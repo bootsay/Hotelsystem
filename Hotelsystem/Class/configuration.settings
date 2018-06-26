@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="configuration">
+  <Profiles />
+  <Settings>
+    <Setting Name="dbname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">MinimarkShop</Value>
+    </Setting>
+    <Setting Name="servername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(local)</Value>
+    </Setting>
+    <Setting Name="printername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">doPDF 81</Value>
+    </Setting>
+    <Setting Name="Displayname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CD7220NU</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
