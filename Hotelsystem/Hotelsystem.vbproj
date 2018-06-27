@@ -81,6 +81,7 @@
     <Compile Include="Class\formclose.vb" />
     <Compile Include="Class\tbcategory.vb" />
     <Compile Include="Class\tbdiscounts.vb" />
+    <Compile Include="Class\tbfreserve.vb" />
     <Compile Include="Class\tbexchange.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
