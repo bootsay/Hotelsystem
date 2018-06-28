@@ -79,8 +79,21 @@
     </Compile>
     <Compile Include="Class\Connectdb.vb" />
     <Compile Include="Class\formclose.vb" />
+    <Compile Include="Class\tbproduct.vb" />
+    <Compile Include="Class\tbposition.vb" />
+    <Compile Include="Class\tbprovince.vb" />
+    <Compile Include="Class\tbroomstatus.vb" />
+    <Compile Include="Class\tbpaymethod.vb" />
+    <Compile Include="Class\tblevel.vb" />
+    <Compile Include="Class\tbfusetype.vb" />
+    <Compile Include="Class\tbfroomtyperate.vb" />
+    <Compile Include="Class\tbfroomtype.vb" />
+    <Compile Include="Class\tbfroomrate.vb" />
+    <Compile Include="Class\tbfroomlocation.vb" />
+    <Compile Include="Class\tbfmarkettype.vb" />
     <Compile Include="Class\tbcategory.vb" />
     <Compile Include="Class\tbdiscounts.vb" />
+    <Compile Include="Class\tbfroom.vb" />
     <Compile Include="Class\tbfreserve.vb" />
     <Compile Include="Class\tbexchange.vb" />
     <Compile Include="Form1.vb">
