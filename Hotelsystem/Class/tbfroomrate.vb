@@ -39,7 +39,7 @@ Public Class tbfroomrate
     Public Function update(roomrateid As Integer, roomtypeid As Integer, roomtyperateid As Integer, price As Double, des As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfroomrate set roomtypeid='" & roomtypeid & "', price='" & price & "', des='" & des & "' where roomrateid='" & roomrateid & "'", cn.conn)
+            cm = New SqlCommand("update tbfroomrate set roomtypeid='" & roomtypeid & "', roomtyperateid='" & roomtyperateid & "', price='" & price & "', des='" & des & "' where roomrateid='" & roomrateid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else

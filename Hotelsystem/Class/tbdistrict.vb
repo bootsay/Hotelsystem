@@ -1,15 +1,15 @@
 ﻿Imports System.Data.SqlClient
-Public Class tbmainmoney
+Public Class tbdistrict
     Dim cn As New connectdb
     Dim re As SqlDataReader
     Dim da As New SqlDataAdapter
     Dim ds As New DataSet
     Dim cm As New SqlCommand
 
-    Public Function save(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function save(districtid As Integer, provinceid As Integer, districtname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbmainmoney(mainmoneyid,mainmoneyname) values('" & mainmoneyid & "',N'" & mainmoneyname & "')", cn.conn)
+            cm = New SqlCommand("insert into tbdistrict(districtid,provinceid,districtname) values('" & districtid & "','" & provinceid & "','" & districtname & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -22,10 +22,10 @@ Public Class tbmainmoney
         Return True
     End Function
 
-    Public Function delete(mainmoneyid As Integer)
+    Public Function delete(districtid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbmainmoney where mainmoneyid='" & mainmoneyid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbdistrict where districtid='" & districtid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່?", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -37,10 +37,10 @@ Public Class tbmainmoney
         Return True
     End Function
 
-    Public Function update(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function update(districtid As Integer, provinceid As Integer, districtname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbmainmoney set mainmoneyname=N'" & mainmoneyname & "' where mainmoneyid='" & mainmoneyid & "'", cn.conn)
+            cm = New SqlCommand("update tbdistrict set provinceid='" & provinceid & "',districtname='" & districtname & "' where districtid='" & districtid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -56,7 +56,7 @@ Public Class tbmainmoney
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 mainmoneyid from tbmainmoney order by mainmoneyid desc", cn.conn)
+            cm = New SqlCommand("select top 1 districtid from tbdistrict order by districtid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -72,19 +72,20 @@ Public Class tbmainmoney
         Return id
     End Function
 
-    Public Function loadtbmainmoneyl(dgv As DataGridView)
+    Public Function loadtbdistrict(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbmainmoney", cn.conn)
+            da = New SqlDataAdapter("select * from tbdistrict", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດເງິນຫຼັກ"
-                .Columns(1).HeaderText = "ຊື່ເງິນຫຼັກ"
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(0).HeaderText = "ລະຫັດເມືອງ"
+                .Columns(1).HeaderText = "ລະຫັດແຂວງ"
+                .Columns(2).HeaderText = "ຊື່ເມືອງ"
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
 

@@ -6,10 +6,10 @@ Public Class tbexchange
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
 
-    Public Function save(ex_id As Integer, bath_to_kip As Double, dolla_to_kip As Double)
+    Public Function save(exchid As Integer, bath As Double, dolla As Double, china As Double)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbexchange(ex_id,bath_to_kip,dolla_to_kip)values('" & ex_id & "','" & bath_to_kip & "','" & dolla_to_kip & "')", cn.conn)
+            cm = New SqlCommand("insert into tbexchange(exchid,bath,dolla,china)values('" & exchid & "','" & bath & "','" & dolla & "','" & china & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -21,10 +21,10 @@ Public Class tbexchange
         Return True
     End Function
 
-    Public Function delete(ex_id As Integer)
+    Public Function delete(exchid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbexchange where ex_id='" & ex_id & "'", cn.conn)
+            cm = New SqlCommand("delete from tbexchange where exchid='" & exchid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -36,10 +36,10 @@ Public Class tbexchange
         Return True
     End Function
 
-    Public Function update(ex_id As Integer, bath_to_kip As Double, dolla_to_kip As Double)
+    Public Function update(exchid As Integer, bath As Double, dolla As Double, china As Double)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbexchange set bath_to_kip='" & bath_to_kip & "', dolla_to_kip='" & dolla_to_kip & "' where ex_id='" & ex_id & "'", cn.conn)
+            cm = New SqlCommand("update tbexchange set bath='" & bath & "', dolla='" & dolla & "', china='" & china & "' where exchid='" & exchid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -56,7 +56,7 @@ Public Class tbexchange
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 ex_id from tbexchange order by ex_id desc", cn.conn)
+            cm = New SqlCommand("select top 1 exchid from tbexchange order by exchid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -86,10 +86,12 @@ Public Class tbexchange
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
                 .Columns(0).HeaderText = "ລໍາດັບ"
                 .Columns(1).HeaderText = "ບາດ"
-                .Columns(2).HeaderText = "ໂດຮາ"
+                .Columns(2).HeaderText = "ດອນລາ"
+                .Columns(3).HeaderText = "ຢວນ"
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(1).DefaultCellStyle.Format = "N0"
                 .Columns(2).DefaultCellStyle.Format = "N0"
+                .Columns(3).DefaultCellStyle.Format = "N0"
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -122,6 +124,20 @@ Public Class tbexchange
         End If
         re.Close()
         Return dolla
+
+    End Function
+    Public Function loadchina()
+        Dim china As Double
+        cn.connect()
+        cm = New SqlCommand("select * from tbexchange", cn.conn)
+        re = cm.ExecuteReader
+        If re.HasRows Then
+            While re.Read
+                china = re.GetValue(3)
+            End While
+        End If
+        re.Close()
+        Return china
 
     End Function
     Public Function convertbaht(totalkip As Double)

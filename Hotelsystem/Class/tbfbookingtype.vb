@@ -1,15 +1,15 @@
 ﻿Imports System.Data.SqlClient
-Public Class tbmainmoney
+Public Class tbfbookingtype
     Dim cn As New connectdb
     Dim re As SqlDataReader
     Dim da As New SqlDataAdapter
     Dim ds As New DataSet
     Dim cm As New SqlCommand
 
-    Public Function save(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function save(bookingtypeid As Integer, bookingtypename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbmainmoney(mainmoneyid,mainmoneyname) values('" & mainmoneyid & "',N'" & mainmoneyname & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfbookingtype(bookingtypeid,bookingtypename) values('" & bookingtypeid & "',N'" & bookingtypename & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -22,10 +22,10 @@ Public Class tbmainmoney
         Return True
     End Function
 
-    Public Function delete(mainmoneyid As Integer)
+    Public Function delete(bookingtypeid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbmainmoney where mainmoneyid='" & mainmoneyid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbfbookingtype where bookingtypeid='" & bookingtypeid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່?", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -37,10 +37,10 @@ Public Class tbmainmoney
         Return True
     End Function
 
-    Public Function update(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function update(bookingtypeid As Integer, bookingtypename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbmainmoney set mainmoneyname=N'" & mainmoneyname & "' where mainmoneyid='" & mainmoneyid & "'", cn.conn)
+            cm = New SqlCommand("update tbfbookingtype set bookingtypename=N'" & bookingtypename & "' where bookingtypeid='" & bookingtypeid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -56,7 +56,7 @@ Public Class tbmainmoney
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 mainmoneyid from tbmainmoney order by mainmoneyid desc", cn.conn)
+            cm = New SqlCommand("select top 1 bookingtypeid from tbfbookingtype order by bookingtypeid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -72,18 +72,18 @@ Public Class tbmainmoney
         Return id
     End Function
 
-    Public Function loadtbmainmoneyl(dgv As DataGridView)
+    Public Function loadtbfbookingtype(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbmainmoney", cn.conn)
+            da = New SqlDataAdapter("select * from tbfbookingtype", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດເງິນຫຼັກ"
-                .Columns(1).HeaderText = "ຊື່ເງິນຫຼັກ"
+                .Columns(0).HeaderText = "ລະຫັດປະເພດສັງຈອງ"
+                .Columns(1).HeaderText = "ຊື່ປະເພດສັງຈອງ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
