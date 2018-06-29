@@ -79,9 +79,27 @@
     </Compile>
     <Compile Include="Class\Connectdb.vb" />
     <Compile Include="Class\formclose.vb" />
+    <Compile Include="Class\tbbilldetailmoveitem.vb" />
+    <Compile Include="Class\tbfcheckin.vb" />
+    <Compile Include="Class\tbfcheckout.vb" />
+    <Compile Include="Class\tbfBill.vb" />
+    <Compile Include="Class\tbdistrict.vb" />
+    <Compile Include="Class\tbdepartment.vb" />
+    <Compile Include="Class\tbcustomer.vb" />
+    <Compile Include="Class\tbchangeroom.vb" />
+    <Compile Include="Class\tbcompanyprofile.vb" />
+    <Compile Include="Class\tbfBilldetail.vb" />
+    <Compile Include="Class\tbfinouttype.vb" />
+    <Compile Include="Class\tbfcustomertype.vb" />
+    <Compile Include="Class\tbpaydetail.vb" />
     <Compile Include="Class\tbproduct.vb" />
     <Compile Include="Class\tbposition.vb" />
     <Compile Include="Class\tbprovince.vb" />
+    <Compile Include="Class\tbdateend.vb" />
+    <Compile Include="Class\tbcountry.vb" />
+    <Compile Include="Class\tbmealtype.vb" />
+    <Compile Include="Class\tbfbookingtype.vb" />
+    <Compile Include="Class\tbmainmoney.vb" />
     <Compile Include="Class\tbroomstatus.vb" />
     <Compile Include="Class\tbpaymethod.vb" />
     <Compile Include="Class\tblevel.vb" />
