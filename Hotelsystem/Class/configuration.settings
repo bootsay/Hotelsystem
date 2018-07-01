@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="dbname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MinimarkShop</Value>
+      <Value Profile="(Default)">dbhotelsystem</Value>
     </Setting>
     <Setting Name="servername" Type="System.String" Scope="User">
       <Value Profile="(Default)">(local)</Value>

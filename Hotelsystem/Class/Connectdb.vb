@@ -2,8 +2,8 @@
 Public Class connectdb
     Public conn As New SqlConnection
     Public user As String = "sa"
-    Public password As String = "bootvong"
-    Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; Persist Security Info=True;User ID=sa;Password=bootvong"
+    Public password As String = "99491232"
+    Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; Persist Security Info=True;User ID=sa;Password=99491232"
     Public Function connect()
         Try
             With conn
