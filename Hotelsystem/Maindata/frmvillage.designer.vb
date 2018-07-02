@@ -27,25 +27,24 @@ Partial Class frmvillage
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnsave = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btndelete = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnedit = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cbprovience = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbdistrict = New DevComponents.DotNetBar.Controls.ComboBoxEx()
-        Me.txttype = New System.Windows.Forms.TextBox()
+        Me.txtvillage = New System.Windows.Forms.TextBox()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.btnsave = New System.Windows.Forms.ToolStripButton()
-        Me.btndelete = New System.Windows.Forms.ToolStripButton()
-        Me.btnedit = New System.Windows.Forms.ToolStripButton()
-        Me.btnupdate = New System.Windows.Forms.ToolStripButton()
-        Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.btnAddDistrict = New DevComponents.DotNetBar.ButtonX()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -118,33 +117,82 @@ Partial Class frmvillage
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
+        'btnsave
+        '
+        Me.btnsave.ForeColor = System.Drawing.Color.Black
+        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save
+        Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
+        Me.btnsave.Name = "btnsave"
+        Me.btnsave.Size = New System.Drawing.Size(79, 36)
+        Me.btnsave.Text = "ບັນທືກ"
+        '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        '
+        'btndelete
+        '
+        Me.btndelete.ForeColor = System.Drawing.Color.Black
+        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
+        Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(63, 36)
+        Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
         Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
         '
+        'btnedit
+        '
+        Me.btnedit.ForeColor = System.Drawing.Color.Black
+        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Edit_page
+        Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnedit.Name = "btnedit"
+        Me.btnedit.Size = New System.Drawing.Size(77, 36)
+        Me.btnedit.Text = "ແກ້ໄຂ"
+        '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources.Refresh
+        Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(77, 36)
+        Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
         '
+        'btnnew
+        '
+        Me.btnnew.ForeColor = System.Drawing.Color.Black
+        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
+        Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnnew.Name = "btnnew"
+        Me.btnnew.Size = New System.Drawing.Size(90, 36)
+        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.cbprovience)
+        Me.Panel1.Controls.Add(Me.btnAddDistrict)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.cbdistrict)
-        Me.Panel1.Controls.Add(Me.txttype)
+        Me.Panel1.Controls.Add(Me.txtvillage)
         Me.Panel1.Controls.Add(Me.txtid)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -154,35 +202,13 @@ Partial Class frmvillage
         Me.Panel1.Size = New System.Drawing.Size(811, 110)
         Me.Panel1.TabIndex = 2
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(10, 40)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 24)
-        Me.Label4.TabIndex = 7
-        Me.Label4.Text = "ແຂວງ:"
-        '
-        'cbprovience
-        '
-        Me.cbprovience.DisplayMember = "Text"
-        Me.cbprovience.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbprovience.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbprovience.FormattingEnabled = True
-        Me.cbprovience.ItemHeight = 22
-        Me.cbprovience.Location = New System.Drawing.Point(65, 40)
-        Me.cbprovience.Name = "cbprovience"
-        Me.cbprovience.Size = New System.Drawing.Size(351, 28)
-        Me.cbprovience.TabIndex = 6
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(422, 42)
+        Me.Label3.Location = New System.Drawing.Point(11, 42)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(47, 24)
+        Me.Label3.Size = New System.Drawing.Size(49, 27)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "ເມື່ອງ:"
         '
@@ -193,18 +219,18 @@ Partial Class frmvillage
         Me.cbdistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbdistrict.FormattingEnabled = True
         Me.cbdistrict.ItemHeight = 22
-        Me.cbdistrict.Location = New System.Drawing.Point(475, 40)
+        Me.cbdistrict.Location = New System.Drawing.Point(65, 40)
         Me.cbdistrict.Name = "cbdistrict"
         Me.cbdistrict.Size = New System.Drawing.Size(330, 28)
         Me.cbdistrict.TabIndex = 4
         '
-        'txttype
+        'txtvillage
         '
-        Me.txttype.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttype.Location = New System.Drawing.Point(65, 71)
-        Me.txttype.Name = "txttype"
-        Me.txttype.Size = New System.Drawing.Size(740, 34)
-        Me.txttype.TabIndex = 3
+        Me.txtvillage.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtvillage.Location = New System.Drawing.Point(65, 72)
+        Me.txtvillage.Name = "txtvillage"
+        Me.txtvillage.Size = New System.Drawing.Size(330, 34)
+        Me.txtvillage.TabIndex = 3
         '
         'txtid
         '
@@ -212,7 +238,7 @@ Partial Class frmvillage
         Me.txtid.Location = New System.Drawing.Point(65, 3)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(351, 34)
+        Me.txtid.Size = New System.Drawing.Size(330, 34)
         Me.txtid.TabIndex = 2
         '
         'Label2
@@ -221,7 +247,7 @@ Partial Class frmvillage
         Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(17, 75)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 24)
+        Me.Label2.Size = New System.Drawing.Size(44, 27)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ບ້ານ:"
         '
@@ -231,7 +257,7 @@ Partial Class frmvillage
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(6, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 24)
+        Me.Label1.Size = New System.Drawing.Size(55, 27)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -261,59 +287,25 @@ Partial Class frmvillage
         Me.dgvshow.Size = New System.Drawing.Size(811, 371)
         Me.dgvshow.TabIndex = 3
         '
-        'btnsave
+        'btnAddDistrict
         '
-        Me.btnsave.ForeColor = System.Drawing.Color.Black
-        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save
-        Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
-        Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(79, 36)
-        Me.btnsave.Text = "ບັນທືກ"
-        '
-        'btndelete
-        '
-        Me.btndelete.ForeColor = System.Drawing.Color.Black
-        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
-        Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(63, 36)
-        Me.btndelete.Text = "ລືບ"
-        '
-        'btnedit
-        '
-        Me.btnedit.ForeColor = System.Drawing.Color.Black
-        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Edit_page
-        Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(77, 36)
-        Me.btnedit.Text = "ແກ້ໄຂ"
-        '
-        'btnupdate
-        '
-        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources.Refresh
-        Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(77, 36)
-        Me.btnupdate.Text = "ປັບປຸງ"
-        '
-        'btnnew
-        '
-        Me.btnnew.ForeColor = System.Drawing.Color.Black
-        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
-        Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(90, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnAddDistrict.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnAddDistrict.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnAddDistrict.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddDistrict.ForeColor = System.Drawing.Color.Blue
+        Me.btnAddDistrict.Image = CType(resources.GetObject("btnAddDistrict.Image"), System.Drawing.Image)
+        Me.btnAddDistrict.ImageFixedSize = New System.Drawing.Size(24, 24)
+        Me.btnAddDistrict.Location = New System.Drawing.Point(403, 38)
+        Me.btnAddDistrict.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAddDistrict.Name = "btnAddDistrict"
+        Me.btnAddDistrict.Size = New System.Drawing.Size(101, 35)
+        Me.btnAddDistrict.TabIndex = 26
+        Me.btnAddDistrict.Text = "ເພີມເມືອງ"
+        Me.btnAddDistrict.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
         '
         'frmvillage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(823, 561)
         Me.Controls.Add(Me.GroupPanel1)
@@ -346,13 +338,12 @@ Partial Class frmvillage
     Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents btnnew As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents txttype As System.Windows.Forms.TextBox
+    Friend WithEvents txtvillage As System.Windows.Forms.TextBox
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgvshow As DevComponents.DotNetBar.Controls.DataGridViewX
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cbdistrict As DevComponents.DotNetBar.Controls.ComboBoxEx
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents cbprovience As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents btnAddDistrict As DevComponents.DotNetBar.ButtonX
 End Class
