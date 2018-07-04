@@ -37,6 +37,7 @@ Partial Class frmdistrict
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cbprovience = New DevComponents.DotNetBar.Controls.ComboBoxEx()
@@ -110,7 +111,7 @@ Partial Class frmdistrict
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(711, 39)
@@ -125,7 +126,7 @@ Partial Class frmdistrict
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(87, 36)
+        Me.btnsave.Size = New System.Drawing.Size(90, 36)
         Me.btnsave.Text = "ບັນທືກ"
         '
         'ToolStripSeparator1
@@ -140,7 +141,7 @@ Partial Class frmdistrict
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(66, 36)
+        Me.btndelete.Size = New System.Drawing.Size(69, 36)
         Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator2
@@ -155,7 +156,7 @@ Partial Class frmdistrict
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(84, 36)
+        Me.btnedit.Size = New System.Drawing.Size(87, 36)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
         'ToolStripSeparator3
@@ -169,7 +170,7 @@ Partial Class frmdistrict
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(84, 36)
+        Me.btnupdate.Size = New System.Drawing.Size(87, 36)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripSeparator4
@@ -184,8 +185,19 @@ Partial Class frmdistrict
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(102, 36)
+        Me.btnnew.Size = New System.Drawing.Size(105, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'Panel1
         '
@@ -209,7 +221,7 @@ Partial Class frmdistrict
         Me.Label3.Location = New System.Drawing.Point(18, 40)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 24)
+        Me.Label3.Size = New System.Drawing.Size(55, 29)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "ແຂວງ:"
         '
@@ -252,7 +264,7 @@ Partial Class frmdistrict
         Me.Label2.Location = New System.Drawing.Point(22, 77)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 24)
+        Me.Label2.Size = New System.Drawing.Size(51, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ເມືອງ:"
         '
@@ -263,7 +275,7 @@ Partial Class frmdistrict
         Me.Label1.Location = New System.Drawing.Point(15, 8)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 24)
+        Me.Label1.Size = New System.Drawing.Size(58, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -289,19 +301,22 @@ Partial Class frmdistrict
         Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvshow.Name = "dgvshow"
         Me.dgvshow.ReadOnly = True
+        Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvshow.RowTemplate.Height = 28
+        Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvshow.Size = New System.Drawing.Size(703, 527)
         Me.dgvshow.TabIndex = 3
         '
         'frmdistrict
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(717, 709)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
@@ -343,4 +358,5 @@ Partial Class frmdistrict
     Friend WithEvents dgvshow As DevComponents.DotNetBar.Controls.DataGridViewX
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cbprovience As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class

@@ -1,15 +1,14 @@
 ﻿Imports System.Data.SqlClient
-Public Class tbfusetype
+Public Class tbvillage
     Dim cn As New connectdb
     Dim re As SqlDataReader
     Dim da As New SqlDataAdapter
     Dim ds As New DataSet
     Dim cm As New SqlCommand
-
-    Public Function save(usetypeid As Integer, usetypename As String)
+    Public Function save(villageid As Integer, districtid As Integer, villagename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfusetype(usetypeid,usetypename) values('" & usetypeid & "',N'" & usetypename & "')", cn.conn)
+            cm = New SqlCommand("insert into tbvillage(villageid,districtid,villagename) values('" & villageid & "','" & districtid & "',N'" & villagename & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -22,10 +21,10 @@ Public Class tbfusetype
         Return True
     End Function
 
-    Public Function delete(usetypeid As Integer)
+    Public Function delete(villageid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbfusetype where usetypeid='" & usetypeid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbvillage where villageid='" & villageid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່?", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -37,10 +36,10 @@ Public Class tbfusetype
         Return True
     End Function
 
-    Public Function update(usetypeid As Integer, usetypename As String)
+    Public Function update(villageid As Integer, districtid As Integer, villagename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfusetype set usetypename=N'" & usetypename & "' where usetypeid='" & usetypeid & "'", cn.conn)
+            cm = New SqlCommand("update tbvillage set districtid=N'" & districtid & "',villagename=N'" & villagename & "' where villageid='" & villageid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -56,7 +55,7 @@ Public Class tbfusetype
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 usetypeid from tbfusetype order by usetypeid desc", cn.conn)
+            cm = New SqlCommand("select top 1 villageid from tbvillage order by villageid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -72,10 +71,10 @@ Public Class tbfusetype
         Return id
     End Function
 
-    Public Function loadtbfusetype(dgv As DataGridView)
+    Public Function loadtbvillage(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbfusetype", cn.conn)
+            da = New SqlDataAdapter("select * from viewvillage  order by villageid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -83,11 +82,17 @@ Public Class tbfusetype
             dgv.Refresh()
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດ"
-                .Columns(1).HeaderText = "ປະເພດໃຊ້ງານ"
+                .Columns(1).HeaderText = "ແຂວງ"
+                .Columns(2).HeaderText = "ເມືອງ"
+                .Columns(3).HeaderText = "ບ້ານ"
+                .Columns(4).Visible = False
+                .Columns(5).Visible = False
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

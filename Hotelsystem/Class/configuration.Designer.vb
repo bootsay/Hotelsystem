@@ -40,7 +40,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("(local)")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("PHONE\PHONE")>  _
     Public Property servername() As String
         Get
             Return CType(Me("servername"),String)

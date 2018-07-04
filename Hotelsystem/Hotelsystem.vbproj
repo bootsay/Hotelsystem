@@ -97,6 +97,7 @@
       <DependentUpon>configuration.settings</DependentUpon>
     </Compile>
     <Compile Include="Class\Connectdb.vb" />
+    <Compile Include="Class\tbvillage.vb" />
     <Compile Include="Class\formclose.vb" />
     <Compile Include="Class\tbbilldetailmoveitem.vb" />
     <Compile Include="Class\tbfcheckin.vb" />

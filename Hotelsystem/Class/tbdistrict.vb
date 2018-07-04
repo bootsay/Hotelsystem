@@ -72,19 +72,20 @@ Public Class tbdistrict
         Return id
     End Function
 
-    Public Function loadtbdistrict(dgv As DataGridView)
+    Public Function loadtbdistrict(provinceid As Integer, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbdistrict", cn.conn)
+            da = New SqlDataAdapter("select * from viewdistrict where provinceid='" & provinceid & "' order by districtid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດເມືອງ"
-                .Columns(1).HeaderText = "ລະຫັດແຂວງ"
-                .Columns(2).HeaderText = "ຊື່ເມືອງ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ແຂວງ"
+                .Columns(2).HeaderText = "ເມືອງ"
+                .Columns(3).Visible = False
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
@@ -92,4 +93,37 @@ Public Class tbdistrict
         End Try
         Return True
     End Function
+    Public Function combodistrict(provinceid As Integer, cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbdistrict where provinceid='" & provinceid & "'", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("districtname").ToString
+                .ValueMember = dt.Columns("districtid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function comboboxdistrict(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbdistrict order by districtid", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("districtname").ToString
+                .ValueMember = dt.Columns("districtid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+
 End Class

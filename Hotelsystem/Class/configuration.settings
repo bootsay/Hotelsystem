@@ -6,7 +6,7 @@
       <Value Profile="(Default)">dbhotelsystem</Value>
     </Setting>
     <Setting Name="servername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">(local)</Value>
+      <Value Profile="(Default)">PHONE\PHONE</Value>
     </Setting>
     <Setting Name="printername" Type="System.String" Scope="User">
       <Value Profile="(Default)">doPDF 81</Value>

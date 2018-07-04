@@ -72,24 +72,43 @@ Public Class tbprovince
         Return id
     End Function
 
-    Public Function loadtblevel(dgv As DataGridView)
+    Public Function loadtbprovince(countryid As Integer, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbprovince", cn.conn)
+            da = New SqlDataAdapter("select * from viewprovience where countryid='" & countryid & "'  order by provinceid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດແຂວງ"
-                .Columns(1).HeaderText = "ລະຫັດປະເທດ"
-                .Columns(2).HeaderText = "ຊື່ແຂວງ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເທດ"
+                .Columns(2).HeaderText = "ແຂວງ"
+                .Columns(3).Visible = False
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function
+    Public Function comboprovince(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbprovince", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("provincename").ToString
+                .ValueMember = dt.Columns("provinceid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+   
 End Class
