@@ -124,7 +124,7 @@ Partial Class frmvillage
         'btnsave
         '
         Me.btnsave.ForeColor = System.Drawing.Color.Black
-        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save
+        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save
         Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
@@ -140,7 +140,7 @@ Partial Class frmvillage
         'btndelete
         '
         Me.btndelete.ForeColor = System.Drawing.Color.Black
-        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
+        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
@@ -155,7 +155,7 @@ Partial Class frmvillage
         'btnedit
         '
         Me.btnedit.ForeColor = System.Drawing.Color.Black
-        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Edit_page
+        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
@@ -169,7 +169,7 @@ Partial Class frmvillage
         '
         'btnupdate
         '
-        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources.Refresh
+        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources.Refresh
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
@@ -184,7 +184,7 @@ Partial Class frmvillage
         'btnnew
         '
         Me.btnnew.ForeColor = System.Drawing.Color.Black
-        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
+        Me.btnnew.Image = Global.HotelSystem.My.Resources.Resources.New_file
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
@@ -195,7 +195,7 @@ Partial Class frmvillage
         '
         Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
         Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton1.Name = "ToolStripButton1"

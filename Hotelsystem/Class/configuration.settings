@@ -9,10 +9,13 @@
       <Value Profile="(Default)">PHONE\PHONE</Value>
     </Setting>
     <Setting Name="printername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">doPDF 81</Value>
+      <Value Profile="(Default)">Adobe PDF</Value>
     </Setting>
-    <Setting Name="Displayname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">CD7220NU</Value>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">99491232</Value>
     </Setting>
   </Settings>
 </SettingsFile>

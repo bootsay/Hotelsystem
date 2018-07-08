@@ -214,7 +214,7 @@ Partial Class frmproduct
         'btnsave
         '
         Me.btnsave.ForeColor = System.Drawing.Color.Black
-        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save
+        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save
         Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
@@ -230,7 +230,7 @@ Partial Class frmproduct
         'btndelete
         '
         Me.btndelete.ForeColor = System.Drawing.Color.Black
-        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
+        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
@@ -245,7 +245,7 @@ Partial Class frmproduct
         'btnedit
         '
         Me.btnedit.ForeColor = System.Drawing.Color.Black
-        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Edit_page
+        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
@@ -259,7 +259,7 @@ Partial Class frmproduct
         '
         'btnupdate
         '
-        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources.Refresh
+        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources.Refresh
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
@@ -274,7 +274,7 @@ Partial Class frmproduct
         'btnnew
         '
         Me.btnnew.ForeColor = System.Drawing.Color.Black
-        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
+        Me.btnnew.Image = Global.HotelSystem.My.Resources.Resources.New_file
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
@@ -284,7 +284,7 @@ Partial Class frmproduct
         'btnclose
         '
         Me.btnclose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnclose.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.btnclose.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
         Me.btnclose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnclose.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnclose.Name = "btnclose"
@@ -357,7 +357,7 @@ Partial Class frmproduct
         '
         Me.btnsubcategory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnsubcategory.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnsubcategory.Image = Global.Hotelsystem.My.Resources.Resources.add1
+        Me.btnsubcategory.Image = Global.HotelSystem.My.Resources.Resources.add1
         Me.btnsubcategory.ImageFixedSize = New System.Drawing.Size(24, 24)
         Me.btnsubcategory.Location = New System.Drawing.Point(253, 153)
         Me.btnsubcategory.Name = "btnsubcategory"
@@ -395,7 +395,7 @@ Partial Class frmproduct
         '
         Me.btnaddcategory.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnaddcategory.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnaddcategory.Image = Global.Hotelsystem.My.Resources.Resources.add4
+        Me.btnaddcategory.Image = Global.HotelSystem.My.Resources.Resources.add4
         Me.btnaddcategory.ImageFixedSize = New System.Drawing.Size(24, 24)
         Me.btnaddcategory.Location = New System.Drawing.Point(117, 153)
         Me.btnaddcategory.Name = "btnaddcategory"

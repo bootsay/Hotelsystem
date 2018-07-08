@@ -1,54 +1,51 @@
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmmain.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmuser.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbookingtype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbilldetail.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbilldetailmoveitem.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmstatus.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmchangeroom.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcompanyprofile.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcountry.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmdateend.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcheckout.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcustomertype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbill.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frminouttype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmmarkettype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcheckin.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmreserve.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroom.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomlocation.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomrate.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomtype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomtyperate.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmusetype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmlevel.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmmainmoney.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmmealtype.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmpaydetail.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmpaymethod.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmposition.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmproduct.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomstatus.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmtitlename.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcategory.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcustomer.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmdepartment.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmdistrict.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmexchange.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmprovience.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmunit.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmvillage.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.Resources.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.vbproj.GenerateResource.Cache
-R:\Projects\Hotelsystem\Hotelsystem\bin\Debug\Hotelsystem.exe.config
-R:\Projects\Hotelsystem\Hotelsystem\bin\Debug\Hotelsystem.exe
-R:\Projects\Hotelsystem\Hotelsystem\bin\Debug\Hotelsystem.pdb
-R:\Projects\Hotelsystem\Hotelsystem\bin\Debug\Hotelsystem.xml
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.exe
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.xml
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.pdb
-Z:\Hotelsystem\bin\Debug\Hotelsystem.exe.config
-Z:\Hotelsystem\obj\Debug\Hotelsystem.exe
-Z:\Hotelsystem\obj\Debug\Hotelsystem.xml
-Z:\Hotelsystem\obj\Debug\Hotelsystem.pdb
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.vbprojResolveAssemblyReference.cache
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\bin\Debug\HotelSystem.exe.config
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\bin\Debug\HotelSystem.exe
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\bin\Debug\HotelSystem.pdb
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\bin\Debug\HotelSystem.xml
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.Form1.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.Form2.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmlogin.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmmain.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcategory.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcompanyprofile.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcountry.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcustomer.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcustomertype.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmdepartment.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmdistrict.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmlevel.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmmarkettype.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmmealtype.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmposition.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmprovience.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroom.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroomrate.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmtitlename.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmunit.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmuser.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmusetype.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmvillage.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.Resources.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.vbproj.GenerateResource.Cache
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.exe
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.xml
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.pdb
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmexchange.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroomlocation.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroomtype.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroomtyperate.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmproduct.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcheckin.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmcheckout.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmitemlist.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmshowcustomer.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmshowroomlistitem.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmshowroomreserve.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmroommap.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmoption.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\HotelSystem\HotelSystem\obj\Debug\HotelSystem.frmreserve.resources
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\bin\Debug\HotelSystem.exe.config
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\obj\Debug\HotelSystem.exe
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\obj\Debug\HotelSystem.xml
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\obj\Debug\HotelSystem.pdb
+C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\bin\Debug\System_HotelSystem.exe.config

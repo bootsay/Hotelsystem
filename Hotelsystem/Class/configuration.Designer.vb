@@ -52,7 +52,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("doPDF 81")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("Adobe PDF")>  _
     Public Property printername() As String
         Get
             Return CType(Me("printername"),String)
@@ -64,13 +64,25 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("CD7220NU")>  _
-    Public Property Displayname() As String
+     Global.System.Configuration.DefaultSettingValueAttribute("sa")>  _
+    Public Property username() As String
         Get
-            Return CType(Me("Displayname"),String)
+            Return CType(Me("username"),String)
         End Get
         Set
-            Me("Displayname") = value
+            Me("username") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("99491232")>  _
+    Public Property password() As String
+        Get
+            Return CType(Me("password"),String)
+        End Get
+        Set
+            Me("password") = value
         End Set
     End Property
 End Class

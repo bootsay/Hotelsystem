@@ -119,7 +119,7 @@ Partial Class frmcustomer
         '
         'btnsave
         '
-        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save
+        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save
         Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(10, 0, 10, 0)
@@ -129,7 +129,7 @@ Partial Class frmcustomer
         '
         'btndelete
         '
-        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
+        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
@@ -139,7 +139,7 @@ Partial Class frmcustomer
         '
         'btnupdate
         '
-        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources.Refresh
+        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources.Refresh
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
@@ -149,7 +149,7 @@ Partial Class frmcustomer
         '
         'btnedit
         '
-        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Edit_page
+        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
@@ -159,7 +159,7 @@ Partial Class frmcustomer
         '
         'btnnew
         '
-        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
+        Me.btnnew.Image = Global.HotelSystem.My.Resources.Resources.New_file
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
@@ -170,7 +170,7 @@ Partial Class frmcustomer
         'btnclose
         '
         Me.btnclose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnclose.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.btnclose.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
         Me.btnclose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnclose.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnclose.Name = "btnclose"

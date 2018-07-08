@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Public Class connectdb
     Public conn As New SqlConnection
-    Public user As String = "sa"
-    Public password As String = "99491232"
-    Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; Persist Security Info=True;User ID=sa;Password=99491232"
+    Public user As String = configuration.Default.username
+    Public password As String = configuration.Default.password
+    Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; User ID='" & user & "';Password='" & password & "'"
     Public Function connect()
         Try
             With conn

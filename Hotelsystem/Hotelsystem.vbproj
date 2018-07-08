@@ -1,34 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8F7AF5E0-5CB0-4D84-A36F-35A41CCE8D93}</ProjectGuid>
+    <ProjectGuid>{BFEB273D-06B6-4C4E-A401-8EEFB639E660}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Hotelsystem.My.MyApplication</StartupObject>
-    <RootNamespace>Hotelsystem</RootNamespace>
-    <AssemblyName>Hotelsystem</AssemblyName>
+    <StartupObject>HotelSystem.My.MyApplication</StartupObject>
+    <RootNamespace>HotelSystem</RootNamespace>
+    <AssemblyName>HotelSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,7 +20,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Hotelsystem.xml</DocumentationFile>
+    <DocumentationFile>HotelSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -47,7 +30,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Hotelsystem.xml</DocumentationFile>
+    <DocumentationFile>HotelSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -63,9 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2">
-      <HintPath>F:\Smartinventory\Smartinventory\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
-    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -75,7 +56,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -97,87 +77,95 @@
       <DependentUpon>configuration.settings</DependentUpon>
     </Compile>
     <Compile Include="Class\Connectdb.vb" />
+    <Compile Include="Class\formclose.vb" />
+    <Compile Include="Class\tbbilldetailmoveitem.vb" />
+    <Compile Include="Class\tbcategory.vb" />
+    <Compile Include="Class\tbchangeroom.vb" />
+    <Compile Include="Class\tbcompanyprofile.vb" />
+    <Compile Include="Class\tbcountry.vb" />
+    <Compile Include="Class\tbcustomer.vb" />
+    <Compile Include="Class\tbdateend.vb" />
+    <Compile Include="Class\tbdepartment.vb" />
+    <Compile Include="Class\tbdiscounts.vb" />
+    <Compile Include="Class\tbdistrict.vb" />
+    <Compile Include="Class\tbexchange.vb" />
+    <Compile Include="Class\tbfBill.vb" />
+    <Compile Include="Class\tbfBilldetail.vb" />
+    <Compile Include="Class\tbfbookingtype.vb" />
+    <Compile Include="Class\tbfcheckin.vb" />
+    <Compile Include="Class\tbfcheckout.vb" />
+    <Compile Include="Class\tbfcustomertype.vb" />
+    <Compile Include="Class\tbfinouttype.vb" />
+    <Compile Include="Class\tbfmarkettype.vb" />
+    <Compile Include="Class\tbfreserve.vb" />
+    <Compile Include="Class\tbfroom.vb" />
+    <Compile Include="Class\tbfroomlocation.vb" />
+    <Compile Include="Class\tbfroomrate.vb" />
+    <Compile Include="Class\tbfroomtype.vb" />
+    <Compile Include="Class\tbfroomtyperate.vb" />
+    <Compile Include="Class\tbfusetype.vb" />
+    <Compile Include="Class\tbitemlist.vb" />
+    <Compile Include="Class\tblevel.vb" />
+    <Compile Include="Class\tbmainmoney.vb" />
+    <Compile Include="Class\tbmealtype.vb" />
+    <Compile Include="Class\tbpaydetail.vb" />
+    <Compile Include="Class\tbpaymethod.vb" />
+    <Compile Include="Class\tbposition.vb" />
+    <Compile Include="Class\tbproduct.vb" />
+    <Compile Include="Class\tbprovince.vb" />
+    <Compile Include="Class\tbroomstatus.vb" />
     <Compile Include="Class\tbstatusall.vb" />
     <Compile Include="Class\tbtitlename.vb" />
     <Compile Include="Class\tbunit.vb" />
     <Compile Include="Class\tbuser.vb" />
     <Compile Include="Class\tbvillage.vb" />
-    <Compile Include="Class\formclose.vb" />
-    <Compile Include="Class\tbbilldetailmoveitem.vb" />
-    <Compile Include="Class\tbfcheckin.vb" />
-    <Compile Include="Class\tbfcheckout.vb" />
-    <Compile Include="Class\tbfBill.vb" />
-    <Compile Include="Class\tbdistrict.vb" />
-    <Compile Include="Class\tbdepartment.vb" />
-    <Compile Include="Class\tbcustomer.vb" />
-    <Compile Include="Class\tbchangeroom.vb" />
-    <Compile Include="Class\tbcompanyprofile.vb" />
-    <Compile Include="Class\tbfBilldetail.vb" />
-    <Compile Include="Class\tbfinouttype.vb" />
-    <Compile Include="Class\tbfcustomertype.vb" />
-    <Compile Include="Class\tbpaydetail.vb" />
-    <Compile Include="Class\tbproduct.vb" />
-    <Compile Include="Class\tbposition.vb" />
-    <Compile Include="Class\tbprovince.vb" />
-    <Compile Include="Class\tbdateend.vb" />
-    <Compile Include="Class\tbcountry.vb" />
-    <Compile Include="Class\tbmealtype.vb" />
-    <Compile Include="Class\tbfbookingtype.vb" />
-    <Compile Include="Class\tbmainmoney.vb" />
-    <Compile Include="Class\tbroomstatus.vb" />
-    <Compile Include="Class\tbpaymethod.vb" />
-    <Compile Include="Class\tblevel.vb" />
-    <Compile Include="Class\tbfusetype.vb" />
-    <Compile Include="Class\tbfroomtyperate.vb" />
-    <Compile Include="Class\tbfroomtype.vb" />
-    <Compile Include="Class\tbfroomrate.vb" />
-    <Compile Include="Class\tbfroomlocation.vb" />
-    <Compile Include="Class\tbfmarkettype.vb" />
-    <Compile Include="Class\tbcategory.vb" />
-    <Compile Include="Class\tbdiscounts.vb" />
-    <Compile Include="Class\tbfroom.vb" />
-    <Compile Include="Class\tbfreserve.vb" />
-    <Compile Include="Class\tbexchange.vb" />
-    <Compile Include="frmmain.Designer.vb">
-      <DependentUpon>frmmain.vb</DependentUpon>
+    <Compile Include="Form1.designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.designer.vb">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmuser.designer.vb">
-      <DependentUpon>frmuser.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmuser.vb">
+    <Compile Include="frmmain.Designer.vb">
+      <DependentUpon>frmmain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmbookingtype.designer.vb">
-      <DependentUpon>frmbookingtype.vb</DependentUpon>
+    <Compile Include="House_keeping\frmitemlist.designer.vb">
+      <DependentUpon>frmitemlist.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmbookingtype.vb">
+    <Compile Include="House_keeping\frmitemlist.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmbilldetail.designer.vb">
-      <DependentUpon>frmbilldetail.vb</DependentUpon>
+    <Compile Include="House_keeping\frmoption.Designer.vb">
+      <DependentUpon>frmoption.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmbilldetail.vb">
+    <Compile Include="House_keeping\frmoption.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmbilldetailmoveitem.designer.vb">
-      <DependentUpon>frmbilldetailmoveitem.vb</DependentUpon>
+    <Compile Include="House_keeping\frmroommap.Designer.vb">
+      <DependentUpon>frmroommap.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmbilldetailmoveitem.vb">
+    <Compile Include="House_keeping\frmroommap.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmstatus.designer.vb">
-      <DependentUpon>frmstatus.vb</DependentUpon>
+    <Compile Include="Maindata\frmcategory.designer.vb">
+      <DependentUpon>frmcategory.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmstatus.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmchangeroom.designer.vb">
-      <DependentUpon>frmchangeroom.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmchangeroom.vb">
+    <Compile Include="Maindata\frmcategory.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmcompanyprofile.designer.vb">
@@ -192,16 +180,10 @@
     <Compile Include="Maindata\frmcountry.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmdateend.designer.vb">
-      <DependentUpon>frmdateend.vb</DependentUpon>
+    <Compile Include="Maindata\frmcustomer.designer.vb">
+      <DependentUpon>frmcustomer.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmdateend.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmcheckout.designer.vb">
-      <DependentUpon>frmcheckout.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmcheckout.vb">
+    <Compile Include="Maindata\frmcustomer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmcustomertype.designer.vb">
@@ -210,16 +192,28 @@
     <Compile Include="Maindata\frmcustomertype.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmbill.designer.vb">
-      <DependentUpon>frmbill.vb</DependentUpon>
+    <Compile Include="Maindata\frmdepartment.designer.vb">
+      <DependentUpon>frmdepartment.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmbill.vb">
+    <Compile Include="Maindata\frmdepartment.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frminouttype.designer.vb">
-      <DependentUpon>frminouttype.vb</DependentUpon>
+    <Compile Include="Maindata\frmdistrict.designer.vb">
+      <DependentUpon>frmdistrict.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frminouttype.vb">
+    <Compile Include="Maindata\frmdistrict.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmexchange.designer.vb">
+      <DependentUpon>frmexchange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmexchange.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmlevel.designer.vb">
+      <DependentUpon>frmlevel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmlevel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmmarkettype.designer.vb">
@@ -228,16 +222,28 @@
     <Compile Include="Maindata\frmmarkettype.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmcheckin.designer.vb">
-      <DependentUpon>frmcheckin.vb</DependentUpon>
+    <Compile Include="Maindata\frmmealtype.designer.vb">
+      <DependentUpon>frmmealtype.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmcheckin.vb">
+    <Compile Include="Maindata\frmmealtype.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmreserve.designer.vb">
-      <DependentUpon>frmreserve.vb</DependentUpon>
+    <Compile Include="Maindata\frmposition.designer.vb">
+      <DependentUpon>frmposition.vb</DependentUpon>
     </Compile>
-    <Compile Include="Maindata\frmreserve.vb">
+    <Compile Include="Maindata\frmposition.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmproduct.designer.vb">
+      <DependentUpon>frmproduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmproduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmprovience.designer.vb">
+      <DependentUpon>frmprovience.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmprovience.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmroom.designer.vb">
@@ -270,106 +276,28 @@
     <Compile Include="Maindata\frmroomtyperate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmusetype.designer.vb">
-      <DependentUpon>frmusetype.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmusetype.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmlevel.designer.vb">
-      <DependentUpon>frmlevel.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmlevel.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmmainmoney.designer.vb">
-      <DependentUpon>frmmainmoney.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmmainmoney.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmmealtype.designer.vb">
-      <DependentUpon>frmmealtype.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmmealtype.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmpaydetail.designer.vb">
-      <DependentUpon>frmpaydetail.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmpaydetail.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmpaymethod.designer.vb">
-      <DependentUpon>frmpaymethod.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmpaymethod.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmposition.designer.vb">
-      <DependentUpon>frmposition.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmposition.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmproduct.designer.vb">
-      <DependentUpon>frmproduct.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmproduct.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmroomstatus.designer.vb">
-      <DependentUpon>frmroomstatus.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmroomstatus.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Maindata\frmtitlename.designer.vb">
       <DependentUpon>frmtitlename.vb</DependentUpon>
     </Compile>
     <Compile Include="Maindata\frmtitlename.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmcategory.designer.vb">
-      <DependentUpon>frmcategory.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmcategory.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmcustomer.designer.vb">
-      <DependentUpon>frmcustomer.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmcustomer.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmdepartment.designer.vb">
-      <DependentUpon>frmdepartment.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmdepartment.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmdistrict.designer.vb">
-      <DependentUpon>frmdistrict.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmdistrict.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmexchange.designer.vb">
-      <DependentUpon>frmexchange.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmexchange.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Maindata\frmprovience.designer.vb">
-      <DependentUpon>frmprovience.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmprovience.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Maindata\frmunit.designer.vb">
       <DependentUpon>frmunit.vb</DependentUpon>
     </Compile>
     <Compile Include="Maindata\frmunit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmuser.designer.vb">
+      <DependentUpon>frmuser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmuser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmusetype.designer.vb">
+      <DependentUpon>frmusetype.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmusetype.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmvillage.designer.vb">
@@ -393,28 +321,67 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reception\frmcheckin.designer.vb">
+      <DependentUpon>frmcheckin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmcheckin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmcheckout.designer.vb">
+      <DependentUpon>frmcheckout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmcheckout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmshowcustomer.designer.vb">
+      <DependentUpon>frmshowcustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmshowcustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reception\frmshowroomlistitem.designer.vb">
+      <DependentUpon>frmshowroomlistitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reception\frmshowroomlistitem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation\frmreserve.designer.vb">
+      <DependentUpon>frmreserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation\frmreserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation\frmshowroomreserve.designer.vb">
+      <DependentUpon>frmshowroomreserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation\frmshowroomreserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmuser.resx">
-      <DependentUpon>frmuser.vb</DependentUpon>
+    <EmbeddedResource Include="House_keeping\frmitemlist.resx">
+      <DependentUpon>frmitemlist.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmbookingtype.resx">
-      <DependentUpon>frmbookingtype.vb</DependentUpon>
+    <EmbeddedResource Include="House_keeping\frmoption.resx">
+      <DependentUpon>frmoption.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmbilldetail.resx">
-      <DependentUpon>frmbilldetail.vb</DependentUpon>
+    <EmbeddedResource Include="House_keeping\frmroommap.resx">
+      <DependentUpon>frmroommap.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmbilldetailmoveitem.resx">
-      <DependentUpon>frmbilldetailmoveitem.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmstatus.resx">
-      <DependentUpon>frmstatus.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmchangeroom.resx">
-      <DependentUpon>frmchangeroom.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmcategory.resx">
+      <DependentUpon>frmcategory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmcompanyprofile.resx">
       <DependentUpon>frmcompanyprofile.vb</DependentUpon>
@@ -422,29 +389,38 @@
     <EmbeddedResource Include="Maindata\frmcountry.resx">
       <DependentUpon>frmcountry.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmdateend.resx">
-      <DependentUpon>frmdateend.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmcheckout.resx">
-      <DependentUpon>frmcheckout.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmcustomer.resx">
+      <DependentUpon>frmcustomer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmcustomertype.resx">
       <DependentUpon>frmcustomertype.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmbill.resx">
-      <DependentUpon>frmbill.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmdepartment.resx">
+      <DependentUpon>frmdepartment.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frminouttype.resx">
-      <DependentUpon>frminouttype.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmdistrict.resx">
+      <DependentUpon>frmdistrict.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmexchange.resx">
+      <DependentUpon>frmexchange.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmlevel.resx">
+      <DependentUpon>frmlevel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmmarkettype.resx">
       <DependentUpon>frmmarkettype.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmcheckin.resx">
-      <DependentUpon>frmcheckin.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmmealtype.resx">
+      <DependentUpon>frmmealtype.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmreserve.resx">
-      <DependentUpon>frmreserve.vb</DependentUpon>
+    <EmbeddedResource Include="Maindata\frmposition.resx">
+      <DependentUpon>frmposition.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmproduct.resx">
+      <DependentUpon>frmproduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmprovience.resx">
+      <DependentUpon>frmprovience.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmroom.resx">
       <DependentUpon>frmroom.vb</DependentUpon>
@@ -461,65 +437,44 @@
     <EmbeddedResource Include="Maindata\frmroomtyperate.resx">
       <DependentUpon>frmroomtyperate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmusetype.resx">
-      <DependentUpon>frmusetype.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmlevel.resx">
-      <DependentUpon>frmlevel.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmmainmoney.resx">
-      <DependentUpon>frmmainmoney.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmmealtype.resx">
-      <DependentUpon>frmmealtype.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmpaydetail.resx">
-      <DependentUpon>frmpaydetail.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmpaymethod.resx">
-      <DependentUpon>frmpaymethod.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmposition.resx">
-      <DependentUpon>frmposition.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmproduct.resx">
-      <DependentUpon>frmproduct.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmroomstatus.resx">
-      <DependentUpon>frmroomstatus.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmtitlename.resx">
       <DependentUpon>frmtitlename.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmcategory.resx">
-      <DependentUpon>frmcategory.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmcustomer.resx">
-      <DependentUpon>frmcustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmdepartment.resx">
-      <DependentUpon>frmdepartment.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmdistrict.resx">
-      <DependentUpon>frmdistrict.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmexchange.resx">
-      <DependentUpon>frmexchange.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmprovience.resx">
-      <DependentUpon>frmprovience.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmunit.resx">
       <DependentUpon>frmunit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmuser.resx">
+      <DependentUpon>frmuser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmusetype.resx">
+      <DependentUpon>frmusetype.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmvillage.resx">
       <DependentUpon>frmvillage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmcheckin.resx">
+      <DependentUpon>frmcheckin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmcheckout.resx">
+      <DependentUpon>frmcheckout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmshowcustomer.resx">
+      <DependentUpon>frmshowcustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reception\frmshowroomlistitem.resx">
+      <DependentUpon>frmshowroomlistitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation\frmreserve.resx">
+      <DependentUpon>frmreserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation\frmshowroomreserve.resx">
+      <DependentUpon>frmshowroomreserve.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -539,22 +494,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <None Include="Resources\hotel.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Save.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1451113132_Customer_Male_Light.ico" />
@@ -582,6 +525,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add41.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\admin-settings.png" />
@@ -719,7 +665,7 @@
     <None Include="Resources\Report.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Save1.ico" />
+    <None Include="Resources\Save.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save-icon.png" />
@@ -736,5 +682,40 @@
   <ItemGroup>
     <None Include="Resources\shopping-cart.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotelcheckout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Financial\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

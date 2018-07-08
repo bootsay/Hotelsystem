@@ -6,10 +6,10 @@ Public Class tbcategory
     Dim ds As New DataSet
     Dim cm As New SqlCommand
 
-    Public Function save(cateid As Integer, catename As String)
+    Public Function save(cate_id As Integer, name As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbcategory(cateid,catename) values('" & cateid & "',N'" & catename & "')", cn.conn)
+            cm = New SqlCommand("insert into tbcategory(cateid,catename) values('" & cate_id & "',N'" & name & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -22,10 +22,10 @@ Public Class tbcategory
         Return True
     End Function
 
-    Public Function delete(cateid As Integer)
+    Public Function delete(cate_id As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbcategory where cateid='" & cateid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbcategory where cateid='" & cate_id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່?", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -37,10 +37,10 @@ Public Class tbcategory
         Return True
     End Function
 
-    Public Function update(cateid As Integer, catename As String)
+    Public Function update(cate_id As Integer, catename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbcategory set catename=N'" & catename & "' where cateid='" & cateid & "'", cn.conn)
+            cm = New SqlCommand("update tbcategory set catename=N'" & catename & "' where cateID='" & cate_id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -83,7 +83,7 @@ Public Class tbcategory
             dgv.Refresh()
             With dgv
                 .Columns(0).HeaderText = "ລໍາດັບ"
-                .Columns(1).HeaderText = "ປະເພດສີນຄ້າ"
+                .Columns(1).HeaderText = "ຊະນິດສີນຄ້າ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

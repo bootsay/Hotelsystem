@@ -19,40 +19,36 @@ Public Class frmroom
     End Sub
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        Try
-            If txtphone.Text = "" Then
-                MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                txtphone.Select()
-                Return
-            End If
-            If txtroomid.Text = "" Then
-                MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                txtphone.Select()
-                Return
-            End If
-            If txtdes.Text = "" Then
-                MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                txtphone.Select()
-                Return
-            End If
-            Dim activates As Boolean
-            If chkactivate.Checked = True Then
-                activates = True
-            Else
-                activates = False
-            End If
-            room.save(txtid.Text, cbroomtype.SelectedValue, cbroomlocation.SelectedValue, txtphone.Text, txtroomid.Text, txtdes.Text, activates, cbstatus.SelectedValue)
-            txtphone.Clear()
-            txtroomid.Clear()
-            txtdes.Clear()
-            btnsave.Enabled = False
-            room.loadtbfroom(dgvshow)
-            txtid.Text = room.runid
+        If txtphone.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtphone.Select()
-            enablesave()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+            Return
+        End If
+        If txtroomid.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtphone.Select()
+            Return
+        End If
+        If txtdes.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtphone.Select()
+            Return
+        End If
+        Dim activates As Boolean
+        If chkactivate.Checked = True Then
+            activates = True
+        Else
+            activates = False
+        End If
+        room.save(txtid.Text, cbroomtype.SelectedValue, cbroomlocation.SelectedValue, txtphone.Text, txtroomid.Text, txtdes.Text, activates, cbstatus.SelectedValue)
+        txtphone.Clear()
+        txtroomid.Clear()
+        txtdes.Clear()
+        btnsave.Enabled = False
+        room.loadtbfroom(dgvshow)
+        txtid.Text = room.runid
+        txtphone.Select()
+        enablesave()
     End Sub
     Private Sub enablesave()
         btnsave.Enabled = True
@@ -107,8 +103,8 @@ Public Class frmroom
                 txtid.Text = .CurrentRow.Cells(0).Value
                 cbroomtype.Text = .CurrentRow.Cells(1).Value
                 cbroomlocation.Text = .CurrentRow.Cells(2).Value
-                txtroomid.Text = .CurrentRow.Cells(3).Value
-                txtphone.Text = .CurrentRow.Cells(4).Value
+                txtphone.Text = .CurrentRow.Cells(3).Value
+                txtroomid.Text = .CurrentRow.Cells(4).Value
                 txtdes.Text = .CurrentRow.Cells(5).Value
                 chkactivate.Checked = .CurrentRow.Cells(6).Value
                 cbstatus.Text = .CurrentRow.Cells(7).Value
@@ -177,13 +173,5 @@ Public Class frmroom
         cbstatus.Enabled = True
         chkactivate.Enabled = True
         enablesave()
-    End Sub
-
-    Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles ButtonX3.Click
-        frmroomlocation.Show()
-    End Sub
-
-    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
-        frmroomtype.Show()
     End Sub
 End Class

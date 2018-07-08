@@ -6,10 +6,10 @@ Public Class tbfcheckin
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
 
-    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, roomid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, statusid As Integer)
+    Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,userid,roomid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark,statusid)values('" & checkinNO & "','" & checkinid & "','" & userid & "','" & roomid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "',N'" & remark & "','" & statusid & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,reserveNO,inoutid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark)values('" & checkinNO & "','" & checkinid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -21,10 +21,10 @@ Public Class tbfcheckin
         Return True
     End Function
 
-    Public Function delete(checkinid As Integer)
+    Public Function delete(checkinNO As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbfcheckin where checkinid='" & checkinid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbfcheckin where checkinNO='" & checkinNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -36,10 +36,10 @@ Public Class tbfcheckin
         Return True
     End Function
 
-    Public Function update(checkinNO As String, checkinid As Integer, userid As Integer, roomid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, statusid As Integer)
+    Public Function update(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', userid='" & userid & "', roomid='" & roomid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark='" & remark & "', statusid='" & statusid & "' where checkinNO='" & checkinNO & "'", cn.conn)
+            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', reserveNO='" & reserveNO & "', inoutid='" & inoutid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark='" & remark & "' where checkinNO='" & checkinNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -68,7 +68,7 @@ Public Class tbfcheckin
                 idorder = 1
             End If
             id = idorder
-            id = String.Format("{0}{1}", "CIN", idorder.ToString().PadLeft(length, "0"))
+            id = String.Format("{0}{1}", "CHKIN", idorder.ToString().PadLeft(length, "0"))
             re.Close()
             cm.Dispose()
             cn.conn.Close()
@@ -131,7 +131,7 @@ Public Class tbfcheckin
                 .Columns(18).HeaderText = "ຈຳນວນຄົນ"
                 .Columns(19).HeaderText = "ປະເພດຄາບເຂົ້າ"
                 .Columns(20).HeaderText = "ປະເພດນຳໃຊ້"
-                .Columns(21).Visible = False
+                .Columns(21).HeaderText = "ໝາຍເຫດ"
                 .Columns(22).Visible = False
                 .Columns(23).Visible = False
                 .Columns(24).Visible = False
@@ -142,7 +142,6 @@ Public Class tbfcheckin
                 .Columns(29).Visible = False
                 .Columns(30).Visible = False
                 .Columns(31).Visible = False
-                .Columns(32).Visible = False
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
