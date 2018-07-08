@@ -49,3 +49,7 @@ C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSyst
 C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\obj\Debug\HotelSystem.xml
 C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\obj\Debug\HotelSystem.pdb
 C:\Users\BOOT\Documents\Visual Studio 2012\Projects\System_HotelSystem\HotelSystem\bin\Debug\System_HotelSystem.exe.config
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\bin\Debug\HotelSystem.exe.config
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.exe
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.xml
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.pdb
