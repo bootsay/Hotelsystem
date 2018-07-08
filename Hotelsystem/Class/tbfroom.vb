@@ -5,6 +5,17 @@ Public Class tbfroom
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
+    Public Function getroom(floorid As Integer, dt As DataTable)
+        cn.connect()
+        Try
+            dt.Clear()
+            da = New SqlDataAdapter("select * from viewroominfo where locationid='" & floorid & "'", cn.conn)
+            da.Fill(dt)
+
+        Catch ex As Exception
+
+        End Try
+    End Function
 
     Public Function save(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As Integer, des As String, activate As String, statusid As Integer)
         cn.connect()
