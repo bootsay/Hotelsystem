@@ -15,6 +15,7 @@ Public Class tbfroom
         Catch ex As Exception
 
         End Try
+        Return True
     End Function
 
     Public Function save(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As Integer, des As String, activate As String, statusid As Integer)
