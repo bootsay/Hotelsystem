@@ -157,7 +157,7 @@ Public Class tbitemlist
                 .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ນໍ້າເບີຫ້ອງ"
                 .Columns(2).HeaderText = "ຊື່ສິນຄ້າ"
-                .Columns(3).HeaderText = "ນໍ້ຈໍານວນ"
+                .Columns(3).HeaderText = "ຈໍານວນ"
                 .Columns(4).HeaderText = "ລາຄາ"
                 .Columns(4).DefaultCellStyle.Format = "#,###"
                 .Columns(5).HeaderText = "ລາຄາລວມ"

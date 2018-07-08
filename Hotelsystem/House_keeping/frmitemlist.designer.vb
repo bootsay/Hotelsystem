@@ -158,7 +158,7 @@ Partial Class frmitemlist
         Me.btnsave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnsave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnsave.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save_icon
+        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save_icon
         Me.btnsave.ImageFixedSize = New System.Drawing.Size(32, 32)
         Me.btnsave.Location = New System.Drawing.Point(119, 3)
         Me.btnsave.Name = "btnsave"
@@ -171,7 +171,7 @@ Partial Class frmitemlist
         Me.btnedit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnedit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnedit.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Add_product
+        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Add_product
         Me.btnedit.Location = New System.Drawing.Point(215, 3)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(88, 45)
@@ -183,7 +183,7 @@ Partial Class frmitemlist
         Me.btnupdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnupdate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnupdate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources._1472720664_document_open
+        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources._1472720664_document_open
         Me.btnupdate.Location = New System.Drawing.Point(309, 3)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(92, 45)
@@ -195,7 +195,7 @@ Partial Class frmitemlist
         Me.btndelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btndelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btndelete.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
+        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
         Me.btndelete.Location = New System.Drawing.Point(407, 3)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(46, 45)
