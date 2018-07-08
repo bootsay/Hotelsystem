@@ -40,7 +40,7 @@ Public Class tbfroomlocation
     Public Function update(locationid As Integer, locationname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbcategory set locationname=N'" & locationname & "' where locationid='" & locationid & "'", cn.conn)
+            cm = New SqlCommand("update tbfroomlocation set locationname=N'" & locationname & "' where locationid='" & locationid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -88,6 +88,22 @@ Public Class tbfroomlocation
             End With
         Catch ex As Exception
 
+        End Try
+        Return True
+    End Function
+    Public Function comboroomlocation(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfroomlocation order by locationid", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("locationname").ToString
+                .ValueMember = dt.Columns("locationid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

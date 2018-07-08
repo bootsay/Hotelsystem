@@ -231,7 +231,7 @@ Partial Class frmcustomertype
         Me.txtcustomertype.Location = New System.Drawing.Point(143, 49)
         Me.txtcustomertype.Margin = New System.Windows.Forms.Padding(4)
         Me.txtcustomertype.Name = "txtcustomertype"
-        Me.txtcustomertype.Size = New System.Drawing.Size(471, 35)
+        Me.txtcustomertype.Size = New System.Drawing.Size(347, 35)
         Me.txtcustomertype.TabIndex = 3
         '
         'txtid
@@ -243,7 +243,7 @@ Partial Class frmcustomertype
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(471, 35)
+        Me.txtid.Size = New System.Drawing.Size(347, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
@@ -281,6 +281,7 @@ Partial Class frmcustomertype
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.RowTemplate.Height = 28
+        Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvshow.Size = New System.Drawing.Size(625, 335)
         Me.dgvshow.TabIndex = 3
         '
@@ -289,6 +290,7 @@ Partial Class frmcustomertype
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(639, 506)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False

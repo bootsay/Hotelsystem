@@ -1,6 +1,6 @@
 ﻿Public Class frmvillage
     Dim village As New tbvillage
-    Dim cate As New tbprovince
+    Dim province As New tbprovince
     Dim district As New tbdistrict
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         If cbprovince.SelectedValue < 1 Then
@@ -27,7 +27,7 @@
 
     Private Sub frmvillage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtid.Text = village.runid
-        cate.comboprovince(cbprovince)
+        province.comboprovince(cbprovince)
         village.loadtbvillage(dgvshow)
         enablesave()
         txtvillage.Select()
@@ -89,7 +89,7 @@
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         village.update(txtid.Text, cbdistrict.SelectedValue, txtvillage.Text)
         txtvillage.ReadOnly = False
-        txtid.Text = cate.runid
+        txtid.Text = province.runid
         village.loadtbvillage(dgvshow)
         txtvillage.Clear()
         txtvillage.Select()

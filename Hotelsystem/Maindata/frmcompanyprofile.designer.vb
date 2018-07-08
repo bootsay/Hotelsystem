@@ -23,7 +23,7 @@ Partial Class frmcompanyprofile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcompanyprofile))
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
@@ -36,24 +36,25 @@ Partial Class frmcompanyprofile
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtstart = New System.Windows.Forms.DateTimePicker()
         Me.pimage = New System.Windows.Forms.PictureBox()
         Me.txtemail = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtfax = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.txttel = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtaddress = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtbsnnamelao = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtname = New System.Windows.Forms.TextBox()
         Me.txtbsnnid = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtfax = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -119,7 +120,7 @@ Partial Class frmcompanyprofile
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1, Me.btnnew})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(980, 39)
@@ -194,8 +195,8 @@ Partial Class frmcompanyprofile
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.dtstart)
         Me.Panel1.Controls.Add(Me.pimage)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.txtemail)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label6)
@@ -206,7 +207,7 @@ Partial Class frmcompanyprofile
         Me.Panel1.Controls.Add(Me.txtaddress)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.txtbsnnamelao)
+        Me.Panel1.Controls.Add(Me.txtname)
         Me.Panel1.Controls.Add(Me.txtbsnnid)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
@@ -216,13 +217,21 @@ Partial Class frmcompanyprofile
         Me.Panel1.Size = New System.Drawing.Size(974, 225)
         Me.Panel1.TabIndex = 2
         '
+        'dtstart
+        '
+        Me.dtstart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtstart.Location = New System.Drawing.Point(489, 86)
+        Me.dtstart.Name = "dtstart"
+        Me.dtstart.Size = New System.Drawing.Size(200, 35)
+        Me.dtstart.TabIndex = 17
+        '
         'pimage
         '
         Me.pimage.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pimage.ErrorImage = CType(resources.GetObject("pimage.ErrorImage"), System.Drawing.Image)
         Me.pimage.Image = CType(resources.GetObject("pimage.Image"), System.Drawing.Image)
-        Me.pimage.Location = New System.Drawing.Point(622, 83)
+        Me.pimage.Location = New System.Drawing.Point(841, 52)
         Me.pimage.Name = "pimage"
         Me.pimage.Size = New System.Drawing.Size(120, 135)
         Me.pimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -234,20 +243,50 @@ Partial Class frmcompanyprofile
         Me.txtemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtemail.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtemail.Location = New System.Drawing.Point(90, 154)
+        Me.txtemail.Location = New System.Drawing.Point(489, 46)
         Me.txtemail.Name = "txtemail"
         Me.txtemail.Size = New System.Drawing.Size(294, 34)
         Me.txtemail.TabIndex = 11
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(413, 90)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(73, 27)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "ວັນທີກໍ່ຕັ້ງ:"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(37, 157)
+        Me.Label6.Location = New System.Drawing.Point(436, 49)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(50, 27)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "ອີເມວ:"
+        '
+        'txtfax
+        '
+        Me.txtfax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtfax.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtfax.Location = New System.Drawing.Point(489, 6)
+        Me.txtfax.Name = "txtfax"
+        Me.txtfax.Size = New System.Drawing.Size(294, 34)
+        Me.txtfax.TabIndex = 9
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(440, 9)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(45, 27)
+        Me.Label7.TabIndex = 8
+        Me.Label7.Text = "ແຟັກ:"
         '
         'txttel
         '
@@ -289,15 +328,25 @@ Partial Class frmcompanyprofile
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "ທີ່ຢູ່:"
         '
-        'txtbsnnamelao
+        'Label9
         '
-        Me.txtbsnnamelao.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(853, 15)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(92, 27)
+        Me.Label9.TabIndex = 4
+        Me.Label9.Text = "ໂລໂກບໍລິສັດ:"
+        '
+        'txtname
+        '
+        Me.txtname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtbsnnamelao.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtbsnnamelao.Location = New System.Drawing.Point(90, 40)
-        Me.txtbsnnamelao.Name = "txtbsnnamelao"
-        Me.txtbsnnamelao.Size = New System.Drawing.Size(294, 34)
-        Me.txtbsnnamelao.TabIndex = 3
+        Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtname.Location = New System.Drawing.Point(90, 40)
+        Me.txtname.Name = "txtname"
+        Me.txtname.Size = New System.Drawing.Size(294, 34)
+        Me.txtname.TabIndex = 3
         '
         'txtbsnnid
         '
@@ -336,14 +385,14 @@ Partial Class frmcompanyprofile
         Me.dgvshow.AllowUserToResizeRows = False
         Me.dgvshow.BackgroundColor = System.Drawing.SystemColors.Control
         Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(3, 273)
@@ -358,55 +407,15 @@ Partial Class frmcompanyprofile
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Label7
+        'btnnew
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(440, 9)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(45, 27)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "ແຟັກ:"
-        '
-        'txtfax
-        '
-        Me.txtfax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtfax.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtfax.Location = New System.Drawing.Point(489, 6)
-        Me.txtfax.Name = "txtfax"
-        Me.txtfax.Size = New System.Drawing.Size(294, 34)
-        Me.txtfax.TabIndex = 9
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(399, 46)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(90, 27)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "ວັນທີເລີ່ມຕົ້ນ:"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBox2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(489, 43)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(294, 34)
-        Me.TextBox2.TabIndex = 11
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(526, 138)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(92, 27)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "ໂລໂກບໍລິສັດ:"
+        Me.btnnew.ForeColor = System.Drawing.Color.Black
+        Me.btnnew.Image = Global.Hotelsystem.My.Resources.Resources.New_file
+        Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnnew.Name = "btnnew"
+        Me.btnnew.Size = New System.Drawing.Size(90, 36)
+        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
         'frmcompanyprofile
         '
@@ -448,7 +457,7 @@ Partial Class frmcompanyprofile
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents btnupdate As System.Windows.Forms.ToolStripButton
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents txtbsnnamelao As System.Windows.Forms.TextBox
+    Friend WithEvents txtname As System.Windows.Forms.TextBox
     Friend WithEvents txtbsnnid As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -462,9 +471,10 @@ Partial Class frmcompanyprofile
     Friend WithEvents pimage As System.Windows.Forms.PictureBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtfax As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents dtstart As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnnew As System.Windows.Forms.ToolStripButton
 End Class

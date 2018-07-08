@@ -9,7 +9,7 @@ Public Class tbfreserve
     Public Function save(reserveNo As String, reserveid As Integer, customerNo As String, roomid As String, datereserve As String, datecheckin As String, datecheckout As String, numberofpax As Integer, remark As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbexchange(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datechecout,numberofpax,remark)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & numberofpax & "','" & remark & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfreserve(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datecheckout,numberofpax,remark)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & numberofpax & "',N'" & remark & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -24,7 +24,7 @@ Public Class tbfreserve
     Public Function delete(reserveid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbfreserve where reserveNO='" & reserveid & "'", cn.conn)
+            cm = New SqlCommand("delete from tbfreserve where reserveid='" & reserveid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -52,11 +52,37 @@ Public Class tbfreserve
         Return True
     End Function
 
+    Public Function runidNO()
+        cn.connect()
+        Dim id As String = Nothing
+        Dim idorder As Integer
+        Dim length As Integer = 4
+        Try
+            cm = New SqlCommand("select top 1 reserveid from tbfreserve order by reserveid desc", cn.conn)
+            re = cm.ExecuteReader
+            If re.HasRows Then
+                While re.Read
+                    idorder = re.GetValue(0) + 1
+                End While
+            Else
+                idorder = 1
+            End If
+            id = idorder
+            id = String.Format("{0}{1}", "R", idorder.ToString().PadLeft(length, "0"))
+            re.Close()
+            cm.Dispose()
+            cn.conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return id
+    End Function
     Public Function runid()
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 reserveNo from tbfreserve order by reserveNo desc", cn.conn)
+            cm = New SqlCommand("select top 1 reserveid from tbfreserve order by reserveid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -74,7 +100,7 @@ Public Class tbfreserve
     Public Function loadtbfreserve(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbfreserve", cn.conn)
+            da = New SqlDataAdapter("select * from viewreserve", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -84,16 +110,25 @@ Public Class tbfreserve
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).HeaderText = "ເລກທີ"
-                .Columns(1).HeaderText = "ລະຫັດສັງຈອງ"
-                .Columns(2).HeaderText = "ລະຫັດລູກຄ້າ"
-                .Columns(3).HeaderText = "ລະຫັດຫ້ອງ"
+                .Columns(0).Visible = False
+                .Columns(1).HeaderText = "ເລກທີສັງຈອງ"
+                .Columns(2).HeaderText = "ຊື່ລູກຄ້າ"
+                .Columns(3).HeaderText = "ເບີຫ້ອງ"
                 .Columns(4).HeaderText = "ວັນທີຈອງ"
                 .Columns(5).HeaderText = "ວັນທີເຂົ້າ"
                 .Columns(6).HeaderText = "ວັນທີອອກ"
                 .Columns(7).HeaderText = "ຈຳນວນຄົນ"
                 .Columns(8).HeaderText = "ຄຳອະທິບາຍ"
+                .Columns(9).Visible = False
+                .Columns(10).Visible = False
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

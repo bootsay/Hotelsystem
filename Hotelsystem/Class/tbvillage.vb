@@ -96,4 +96,38 @@ Public Class tbvillage
         End Try
         Return True
     End Function
+    Public Function combovillage(districtid As Integer, cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbvillage where districtid='" & districtid & "'", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("villagename").ToString
+                .ValueMember = dt.Columns("villageid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function comboboxvillage(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbvillage ", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("villagename").ToString
+                .ValueMember = dt.Columns("villageid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
 End Class

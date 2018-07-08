@@ -97,6 +97,10 @@
       <DependentUpon>configuration.settings</DependentUpon>
     </Compile>
     <Compile Include="Class\Connectdb.vb" />
+    <Compile Include="Class\tbstatusall.vb" />
+    <Compile Include="Class\tbtitlename.vb" />
+    <Compile Include="Class\tbunit.vb" />
+    <Compile Include="Class\tbuser.vb" />
     <Compile Include="Class\tbvillage.vb" />
     <Compile Include="Class\formclose.vb" />
     <Compile Include="Class\tbbilldetailmoveitem.vb" />
@@ -162,6 +166,12 @@
       <DependentUpon>frmbilldetailmoveitem.vb</DependentUpon>
     </Compile>
     <Compile Include="Maindata\frmbilldetailmoveitem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maindata\frmstatus.designer.vb">
+      <DependentUpon>frmstatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maindata\frmstatus.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Maindata\frmchangeroom.designer.vb">
@@ -332,12 +342,6 @@
     <Compile Include="Maindata\frmcustomer.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Maindata\frmcustype.designer.vb">
-      <DependentUpon>frmcustype.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Maindata\frmcustype.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Maindata\frmdepartment.designer.vb">
       <DependentUpon>frmdepartment.vb</DependentUpon>
     </Compile>
@@ -405,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmbilldetailmoveitem.resx">
       <DependentUpon>frmbilldetailmoveitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maindata\frmstatus.resx">
+      <DependentUpon>frmstatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmchangeroom.resx">
       <DependentUpon>frmchangeroom.vb</DependentUpon>
@@ -489,9 +496,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmcustomer.resx">
       <DependentUpon>frmcustomer.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Maindata\frmcustype.resx">
-      <DependentUpon>frmcustype.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maindata\frmdepartment.resx">
       <DependentUpon>frmdepartment.vb</DependentUpon>

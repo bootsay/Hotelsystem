@@ -82,12 +82,28 @@ Public Class tbfcustomertype
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດປະເພດລູກຄ້າ"
-                .Columns(1).HeaderText = "ຊື່ປະເພດລູກຄ້າ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດລູກຄ້າ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
+        End Try
+        Return True
+    End Function
+    Public Function combocustomertype(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfcustomertype", cn.conn)
+            da.Fill(dt)
 
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("customertypename").ToString
+                .ValueMember = dt.Columns("customertypeid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

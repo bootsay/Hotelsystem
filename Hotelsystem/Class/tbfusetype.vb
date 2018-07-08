@@ -91,4 +91,21 @@ Public Class tbfusetype
         End Try
         Return True
     End Function
+    Public Function combousetype(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfusetype", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("usetypename").ToString
+                .ValueMember = dt.Columns("usetypeid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
 End Class

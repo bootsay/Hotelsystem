@@ -39,15 +39,14 @@ Partial Class frmcheckout
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.dtCheckout = New System.Windows.Forms.DateTimePicker()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtCheckoutId = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtCheckoutNO = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCheckoutId = New System.Windows.Forms.TextBox()
-        Me.txtCustomerNO = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.dtCheckout = New System.Windows.Forms.DateTimePicker()
+        Me.cbcustomer = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -205,10 +204,9 @@ Partial Class frmcheckout
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cbcustomer)
         Me.Panel1.Controls.Add(Me.dtCheckout)
         Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.txtCustomerNO)
         Me.Panel1.Controls.Add(Me.txtCheckoutId)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtCheckoutNO)
@@ -220,16 +218,48 @@ Partial Class frmcheckout
         Me.Panel1.Size = New System.Drawing.Size(625, 217)
         Me.Panel1.TabIndex = 2
         '
-        'Label3
+        'dtCheckout
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(24, 57)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 29)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "ລະຫັດແຈ້ງອອກ:"
+        Me.dtCheckout.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtCheckout.Location = New System.Drawing.Point(143, 98)
+        Me.dtCheckout.Name = "dtCheckout"
+        Me.dtCheckout.Size = New System.Drawing.Size(157, 35)
+        Me.dtCheckout.TabIndex = 6
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(36, 103)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(106, 29)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "ວັນທີ່ແຈ້ງອອກ:"
+        '
+        'txtCheckoutId
+        '
+        Me.txtCheckoutId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCheckoutId.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCheckoutId.Location = New System.Drawing.Point(307, 100)
+        Me.txtCheckoutId.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtCheckoutId.Name = "txtCheckoutId"
+        Me.txtCheckoutId.ReadOnly = True
+        Me.txtCheckoutId.Size = New System.Drawing.Size(102, 35)
+        Me.txtCheckoutId.TabIndex = 2
+        Me.txtCheckoutId.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(74, 59)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(65, 29)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "ຊື່ລູກຄ້າ:"
         '
         'txtCheckoutNO
         '
@@ -240,7 +270,7 @@ Partial Class frmcheckout
         Me.txtCheckoutNO.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCheckoutNO.Name = "txtCheckoutNO"
         Me.txtCheckoutNO.ReadOnly = True
-        Me.txtCheckoutNO.Size = New System.Drawing.Size(471, 35)
+        Me.txtCheckoutNO.Size = New System.Drawing.Size(293, 35)
         Me.txtCheckoutNO.TabIndex = 2
         '
         'Label1
@@ -281,57 +311,19 @@ Partial Class frmcheckout
         Me.dgvshow.Size = New System.Drawing.Size(625, 216)
         Me.dgvshow.TabIndex = 3
         '
-        'Label2
+        'cbcustomer
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(48, 100)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(92, 29)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "ເລກທີລູກຄ້າ:"
-        '
-        'txtCheckoutId
-        '
-        Me.txtCheckoutId.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.cbcustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCheckoutId.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCheckoutId.Location = New System.Drawing.Point(143, 54)
-        Me.txtCheckoutId.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCheckoutId.Name = "txtCheckoutId"
-        Me.txtCheckoutId.ReadOnly = True
-        Me.txtCheckoutId.Size = New System.Drawing.Size(471, 35)
-        Me.txtCheckoutId.TabIndex = 2
-        '
-        'txtCustomerNO
-        '
-        Me.txtCustomerNO.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCustomerNO.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCustomerNO.Location = New System.Drawing.Point(143, 97)
-        Me.txtCustomerNO.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtCustomerNO.Name = "txtCustomerNO"
-        Me.txtCustomerNO.Size = New System.Drawing.Size(471, 35)
-        Me.txtCustomerNO.TabIndex = 3
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(36, 144)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(106, 29)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "ວັນທີ່ແຈ້ງອອກ:"
-        '
-        'dtCheckout
-        '
-        Me.dtCheckout.Location = New System.Drawing.Point(143, 139)
-        Me.dtCheckout.Name = "dtCheckout"
-        Me.dtCheckout.Size = New System.Drawing.Size(293, 35)
-        Me.dtCheckout.TabIndex = 6
+        Me.cbcustomer.DisplayMember = "Text"
+        Me.cbcustomer.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbcustomer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbcustomer.FormattingEnabled = True
+        Me.cbcustomer.ItemHeight = 29
+        Me.cbcustomer.Location = New System.Drawing.Point(142, 53)
+        Me.cbcustomer.Name = "cbcustomer"
+        Me.cbcustomer.Size = New System.Drawing.Size(294, 35)
+        Me.cbcustomer.TabIndex = 29
         '
         'frmcheckout
         '
@@ -376,11 +368,10 @@ Partial Class frmcheckout
     Friend WithEvents txtCheckoutNO As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dgvshow As DevComponents.DotNetBar.Controls.DataGridViewX
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents dtCheckout As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents txtCustomerNO As System.Windows.Forms.TextBox
     Friend WithEvents txtCheckoutId As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cbcustomer As DevComponents.DotNetBar.Controls.ComboBoxEx
 End Class

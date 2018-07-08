@@ -82,12 +82,29 @@ Public Class tbmealtype
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດປະເພດຄາບເຂົ້າ"
-                .Columns(1).HeaderText = "ຊື່ປະເພດຄາບເຂົ້າ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດຄາບເຂົ້າ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
 
+        End Try
+        Return True
+    End Function
+    Public Function combomealtype(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbmealtype", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("mealtypename").ToString
+                .ValueMember = dt.Columns("mealtypeid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

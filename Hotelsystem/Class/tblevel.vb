@@ -82,8 +82,8 @@ Public Class tblevel
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດລະດັບ"
-                .Columns(1).HeaderText = "ຊື່ລະດັບ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ລະດັບ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

@@ -72,7 +72,7 @@ Public Class tbroomstatus
         Return id
     End Function
 
-    Public Function loadtblevel(dgv As DataGridView)
+    Public Function loadtbstatus(dgv As DataGridView)
         cn.connect()
         Try
             da = New SqlDataAdapter("select * from tbroomstatus", cn.conn)
@@ -82,12 +82,28 @@ Public Class tbroomstatus
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດສະຖານະ"
-                .Columns(1).HeaderText = "ຊື່ສະຖານະ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ສະຖານະ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
 
+        End Try
+        Return True
+    End Function
+    Public Function comboroomstatus(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbroomstatus order by statusid", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("statusname").ToString
+                .ValueMember = dt.Columns("statusid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

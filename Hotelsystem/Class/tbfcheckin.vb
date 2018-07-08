@@ -6,10 +6,10 @@ Public Class tbfcheckin
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
 
-    Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, roomid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, statusid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,reserveNO,inoutid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark)values('" & checkinNO & "','" & checkinid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,userid,roomid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark,statusid)values('" & checkinNO & "','" & checkinid & "','" & userid & "','" & roomid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "',N'" & remark & "','" & statusid & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -21,10 +21,10 @@ Public Class tbfcheckin
         Return True
     End Function
 
-    Public Function delete(checkinNO As Integer)
+    Public Function delete(checkinid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbfcheckin where checkinNO='" & checkinNO & "'", cn.conn)
+            cm = New SqlCommand("delete from tbfcheckin where checkinid='" & checkinid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -36,10 +36,10 @@ Public Class tbfcheckin
         Return True
     End Function
 
-    Public Function update(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function update(checkinNO As String, checkinid As Integer, userid As Integer, roomid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, statusid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', reserveNO='" & reserveNO & "', inoutid='" & inoutid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark='" & remark & "' where checkinNO='" & checkinNO & "'", cn.conn)
+            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', userid='" & userid & "', roomid='" & roomid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark='" & remark & "', statusid='" & statusid & "' where checkinNO='" & checkinNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -52,11 +52,37 @@ Public Class tbfcheckin
         Return True
     End Function
 
+    Public Function runidNO()
+        cn.connect()
+        Dim id As String = Nothing
+        Dim idorder As Integer
+        Dim length As Integer = 4
+        Try
+            cm = New SqlCommand("select top 1 checkinid from tbfcheckin order by checkinid desc", cn.conn)
+            re = cm.ExecuteReader
+            If re.HasRows Then
+                While re.Read
+                    idorder = re.GetValue(0) + 1
+                End While
+            Else
+                idorder = 1
+            End If
+            id = idorder
+            id = String.Format("{0}{1}", "CIN", idorder.ToString().PadLeft(length, "0"))
+            re.Close()
+            cm.Dispose()
+            cn.conn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return id
+    End Function
     Public Function runid()
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 checkinNO from tbfcheckin order by checkinNO desc", cn.conn)
+            cm = New SqlCommand("select top 1 checkinid from tbfcheckin order by checkinid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -74,7 +100,7 @@ Public Class tbfcheckin
     Public Function loadtbfcheckin(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbfcheckin", cn.conn)
+            da = New SqlDataAdapter("select * from viewcheckin", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -85,19 +111,38 @@ Public Class tbfcheckin
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
                 .Columns(0).HeaderText = "ເລກທີແຈ້ງເຂົ້າ"
-                .Columns(1).HeaderText = "ລະຫັດແຈ້ງເຂົ້າ"
-                .Columns(2).HeaderText = "ເລກທີສັງຈອງ"
-                .Columns(3).HeaderText = "ລະຫັດເຂົ້າອອກ"
-                .Columns(4).HeaderText = "ເລກທີລູກຄ້າ"
-                .Columns(5).HeaderText = "ລະຫັດປະເພດສັງຈອງ"
-                .Columns(6).HeaderText = "ລະຫັດປະເພດຕະຫຼາດ"
-                .Columns(7).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
-                .Columns(8).HeaderText = "ວັນທີແຈ້ງອອກ"
-                .Columns(9).HeaderText = "ຈຳນວນຄົນ"
-                .Columns(10).HeaderText = "ລະຫັດປະເພດຄາບເຂົ້າ"
-                .Columns(11).HeaderText = "ລະຫັດປະເພດໃຊ້"
-                .Columns(12).HeaderText = "ໝາຍເຫດ"
-                .Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(1).Visible = False
+                .Columns(2).HeaderText = "ທີ່ຕັ້ງຫ້ອງ"
+                .Columns(3).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີຫ້ອງ"
+                .Columns(5).HeaderText = "ປະເພດລູກຄ້າ"
+                .Columns(6).HeaderText = "ຄຳນຳໜ້າ"
+                .Columns(7).HeaderText = "ຊື່"
+                .Columns(8).HeaderText = "ນາມສະກຸນ"
+                .Columns(9).HeaderText = "ຊັ້ນຊາດ"
+                .Columns(10).HeaderText = "ບ້ານ"
+                .Columns(11).HeaderText = "ເມືອງ"
+                .Columns(12).HeaderText = "ແຂວງ"
+                .Columns(13).HeaderText = "ປະເທດ"
+                .Columns(14).HeaderText = "ປະເພດສັງຈອງ"
+                .Columns(15).HeaderText = "ປະເພດຕະຫຼາດ"
+                .Columns(16).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
+                .Columns(17).HeaderText = "ວັນທີແຈ້ງອອກ"
+                .Columns(18).HeaderText = "ຈຳນວນຄົນ"
+                .Columns(19).HeaderText = "ປະເພດຄາບເຂົ້າ"
+                .Columns(20).HeaderText = "ປະເພດນຳໃຊ້"
+                .Columns(21).Visible = False
+                .Columns(22).Visible = False
+                .Columns(23).Visible = False
+                .Columns(24).Visible = False
+                .Columns(25).Visible = False
+                .Columns(26).Visible = False
+                .Columns(27).Visible = False
+                .Columns(28).Visible = False
+                .Columns(29).Visible = False
+                .Columns(30).Visible = False
+                .Columns(31).Visible = False
+                .Columns(32).Visible = False
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

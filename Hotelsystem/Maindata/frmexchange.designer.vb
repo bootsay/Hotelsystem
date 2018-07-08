@@ -27,18 +27,19 @@ Partial Class frmexchange
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvexchange = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtchina = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.txtdolla = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtbaht = New System.Windows.Forms.TextBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.btnedit = New System.Windows.Forms.ToolStripButton()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtchina = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvexchange, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupPanel1.SuspendLayout()
@@ -84,6 +85,7 @@ Partial Class frmexchange
         Me.dgvexchange.ReadOnly = True
         Me.dgvexchange.RowHeadersVisible = False
         Me.dgvexchange.RowTemplate.Height = 28
+        Me.dgvexchange.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvexchange.Size = New System.Drawing.Size(488, 369)
         Me.dgvexchange.TabIndex = 2
         '
@@ -127,11 +129,21 @@ Partial Class frmexchange
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
         Me.GroupPanel1.TabIndex = 3
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Location = New System.Drawing.Point(389, 136)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(33, 29)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "ກີບ"
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Location = New System.Drawing.Point(443, 95)
+        Me.Label4.Location = New System.Drawing.Point(390, 95)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(33, 29)
         Me.Label4.TabIndex = 10
@@ -141,44 +153,61 @@ Partial Class frmexchange
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(17, 53)
+        Me.Label2.Location = New System.Drawing.Point(89, 53)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(155, 29)
+        Me.Label2.Size = New System.Drawing.Size(83, 29)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "ຈໍານວນເງີນ 1 ບາດ ="
+        Me.Label2.Text = " 1 ບາດ ="
+        '
+        'txtchina
+        '
+        Me.txtchina.Location = New System.Drawing.Point(174, 133)
+        Me.txtchina.Name = "txtchina"
+        Me.txtchina.Size = New System.Drawing.Size(213, 35)
+        Me.txtchina.TabIndex = 5
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Location = New System.Drawing.Point(442, 53)
+        Me.Label3.Location = New System.Drawing.Point(389, 53)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(33, 29)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "ກີບ"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Location = New System.Drawing.Point(86, 135)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(85, 29)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = " 1 ຢວນ ="
+        '
         'txtdolla
         '
         Me.txtdolla.Location = New System.Drawing.Point(175, 92)
         Me.txtdolla.Name = "txtdolla"
-        Me.txtdolla.Size = New System.Drawing.Size(265, 35)
+        Me.txtdolla.Size = New System.Drawing.Size(212, 35)
         Me.txtdolla.TabIndex = 5
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(8, 94)
+        Me.Label1.Location = New System.Drawing.Point(88, 94)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(164, 29)
+        Me.Label1.Size = New System.Drawing.Size(84, 29)
         Me.Label1.TabIndex = 4
-        Me.Label1.Text = "ຈໍານວນເງີນ 1 ໂດລາ ="
+        Me.Label1.Text = "1 ໂດລາ ="
         '
         'txtbaht
         '
         Me.txtbaht.Location = New System.Drawing.Point(175, 50)
         Me.txtbaht.Name = "txtbaht"
-        Me.txtbaht.Size = New System.Drawing.Size(264, 35)
+        Me.txtbaht.Size = New System.Drawing.Size(212, 35)
         Me.txtbaht.TabIndex = 3
         '
         'ToolStrip1
@@ -187,7 +216,7 @@ Partial Class frmexchange
         Me.ToolStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnupdate, Me.btnedit})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnupdate, Me.btnedit, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -215,32 +244,16 @@ Partial Class frmexchange
         Me.btnedit.Size = New System.Drawing.Size(87, 36)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
-        'Label5
+        'ToolStripButton1
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Location = New System.Drawing.Point(14, 135)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(157, 29)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "ຈໍານວນເງີນ 1 ຢວນ ="
-        '
-        'txtchina
-        '
-        Me.txtchina.Location = New System.Drawing.Point(174, 133)
-        Me.txtchina.Name = "txtchina"
-        Me.txtchina.Size = New System.Drawing.Size(265, 35)
-        Me.txtchina.TabIndex = 5
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Location = New System.Drawing.Point(442, 136)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(33, 29)
-        Me.Label6.TabIndex = 10
-        Me.Label6.Text = "ກີບ"
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'frmexchange
         '
@@ -248,6 +261,7 @@ Partial Class frmexchange
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(494, 561)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
@@ -282,4 +296,5 @@ Partial Class frmexchange
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtchina As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class

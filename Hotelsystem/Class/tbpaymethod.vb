@@ -72,7 +72,7 @@ Public Class tbpaymethod
         Return id
     End Function
 
-    Public Function loadtblevel(dgv As DataGridView)
+    Public Function loadtbpaymethod(dgv As DataGridView)
         cn.connect()
         Try
             da = New SqlDataAdapter("select * from tbpaymethod", cn.conn)

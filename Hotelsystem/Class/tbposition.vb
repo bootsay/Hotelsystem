@@ -72,19 +72,21 @@ Public Class tbposition
         Return id
     End Function
 
-    Public Function loadtblevel(dgv As DataGridView)
+    Public Function loadtbposition(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbposition", cn.conn)
+            da = New SqlDataAdapter("select * from viewposition order by positionid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດຕຳແໜ່ງ"
-                .Columns(1).HeaderText = "ລະຫັດພະແນກ"
-                .Columns(2).HeaderText = "ຊື່ຕຳແໜ່ງ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ພະແນກ"
+                .Columns(2).HeaderText = "ຕຳແໜ່ງ"
+                .Columns(3).Visible = False
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

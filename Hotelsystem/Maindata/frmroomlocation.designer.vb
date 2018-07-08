@@ -216,12 +216,12 @@ Partial Class frmroomlocation
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(47, 52)
+        Me.Label3.Location = New System.Drawing.Point(18, 52)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(46, 29)
+        Me.Label3.Size = New System.Drawing.Size(76, 29)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "ທີ່ຕັ້ງ:"
+        Me.Label3.Text = "ທີ່ຕັ້ງຫ້ອງ:"
         '
         'txtroomlocation
         '
@@ -231,7 +231,7 @@ Partial Class frmroomlocation
         Me.txtroomlocation.Location = New System.Drawing.Point(96, 49)
         Me.txtroomlocation.Margin = New System.Windows.Forms.Padding(4)
         Me.txtroomlocation.Name = "txtroomlocation"
-        Me.txtroomlocation.Size = New System.Drawing.Size(518, 35)
+        Me.txtroomlocation.Size = New System.Drawing.Size(423, 35)
         Me.txtroomlocation.TabIndex = 3
         '
         'txtid
@@ -243,7 +243,7 @@ Partial Class frmroomlocation
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(518, 35)
+        Me.txtid.Size = New System.Drawing.Size(423, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1

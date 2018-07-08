@@ -40,7 +40,7 @@ Public Class tbfinouttype
     Public Function update(inoutid As Integer, inoutname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfinouttype set inoutname=N'" & inoutname & "' where customertypeid='" & inoutid & "'", cn.conn)
+            cm = New SqlCommand("update tbfinouttype set inoutname=N'" & inoutname & "' where inoutid='" & inoutid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -82,8 +82,8 @@ Public Class tbfinouttype
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດເຂົ້າອອກ"
-                .Columns(1).HeaderText = "ຊື່ເຂົ້າອອກ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດເຂົ້າອອກ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

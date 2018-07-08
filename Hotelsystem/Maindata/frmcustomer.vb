@@ -1,332 +1,268 @@
 ﻿Public Class frmcustomer
-    'Dim customer As New tbsuppliers
-    'Dim adds As New tbprovience
-    'Dim custype_C As New tbcustomertype
-    'Dim txtid As New TextBox
-    'Dim custype As String
-    'Dim village As String
-    'Dim provience As String
-    'Dim district As String
-    'Private Sub frmcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    '    Try
-    '        txtid.Text = customer.runidsupplier
-    '        custype_C.combocustype(cbtype)
-    '        cbtype.SelectedValue = 0
-    '        custype = "ລູກຄ້າ"
-    '        'rdcustomer.Checked = True
-    '        adds.comboprovience(cbprovience)
-    '        cbprovience.SelectedValue = 1
-    '        customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '        enableSave()
-    '        txtcount.Text = dgvcustomer.Rows.Count
-    '    Catch ex As Exception
-    '        MessageBox.Show(ex.Message)
-    '    End Try
-    'End Sub
-    'Private Sub enableSave()
-    '    btnsave.Enabled = True
-    '    btnedit.Enabled = False
-    '    btnupdate.Enabled = False
-    '    btndelete.Enabled = False
-    '    btnnew.Enabled = False
-    'End Sub
-    'Private Sub enableEdit()
-    '    btnsave.Enabled = False
-    '    btnedit.Enabled = True
-    '    btnupdate.Enabled = False
-    '    btndelete.Enabled = True
-    '    btnnew.Enabled = True
-    'End Sub
-    'Private Sub enableUpdate()
-    '    btnsave.Enabled = False
-    '    btnedit.Enabled = False
-    '    btnupdate.Enabled = True
-    '    btndelete.Enabled = False
-    '    btnnew.Enabled = False
-    'End Sub
-    'Private Sub cleartext()
-    '    txtcomname.Clear()
-    '    txtcontactname.Clear()
+    Dim customer As New tbcustomer
+    Dim customertype As New tbfcustomertype
+    Dim roomrate As New tbfroomrate
+    Dim titlename As New tbtitlename
+    Dim province As New tbprovince
+    Dim district As New tbdistrict
+    Dim village As New tbvillage
+    Private Sub frmcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            txtCustomerID.Text = customer.runidNO
+            customertype.combocustomertype(cbcustomertype)
+            roomrate.comboroomrate(cbRoomrate)
+            titlename.combotitlename(cbtitlename)
+            province.comboprovince(cbprovince)
+            customer.loadtbcustomer(dgvcustomer)
+            enableSave()
+            txtCustomerName.Select()
 
-    '    txttel.Clear()
-    '    txtfax.Clear()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub enableSave()
+        btnsave.Enabled = True
+        btnedit.Enabled = False
+        btnupdate.Enabled = False
+        btndelete.Enabled = False
+        btnnew.Enabled = False
+    End Sub
+    Private Sub enableEdit()
+        btnsave.Enabled = False
+        btnedit.Enabled = True
+        btnupdate.Enabled = False
+        btndelete.Enabled = True
+        btnnew.Enabled = True
+    End Sub
+    Private Sub enableUpdate()
+        btnsave.Enabled = False
+        btnedit.Enabled = False
+        btnupdate.Enabled = True
+        btndelete.Enabled = False
+        btnnew.Enabled = False
+    End Sub
+    Private Sub cleartext()
+        txtCustomerName.Clear()
+        txtEmail.Clear()
+        txtIdcard.Clear()
+        txttel.Clear()
+        txtFax.Clear()
+        txtNationality.Clear()
+        txtPassport.Clear()
+        txtSurname.Clear()
 
-    '    txtemail.Clear()
-    'End Sub
-    'Private Sub disabletext()
-    '    txtcomname.Enabled = False
-    '    txtcontactname.Enabled = False
+    End Sub
+    Private Sub disabletext()
+        txtCustomerName.Enabled = False
+        txtEmail.Enabled = False
+        txtTel.Enabled = False
+        txtFax.Enabled = False
+        txtPassport.Enabled = False
+        txtSurname.Enabled = False
+        txtNationality.Enabled = False
+        txtIdcard.Enabled = False
 
-    '    txttel.Enabled = False
-    '    txtfax.Enabled = False
+        cbcustomertype.Enabled = False
+        cbRoomrate.Enabled = False
+        cbtitlename.Enabled = False
+        cbvillage.Enabled = False
+        cbdistrict.Enabled = False
+        cbprovince.Enabled = False
+        chkActivate.Enabled = False
+    End Sub
+    Private Sub Enabletext()
+        txtCustomerName.Enabled = True
+        txtEmail.Enabled = True
+        txtTel.Enabled = True
+        txtFax.Enabled = True
+        txtPassport.Enabled = True
+        txtSurname.Enabled = True
+        txtNationality.Enabled = True
+        txtIdcard.Enabled = True
 
-    '    txtemail.Enabled = False
-    'End Sub
-    'Private Sub Enabletext()
-    '    txtcomname.Enabled = True
-    '    txtcontactname.Enabled = True
+        cbcustomertype.Enabled = True
+        cbRoomrate.Enabled = True
+        cbtitlename.Enabled = True
+        cbvillage.Enabled = True
+        cbdistrict.Enabled = True
+        cbprovince.Enabled = True
+        chkActivate.Enabled = True
+    End Sub
+    Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click     
+        If txtCustomerName.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtCustomerName.Focus()
+            Return
+        End If
+        If txtSurname.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtSurname.Focus()
+            Return
+        End If
 
-    '    txttel.Enabled = True
-    '    txtfax.Enabled = True
+        If txtNationality.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtNationality.Focus()
+            Return
+        End If
+        If txtPassport.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtPassport.Focus()
+            Return
+        End If
+        If txtIdcard.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtIdcard.Focus()
+            Return
+        End If
+        If txtTel.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtTel.Focus()
+            Return
+        End If
+        If txtFax.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtFax.Focus()
+            Return
+        End If
+        If txtEmail.Text = "" Then
+            MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
+            txtEmail.Focus()
+            Return
+        End If
+        Dim activates As Boolean
+        If chkActivate.Checked = True Then
+            activates = True
+        Else
+            activates = False
+        End If
+        Dim idno As String = customer.runidNO
+        Dim id As Integer = customer.runid
+        customer.save(idno, id, cbcustomertype.SelectedValue, cbtitlename.SelectedValue, txtCustomerName.Text, txtSurname.Text, txtNationality.Text, cbvillage.SelectedValue, txtPassport.Text, txtIdcard.Text, txtTel.Text, txtFax.Text, txtEmail.Text, cbRoomrate.SelectedValue, activates)
+        customer.loadtbcustomer(dgvcustomer)
+        enableSave()
+        cleartext()
+        txtCustomerName.Select()
 
-    '    txtemail.Enabled = True
-    'End Sub
-    'Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-    '    If cbprovience.SelectedValue < 1 Then
-    '        MessageBox.Show("ກະລຸນາເລືອກແຂວງ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '        Return
-    '    End If
-    '    If cbdistrict.SelectedValue < 1 Then
-    '        MessageBox.Show("ກະລຸນາເລືອກເມືອງ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '        Return
-    '    End If
-    '    'If cbvillage.SelectedValue < 1 Then
-    '    '    MessageBox.Show("ກະລຸນາເລືອກບ້ານ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    '    Return
-    '    'End If
-    '    If txtcomname.Text = "" Then
-    '        MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
-    '        txtcomname.Focus()
-    '        Return
-    '    End If
-    '    If txtcontactname.Text = "" Then
-    '        MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
-    '        txtcontactname.Focus()
-    '        Return
-    '    End If
+    End Sub
 
-    '    If txttel.Text = "" Then
-    '        MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
-    '        txttel.Focus()
-    '        Return
-    '    End If
-    '    Dim autoid As Integer = customer.runidauto
-    '    Dim rows As DataRowView = cbtype.SelectedItem
-    '    Dim row As DataRow = rows.Row
-    '    custype = row(1).ToString
+    Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
+        enableSave()
+        Enabletext()
+        cleartext()
+        txtCustomerName.Select()
+    End Sub
 
-    '    If cbdistrict.SelectedValue < 1 Then
-    '        district = "none"
-    '    End If
-    '    If cbvillage.SelectedValue < 1 Then
-    '        village = "none"
-    '    End If
-    '    If cbprovience.SelectedValue < 1 Then
-    '        provience = "none"
-    '    End If
-    '    If cbtype.SelectedValue = 0 Then
-    '        MessageBox.Show("ກະລຸນາເລືອກລູກຄ້າ", "ຄໍແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Question)
-    '        Return
-    '    End If
-    '    txtid.Text = customer.runidsupplier
-    '    customer.save(txtid.Text, txtcomname.Text, txtcontactname.Text, provience, district, village, txttel.Text, txtfax.Text, txtemail.Text, custype, autoid)
-    '    cleartext()
-    '    txtcomname.Select()
-    '    txtid.Text = customer.runidsupplier
+    Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
+        Try
+            Dim activates As Boolean
+            If chkActivate.Checked = True Then
+                activates = True
+            End If
+            customer.update(txtCustomerID.Text, txtid.Text, cbcustomertype.SelectedValue, cbtitlename.SelectedValue, txtCustomerName.Text, txtSurname.Text, txtNationality.Text, cbvillage.SelectedValue, txtPassport.Text, txtIdcard.Text, txtTel.Text, txtFax.Text, txtEmail.Text, cbRoomrate.SelectedValue, activates)
+            customer.loadtbcustomer(dgvcustomer)
+            enableSave()
+            cleartext()
+            txtCustomerName.Select()
 
-    '    enableSave()
-    '    customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    'End Sub
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 
-    'Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
-    '    enableSave()
-    '    Enabletext()
-    '    cleartext()
-    '    txtcomname.Select()
-    'End Sub
+    Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
+        Enabletext()
+        txtCustomerName.Select()
+        enableUpdate()
+    End Sub
 
-    'Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-    '    'Dim autoid As Integer = customer.runidauto
-    '    Dim rows As DataRowView = cbtype.SelectedItem
-    '    Dim row As DataRow = rows.Row
-    '    custype = row(1).ToString
-    '    customer.update(txtid.Text, txtcomname.Text, txtcontactname.Text, provience, district, village, txttel.Text, txtfax.Text, txtemail.Text, custype)
-    '    cleartext()
-    '    txtcomname.Select()
-    '    enableSave()
-    '    customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    'End Sub
+    Private Sub dgvcustomer_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvcustomer.CellMouseUp
+        Try
+            With dgvcustomer
+                customertype.combocustomertype(cbcustomertype)
+                roomrate.comboroomrate(cbRoomrate)
+                titlename.combotitlename(cbtitlename)
+                village.comboboxvillage(cbvillage)
+                district.comboboxdistrict(cbdistrict)
+                province.comboprovince(cbprovince)
 
-    'Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
-    '    Enabletext()
-    '    txtcomname.Select()
-    '    enableUpdate()
-    'End Sub
+                txtid.Text = .CurrentRow.Cells(0).Value
+                txtCustomerID.Text = .CurrentRow.Cells(1).Value
+                cbcustomertype.Text = .CurrentRow.Cells(2).Value
+                cbtitlename.Text = .CurrentRow.Cells(3).Value
+                txtCustomerName.Text = .CurrentRow.Cells(4).Value
+                txtSurname.Text = .CurrentRow.Cells(5).Value
+                txtNationality.Text = .CurrentRow.Cells(6).Value
+                cbvillage.Text = .CurrentRow.Cells(7).Value
+                cbdistrict.Text = .CurrentRow.Cells(8).Value
+                cbprovince.Text = .CurrentRow.Cells(9).Value
+                txtPassport.Text = .CurrentRow.Cells(10).Value
+                txtIdcard.Text = .CurrentRow.Cells(11).Value
+                txtTel.Text = .CurrentRow.Cells(12).Value
+                txtFax.Text = .CurrentRow.Cells(13).Value
+                txtEmail.Text = .CurrentRow.Cells(14).Value
+                cbRoomrate.Text = .CurrentRow.Cells(15).Value
+                chkActivate.Checked = .CurrentRow.Cells(16).Value
+                disabletext()
+                enableEdit()
+            End With
+        Catch ex As Exception
 
-    'Private Sub dgvcustomer_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvcustomer.CellMouseUp
-    '    Try
-    '        With dgvcustomer
-    '            txtid.Text = .CurrentRow.Cells(0).Value
-    '            txtcomname.Text = .CurrentRow.Cells(1).Value
-    '            txtcontactname.Text = .CurrentRow.Cells(2).Value
-    '            cbprovience.Text = .CurrentRow.Cells(3).Value
-    '            cbdistrict.Text = .CurrentRow.Cells(4).Value
-    '            cbvillage.Text = .CurrentRow.Cells(5).Value
-    '            txttel.Text = .CurrentRow.Cells(6).Value
-    '            txtfax.Text = .CurrentRow.Cells(7).Value
-    '            txtemail.Text = .CurrentRow.Cells(8).Value
-    '            cbtype.Text = .CurrentRow.Cells(9).Value
-    '            disabletext()
-    '            enableEdit()
-    '        End With
-    '    Catch ex As Exception
+        End Try
+    End Sub
 
-    '    End Try
-    'End Sub
-
-    'Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-    '    customer.delete(txtid.Text)
-    '    Enabletext()
-    '    cleartext()
-    '    txtcomname.Select()
-    '    enableSave()
-    '    customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    'End Sub
-    'Private Sub cbprovience_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    Try
-    '        Dim rows As DataRowView = cbprovience.SelectedItem
-    '        Dim row As DataRow = rows.Row
-    '        provience = row(1).ToString
-    '        adds.comboboxdistrict(cbprovience.SelectedValue, cbdistrict)
-    '        'customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub cbdistrict_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    Try
-    '        Dim rows As DataRowView = cbdistrict.SelectedItem
-    '        Dim row As DataRow = rows.Row
-    '        district = row(1).ToString
-    '        adds.comboboxvillage(cbdistrict.SelectedValue, cbvillage)
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub rdbigshop_CheckedChanged(sender As Object, e As EventArgs)
-
-    '    'If rdcustomer.Checked = True Then
-    '    '    custype = "ລູກຄ້າ"
-    '    '    'txtid.Text = customer.runidcustomer
-    '    'ElseIf rdbigshop.Checked = True Then
-    '    '    custype = "ຮ້ານໃຫ່ຍ"
-    '    '    'txtid.Text = customer.runidbigshop
-    '    'ElseIf rdsmallshop.Checked = True Then
-    '    '    custype = "ຮ້ານນ້ອຍ"
-    '    '    'txtid.Text = customer.runidsmallshop
-    '    'ElseIf rdsupplier.Checked = True Then
-    '    '    custype = "ຜູ້ສະໜອງ"
-    '    '    'txtid.Text = customer.runidsupplier
-    '    'End If
-    '    customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '    txtcount.Text = dgvcustomer.Rows.Count
-    'End Sub
-
-    'Private Sub rdsmallshop_CheckedChanged(sender As Object, e As EventArgs)
-
-    '    'If rdcustomer.Checked = True Then
-    '    '    custype = "ລູກຄ້າ"
-    '    '    'txtid.Text = customer.runidcustomer
-    '    'ElseIf rdbigshop.Checked = True Then
-    '    '    custype = "ຮ້ານໃຫ່ຍ"
-    '    '    'txtid.Text = customer.runidbigshop
-    '    'ElseIf rdsmallshop.Checked = True Then
-    '    '    custype = "ຮ້ານນ້ອຍ"
-    '    '    'txtid.Text = customer.runidsmallshop
-    '    'ElseIf rdsupplier.Checked = True Then
-    '    '    custype = "ຜູ້ສະໜອງ"
-    '    '    'txtid.Text = customer.runidsupplier
-    '    'End If
-    '    customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '    txtcount.Text = dgvcustomer.Rows.Count
-    'End Sub
-
-    'Private Sub frmcustomer_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-    '    Try
-    '       If cbtype.SelectedValue = 0 Then
-    '            custype = "%"
-    '        Else
-    '            Dim rows As DataRowView = cbtype.SelectedItem
-    '            Dim row As DataRow = rows.Row
-    '            custype = row(1).ToString
-    '        End If
-    '        customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '        txtcount.Text = dgvcustomer.Rows.Count
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub cbvillage_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbvillage.SelectedIndexChanged
-    '    Try
-    '        Dim rows As DataRowView = cbvillage.SelectedItem
-    '        Dim row As DataRow = rows.Row
-    '        village = row(1).ToString
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub btnclose_Click(sender As Object, e As EventArgs) Handles btnclose.Click
-    '    Me.Close()
-    'End Sub
-
-    'Private Sub btnadd_Click(sender As Object, e As EventArgs)
-    '    frmcustype.ShowDialog()
-    '    frmcustype.Close()
-    '    custype_C.combocustype(cbtype)
-    'End Sub
-
-    'Private Sub cbtype_SelectedIndexChanged(sender As Object, e As EventArgs)
-    '    Try
-    '        If cbtype.SelectedValue = 0 Then
-    '            custype = "%"
-    '        Else
-    '            Dim rows As DataRowView = cbtype.SelectedItem
-    '            Dim row As DataRow = rows.Row
-    '            custype = row(1).ToString
-    '        End If
-    '        customer.showsuppliers(custype, dgvcustomer, "%", "%", "%")
-    '        txtcount.Text = dgvcustomer.Rows.Count
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub btnprovince_Click(sender As Object, e As EventArgs) Handles btnprovince.Click
-    '    Try
-    '        frmprovience.ShowDialog()
-    '        frmprovience.Close()
-    '        adds.comboprovience(cbprovience)
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub btndistrict_Click(sender As Object, e As EventArgs) Handles btndistrict.Click
-    '    Try
-    '        frmdistrict.ShowDialog()
-    '        frmdistrict.Close()
-    '        adds.comboboxdistrict(cbprovience.SelectedValue, cbdistrict)
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
-    'Private Sub btnban_Click(sender As Object, e As EventArgs) Handles btnban.Click
-    '    Try
-    '        frmvillage.ShowDialog()
-    '        frmvillage.Close()
-    '        adds.comboboxvillage(cbdistrict.SelectedValue, cbvillage)
-
-    '    Catch ex As Exception
-
-    '    End Try
-    'End Sub
-
+    Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
+        customer.delete(txtid.Text)
+        Enabletext()
+        cleartext()
+        txtCustomerName.Select()
+        enableSave()
+        customer.loadtbcustomer(dgvcustomer)
+    End Sub
     Private Sub btnclose_Click(sender As Object, e As EventArgs) Handles btnclose.Click
         Me.Close()
     End Sub
+
+    Private Sub cbprovince_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbprovince.SelectedIndexChanged
+        Try
+            district.combodistrict(cbprovince.SelectedValue, cbdistrict)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub cbdistrict_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbdistrict.SelectedIndexChanged
+        Try
+            village.combovillage(cbdistrict.SelectedValue, cbvillage)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnAddProvince_Click(sender As Object, e As EventArgs) Handles btnAddProvince.Click
+        frmcustomertype.Show()
+    End Sub
+
+    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
+        frmroomrate.Show()
+    End Sub
+
+    Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles ButtonX3.Click
+        frmtitlename.Show()
+    End Sub
+
+    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
+        frmvillage.Show()
+    End Sub
+
+    Private Sub ButtonX4_Click(sender As Object, e As EventArgs) Handles ButtonX4.Click
+        frmdistrict.Show()
+    End Sub
+
+    Private Sub ButtonX5_Click(sender As Object, e As EventArgs) Handles ButtonX5.Click
+        frmprovience.Show()
+    End Sub
+
+
 End Class

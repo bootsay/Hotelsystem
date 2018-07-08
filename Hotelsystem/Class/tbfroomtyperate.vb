@@ -82,12 +82,28 @@ Public Class tbfroomtyperate
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດປະເພດລາຄາຫ້ອງ"
-                .Columns(1).HeaderText = "ຊື່ປະເພດລາຄາຫ້ອງ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດລາຄາຫ້ອງ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
 
+        End Try
+        Return True
+    End Function
+    Public Function comboroomtyperate(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfroomtyperate order by roomtyperateid", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("roomtyperatename").ToString
+                .ValueMember = dt.Columns("roomtyperateid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

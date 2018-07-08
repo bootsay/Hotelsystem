@@ -74,7 +74,7 @@ Public Class tbfroomrate
     Public Function loadtbfroomrate(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbfroomrate", cn.conn)
+            da = New SqlDataAdapter("select * from viewroomrate", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -84,12 +84,31 @@ Public Class tbfroomrate
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).HeaderText = "ລະຫັດລາຄາຫ້ອງ"
-                .Columns(1).HeaderText = "ລະຫັດປະເພດຫ້ອງ"
-                .Columns(2).HeaderText = "ລະຫັດປະເພດລາຄາຫ້ອງ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(2).HeaderText = "ປະເພດລາຄາຫ້ອງ"
                 .Columns(3).HeaderText = "ລາຄາ"
                 .Columns(4).HeaderText = "ຄຳອະທິບາຍ"
+                .Columns(5).Visible = False
+                .Columns(6).Visible = False
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function comboroomrate(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfroomrate", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("price").ToString
+                .ValueMember = dt.Columns("roomrateid").ToString
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

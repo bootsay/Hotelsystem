@@ -40,7 +40,7 @@ Public Class tbfmarkettype
     Public Function update(markettypeid As Integer, markettypename As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbmarkettype set markettypename=N'" & markettypename & "' where markettypeid='" & markettypeid & "'", cn.conn)
+            cm = New SqlCommand("update tbfmarkettype set markettypename=N'" & markettypename & "' where markettypeid='" & markettypeid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -56,7 +56,7 @@ Public Class tbfmarkettype
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 markettypeid from tbmarkettype order by markettypeid desc", cn.conn)
+            cm = New SqlCommand("select top 1 markettypeid from tbfmarkettype order by markettypeid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -75,7 +75,7 @@ Public Class tbfmarkettype
     Public Function loadtbmarkettype(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from tbmarkettype", cn.conn)
+            da = New SqlDataAdapter("select * from tbfmarkettype", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -91,4 +91,22 @@ Public Class tbfmarkettype
         End Try
         Return True
     End Function
+    Public Function combomarkettype(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbfmarkettype", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("markettypename").ToString
+                .ValueMember = dt.Columns("markettypeid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+
 End Class

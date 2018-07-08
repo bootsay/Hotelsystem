@@ -231,7 +231,7 @@ Partial Class frmbookingtype
         Me.txttype.Location = New System.Drawing.Point(135, 49)
         Me.txttype.Margin = New System.Windows.Forms.Padding(4)
         Me.txttype.Name = "txttype"
-        Me.txttype.Size = New System.Drawing.Size(479, 35)
+        Me.txttype.Size = New System.Drawing.Size(343, 35)
         Me.txttype.TabIndex = 3
         '
         'txtid
@@ -243,7 +243,7 @@ Partial Class frmbookingtype
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(479, 35)
+        Me.txtid.Size = New System.Drawing.Size(343, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1

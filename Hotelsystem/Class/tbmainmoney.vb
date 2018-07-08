@@ -6,10 +6,10 @@ Public Class tbmainmoney
     Dim ds As New DataSet
     Dim cm As New SqlCommand
 
-    Public Function save(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function save(mainmoneyid As Integer, moneyname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbmainmoney(mainmoneyid,mainmoneyname) values('" & mainmoneyid & "',N'" & mainmoneyname & "')", cn.conn)
+            cm = New SqlCommand("insert into tbmainmoney(mainmoneyid,moneyname) values('" & mainmoneyid & "',N'" & moneyname & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -37,10 +37,10 @@ Public Class tbmainmoney
         Return True
     End Function
 
-    Public Function update(mainmoneyid As Integer, mainmoneyname As String)
+    Public Function update(mainmoneyid As Integer, moneyname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbmainmoney set mainmoneyname=N'" & mainmoneyname & "' where mainmoneyid='" & mainmoneyid & "'", cn.conn)
+            cm = New SqlCommand("update tbmainmoney set moneyname=N'" & moneyname & "' where mainmoneyid='" & mainmoneyid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -82,8 +82,8 @@ Public Class tbmainmoney
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
-                .Columns(0).HeaderText = "ລະຫັດເງິນຫຼັກ"
-                .Columns(1).HeaderText = "ຊື່ເງິນຫຼັກ"
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ເງິນຫຼັກ"
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

@@ -2,25 +2,60 @@
 Public Class tbcompanyprofile
     Dim cn As New connectdb
     Dim da As New SqlDataAdapter
+    Dim re As SqlDataReader
     Dim ds As New DataSet
     Dim cm As New SqlCommand
-    Dim re As SqlDataReader
+    Public Function saveimage() As Byte()
+        Dim frmp As frmcompanyprofile = CType(Application.OpenForms("frmcompanyprofile"), frmcompanyprofile)
+        Dim memstream1 As New IO.MemoryStream
+        frmp.pimage.Image.Save(memstream1, Drawing.Imaging.ImageFormat.Jpeg)
+        Return memstream1.ToArray()
+    End Function
+    Public Function save(profileid As Integer, comname As String, address As String, tel As String, fax As String, email As String, startdate As String)
+        cn.connect()
 
-    Public Function save(profileid As Integer, comname As String, address As String, tel As String, fax As String, email As String, logo As String, startdate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbcompanyprofile(profileid,comname,address,tel,fax,email,logo,startdate)values('" & profileid & "','" & comname & "','" & address & "','" & tel & "','" & fax & "','" & email & "','" & logo & "','" & startdate & "')", cn.conn)
-            If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
-                cm.ExecuteNonQuery()
-            Else
+            Dim pic() As Byte = saveimage()
+            cm.Parameters.AddWithValue("pic", pic)
+            Dim sav As String = "insert into tbcompanyprofile values('" & profileid & "',N'" & comname & "',N'" & address & "',N'" & tel & "','" & fax & "',N'" & email & "','" & startdate & "',@pic)"
+            With cm
+                If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
+                    .CommandType = CommandType.Text
+                    .CommandText = sav
+                    .Connection = cn.conn
+                    cm.ExecuteNonQuery()
+                Else
 
-            End If
+                End If
+            End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function
+    Public Function showimage(dgv As DataGridView)
+        Dim product As frmcompanyprofile = CType(Application.OpenForms("frmcompanyprofile"), frmcompanyprofile)
+        cn.connect()
+        Try
+            cm = New SqlCommand("select logo from tbcompanyprofile where profileid='" & dgv.CurrentRow.Cells(0).Value & "'", cn.conn)
+            re = cm.ExecuteReader
+            If re.Read Then
+                Dim bytimage() As Byte
 
+                bytimage = CType(re(0), Byte())
+                Dim ms As New System.IO.MemoryStream(bytimage)
+                Dim bmimage As New Bitmap(ms)
+                ms.Close()
+                product.pimage.SizeMode = PictureBoxSizeMode.StretchImage
+                product.pimage.Image = bmimage
+            End If
+            re.Close()
+        Catch ex As Exception
+
+        End Try
+        Return True
+    End Function
     Public Function delete(profileid As Integer)
         cn.connect()
         Try
@@ -35,17 +70,30 @@ Public Class tbcompanyprofile
         End Try
         Return True
     End Function
-
-    Public Function update(profileid As Integer, comname As String, address As String, tel As String, fax As String, email As String, logo As String, startdate As String)
+    Public Function updateimage()
+        Dim product As frmcompanyprofile = CType(Application.OpenForms("frmcompanyprofile"), frmcompanyprofile)
+        Dim byteimage() As Byte
+        Dim ms As New System.IO.MemoryStream
+        Dim dd As New Bitmap(product.pimage.Image)
+        dd.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
+        byteimage = ms.ToArray()
+        Return ms.ToArray
+    End Function
+    Public Function update(profileid As Integer, comname As String, address As String, tel As String, fax As String, email As String, startdate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbcompanyprofile set comname='" & comname & "', address='" & address & "', tel='" & tel & "', fax='" & fax & "', email='" & email & "', logo='" & logo & "', startdate='" & startdate & "' where profileid='" & profileid & "'", cn.conn)
-            If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
-                cm.ExecuteNonQuery()
+            Dim pic() As Byte = updateimage()
+            cm.Parameters.AddWithValue("pic", pic)
+            Dim up As String = "update tbcompanyprofile set comname=N'" & comname & "',address=N'" & address & "',tel=N'" & tel & "',fax=N'" & fax & "',emal='" & email & "',startdate='" & startdate & "',logo=" & "@pic where profileid='" & profileid & "'"
+            If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
+                With cm
+                    .CommandType = CommandType.Text
+                    .CommandText = up
+                    .Connection = cn.conn
+                    cm.ExecuteNonQuery()
+                End With
             Else
-
             End If
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -84,15 +132,20 @@ Public Class tbcompanyprofile
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).HeaderText = "ລະຫັດໂປຣຟາຍ"
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ຊື່ບໍລິສັດ"
                 .Columns(2).HeaderText = "ທີຢູ່"
                 .Columns(3).HeaderText = "ໂທ"
                 .Columns(4).HeaderText = "ແຟກ"
                 .Columns(5).HeaderText = "ອີເມວ"
-                .Columns(6).HeaderText = "ໂລໂກ"
-                .Columns(7).HeaderText = "ວັນທີເລີ່ມຕົ້ນ"
+                .Columns(6).HeaderText = "ວັນທີກໍ່ຕັ້ງ"
+                .Columns(7).Visible = False
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

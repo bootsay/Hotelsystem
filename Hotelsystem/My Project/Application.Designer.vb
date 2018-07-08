@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Hotelsystem.frmusetype
+            Me.MainForm = Global.Hotelsystem.frmroom
         End Sub
     End Class
 End Namespace

@@ -3,6 +3,7 @@ R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmuser.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbookingtype.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbilldetail.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmbilldetailmoveitem.resources
+R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmstatus.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmchangeroom.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcompanyprofile.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcountry.resources
@@ -31,7 +32,6 @@ R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmroomstatus.resource
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmtitlename.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcategory.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcustomer.resources
-R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmcustype.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmdepartment.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmdistrict.resources
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.frmexchange.resources
@@ -47,3 +47,8 @@ R:\Projects\Hotelsystem\Hotelsystem\bin\Debug\Hotelsystem.xml
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.exe
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.xml
 R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.pdb
+Z:\Hotelsystem\bin\Debug\Hotelsystem.exe.config
+Z:\Hotelsystem\obj\Debug\Hotelsystem.exe
+Z:\Hotelsystem\obj\Debug\Hotelsystem.xml
+Z:\Hotelsystem\obj\Debug\Hotelsystem.pdb
+R:\Projects\Hotelsystem\Hotelsystem\obj\Debug\Hotelsystem.vbprojResolveAssemblyReference.cache

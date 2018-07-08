@@ -3,6 +3,7 @@
     'Dim txtid As New TextBox
     'Dim bath As Double
     'Dim dolla As Double
+    'Dim china As Double
     'Private Sub frmexchange_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     '    txtbaht.Enabled = False
     '    txtdolla.Enabled = False
@@ -29,27 +30,27 @@
     'End Sub
 
     'Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-    '    Dim exits As Integer = exh.Check_exchangeExist()
+    '    ' Dim exits As Integer = exh.Check_exchangeExist()
     '    If exits > 0 Then
-    '        exh.update(txtid.Text, txtbaht.Text, txtdolla.Text)
+    '        exh.update(txtid.Text, txtbaht.Text, txtdolla.Text, txtchina.Text)
     '        txtbaht.Enabled = False
     '        txtdolla.Enabled = False
     '        btnupdate.Enabled = False
     '        exh.loadtbexchange(dgvexchange)
     '        bath = exh.loadbaht
     '        dolla = exh.loaddolla
-    '        frmmain.bath = bath.ToString("N")
-    '        frmmain.dolla = dolla.ToString("N")
+    '        'frmmain.bath = bath.ToString("N")
+    '        'frmmain.dolla = dolla.ToString("N")
     '    Else
-    '        exh.save(1, txtbaht.Text, txtdolla.Text)
+    '        exh.save(1, txtbaht.Text, txtdolla.Text, txtchina.Text)
     '        txtbaht.Enabled = False
     '        txtdolla.Enabled = False
     '        btnupdate.Enabled = False
     '        exh.loadtbexchange(dgvexchange)
     '        bath = exh.loadbaht
     '        dolla = exh.loaddolla
-    '        frmmain.bath = bath.ToString("N")
-    '        frmmain.dolla = dolla.ToString("N")
+    '        'frmmain.bath = bath.ToString("N")
+    '        'frmmain.dolla = dolla.ToString("N")
     '    End If
 
 
@@ -106,4 +107,9 @@
     '    End If
 
     'End Sub
+
+    'Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+    '    Me.Close()
+    'End Sub
+
 End Class

@@ -37,6 +37,7 @@ Partial Class frmposition
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbdepartment = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -45,6 +46,7 @@ Partial Class frmposition
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.btnAddProvince = New DevComponents.DotNetBar.ButtonX()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -111,7 +113,7 @@ Partial Class frmposition
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(6)
@@ -189,8 +191,20 @@ Partial Class frmposition
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.btnAddProvince)
         Me.Panel1.Controls.Add(Me.cbdepartment)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -209,7 +223,7 @@ Partial Class frmposition
         Me.cbdepartment.FormattingEnabled = True
         Me.cbdepartment.Location = New System.Drawing.Point(96, 52)
         Me.cbdepartment.Name = "cbdepartment"
-        Me.cbdepartment.Size = New System.Drawing.Size(457, 37)
+        Me.cbdepartment.Size = New System.Drawing.Size(223, 37)
         Me.cbdepartment.TabIndex = 6
         '
         'Label2
@@ -242,7 +256,7 @@ Partial Class frmposition
         Me.txtposition.Location = New System.Drawing.Point(96, 94)
         Me.txtposition.Margin = New System.Windows.Forms.Padding(4)
         Me.txtposition.Name = "txtposition"
-        Me.txtposition.Size = New System.Drawing.Size(457, 35)
+        Me.txtposition.Size = New System.Drawing.Size(223, 35)
         Me.txtposition.TabIndex = 3
         '
         'txtid
@@ -254,7 +268,7 @@ Partial Class frmposition
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(457, 35)
+        Me.txtid.Size = New System.Drawing.Size(223, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
@@ -291,14 +305,32 @@ Partial Class frmposition
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.RowTemplate.Height = 28
+        Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvshow.Size = New System.Drawing.Size(625, 249)
         Me.dgvshow.TabIndex = 3
+        '
+        'btnAddProvince
+        '
+        Me.btnAddProvince.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnAddProvince.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnAddProvince.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddProvince.ForeColor = System.Drawing.Color.Blue
+        Me.btnAddProvince.Image = CType(resources.GetObject("btnAddProvince.Image"), System.Drawing.Image)
+        Me.btnAddProvince.ImageFixedSize = New System.Drawing.Size(24, 24)
+        Me.btnAddProvince.Location = New System.Drawing.Point(346, 52)
+        Me.btnAddProvince.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAddProvince.Name = "btnAddProvince"
+        Me.btnAddProvince.Size = New System.Drawing.Size(114, 35)
+        Me.btnAddProvince.TabIndex = 27
+        Me.btnAddProvince.Text = "ເພີມພະແນກ"
+        Me.btnAddProvince.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
         '
         'frmposition
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(639, 506)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
@@ -340,4 +372,6 @@ Partial Class frmposition
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents cbdepartment As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents btnAddProvince As DevComponents.DotNetBar.ButtonX
 End Class

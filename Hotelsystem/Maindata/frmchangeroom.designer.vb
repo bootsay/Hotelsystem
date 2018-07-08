@@ -37,17 +37,17 @@ Partial Class frmchangeroom
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.dtDatemove = New System.Windows.Forms.DateTimePicker()
+        Me.cbtoroom = New System.Windows.Forms.ComboBox()
+        Me.cbfromroom = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cbfromroom = New System.Windows.Forms.ComboBox()
-        Me.cbtoroom = New System.Windows.Forms.ComboBox()
-        Me.dtDatemove = New System.Windows.Forms.DateTimePicker()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -192,6 +192,17 @@ Partial Class frmchangeroom
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.dtDatemove)
@@ -209,6 +220,62 @@ Partial Class frmchangeroom
         Me.Panel1.Size = New System.Drawing.Size(625, 172)
         Me.Panel1.TabIndex = 2
         '
+        'dtDatemove
+        '
+        Me.dtDatemove.Location = New System.Drawing.Point(136, 132)
+        Me.dtDatemove.Name = "dtDatemove"
+        Me.dtDatemove.Size = New System.Drawing.Size(198, 35)
+        Me.dtDatemove.TabIndex = 7
+        '
+        'cbtoroom
+        '
+        Me.cbtoroom.FormattingEnabled = True
+        Me.cbtoroom.Location = New System.Drawing.Point(136, 90)
+        Me.cbtoroom.Name = "cbtoroom"
+        Me.cbtoroom.Size = New System.Drawing.Size(384, 37)
+        Me.cbtoroom.TabIndex = 6
+        '
+        'cbfromroom
+        '
+        Me.cbfromroom.FormattingEnabled = True
+        Me.cbfromroom.Location = New System.Drawing.Point(136, 49)
+        Me.cbfromroom.Name = "cbfromroom"
+        Me.cbfromroom.Size = New System.Drawing.Size(384, 37)
+        Me.cbfromroom.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(23, 132)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(76, 29)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "ວັນທີຍ້າຍ:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(23, 93)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 29)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "ຍ້າຍໄປຫ້ອງ:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(23, 57)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(103, 29)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "ຍ້າຍຈາກຫ້ອງ:"
+        '
         'txtid
         '
         Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -218,7 +285,7 @@ Partial Class frmchangeroom
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(436, 35)
+        Me.txtid.Size = New System.Drawing.Size(384, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
@@ -258,73 +325,6 @@ Partial Class frmchangeroom
         Me.dgvshow.RowTemplate.Height = 28
         Me.dgvshow.Size = New System.Drawing.Size(625, 261)
         Me.dgvshow.TabIndex = 3
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.Hotelsystem.My.Resources.Resources._1489493744_exit
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(23, 57)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 29)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "ຍ້າຍຈາກຫ້ອງ:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(23, 93)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 29)
-        Me.Label4.TabIndex = 5
-        Me.Label4.Text = "ຍ້າຍໄປຫ້ອງ:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(23, 132)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(76, 29)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "ວັນທີຍ້າຍ:"
-        '
-        'cbfromroom
-        '
-        Me.cbfromroom.FormattingEnabled = True
-        Me.cbfromroom.Location = New System.Drawing.Point(136, 49)
-        Me.cbfromroom.Name = "cbfromroom"
-        Me.cbfromroom.Size = New System.Drawing.Size(436, 37)
-        Me.cbfromroom.TabIndex = 6
-        '
-        'cbtoroom
-        '
-        Me.cbtoroom.FormattingEnabled = True
-        Me.cbtoroom.Location = New System.Drawing.Point(136, 90)
-        Me.cbtoroom.Name = "cbtoroom"
-        Me.cbtoroom.Size = New System.Drawing.Size(436, 37)
-        Me.cbtoroom.TabIndex = 6
-        '
-        'dtDatemove
-        '
-        Me.dtDatemove.Location = New System.Drawing.Point(136, 132)
-        Me.dtDatemove.Name = "dtDatemove"
-        Me.dtDatemove.Size = New System.Drawing.Size(280, 35)
-        Me.dtDatemove.TabIndex = 7
         '
         'frmchangeroom
         '
