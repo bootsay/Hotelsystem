@@ -3,7 +3,7 @@
     Dim roomtype As New tbfroomtype
     Dim rooms As New tbfroom
     Dim dtroom As New DataTable
-    Dim roomstatus As String
+    Dim roomstatus As Integer
     Dim roomtypename As String
     Dim roomNumber As String
     Private Sub frmroommap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,11 +20,26 @@
                 btn.Width = 140
                 btn.Height = 100
                 btn.Font = New System.Drawing.Font("Saysettha OT", 11.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-                roomstatus = dtroom.Rows(i).Item(7)
+                roomstatus = dtroom.Rows(i).Item(10)
                 roomtypename = dtroom.Rows(i).Item(1)
                 roomNumber = dtroom.Rows(i).Item(4)
                 btn.Text = roomNumber + "(" & roomtypename & ")"
-                If roomstatus = "ຫ້ອງເປື້ອນ" Then
+                If roomstatus = 1 Then
+                    btn.Image = My.Resources.hotel_empty
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 2 Then
+                    btn.Image = My.Resources.room1
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 3 Then
+                    btn.Image = My.Resources.hotel_notempty
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 4 Then
+                    btn.Image = My.Resources.hotel_dirty
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 5 Then
+                    btn.Image = My.Resources.hotel_outofforder
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 6 Then
                     btn.Image = My.Resources.hotel_dirty
                     btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                 End If

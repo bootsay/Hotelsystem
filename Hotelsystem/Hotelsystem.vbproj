@@ -81,6 +81,7 @@
     <Compile Include="Class\tbbilldetailmoveitem.vb" />
     <Compile Include="Class\tbcategory.vb" />
     <Compile Include="Class\tbchangeroom.vb" />
+    <Compile Include="Class\tbcleardata.vb" />
     <Compile Include="Class\tbcompanyprofile.vb" />
     <Compile Include="Class\tbcountry.vb" />
     <Compile Include="Class\tbcustomer.vb" />
@@ -720,6 +721,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hotel_outofforder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

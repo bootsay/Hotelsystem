@@ -35,7 +35,7 @@ Partial Class Form1
         '
         'Button9
         '
-        Me.Button9.Image = Global.HotelSystem.My.Resources.Resources.delete2
+        Me.Button9.Image = Global.HotelSystem.My.Resources.Resources.room1
         Me.Button9.Location = New System.Drawing.Point(86, 286)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(75, 23)

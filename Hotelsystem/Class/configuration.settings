@@ -12,7 +12,7 @@
       <Value Profile="(Default)">Adobe PDF</Value>
     </Setting>
     <Setting Name="servername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ADMIN\SQL2012</Value>
+      <Value Profile="(Default)">27.254.172.47</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)">bootvong</Value>
