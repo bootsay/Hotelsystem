@@ -15,7 +15,12 @@
       <Value Profile="(Default)">bootvong</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
+<<<<<<< HEAD
       <Value Profile="(Default)">@ITadmin2018@admin</Value>
+=======
+      <Value Profile="(Default)">@ITadmin2018@admin
+</Value>
+>>>>>>> dbf3e4799445b3e06b755f586dfe15e2ff22e611
     </Setting>
   </Settings>
 </SettingsFile>

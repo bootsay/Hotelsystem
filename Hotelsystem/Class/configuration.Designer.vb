@@ -76,7 +76,11 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+<<<<<<< HEAD
      Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin")>  _
+=======
+     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10))>  _
+>>>>>>> dbf3e4799445b3e06b755f586dfe15e2ff22e611
     Public Property password() As String
         Get
             Return CType(Me("password"),String)
