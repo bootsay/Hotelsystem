@@ -91,6 +91,10 @@ Public Class tbfroomrate
                 .Columns(4).HeaderText = "ຄຳອະທິບາຍ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

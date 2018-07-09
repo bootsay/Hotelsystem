@@ -84,6 +84,7 @@ Public Class tbpaymethod
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດຊຳລະ"
                 .Columns(1).HeaderText = "ວິທີຊຳລະ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

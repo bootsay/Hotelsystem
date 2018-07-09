@@ -61,7 +61,7 @@ Partial Class frmtitlename
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(639, 506)
+        Me.GroupPanel1.Size = New System.Drawing.Size(551, 506)
         '
         '
         '
@@ -82,6 +82,14 @@ Partial Class frmtitlename
         Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -98,9 +106,9 @@ Partial Class frmtitlename
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(633, 500)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(545, 500)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
@@ -114,7 +122,7 @@ Partial Class frmtitlename
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(6)
-        Me.ToolStrip1.Size = New System.Drawing.Size(633, 51)
+        Me.ToolStrip1.Size = New System.Drawing.Size(545, 51)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -186,7 +194,7 @@ Partial Class frmtitlename
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'ToolStripButton1
         '
@@ -205,18 +213,18 @@ Partial Class frmtitlename
         Me.Panel1.Controls.Add(Me.txttitlename)
         Me.Panel1.Controls.Add(Me.txtid)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(4, 55)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(625, 98)
+        Me.Panel1.Size = New System.Drawing.Size(537, 87)
         Me.Panel1.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 52)
+        Me.Label3.Location = New System.Drawing.Point(7, 48)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(86, 29)
@@ -228,10 +236,10 @@ Partial Class frmtitlename
         Me.txttitlename.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txttitlename.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txttitlename.Location = New System.Drawing.Point(96, 49)
+        Me.txttitlename.Location = New System.Drawing.Point(96, 45)
         Me.txttitlename.Margin = New System.Windows.Forms.Padding(4)
         Me.txttitlename.Name = "txttitlename"
-        Me.txttitlename.Size = New System.Drawing.Size(477, 35)
+        Me.txttitlename.Size = New System.Drawing.Size(435, 35)
         Me.txttitlename.TabIndex = 3
         '
         'txtid
@@ -239,18 +247,18 @@ Partial Class frmtitlename
         Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(96, 11)
+        Me.txtid.Location = New System.Drawing.Point(96, 7)
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(477, 35)
+        Me.txtid.Size = New System.Drawing.Size(435, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(35, 14)
+        Me.Label1.Location = New System.Drawing.Point(35, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 29)
@@ -272,8 +280,8 @@ Partial Class frmtitlename
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.dgvshow.Location = New System.Drawing.Point(4, 161)
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.Location = New System.Drawing.Point(4, 150)
         Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvshow.Name = "dgvshow"
         Me.dgvshow.ReadOnly = True
@@ -282,14 +290,14 @@ Partial Class frmtitlename
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.RowTemplate.Height = 28
         Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvshow.Size = New System.Drawing.Size(625, 335)
+        Me.dgvshow.Size = New System.Drawing.Size(537, 346)
         Me.dgvshow.TabIndex = 3
         '
         'frmtitlename
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 506)
+        Me.ClientSize = New System.Drawing.Size(551, 506)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True

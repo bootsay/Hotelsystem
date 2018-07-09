@@ -25,6 +25,39 @@ Partial Class frmuser
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.btnsave = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btndelete = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnedit = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnupdate = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.btnclose = New System.Windows.Forms.ToolStripButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbposition = New DevComponents.DotNetBar.Controls.ComboBoxEx()
+        Me.cbdepartment = New DevComponents.DotNetBar.Controls.ComboBoxEx()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.cblevel = New System.Windows.Forms.ComboBox()
+        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.txtlao = New System.Windows.Forms.TextBox()
+        Me.txteng = New System.Windows.Forms.TextBox()
+        Me.txtid = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TabControl2 = New DevComponents.DotNetBar.TabControl()
+        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
+        Me.dgvuser = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabControlPanel3 = New DevComponents.DotNetBar.TabControlPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GroupPanel7 = New DevComponents.DotNetBar.Controls.GroupPanel()
@@ -85,41 +118,16 @@ Partial Class frmuser
         Me.frmsumarysale = New System.Windows.Forms.CheckBox()
         Me.frmsalelistapprove = New System.Windows.Forms.CheckBox()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btnsave = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btndelete = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnedit = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnupdate = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnnew = New System.Windows.Forms.ToolStripButton()
-        Me.btnclose = New System.Windows.Forms.ToolStripButton()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.cblevel = New System.Windows.Forms.ComboBox()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
-        Me.txtlao = New System.Windows.Forms.TextBox()
-        Me.txteng = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl2 = New DevComponents.DotNetBar.TabControl()
-        Me.TabControlPanel2 = New DevComponents.DotNetBar.TabControlPanel()
-        Me.dgvuser = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.cbdepartment = New DevComponents.DotNetBar.Controls.ComboBoxEx()
-        Me.cbposition = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
+        Me.TabControlPanel1.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabControl2.SuspendLayout()
+        Me.TabControlPanel2.SuspendLayout()
+        CType(Me.dgvuser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControlPanel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.GroupPanel7.SuspendLayout()
@@ -129,14 +137,6 @@ Partial Class frmuser
         Me.GroupPanel3.SuspendLayout()
         Me.GroupPanel2.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
-        Me.TabControlPanel1.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.ToolStrip1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabControl2.SuspendLayout()
-        Me.TabControlPanel2.SuspendLayout()
-        CType(Me.dgvuser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -146,26 +146,398 @@ Partial Class frmuser
         Me.TabControl1.Controls.Add(Me.TabControlPanel3)
         Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
-        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedTabFont = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TabControl1.SelectedTabIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1314, 755)
+        Me.TabControl1.Size = New System.Drawing.Size(1314, 733)
         Me.TabControl1.TabIndex = 0
         Me.TabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
         Me.TabControl1.Tabs.Add(Me.TabItem1)
         Me.TabControl1.Tabs.Add(Me.TabItem3)
         Me.TabControl1.Text = "TabControl1"
         '
+        'TabControlPanel1
+        '
+        Me.TabControlPanel1.Controls.Add(Me.TableLayoutPanel1)
+        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 38)
+        Me.TabControlPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabControlPanel1.Name = "TabControlPanel1"
+        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel1.Size = New System.Drawing.Size(1314, 695)
+        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel1.Style.GradientAngle = 90
+        Me.TabControlPanel1.TabIndex = 1
+        Me.TabControlPanel1.TabItem = Me.TabItem1
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.ToolStrip1, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TabControl2, 0, 2)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 1)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 3
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1312, 693)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
+        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
+        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.btnclose})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(1312, 39)
+        Me.ToolStrip1.TabIndex = 1
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'btnsave
+        '
+        Me.btnsave.ForeColor = System.Drawing.Color.Black
+        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save
+        Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
+        Me.btnsave.Name = "btnsave"
+        Me.btnsave.Size = New System.Drawing.Size(88, 36)
+        Me.btnsave.Text = "ບັນທືກ"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
+        '
+        'btndelete
+        '
+        Me.btndelete.ForeColor = System.Drawing.Color.Black
+        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
+        Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(68, 36)
+        Me.btndelete.Text = "ລືບ"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
+        '
+        'btnedit
+        '
+        Me.btnedit.ForeColor = System.Drawing.Color.Black
+        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
+        Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnedit.Name = "btnedit"
+        Me.btnedit.Size = New System.Drawing.Size(84, 36)
+        Me.btnedit.Text = "ແກ້ໄຂ"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
+        '
+        'btnupdate
+        '
+        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources.Refresh
+        Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(86, 36)
+        Me.btnupdate.Text = "ປັບປຸງ"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
+        '
+        'btnnew
+        '
+        Me.btnnew.ForeColor = System.Drawing.Color.Black
+        Me.btnnew.Image = Global.HotelSystem.My.Resources.Resources.New_file
+        Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnnew.Name = "btnnew"
+        Me.btnnew.Size = New System.Drawing.Size(100, 36)
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
+        '
+        'btnclose
+        '
+        Me.btnclose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.btnclose.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
+        Me.btnclose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.btnclose.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btnclose.Name = "btnclose"
+        Me.btnclose.Size = New System.Drawing.Size(36, 36)
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.cbposition)
+        Me.Panel1.Controls.Add(Me.cbdepartment)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label5)
+        Me.Panel1.Controls.Add(Me.cblevel)
+        Me.Panel1.Controls.Add(Me.txtpassword)
+        Me.Panel1.Controls.Add(Me.txtlao)
+        Me.Panel1.Controls.Add(Me.txteng)
+        Me.Panel1.Controls.Add(Me.txtid)
+        Me.Panel1.Controls.Add(Me.Label4)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Panel1.Location = New System.Drawing.Point(4, 43)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1304, 167)
+        Me.Panel1.TabIndex = 2
+        '
+        'cbposition
+        '
+        Me.cbposition.DisplayMember = "Text"
+        Me.cbposition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbposition.FormattingEnabled = True
+        Me.cbposition.ItemHeight = 29
+        Me.cbposition.Location = New System.Drawing.Point(716, 40)
+        Me.cbposition.Name = "cbposition"
+        Me.cbposition.Size = New System.Drawing.Size(581, 35)
+        Me.cbposition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cbposition.TabIndex = 15
+        '
+        'cbdepartment
+        '
+        Me.cbdepartment.DisplayMember = "Text"
+        Me.cbdepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbdepartment.FormattingEnabled = True
+        Me.cbdepartment.ItemHeight = 29
+        Me.cbdepartment.Location = New System.Drawing.Point(716, 4)
+        Me.cbdepartment.Name = "cbdepartment"
+        Me.cbdepartment.Size = New System.Drawing.Size(581, 35)
+        Me.cbdepartment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.cbdepartment.TabIndex = 14
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 123)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(112, 29)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "ສິດທິການນຳໃຊ້:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(625, 84)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(58, 29)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "ລະຫັດ:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(625, 47)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(68, 29)
+        Me.Label5.TabIndex = 11
+        Me.Label5.Text = "ຕໍາແໜ່ງ:"
+        '
+        'cblevel
+        '
+        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cblevel.FormattingEnabled = True
+        Me.cblevel.Location = New System.Drawing.Point(159, 119)
+        Me.cblevel.Margin = New System.Windows.Forms.Padding(4)
+        Me.cblevel.Name = "cblevel"
+        Me.cblevel.Size = New System.Drawing.Size(1139, 37)
+        Me.cblevel.TabIndex = 10
+        '
+        'txtpassword
+        '
+        Me.txtpassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtpassword.Location = New System.Drawing.Point(716, 80)
+        Me.txtpassword.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtpassword.Name = "txtpassword"
+        Me.txtpassword.Size = New System.Drawing.Size(583, 35)
+        Me.txtpassword.TabIndex = 9
+        Me.txtpassword.UseSystemPasswordChar = True
+        '
+        'txtlao
+        '
+        Me.txtlao.Location = New System.Drawing.Point(159, 80)
+        Me.txtlao.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtlao.Name = "txtlao"
+        Me.txtlao.Size = New System.Drawing.Size(453, 35)
+        Me.txtlao.TabIndex = 6
+        '
+        'txteng
+        '
+        Me.txteng.Location = New System.Drawing.Point(159, 40)
+        Me.txteng.Margin = New System.Windows.Forms.Padding(4)
+        Me.txteng.Name = "txteng"
+        Me.txteng.Size = New System.Drawing.Size(453, 35)
+        Me.txteng.TabIndex = 5
+        '
+        'txtid
+        '
+        Me.txtid.Location = New System.Drawing.Point(159, 4)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtid.Name = "txtid"
+        Me.txtid.ReadOnly = True
+        Me.txtid.Size = New System.Drawing.Size(453, 35)
+        Me.txtid.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(625, 13)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(66, 29)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "ພະແນກ:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 76)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(119, 29)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "ຊື່ຜູ້ໃຊ້ພາສາລາວ:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 43)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(108, 29)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "ຊື່ເຂົ້າໃຊ້ລະບົບ:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 9)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 29)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "ລະຫັດ:"
+        '
+        'TabControl2
+        '
+        Me.TabControl2.BackColor = System.Drawing.Color.Transparent
+        Me.TabControl2.CanReorderTabs = True
+        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
+        Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl2.Location = New System.Drawing.Point(4, 219)
+        Me.TabControl2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedTabFont = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl2.SelectedTabIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(1304, 470)
+        Me.TabControl2.TabIndex = 3
+        Me.TabControl2.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
+        Me.TabControl2.Tabs.Add(Me.TabItem2)
+        Me.TabControl2.Text = "TabControl2"
+        '
+        'TabControlPanel2
+        '
+        Me.TabControlPanel2.Controls.Add(Me.dgvuser)
+        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 38)
+        Me.TabControlPanel2.Margin = New System.Windows.Forms.Padding(4)
+        Me.TabControlPanel2.Name = "TabControlPanel2"
+        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
+        Me.TabControlPanel2.Size = New System.Drawing.Size(1304, 432)
+        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
+        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
+        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
+        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
+            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
+        Me.TabControlPanel2.Style.GradientAngle = 90
+        Me.TabControlPanel2.TabIndex = 1
+        Me.TabControlPanel2.TabItem = Me.TabItem2
+        '
+        'dgvuser
+        '
+        Me.dgvuser.AllowUserToAddRows = False
+        Me.dgvuser.AllowUserToDeleteRows = False
+        Me.dgvuser.AllowUserToResizeColumns = False
+        Me.dgvuser.AllowUserToResizeRows = False
+        Me.dgvuser.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
+        Me.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvuser.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvuser.Location = New System.Drawing.Point(1, 1)
+        Me.dgvuser.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvuser.Name = "dgvuser"
+        Me.dgvuser.ReadOnly = True
+        Me.dgvuser.RowHeadersVisible = False
+        Me.dgvuser.RowTemplate.Height = 28
+        Me.dgvuser.Size = New System.Drawing.Size(1302, 430)
+        Me.dgvuser.TabIndex = 0
+        '
+        'TabItem2
+        '
+        Me.TabItem2.AttachedControl = Me.TabControlPanel2
+        Me.TabItem2.Name = "TabItem2"
+        Me.TabItem2.Text = "ລາຍຊື່ຜູ້ໃຊ້"
+        '
+        'TabItem1
+        '
+        Me.TabItem1.AttachedControl = Me.TabControlPanel1
+        Me.TabItem1.Name = "TabItem1"
+        Me.TabItem1.Text = "ເພີ້ມຜູ້ໃຊ້ງານ"
+        '
         'TabControlPanel3
         '
         Me.TabControlPanel3.Controls.Add(Me.Panel2)
         Me.TabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControlPanel3.Location = New System.Drawing.Point(0, 38)
-        Me.TabControlPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TabControlPanel3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControlPanel3.Name = "TabControlPanel3"
         Me.TabControlPanel3.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel3.Size = New System.Drawing.Size(1314, 717)
+        Me.TabControlPanel3.Size = New System.Drawing.Size(1314, 695)
         Me.TabControlPanel3.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.TabControlPanel3.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
         Me.TabControlPanel3.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
@@ -188,9 +560,9 @@ Partial Class frmuser
         Me.Panel2.Controls.Add(Me.GroupPanel1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(1, 1)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1312, 715)
+        Me.Panel2.Size = New System.Drawing.Size(1312, 693)
         Me.Panel2.TabIndex = 0
         '
         'GroupPanel7
@@ -201,7 +573,7 @@ Partial Class frmuser
         Me.GroupPanel7.Controls.Add(Me.frmincome_outcome)
         Me.GroupPanel7.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel7.Location = New System.Drawing.Point(818, 15)
-        Me.GroupPanel7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel7.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel7.Name = "GroupPanel7"
         Me.GroupPanel7.Size = New System.Drawing.Size(174, 419)
         '
@@ -242,9 +614,9 @@ Partial Class frmuser
         Me.frmreportdaily.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmreportdaily.ForeColor = System.Drawing.Color.Red
         Me.frmreportdaily.Location = New System.Drawing.Point(8, 56)
-        Me.frmreportdaily.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmreportdaily.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportdaily.Name = "frmreportdaily"
-        Me.frmreportdaily.Size = New System.Drawing.Size(76, 23)
+        Me.frmreportdaily.Size = New System.Drawing.Size(77, 26)
         Me.frmreportdaily.TabIndex = 36
         Me.frmreportdaily.Text = "ລາຍງານ"
         Me.frmreportdaily.UseVisualStyleBackColor = False
@@ -256,9 +628,9 @@ Partial Class frmuser
         Me.frmincome_outcome.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmincome_outcome.ForeColor = System.Drawing.Color.Red
         Me.frmincome_outcome.Location = New System.Drawing.Point(8, 19)
-        Me.frmincome_outcome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmincome_outcome.Margin = New System.Windows.Forms.Padding(4)
         Me.frmincome_outcome.Name = "frmincome_outcome"
-        Me.frmincome_outcome.Size = New System.Drawing.Size(115, 23)
+        Me.frmincome_outcome.Size = New System.Drawing.Size(116, 26)
         Me.frmincome_outcome.TabIndex = 27
         Me.frmincome_outcome.Text = "ບັນທືກປະຈໍາວັນ"
         Me.frmincome_outcome.UseVisualStyleBackColor = False
@@ -285,7 +657,7 @@ Partial Class frmuser
         Me.GroupPanel4.Controls.Add(Me.btnapprove3)
         Me.GroupPanel4.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel4.Location = New System.Drawing.Point(995, 15)
-        Me.GroupPanel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel4.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel4.Name = "GroupPanel4"
         Me.GroupPanel4.Size = New System.Drawing.Size(253, 421)
         '
@@ -328,7 +700,7 @@ Partial Class frmuser
         Me.Label15.Location = New System.Drawing.Point(4, 306)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(89, 21)
+        Me.Label15.Size = New System.Drawing.Size(89, 24)
         Me.Label15.TabIndex = 38
         Me.Label15.Text = "+ ຂາຍສີນຄ້າ"
         Me.Label15.Visible = False
@@ -340,9 +712,9 @@ Partial Class frmuser
         Me.btncancel5.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel5.ForeColor = System.Drawing.Color.Red
         Me.btncancel5.Location = New System.Drawing.Point(141, 333)
-        Me.btncancel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncancel5.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel5.Name = "btncancel5"
-        Me.btncancel5.Size = New System.Drawing.Size(69, 23)
+        Me.btncancel5.Size = New System.Drawing.Size(70, 26)
         Me.btncancel5.TabIndex = 36
         Me.btncancel5.Text = "ຍົກເລີກ"
         Me.btncancel5.UseVisualStyleBackColor = False
@@ -355,9 +727,9 @@ Partial Class frmuser
         Me.btnapprove5.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnapprove5.ForeColor = System.Drawing.Color.Red
         Me.btnapprove5.Location = New System.Drawing.Point(9, 333)
-        Me.btnapprove5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnapprove5.Margin = New System.Windows.Forms.Padding(4)
         Me.btnapprove5.Name = "btnapprove5"
-        Me.btnapprove5.Size = New System.Drawing.Size(96, 23)
+        Me.btnapprove5.Size = New System.Drawing.Size(97, 26)
         Me.btnapprove5.TabIndex = 37
         Me.btnapprove5.Text = "ອະນຸມັດຂາຍ"
         Me.btnapprove5.UseVisualStyleBackColor = False
@@ -372,7 +744,7 @@ Partial Class frmuser
         Me.Label14.Location = New System.Drawing.Point(4, 248)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(132, 21)
+        Me.Label14.Size = New System.Drawing.Size(132, 24)
         Me.Label14.TabIndex = 35
         Me.Label14.Text = "+ ໃບຊ້ອມແປງສີນຄ້າ"
         '
@@ -383,9 +755,9 @@ Partial Class frmuser
         Me.btncancel4.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel4.ForeColor = System.Drawing.Color.Red
         Me.btncancel4.Location = New System.Drawing.Point(9, 275)
-        Me.btncancel4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncancel4.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel4.Name = "btncancel4"
-        Me.btncancel4.Size = New System.Drawing.Size(69, 23)
+        Me.btncancel4.Size = New System.Drawing.Size(70, 26)
         Me.btncancel4.TabIndex = 33
         Me.btncancel4.Text = "ຍົກເລີກ"
         Me.btncancel4.UseVisualStyleBackColor = False
@@ -399,7 +771,7 @@ Partial Class frmuser
         Me.Label13.Location = New System.Drawing.Point(4, 189)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(87, 21)
+        Me.Label13.Size = New System.Drawing.Size(87, 24)
         Me.Label13.TabIndex = 32
         Me.Label13.Text = "+ ເບີກສີນຄ້າ"
         '
@@ -412,7 +784,7 @@ Partial Class frmuser
         Me.Label12.Location = New System.Drawing.Point(4, 73)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(90, 21)
+        Me.Label12.Size = New System.Drawing.Size(90, 24)
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "+ ສັ່ງຊື້ສິນຄ້າ"
         '
@@ -425,7 +797,7 @@ Partial Class frmuser
         Me.Label11.Location = New System.Drawing.Point(4, 131)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(130, 21)
+        Me.Label11.Size = New System.Drawing.Size(130, 24)
         Me.Label11.TabIndex = 30
         Me.Label11.Text = "+ ຮັບສີນຄ້າເຂົ້າສາງ"
         '
@@ -438,7 +810,7 @@ Partial Class frmuser
         Me.Label10.Location = New System.Drawing.Point(4, 15)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(134, 21)
+        Me.Label10.Size = New System.Drawing.Size(134, 24)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "+ ຈັດການຂໍ້ມູນສີນຄ້າ"
         '
@@ -449,9 +821,9 @@ Partial Class frmuser
         Me.btncancel3.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel3.ForeColor = System.Drawing.Color.Red
         Me.btncancel3.Location = New System.Drawing.Point(141, 217)
-        Me.btncancel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncancel3.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel3.Name = "btncancel3"
-        Me.btncancel3.Size = New System.Drawing.Size(69, 23)
+        Me.btncancel3.Size = New System.Drawing.Size(70, 26)
         Me.btncancel3.TabIndex = 25
         Me.btncancel3.Text = "ຍົກເລີກ"
         Me.btncancel3.UseVisualStyleBackColor = False
@@ -463,9 +835,9 @@ Partial Class frmuser
         Me.btncancel2.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel2.ForeColor = System.Drawing.Color.Red
         Me.btncancel2.Location = New System.Drawing.Point(9, 101)
-        Me.btncancel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncancel2.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel2.Name = "btncancel2"
-        Me.btncancel2.Size = New System.Drawing.Size(69, 23)
+        Me.btncancel2.Size = New System.Drawing.Size(70, 26)
         Me.btncancel2.TabIndex = 26
         Me.btncancel2.Text = "ຍົກເລີກ"
         Me.btncancel2.UseVisualStyleBackColor = False
@@ -477,9 +849,9 @@ Partial Class frmuser
         Me.btncancel1.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel1.ForeColor = System.Drawing.Color.Red
         Me.btncancel1.Location = New System.Drawing.Point(141, 160)
-        Me.btncancel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btncancel1.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel1.Name = "btncancel1"
-        Me.btncancel1.Size = New System.Drawing.Size(69, 23)
+        Me.btncancel1.Size = New System.Drawing.Size(70, 26)
         Me.btncancel1.TabIndex = 21
         Me.btncancel1.Text = "ຍົກເລີກ"
         Me.btncancel1.UseVisualStyleBackColor = False
@@ -491,9 +863,9 @@ Partial Class frmuser
         Me.btnupdate4.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnupdate4.ForeColor = System.Drawing.Color.Red
         Me.btnupdate4.Location = New System.Drawing.Point(9, 43)
-        Me.btnupdate4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnupdate4.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdate4.Name = "btnupdate4"
-        Me.btnupdate4.Size = New System.Drawing.Size(62, 23)
+        Me.btnupdate4.Size = New System.Drawing.Size(63, 26)
         Me.btnupdate4.TabIndex = 20
         Me.btnupdate4.Text = "ປັບປຸງ"
         Me.btnupdate4.UseVisualStyleBackColor = False
@@ -505,9 +877,9 @@ Partial Class frmuser
         Me.btnreceive1.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnreceive1.ForeColor = System.Drawing.Color.Red
         Me.btnreceive1.Location = New System.Drawing.Point(9, 159)
-        Me.btnreceive1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnreceive1.Margin = New System.Windows.Forms.Padding(4)
         Me.btnreceive1.Name = "btnreceive1"
-        Me.btnreceive1.Size = New System.Drawing.Size(80, 23)
+        Me.btnreceive1.Size = New System.Drawing.Size(81, 26)
         Me.btnreceive1.TabIndex = 24
         Me.btnreceive1.Text = "ຮັບສີນຄ້າ"
         Me.btnreceive1.UseVisualStyleBackColor = False
@@ -519,9 +891,9 @@ Partial Class frmuser
         Me.btndelete4.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete4.ForeColor = System.Drawing.Color.Red
         Me.btndelete4.Location = New System.Drawing.Point(141, 43)
-        Me.btndelete4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btndelete4.Margin = New System.Windows.Forms.Padding(4)
         Me.btndelete4.Name = "btndelete4"
-        Me.btndelete4.Size = New System.Drawing.Size(46, 23)
+        Me.btndelete4.Size = New System.Drawing.Size(47, 26)
         Me.btndelete4.TabIndex = 20
         Me.btndelete4.Text = "ລືບ"
         Me.btndelete4.UseVisualStyleBackColor = False
@@ -533,9 +905,9 @@ Partial Class frmuser
         Me.btnapprove3.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnapprove3.ForeColor = System.Drawing.Color.Red
         Me.btnapprove3.Location = New System.Drawing.Point(9, 217)
-        Me.btnapprove3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnapprove3.Margin = New System.Windows.Forms.Padding(4)
         Me.btnapprove3.Name = "btnapprove3"
-        Me.btnapprove3.Size = New System.Drawing.Size(96, 23)
+        Me.btnapprove3.Size = New System.Drawing.Size(97, 26)
         Me.btnapprove3.TabIndex = 28
         Me.btnapprove3.Text = "ອະນຸມັດຂາຍ"
         Me.btnapprove3.UseVisualStyleBackColor = False
@@ -551,7 +923,7 @@ Partial Class frmuser
         Me.GroupPanel5.Controls.Add(Me.frmaddress)
         Me.GroupPanel5.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel5.Location = New System.Drawing.Point(395, 15)
-        Me.GroupPanel5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel5.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel5.Name = "GroupPanel5"
         Me.GroupPanel5.Size = New System.Drawing.Size(225, 419)
         '
@@ -592,9 +964,9 @@ Partial Class frmuser
         Me.frmreportcustomer.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmreportcustomer.ForeColor = System.Drawing.Color.Blue
         Me.frmreportcustomer.Location = New System.Drawing.Point(6, 159)
-        Me.frmreportcustomer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmreportcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportcustomer.Name = "frmreportcustomer"
-        Me.frmreportcustomer.Size = New System.Drawing.Size(117, 25)
+        Me.frmreportcustomer.Size = New System.Drawing.Size(117, 28)
         Me.frmreportcustomer.TabIndex = 31
         Me.frmreportcustomer.Text = "ລາຍງານລູກຄ້າ"
         Me.frmreportcustomer.UseVisualStyleBackColor = False
@@ -606,9 +978,9 @@ Partial Class frmuser
         Me.frmcustomerdebit.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmcustomerdebit.ForeColor = System.Drawing.Color.Blue
         Me.frmcustomerdebit.Location = New System.Drawing.Point(6, 88)
-        Me.frmcustomerdebit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmcustomerdebit.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcustomerdebit.Name = "frmcustomerdebit"
-        Me.frmcustomerdebit.Size = New System.Drawing.Size(124, 25)
+        Me.frmcustomerdebit.Size = New System.Drawing.Size(124, 28)
         Me.frmcustomerdebit.TabIndex = 25
         Me.frmcustomerdebit.Text = "ຂໍ້ມູນລູກຄ້າຕິດໜີ້"
         Me.frmcustomerdebit.UseVisualStyleBackColor = False
@@ -621,9 +993,9 @@ Partial Class frmuser
         Me.frmcustomer.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmcustomer.ForeColor = System.Drawing.Color.Blue
         Me.frmcustomer.Location = New System.Drawing.Point(6, 53)
-        Me.frmcustomer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcustomer.Name = "frmcustomer"
-        Me.frmcustomer.Size = New System.Drawing.Size(163, 25)
+        Me.frmcustomer.Size = New System.Drawing.Size(163, 28)
         Me.frmcustomer.TabIndex = 24
         Me.frmcustomer.Text = "ເພີ້ມຂໍ້ມູນລູກຄ້າ/ຮ້ານຄ້າ"
         Me.frmcustomer.UseVisualStyleBackColor = False
@@ -635,9 +1007,9 @@ Partial Class frmuser
         Me.frmdebitcustomer.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmdebitcustomer.ForeColor = System.Drawing.Color.Blue
         Me.frmdebitcustomer.Location = New System.Drawing.Point(6, 124)
-        Me.frmdebitcustomer.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmdebitcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmdebitcustomer.Name = "frmdebitcustomer"
-        Me.frmdebitcustomer.Size = New System.Drawing.Size(124, 25)
+        Me.frmdebitcustomer.Size = New System.Drawing.Size(124, 28)
         Me.frmdebitcustomer.TabIndex = 30
         Me.frmdebitcustomer.Text = "ຂໍ້ມູນຕິດໜີ້ລູກຄ້າ"
         Me.frmdebitcustomer.UseVisualStyleBackColor = False
@@ -650,9 +1022,9 @@ Partial Class frmuser
         Me.frmaddress.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmaddress.ForeColor = System.Drawing.Color.Blue
         Me.frmaddress.Location = New System.Drawing.Point(6, 18)
-        Me.frmaddress.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmaddress.Margin = New System.Windows.Forms.Padding(4)
         Me.frmaddress.Name = "frmaddress"
-        Me.frmaddress.Size = New System.Drawing.Size(74, 25)
+        Me.frmaddress.Size = New System.Drawing.Size(74, 28)
         Me.frmaddress.TabIndex = 20
         Me.frmaddress.Text = "ຂໍ້ມູນທີຢູ່"
         Me.frmaddress.UseVisualStyleBackColor = False
@@ -669,7 +1041,7 @@ Partial Class frmuser
         Me.GroupPanel6.Controls.Add(Me.Label9)
         Me.GroupPanel6.Controls.Add(Me.Label8)
         Me.GroupPanel6.Location = New System.Drawing.Point(14, 442)
-        Me.GroupPanel6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel6.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel6.Name = "GroupPanel6"
         Me.GroupPanel6.Size = New System.Drawing.Size(1234, 173)
         '
@@ -710,7 +1082,7 @@ Partial Class frmuser
         Me.btnupdatelevel.Image = Global.HotelSystem.My.Resources.Resources.Refresh
         Me.btnupdatelevel.ImageFixedSize = New System.Drawing.Size(40, 40)
         Me.btnupdatelevel.Location = New System.Drawing.Point(116, 83)
-        Me.btnupdatelevel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnupdatelevel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdatelevel.Name = "btnupdatelevel"
         Me.btnupdatelevel.Size = New System.Drawing.Size(153, 52)
         Me.btnupdatelevel.TabIndex = 22
@@ -723,9 +1095,9 @@ Partial Class frmuser
         Me.cbadmin.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbadmin.ForeColor = System.Drawing.Color.Blue
         Me.cbadmin.Location = New System.Drawing.Point(356, 8)
-        Me.cbadmin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbadmin.Margin = New System.Windows.Forms.Padding(4)
         Me.cbadmin.Name = "cbadmin"
-        Me.cbadmin.Size = New System.Drawing.Size(177, 25)
+        Me.cbadmin.Size = New System.Drawing.Size(177, 28)
         Me.cbadmin.TabIndex = 21
         Me.cbadmin.Text = "ສິດທິຂອງຜູ້ບໍລິຫານລະບົບ"
         Me.cbadmin.UseVisualStyleBackColor = False
@@ -737,9 +1109,9 @@ Partial Class frmuser
         Me.cbuser.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbuser.ForeColor = System.Drawing.Color.Blue
         Me.cbuser.Location = New System.Drawing.Point(116, 8)
-        Me.cbuser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cbuser.Margin = New System.Windows.Forms.Padding(4)
         Me.cbuser.Name = "cbuser"
-        Me.cbuser.Size = New System.Drawing.Size(112, 25)
+        Me.cbuser.Size = New System.Drawing.Size(112, 28)
         Me.cbuser.TabIndex = 20
         Me.cbuser.Text = "ສິດທິຂອງຜູ້ໃຊ້"
         Me.cbuser.UseVisualStyleBackColor = False
@@ -747,7 +1119,7 @@ Partial Class frmuser
         'txtusername
         '
         Me.txtusername.Location = New System.Drawing.Point(356, 40)
-        Me.txtusername.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtusername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtusername.Name = "txtusername"
         Me.txtusername.ReadOnly = True
         Me.txtusername.Size = New System.Drawing.Size(854, 34)
@@ -756,7 +1128,7 @@ Partial Class frmuser
         'txtuserid
         '
         Me.txtuserid.Location = New System.Drawing.Point(116, 40)
-        Me.txtuserid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtuserid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtuserid.Name = "txtuserid"
         Me.txtuserid.ReadOnly = True
         Me.txtuserid.Size = New System.Drawing.Size(152, 34)
@@ -769,7 +1141,7 @@ Partial Class frmuser
         Me.Label9.Location = New System.Drawing.Point(303, 44)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 24)
+        Me.Label9.Size = New System.Drawing.Size(54, 27)
         Me.Label9.TabIndex = 19
         Me.Label9.Text = "ຊື່ຜູ້ໃຊ້:"
         '
@@ -780,7 +1152,7 @@ Partial Class frmuser
         Me.Label8.Location = New System.Drawing.Point(32, 45)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(81, 24)
+        Me.Label8.Size = New System.Drawing.Size(83, 27)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "ລະຫັດຜູ້ໃຊ້:"
         '
@@ -798,7 +1170,7 @@ Partial Class frmuser
         Me.GroupPanel3.Controls.Add(Me.frmuser1)
         Me.GroupPanel3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel3.Location = New System.Drawing.Point(624, 15)
-        Me.GroupPanel3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel3.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel3.Name = "GroupPanel3"
         Me.GroupPanel3.Size = New System.Drawing.Size(190, 419)
         '
@@ -839,9 +1211,9 @@ Partial Class frmuser
         Me.frmother.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmother.ForeColor = System.Drawing.Color.Red
         Me.frmother.Location = New System.Drawing.Point(9, 269)
-        Me.frmother.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmother.Margin = New System.Windows.Forms.Padding(4)
         Me.frmother.Name = "frmother"
-        Me.frmother.Size = New System.Drawing.Size(81, 23)
+        Me.frmother.Size = New System.Drawing.Size(82, 26)
         Me.frmother.TabIndex = 29
         Me.frmother.Text = "ຂໍ້ມູນອື່ນໆ"
         Me.frmother.UseVisualStyleBackColor = False
@@ -853,9 +1225,9 @@ Partial Class frmuser
         Me.frmconfig.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmconfig.ForeColor = System.Drawing.Color.Blue
         Me.frmconfig.Location = New System.Drawing.Point(9, 232)
-        Me.frmconfig.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmconfig.Margin = New System.Windows.Forms.Padding(4)
         Me.frmconfig.Name = "frmconfig"
-        Me.frmconfig.Size = New System.Drawing.Size(95, 23)
+        Me.frmconfig.Size = New System.Drawing.Size(96, 26)
         Me.frmconfig.TabIndex = 28
         Me.frmconfig.Text = "ຕັ້ງຄ່າລະບົບ"
         Me.frmconfig.UseVisualStyleBackColor = False
@@ -867,9 +1239,9 @@ Partial Class frmuser
         Me.frmbackup.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmbackup.ForeColor = System.Drawing.Color.Blue
         Me.frmbackup.Location = New System.Drawing.Point(9, 196)
-        Me.frmbackup.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmbackup.Margin = New System.Windows.Forms.Padding(4)
         Me.frmbackup.Name = "frmbackup"
-        Me.frmbackup.Size = New System.Drawing.Size(99, 23)
+        Me.frmbackup.Size = New System.Drawing.Size(100, 26)
         Me.frmbackup.TabIndex = 25
         Me.frmbackup.Text = "ແບັກອັບຂໍ້ມູນ"
         Me.frmbackup.UseVisualStyleBackColor = False
@@ -881,9 +1253,9 @@ Partial Class frmuser
         Me.frmbusiness.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmbusiness.ForeColor = System.Drawing.Color.Blue
         Me.frmbusiness.Location = New System.Drawing.Point(9, 160)
-        Me.frmbusiness.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmbusiness.Margin = New System.Windows.Forms.Padding(4)
         Me.frmbusiness.Name = "frmbusiness"
-        Me.frmbusiness.Size = New System.Drawing.Size(90, 23)
+        Me.frmbusiness.Size = New System.Drawing.Size(91, 26)
         Me.frmbusiness.TabIndex = 26
         Me.frmbusiness.Text = "ຂໍ້ມູນບໍລິສັດ"
         Me.frmbusiness.UseVisualStyleBackColor = False
@@ -895,9 +1267,9 @@ Partial Class frmuser
         Me.frmsalename.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmsalename.ForeColor = System.Drawing.Color.Blue
         Me.frmsalename.Location = New System.Drawing.Point(9, 124)
-        Me.frmsalename.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmsalename.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsalename.Name = "frmsalename"
-        Me.frmsalename.Size = New System.Drawing.Size(112, 23)
+        Me.frmsalename.Size = New System.Drawing.Size(113, 26)
         Me.frmsalename.TabIndex = 21
         Me.frmsalename.Text = "ພະນັກງານຂາຍ"
         Me.frmsalename.UseVisualStyleBackColor = False
@@ -909,9 +1281,9 @@ Partial Class frmuser
         Me.frmmainproduct.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmmainproduct.ForeColor = System.Drawing.Color.Blue
         Me.frmmainproduct.Location = New System.Drawing.Point(9, 18)
-        Me.frmmainproduct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmmainproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmmainproduct.Name = "frmmainproduct"
-        Me.frmmainproduct.Size = New System.Drawing.Size(131, 23)
+        Me.frmmainproduct.Size = New System.Drawing.Size(132, 26)
         Me.frmmainproduct.TabIndex = 20
         Me.frmmainproduct.Text = "ຂໍ້ມູນພື້ນຖານສີນຄ້າ"
         Me.frmmainproduct.UseVisualStyleBackColor = False
@@ -923,9 +1295,9 @@ Partial Class frmuser
         Me.frmexchange.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmexchange.ForeColor = System.Drawing.Color.Blue
         Me.frmexchange.Location = New System.Drawing.Point(9, 88)
-        Me.frmexchange.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmexchange.Margin = New System.Windows.Forms.Padding(4)
         Me.frmexchange.Name = "frmexchange"
-        Me.frmexchange.Size = New System.Drawing.Size(113, 23)
+        Me.frmexchange.Size = New System.Drawing.Size(114, 26)
         Me.frmexchange.TabIndex = 24
         Me.frmexchange.Text = "ອັດຕາແລກປ່ຽນ"
         Me.frmexchange.UseVisualStyleBackColor = False
@@ -937,9 +1309,9 @@ Partial Class frmuser
         Me.frmuser1.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmuser1.ForeColor = System.Drawing.Color.Blue
         Me.frmuser1.Location = New System.Drawing.Point(9, 53)
-        Me.frmuser1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmuser1.Margin = New System.Windows.Forms.Padding(4)
         Me.frmuser1.Name = "frmuser1"
-        Me.frmuser1.Size = New System.Drawing.Size(100, 23)
+        Me.frmuser1.Size = New System.Drawing.Size(101, 26)
         Me.frmuser1.TabIndex = 20
         Me.frmuser1.Text = "ເພີ້ມຜູ້ໃຊ້ງານ"
         Me.frmuser1.UseVisualStyleBackColor = False
@@ -957,7 +1329,7 @@ Partial Class frmuser
         Me.GroupPanel2.Controls.Add(Me.frmreturnproduct)
         Me.GroupPanel2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(204, 15)
-        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel2.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel2.Name = "GroupPanel2"
         Me.GroupPanel2.Size = New System.Drawing.Size(186, 419)
         '
@@ -998,9 +1370,9 @@ Partial Class frmuser
         Me.frmcheckstock.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmcheckstock.ForeColor = System.Drawing.Color.Red
         Me.frmcheckstock.Location = New System.Drawing.Point(10, 52)
-        Me.frmcheckstock.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmcheckstock.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcheckstock.Name = "frmcheckstock"
-        Me.frmcheckstock.Size = New System.Drawing.Size(116, 23)
+        Me.frmcheckstock.Size = New System.Drawing.Size(117, 26)
         Me.frmcheckstock.TabIndex = 35
         Me.frmcheckstock.Text = "ກວດສອບສິນຄ້າ"
         Me.frmcheckstock.UseVisualStyleBackColor = False
@@ -1012,9 +1384,9 @@ Partial Class frmuser
         Me.frmstockreport.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmstockreport.ForeColor = System.Drawing.Color.Blue
         Me.frmstockreport.Location = New System.Drawing.Point(10, 222)
-        Me.frmstockreport.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmstockreport.Margin = New System.Windows.Forms.Padding(4)
         Me.frmstockreport.Name = "frmstockreport"
-        Me.frmstockreport.Size = New System.Drawing.Size(99, 23)
+        Me.frmstockreport.Size = New System.Drawing.Size(100, 26)
         Me.frmstockreport.TabIndex = 34
         Me.frmstockreport.Text = "ລາຍງານສາງ"
         Me.frmstockreport.UseVisualStyleBackColor = False
@@ -1026,9 +1398,9 @@ Partial Class frmuser
         Me.frmreceiveproduct.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmreceiveproduct.ForeColor = System.Drawing.Color.Blue
         Me.frmreceiveproduct.Location = New System.Drawing.Point(10, 120)
-        Me.frmreceiveproduct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmreceiveproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreceiveproduct.Name = "frmreceiveproduct"
-        Me.frmreceiveproduct.Size = New System.Drawing.Size(124, 23)
+        Me.frmreceiveproduct.Size = New System.Drawing.Size(125, 26)
         Me.frmreceiveproduct.TabIndex = 30
         Me.frmreceiveproduct.Text = "ຮັບສີນຄ້າເຂົ້າສາງ"
         Me.frmreceiveproduct.UseVisualStyleBackColor = False
@@ -1040,9 +1412,9 @@ Partial Class frmuser
         Me.frmorder.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmorder.ForeColor = System.Drawing.Color.Blue
         Me.frmorder.Location = New System.Drawing.Point(10, 86)
-        Me.frmorder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmorder.Margin = New System.Windows.Forms.Padding(4)
         Me.frmorder.Name = "frmorder"
-        Me.frmorder.Size = New System.Drawing.Size(87, 23)
+        Me.frmorder.Size = New System.Drawing.Size(88, 26)
         Me.frmorder.TabIndex = 24
         Me.frmorder.Text = "ສັ່ງຊື້ສີນຄ້າ"
         Me.frmorder.UseVisualStyleBackColor = False
@@ -1054,9 +1426,9 @@ Partial Class frmuser
         Me.frmproduct12.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmproduct12.ForeColor = System.Drawing.Color.Blue
         Me.frmproduct12.Location = New System.Drawing.Point(10, 18)
-        Me.frmproduct12.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmproduct12.Margin = New System.Windows.Forms.Padding(4)
         Me.frmproduct12.Name = "frmproduct12"
-        Me.frmproduct12.Size = New System.Drawing.Size(88, 23)
+        Me.frmproduct12.Size = New System.Drawing.Size(89, 26)
         Me.frmproduct12.TabIndex = 20
         Me.frmproduct12.Text = "ຂໍ້ມູນສີນຄ້າ"
         Me.frmproduct12.UseVisualStyleBackColor = False
@@ -1068,9 +1440,9 @@ Partial Class frmuser
         Me.frmstockin_out.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmstockin_out.ForeColor = System.Drawing.Color.Blue
         Me.frmstockin_out.Location = New System.Drawing.Point(10, 188)
-        Me.frmstockin_out.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmstockin_out.Margin = New System.Windows.Forms.Padding(4)
         Me.frmstockin_out.Name = "frmstockin_out"
-        Me.frmstockin_out.Size = New System.Drawing.Size(85, 23)
+        Me.frmstockin_out.Size = New System.Drawing.Size(86, 26)
         Me.frmstockin_out.TabIndex = 32
         Me.frmstockin_out.Text = "ເບີກສີນຄ້າ"
         Me.frmstockin_out.UseVisualStyleBackColor = False
@@ -1082,9 +1454,9 @@ Partial Class frmuser
         Me.frmreturnproduct.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmreturnproduct.ForeColor = System.Drawing.Color.Blue
         Me.frmreturnproduct.Location = New System.Drawing.Point(10, 154)
-        Me.frmreturnproduct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmreturnproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreturnproduct.Name = "frmreturnproduct"
-        Me.frmreturnproduct.Size = New System.Drawing.Size(96, 23)
+        Me.frmreturnproduct.Size = New System.Drawing.Size(97, 26)
         Me.frmreturnproduct.TabIndex = 31
         Me.frmreturnproduct.Text = "ສົ່ງຄືນສີນຄ້າ"
         Me.frmreturnproduct.UseVisualStyleBackColor = False
@@ -1100,7 +1472,7 @@ Partial Class frmuser
         Me.GroupPanel1.Controls.Add(Me.frmsalelistapprove)
         Me.GroupPanel1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(14, 15)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.GroupPanel1.Name = "GroupPanel1"
         Me.GroupPanel1.Size = New System.Drawing.Size(186, 419)
         '
@@ -1141,9 +1513,9 @@ Partial Class frmuser
         Me.frmproductinfo.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmproductinfo.ForeColor = System.Drawing.Color.Red
         Me.frmproductinfo.Location = New System.Drawing.Point(8, 53)
-        Me.frmproductinfo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmproductinfo.Margin = New System.Windows.Forms.Padding(4)
         Me.frmproductinfo.Name = "frmproductinfo"
-        Me.frmproductinfo.Size = New System.Drawing.Size(88, 23)
+        Me.frmproductinfo.Size = New System.Drawing.Size(89, 26)
         Me.frmproductinfo.TabIndex = 36
         Me.frmproductinfo.Text = "ຂໍ້ມູນສີນຄ້າ"
         Me.frmproductinfo.UseVisualStyleBackColor = False
@@ -1155,9 +1527,9 @@ Partial Class frmuser
         Me.frmsale11.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmsale11.ForeColor = System.Drawing.Color.Blue
         Me.frmsale11.Location = New System.Drawing.Point(8, 18)
-        Me.frmsale11.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmsale11.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsale11.Name = "frmsale11"
-        Me.frmsale11.Size = New System.Drawing.Size(87, 23)
+        Me.frmsale11.Size = New System.Drawing.Size(88, 26)
         Me.frmsale11.TabIndex = 33
         Me.frmsale11.Text = "ຂາຍສີນຄ້າ"
         Me.frmsale11.UseVisualStyleBackColor = False
@@ -1169,9 +1541,9 @@ Partial Class frmuser
         Me.frmreportsale.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmreportsale.ForeColor = System.Drawing.Color.Blue
         Me.frmreportsale.Location = New System.Drawing.Point(8, 159)
-        Me.frmreportsale.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmreportsale.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportsale.Name = "frmreportsale"
-        Me.frmreportsale.Size = New System.Drawing.Size(126, 23)
+        Me.frmreportsale.Size = New System.Drawing.Size(127, 26)
         Me.frmreportsale.TabIndex = 27
         Me.frmreportsale.Text = "ລາຍງານການຂາຍ"
         Me.frmreportsale.UseVisualStyleBackColor = False
@@ -1183,9 +1555,9 @@ Partial Class frmuser
         Me.frmsumarysale.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmsumarysale.ForeColor = System.Drawing.Color.Blue
         Me.frmsumarysale.Location = New System.Drawing.Point(8, 124)
-        Me.frmsumarysale.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmsumarysale.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsumarysale.Name = "frmsumarysale"
-        Me.frmsumarysale.Size = New System.Drawing.Size(120, 23)
+        Me.frmsumarysale.Size = New System.Drawing.Size(121, 26)
         Me.frmsumarysale.TabIndex = 24
         Me.frmsumarysale.Text = "ສັງລວມການຂາຍ"
         Me.frmsumarysale.UseVisualStyleBackColor = False
@@ -1197,9 +1569,9 @@ Partial Class frmuser
         Me.frmsalelistapprove.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.frmsalelistapprove.ForeColor = System.Drawing.Color.Blue
         Me.frmsalelistapprove.Location = New System.Drawing.Point(8, 88)
-        Me.frmsalelistapprove.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.frmsalelistapprove.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsalelistapprove.Name = "frmsalelistapprove"
-        Me.frmsalelistapprove.Size = New System.Drawing.Size(103, 23)
+        Me.frmsalelistapprove.Size = New System.Drawing.Size(104, 26)
         Me.frmsalelistapprove.TabIndex = 20
         Me.frmsalelistapprove.Text = "ລາຍກາຍຂາຍ"
         Me.frmsalelistapprove.UseVisualStyleBackColor = False
@@ -1210,392 +1582,31 @@ Partial Class frmuser
         Me.TabItem3.Name = "TabItem3"
         Me.TabItem3.Text = "ກໍານົດສີດທິ"
         '
-        'TabControlPanel1
-        '
-        Me.TabControlPanel1.Controls.Add(Me.TableLayoutPanel1)
-        Me.TabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel1.Location = New System.Drawing.Point(0, 38)
-        Me.TabControlPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabControlPanel1.Name = "TabControlPanel1"
-        Me.TabControlPanel1.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel1.Size = New System.Drawing.Size(1314, 717)
-        Me.TabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel1.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel1.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel1.Style.GradientAngle = 90
-        Me.TabControlPanel1.TabIndex = 1
-        Me.TabControlPanel1.TabItem = Me.TabItem1
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.ToolStrip1, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TabControl2, 0, 2)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(1, 1)
-        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 176.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1312, 715)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
-        Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
-        Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.btnclose})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1312, 39)
-        Me.ToolStrip1.TabIndex = 1
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btnsave
-        '
-        Me.btnsave.ForeColor = System.Drawing.Color.Black
-        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save
-        Me.btnsave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
-        Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(86, 36)
-        Me.btnsave.Text = "ບັນທືກ"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 39)
-        '
-        'btndelete
-        '
-        Me.btndelete.ForeColor = System.Drawing.Color.Black
-        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
-        Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(66, 36)
-        Me.btndelete.Text = "ລືບ"
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 39)
-        '
-        'btnedit
-        '
-        Me.btnedit.ForeColor = System.Drawing.Color.Black
-        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
-        Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(82, 36)
-        Me.btnedit.Text = "ແກ້ໄຂ"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 39)
-        '
-        'btnupdate
-        '
-        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources.Refresh
-        Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(84, 36)
-        Me.btnupdate.Text = "ປັບປຸງ"
-        '
-        'ToolStripSeparator4
-        '
-        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
-        '
-        'btnnew
-        '
-        Me.btnnew.ForeColor = System.Drawing.Color.Black
-        Me.btnnew.Image = Global.HotelSystem.My.Resources.Resources.New_file
-        Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(98, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
-        '
-        'btnclose
-        '
-        Me.btnclose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.btnclose.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
-        Me.btnclose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.btnclose.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(66, 36)
-        Me.btnclose.Text = "ປິດ"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.cbposition)
-        Me.Panel1.Controls.Add(Me.cbdepartment)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.cblevel)
-        Me.Panel1.Controls.Add(Me.txtpassword)
-        Me.Panel1.Controls.Add(Me.txtlao)
-        Me.Panel1.Controls.Add(Me.txteng)
-        Me.Panel1.Controls.Add(Me.txtid)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel1.Location = New System.Drawing.Point(4, 43)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1304, 167)
-        Me.Panel1.TabIndex = 2
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 123)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(109, 24)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "ສິດທິການນຳໃຊ້:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(625, 84)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 24)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "ລະຫັດ:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(625, 47)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(65, 24)
-        Me.Label5.TabIndex = 11
-        Me.Label5.Text = "ຕໍາແໜ່ງ:"
-        '
-        'cblevel
-        '
-        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cblevel.FormattingEnabled = True
-        Me.cblevel.Location = New System.Drawing.Point(159, 119)
-        Me.cblevel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.cblevel.Name = "cblevel"
-        Me.cblevel.Size = New System.Drawing.Size(1139, 32)
-        Me.cblevel.TabIndex = 10
-        '
-        'txtpassword
-        '
-        Me.txtpassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtpassword.Location = New System.Drawing.Point(716, 80)
-        Me.txtpassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.Size = New System.Drawing.Size(583, 35)
-        Me.txtpassword.TabIndex = 9
-        Me.txtpassword.UseSystemPasswordChar = True
-        '
-        'txtlao
-        '
-        Me.txtlao.Location = New System.Drawing.Point(159, 80)
-        Me.txtlao.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtlao.Name = "txtlao"
-        Me.txtlao.Size = New System.Drawing.Size(453, 35)
-        Me.txtlao.TabIndex = 6
-        '
-        'txteng
-        '
-        Me.txteng.Location = New System.Drawing.Point(159, 40)
-        Me.txteng.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txteng.Name = "txteng"
-        Me.txteng.Size = New System.Drawing.Size(453, 35)
-        Me.txteng.TabIndex = 5
-        '
-        'txtid
-        '
-        Me.txtid.Location = New System.Drawing.Point(159, 4)
-        Me.txtid.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.txtid.Name = "txtid"
-        Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(453, 35)
-        Me.txtid.TabIndex = 4
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(625, 13)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 24)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "ພະແນກ:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 76)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(116, 24)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "ຊື່ຜູ້ໃຊ້ພາສາລາວ:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 43)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "ຊື່ເຂົ້າໃຊ້ລະບົບ:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 9)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 24)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ລະຫັດ:"
-        '
-        'TabControl2
-        '
-        Me.TabControl2.BackColor = System.Drawing.Color.Transparent
-        Me.TabControl2.CanReorderTabs = True
-        Me.TabControl2.Controls.Add(Me.TabControlPanel2)
-        Me.TabControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControl2.Location = New System.Drawing.Point(4, 219)
-        Me.TabControl2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedTabFont = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl2.SelectedTabIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(1304, 492)
-        Me.TabControl2.TabIndex = 3
-        Me.TabControl2.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox
-        Me.TabControl2.Tabs.Add(Me.TabItem2)
-        Me.TabControl2.Text = "TabControl2"
-        '
-        'TabControlPanel2
-        '
-        Me.TabControlPanel2.Controls.Add(Me.dgvuser)
-        Me.TabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TabControlPanel2.Location = New System.Drawing.Point(0, 38)
-        Me.TabControlPanel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.TabControlPanel2.Name = "TabControlPanel2"
-        Me.TabControlPanel2.Padding = New System.Windows.Forms.Padding(1)
-        Me.TabControlPanel2.Size = New System.Drawing.Size(1304, 454)
-        Me.TabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(142, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(231, Byte), Integer))
-        Me.TabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(223, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(254, Byte), Integer))
-        Me.TabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine
-        Me.TabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(CType(CType(59, Byte), Integer), CType(CType(97, Byte), Integer), CType(CType(156, Byte), Integer))
-        Me.TabControlPanel2.Style.BorderSide = CType(((DevComponents.DotNetBar.eBorderSide.Left Or DevComponents.DotNetBar.eBorderSide.Right) _
-            Or DevComponents.DotNetBar.eBorderSide.Bottom), DevComponents.DotNetBar.eBorderSide)
-        Me.TabControlPanel2.Style.GradientAngle = 90
-        Me.TabControlPanel2.TabIndex = 1
-        Me.TabControlPanel2.TabItem = Me.TabItem2
-        '
-        'dgvuser
-        '
-        Me.dgvuser.AllowUserToAddRows = False
-        Me.dgvuser.AllowUserToDeleteRows = False
-        Me.dgvuser.AllowUserToResizeColumns = False
-        Me.dgvuser.AllowUserToResizeRows = False
-        Me.dgvuser.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
-        Me.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvuser.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvuser.Location = New System.Drawing.Point(1, 1)
-        Me.dgvuser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.dgvuser.Name = "dgvuser"
-        Me.dgvuser.ReadOnly = True
-        Me.dgvuser.RowHeadersVisible = False
-        Me.dgvuser.RowTemplate.Height = 28
-        Me.dgvuser.Size = New System.Drawing.Size(1302, 452)
-        Me.dgvuser.TabIndex = 0
-        '
-        'TabItem2
-        '
-        Me.TabItem2.AttachedControl = Me.TabControlPanel2
-        Me.TabItem2.Name = "TabItem2"
-        Me.TabItem2.Text = "ລາຍຊື່ຜູ້ໃຊ້"
-        '
-        'TabItem1
-        '
-        Me.TabItem1.AttachedControl = Me.TabControlPanel1
-        Me.TabItem1.Name = "TabItem1"
-        Me.TabItem1.Text = "ເພີ້ມຜູ້ໃຊ້ງານ"
-        '
-        'cbdepartment
-        '
-        Me.cbdepartment.DisplayMember = "Text"
-        Me.cbdepartment.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbdepartment.FormattingEnabled = True
-        Me.cbdepartment.ItemHeight = 29
-        Me.cbdepartment.Location = New System.Drawing.Point(716, 4)
-        Me.cbdepartment.Name = "cbdepartment"
-        Me.cbdepartment.Size = New System.Drawing.Size(581, 35)
-        Me.cbdepartment.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.cbdepartment.TabIndex = 14
-        '
-        'cbposition
-        '
-        Me.cbposition.DisplayMember = "Text"
-        Me.cbposition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cbposition.FormattingEnabled = True
-        Me.cbposition.ItemHeight = 29
-        Me.cbposition.Location = New System.Drawing.Point(716, 40)
-        Me.cbposition.Name = "cbposition"
-        Me.cbposition.Size = New System.Drawing.Size(581, 35)
-        Me.cbposition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.cbposition.TabIndex = 15
-        '
         'frmuser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1314, 755)
+        Me.ClientSize = New System.Drawing.Size(1314, 733)
         Me.ControlBox = False
         Me.Controls.Add(Me.TabControl1)
         Me.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmuser"
+        Me.Text = "."
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabControlPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.TableLayoutPanel1.PerformLayout()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabControl2.ResumeLayout(False)
+        Me.TabControlPanel2.ResumeLayout(False)
+        CType(Me.dgvuser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControlPanel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.GroupPanel7.ResumeLayout(False)
@@ -1612,17 +1623,6 @@ Partial Class frmuser
         Me.GroupPanel2.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
         Me.GroupPanel1.PerformLayout()
-        Me.TabControlPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.TabControl2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabControl2.ResumeLayout(False)
-        Me.TabControlPanel2.ResumeLayout(False)
-        CType(Me.dgvuser, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

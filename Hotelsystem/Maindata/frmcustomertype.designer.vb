@@ -62,7 +62,7 @@ Partial Class frmcustomertype
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(639, 506)
+        Me.GroupPanel1.Size = New System.Drawing.Size(533, 506)
         '
         '
         '
@@ -109,7 +109,7 @@ Partial Class frmcustomertype
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 93.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(633, 500)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(527, 500)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'dgvshow
@@ -152,7 +152,7 @@ Partial Class frmcustomertype
         Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         Me.dgvshow.RowTemplate.Height = 30
-        Me.dgvshow.Size = New System.Drawing.Size(627, 350)
+        Me.dgvshow.Size = New System.Drawing.Size(521, 350)
         Me.dgvshow.TabIndex = 4
         '
         'ToolStrip1
@@ -166,7 +166,7 @@ Partial Class frmcustomertype
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(6)
-        Me.ToolStrip1.Size = New System.Drawing.Size(633, 51)
+        Me.ToolStrip1.Size = New System.Drawing.Size(527, 51)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -238,7 +238,7 @@ Partial Class frmcustomertype
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'ToolStripButton1
         '
@@ -253,22 +253,22 @@ Partial Class frmcustomertype
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtcustomertype)
         Me.Panel1.Controls.Add(Me.txtid)
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(4, 55)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(625, 85)
+        Me.Panel1.Size = New System.Drawing.Size(519, 85)
         Me.Panel1.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(40, 48)
+        Me.Label3.Location = New System.Drawing.Point(4, 48)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 29)
@@ -280,10 +280,10 @@ Partial Class frmcustomertype
         Me.txtcustomertype.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtcustomertype.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcustomertype.Location = New System.Drawing.Point(143, 45)
+        Me.txtcustomertype.Location = New System.Drawing.Point(102, 45)
         Me.txtcustomertype.Margin = New System.Windows.Forms.Padding(4)
         Me.txtcustomertype.Name = "txtcustomertype"
-        Me.txtcustomertype.Size = New System.Drawing.Size(347, 35)
+        Me.txtcustomertype.Size = New System.Drawing.Size(411, 35)
         Me.txtcustomertype.TabIndex = 3
         '
         'txtid
@@ -291,18 +291,18 @@ Partial Class frmcustomertype
         Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(143, 7)
+        Me.txtid.Location = New System.Drawing.Point(102, 7)
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(347, 35)
+        Me.txtid.Size = New System.Drawing.Size(411, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(82, 10)
+        Me.Label1.Location = New System.Drawing.Point(46, 10)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 29)
@@ -313,7 +313,7 @@ Partial Class frmcustomertype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 506)
+        Me.ClientSize = New System.Drawing.Size(533, 506)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True

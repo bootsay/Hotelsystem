@@ -65,8 +65,13 @@ Public Class tbuser
                 .Columns(5).HeaderText = "ລະຫັດ"
                 .Columns(6).HeaderText = "ສິດທິ"
                 .Columns(7).Visible = False
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
 
         Catch ex As Exception

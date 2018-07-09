@@ -24,6 +24,8 @@ Partial Class frmcustomer
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnsave = New System.Windows.Forms.ToolStripButton()
@@ -38,11 +40,17 @@ Partial Class frmcustomer
         Me.btnclose = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel7 = New System.Windows.Forms.ToolStripLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cbprovince = New DevComponents.DotNetBar.Controls.ComboBoxEx()
@@ -80,12 +88,6 @@ Partial Class frmcustomer
         Me.dgvcustomer = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.miniToolStrip = New System.Windows.Forms.ToolStrip()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -108,7 +110,7 @@ Partial Class frmcustomer
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1348, 697)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1344, 723)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'ToolStrip1
@@ -123,7 +125,7 @@ Partial Class frmcustomer
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(1348, 55)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1344, 55)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -195,7 +197,7 @@ Partial Class frmcustomer
         Me.btnnew.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 52)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'btnclose
         '
@@ -204,8 +206,7 @@ Partial Class frmcustomer
         Me.btnclose.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnclose.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnclose.Name = "btnclose"
-        Me.btnclose.Size = New System.Drawing.Size(69, 52)
-        Me.btnclose.Text = "ປິດ"
+        Me.btnclose.Size = New System.Drawing.Size(36, 52)
         '
         'ToolStripSeparator1
         '
@@ -214,59 +215,89 @@ Partial Class frmcustomer
         '
         'ToolStripLabel1
         '
-        Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(101, 52)
-        Me.ToolStripLabel1.Text = "ເພີມປະເພດລູກຄ້າ"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(120, 52)
+        Me.ToolStripLabel1.Text = "ເພີ່ມປະເພດລູກຄ້າ"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel2
         '
-        Me.ToolStripLabel2.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(86, 52)
-        Me.ToolStripLabel2.Text = "ເພີມລາຄາຫ້ອງ"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(101, 52)
+        Me.ToolStripLabel2.Text = "ເພີ່ມລາຄາຫ້ອງ"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel3
         '
-        Me.ToolStripLabel3.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(80, 52)
-        Me.ToolStripLabel3.Text = "ເພີມຄຳນຳໜ້າ"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(94, 52)
+        Me.ToolStripLabel3.Text = "ເພີ່ມຄຳນຳໜ້າ"
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel4
         '
-        Me.ToolStripLabel4.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel4.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(80, 52)
-        Me.ToolStripLabel4.Text = "ເພີມຄຳນຳໜ້າ"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(94, 52)
+        Me.ToolStripLabel4.Text = "ເພີ່ມຄຳນຳໜ້າ"
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel5
         '
-        Me.ToolStripLabel5.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel5.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel5.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(54, 52)
-        Me.ToolStripLabel5.Text = "ເພີມບ້ານ"
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(65, 52)
+        Me.ToolStripLabel5.Text = "ເພີ່ມບ້ານ"
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel6
         '
-        Me.ToolStripLabel6.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel6.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel6.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel6.Name = "ToolStripLabel6"
-        Me.ToolStripLabel6.Size = New System.Drawing.Size(58, 52)
-        Me.ToolStripLabel6.Text = "ເພີມເມືອງ"
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(70, 52)
+        Me.ToolStripLabel6.Text = "ເພີ່ມເມືອງ"
+        '
+        'ToolStripSeparator11
+        '
+        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 55)
         '
         'ToolStripLabel7
         '
-        Me.ToolStripLabel7.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel7.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel7.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel7.Name = "ToolStripLabel7"
-        Me.ToolStripLabel7.Size = New System.Drawing.Size(62, 52)
-        Me.ToolStripLabel7.Text = "ເພີມແຂວງ"
+        Me.ToolStripLabel7.Size = New System.Drawing.Size(72, 52)
+        Me.ToolStripLabel7.Text = "ເພີ່ມແຂວງ"
         '
         'Panel1
         '
@@ -307,7 +338,7 @@ Partial Class frmcustomer
         Me.Panel1.Location = New System.Drawing.Point(3, 59)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1342, 198)
+        Me.Panel1.Size = New System.Drawing.Size(1338, 198)
         Me.Panel1.TabIndex = 3
         '
         'cbprovince
@@ -616,30 +647,46 @@ Partial Class frmcustomer
         Me.dgvcustomer.AllowUserToDeleteRows = False
         Me.dgvcustomer.AllowUserToResizeColumns = False
         Me.dgvcustomer.AllowUserToResizeRows = False
-        Me.dgvcustomer.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvcustomer.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvcustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvcustomer.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvcustomer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvcustomer.EnableHeadersVisualStyles = False
         Me.dgvcustomer.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvcustomer.Location = New System.Drawing.Point(3, 265)
         Me.dgvcustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvcustomer.Name = "dgvcustomer"
         Me.dgvcustomer.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvcustomer.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvcustomer.RowHeadersVisible = False
         Me.dgvcustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvcustomer.RowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvcustomer.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvcustomer.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvcustomer.RowTemplate.Height = 28
         Me.dgvcustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvcustomer.Size = New System.Drawing.Size(1342, 428)
+        Me.dgvcustomer.Size = New System.Drawing.Size(1338, 454)
         Me.dgvcustomer.TabIndex = 4
         '
         'miniToolStrip
@@ -667,7 +714,7 @@ Partial Class frmcustomer
         Me.GroupPanel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(1354, 733)
+        Me.GroupPanel1.Size = New System.Drawing.Size(1350, 729)
         '
         '
         '
@@ -697,37 +744,6 @@ Partial Class frmcustomer
         '
         Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
-        Me.GroupPanel1.Text = "ເພີ້ມລູກຄ້າ"
-        '
-        'ToolStripSeparator6
-        '
-        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator7
-        '
-        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator8
-        '
-        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
-        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator9
-        '
-        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
-        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator10
-        '
-        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
-        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
-        '
-        'ToolStripSeparator11
-        '
-        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
-        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 55)
         '
         'frmcustomer
         '
@@ -735,12 +751,14 @@ Partial Class frmcustomer
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1354, 733)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmcustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "."
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)

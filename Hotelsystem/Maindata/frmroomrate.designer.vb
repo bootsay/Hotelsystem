@@ -66,7 +66,7 @@ Partial Class frmroomrate
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(726, 582)
+        Me.GroupPanel1.Size = New System.Drawing.Size(542, 582)
         '
         '
         '
@@ -87,6 +87,14 @@ Partial Class frmroomrate
         Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -105,7 +113,7 @@ Partial Class frmroomrate
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(720, 576)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(536, 576)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
@@ -119,7 +127,7 @@ Partial Class frmroomrate
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(3)
-        Me.ToolStrip1.Size = New System.Drawing.Size(720, 45)
+        Me.ToolStrip1.Size = New System.Drawing.Size(536, 45)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -191,7 +199,7 @@ Partial Class frmroomrate
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'ToolStripButton1
         '
@@ -220,14 +228,14 @@ Partial Class frmroomrate
         Me.Panel1.Location = New System.Drawing.Point(4, 49)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(712, 223)
+        Me.Panel1.Size = New System.Drawing.Size(528, 223)
         Me.Panel1.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(9, 84)
+        Me.Label4.Location = New System.Drawing.Point(6, 84)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(125, 27)
@@ -238,7 +246,7 @@ Partial Class frmroomrate
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(44, 160)
+        Me.Label5.Location = New System.Drawing.Point(41, 160)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 27)
@@ -249,7 +257,7 @@ Partial Class frmroomrate
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(82, 121)
+        Me.Label3.Location = New System.Drawing.Point(79, 121)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(52, 27)
@@ -266,10 +274,10 @@ Partial Class frmroomrate
         Me.cbroomtype.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbroomtype.FormattingEnabled = True
         Me.cbroomtype.ItemHeight = 29
-        Me.cbroomtype.Location = New System.Drawing.Point(137, 43)
+        Me.cbroomtype.Location = New System.Drawing.Point(134, 43)
         Me.cbroomtype.Margin = New System.Windows.Forms.Padding(4)
         Me.cbroomtype.Name = "cbroomtype"
-        Me.cbroomtype.Size = New System.Drawing.Size(534, 35)
+        Me.cbroomtype.Size = New System.Drawing.Size(385, 35)
         Me.cbroomtype.TabIndex = 4
         '
         'cbroomtyperate
@@ -282,10 +290,10 @@ Partial Class frmroomrate
         Me.cbroomtyperate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbroomtyperate.FormattingEnabled = True
         Me.cbroomtyperate.ItemHeight = 29
-        Me.cbroomtyperate.Location = New System.Drawing.Point(137, 80)
+        Me.cbroomtyperate.Location = New System.Drawing.Point(134, 80)
         Me.cbroomtyperate.Margin = New System.Windows.Forms.Padding(4)
         Me.cbroomtyperate.Name = "cbroomtyperate"
-        Me.cbroomtyperate.Size = New System.Drawing.Size(534, 35)
+        Me.cbroomtyperate.Size = New System.Drawing.Size(385, 35)
         Me.cbroomtyperate.TabIndex = 4
         '
         'txtdes
@@ -293,11 +301,11 @@ Partial Class frmroomrate
         Me.txtdes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtdes.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdes.Location = New System.Drawing.Point(137, 155)
+        Me.txtdes.Location = New System.Drawing.Point(134, 155)
         Me.txtdes.Margin = New System.Windows.Forms.Padding(4)
         Me.txtdes.Multiline = True
         Me.txtdes.Name = "txtdes"
-        Me.txtdes.Size = New System.Drawing.Size(534, 64)
+        Me.txtdes.Size = New System.Drawing.Size(385, 64)
         Me.txtdes.TabIndex = 3
         '
         'txtprice
@@ -305,10 +313,10 @@ Partial Class frmroomrate
         Me.txtprice.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtprice.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtprice.Location = New System.Drawing.Point(137, 117)
+        Me.txtprice.Location = New System.Drawing.Point(134, 117)
         Me.txtprice.Margin = New System.Windows.Forms.Padding(4)
         Me.txtprice.Name = "txtprice"
-        Me.txtprice.Size = New System.Drawing.Size(534, 34)
+        Me.txtprice.Size = New System.Drawing.Size(385, 34)
         Me.txtprice.TabIndex = 3
         '
         'txtid
@@ -316,18 +324,18 @@ Partial Class frmroomrate
         Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(137, 8)
+        Me.txtid.Location = New System.Drawing.Point(134, 8)
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(534, 34)
+        Me.txtid.Size = New System.Drawing.Size(385, 34)
         Me.txtid.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(45, 47)
+        Me.Label2.Location = New System.Drawing.Point(42, 47)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(89, 27)
@@ -338,7 +346,7 @@ Partial Class frmroomrate
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(79, 11)
+        Me.Label1.Location = New System.Drawing.Point(76, 11)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 27)
@@ -362,7 +370,7 @@ Partial Class frmroomrate
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(4, 280)
         Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvshow.Name = "dgvshow"
@@ -372,14 +380,14 @@ Partial Class frmroomrate
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.RowTemplate.Height = 28
-        Me.dgvshow.Size = New System.Drawing.Size(712, 292)
+        Me.dgvshow.Size = New System.Drawing.Size(528, 292)
         Me.dgvshow.TabIndex = 3
         '
         'frmroomrate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(726, 582)
+        Me.ClientSize = New System.Drawing.Size(542, 582)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True

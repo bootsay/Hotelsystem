@@ -139,7 +139,7 @@ Public Class tbfreserve
     Public Function loadtbfreserve(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewreserve order by reserveNO desc", cn.conn)
+            da = New SqlDataAdapter("select * from viewreserve where statusid=2 order by reserveNO desc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -179,7 +179,9 @@ Public Class tbfreserve
                 .Columns(27).Visible = False
                 .Columns(28).Visible = False
                 .Columns(29).Visible = False
-
+                .Columns(30).Visible = False
+                .Columns(31).Visible = False
+                .Columns(32).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -216,7 +218,7 @@ Public Class tbfreserve
     Public Function loadtbfreserveSearch(dgv As DataGridView, name As String)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewreserve where reserveNO like N'%" & name & "%'or room_id='" & name & "'and statuscheckin='NO'order by reserveNO desc", cn.conn)
+            da = New SqlDataAdapter("select * from viewreserve where reserveNO like N'%" & name & "%'or room_id='" & name & "'and statusid=2 order by reserveNO desc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -255,7 +257,9 @@ Public Class tbfreserve
                 .Columns(27).Visible = False
                 .Columns(28).Visible = False
                 .Columns(29).Visible = False
-
+                .Columns(30).Visible = False
+                .Columns(31).Visible = False
+                .Columns(32).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -288,4 +292,82 @@ Public Class tbfreserve
         End Try
         Return True
     End Function
+    Public Function loadtbfreserveSearchorderdate(dgv As DataGridView, d1 As String, d2 As String)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewreserve where datereserve>='" & d1 & "'and datereserve<='" & d2 & "'and statusid=2 order by reserveNO desc", cn.conn)
+            da.Fill(ds, "pt")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt")
+            dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+            With dgv
+                .ReadOnly = True
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ເລກທີສັງຈອງ"
+                .Columns(1).HeaderText = "ປະເພດລູກຄ້າ"
+                .Columns(2).HeaderText = "ນາມຊື່"
+                .Columns(3).HeaderText = "ຊື່"
+                .Columns(4).HeaderText = "ນາມສະກຸນ"
+                .Columns(5).HeaderText = "ສັນຊາດ"
+                .Columns(6).HeaderText = "ທີ່ຢູ່ບ້ານ"
+                .Columns(7).HeaderText = "ເມືອງ"
+                .Columns(8).HeaderText = "ແຂວງ"
+                .Columns(9).HeaderText = "ປະເທດ"
+                .Columns(10).HeaderText = "ເລກທີພາດສະປອດ"
+                .Columns(11).HeaderText = "ເລກບັດປະຈໍາຕົວ"
+                .Columns(12).HeaderText = "ເບີໂທລະສັບ"
+                .Columns(13).HeaderText = "ແຟັກ"
+                .Columns(14).HeaderText = "ອີເມວ"
+                .Columns(15).HeaderText = "ຊັ້ນ"
+                .Columns(16).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(17).HeaderText = "ເບີຫ້ອງ"
+                .Columns(18).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
+                .Columns(19).HeaderText = "ວັນທີຈອງ"
+                .Columns(20).HeaderText = "ວັນທີເຊັກອິນ"
+                .Columns(21).HeaderText = "ວັນທີເຊັກເອົ້າ"
+                .Columns(22).HeaderText = "ຈໍານວນຄົນ"
+                .Columns(23).HeaderText = "ໝາຍເຫດ"
+                .Columns(24).HeaderText = "ຊື່ຜູ້ໃຊ້"
+                .Columns(25).HeaderText = "ສະຖານະ"
+                .Columns(26).Visible = False
+                .Columns(27).Visible = False
+                .Columns(28).Visible = False
+                .Columns(29).Visible = False
+                .Columns(30).Visible = False
+                .Columns(31).Visible = False
+                .Columns(32).Visible = False
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(8).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(9).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(10).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(11).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(12).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(15).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(18).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(19).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(20).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(21).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(22).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(23).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(24).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(25).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+
 End Class

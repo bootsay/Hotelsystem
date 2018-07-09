@@ -89,9 +89,10 @@ Public Class tbfroomtype
                 .Columns(2).HeaderText = "ລາຄາຕຽງພິເສດ"
                 .Columns(3).HeaderText = "ຈຳນວນຄົນສູງສຸດ"
                 .Columns(4).HeaderText = "ຄຳອະທິບາຍ"
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

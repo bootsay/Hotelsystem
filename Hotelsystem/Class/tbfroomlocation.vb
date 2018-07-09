@@ -84,6 +84,7 @@ Public Class tbfroomlocation
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດສະຖານທີ"
                 .Columns(1).HeaderText = "ຊື່ສະຖານທີ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

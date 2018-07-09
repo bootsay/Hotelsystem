@@ -140,11 +140,11 @@ Public Class tbcompanyprofile
                 .Columns(5).HeaderText = "ອີເມວ"
                 .Columns(6).HeaderText = "ວັນທີກໍ່ຕັ້ງ"
                 .Columns(7).Visible = False
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

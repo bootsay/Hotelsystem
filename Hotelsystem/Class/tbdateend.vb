@@ -85,6 +85,8 @@ Public Class tbdateend
                 .Columns(0).HeaderText = "ລະຫັດວັນສິ້ນສຸດ"
                 .Columns(1).HeaderText = "ລະຫັດຜູ້ໃຊ້"
                 .Columns(2).HeaderText = "ວັນທີສິ້ນສຸດ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

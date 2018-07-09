@@ -84,6 +84,7 @@ Public Class tbroomstatus
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ສະຖານະ"
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

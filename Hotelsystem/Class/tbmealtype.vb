@@ -84,6 +84,7 @@ Public Class tbmealtype
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຄາບເຂົ້າ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

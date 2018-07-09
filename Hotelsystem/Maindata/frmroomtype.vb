@@ -39,7 +39,7 @@
         End If
         roomtype.save(txtid.Text, txtroomtype.Text, txtextrabed.Text, txtmaxperson.Text, txtdes.Text)
         txtroomtype.Clear()
-        txtmaxperson.Clear()
+        'txtmaxperson.Clear()
         txtextrabed.Clear()
         txtdes.Clear()
         txtid.Text = roomtype.runid
@@ -53,7 +53,7 @@
         txtroomtype.ReadOnly = False
         txtid.Text = roomtype.runid
         txtroomtype.Clear()
-        txtmaxperson.Clear()
+        'txtmaxperson.Clear()
         txtdes.Clear()
         txtdes.Clear()
         roomtype.loadtbfroomrate(dgvshow)
@@ -63,7 +63,7 @@
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
         txtroomtype.ReadOnly = False
-        txtmaxperson.ReadOnly = False
+        'txtmaxperson.ReadOnly = False
         txtextrabed.ReadOnly = False
         txtdes.ReadOnly = False
         txtroomtype.Select()
@@ -73,10 +73,10 @@
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         roomtype.update(txtid.Text, txtroomtype.Text, txtextrabed.Text, txtmaxperson.Text, txtdes.Text)
         txtroomtype.ReadOnly = False
-        txtmaxperson.ReadOnly = False
+        'txtmaxperson.ReadOnly = False
         txtid.Text = roomtype.runid
         txtroomtype.Clear()
-        txtmaxperson.Clear()
+        'txtmaxperson.Clear()
         txtdes.Clear()
         txtextrabed.Clear()
         roomtype.loadtbfroomrate(dgvshow)
@@ -87,10 +87,10 @@
     Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
         txtroomtype.Clear()
         txtextrabed.Clear()
-        txtmaxperson.Clear()
+        'txtmaxperson.Clear()
         txtdes.Clear()
         txtroomtype.ReadOnly = False
-        txtmaxperson.ReadOnly = False
+        'txtmaxperson.ReadOnly = False
         txtid.Text = roomtype.runid
         txtroomtype.Select()
         roomtype.loadtbfroomrate(dgvshow)
@@ -105,7 +105,7 @@
                 txtmaxperson.Text = .CurrentRow.Cells(3).Value
                 txtdes.Text = .CurrentRow.Cells(4).Value
                 txtroomtype.ReadOnly = True
-                txtmaxperson.ReadOnly = True
+                'txtmaxperson.ReadOnly = True
                 txtextrabed.ReadOnly = True
                 txtdes.ReadOnly = True
                 enableedit()
@@ -117,5 +117,26 @@
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
+    End Sub
+
+    Private Sub txtextrabed_TextChanged(sender As Object, e As EventArgs) Handles txtextrabed.TextChanged
+
+    End Sub
+
+    Private Sub txtroomtype_TextChanged(sender As Object, e As EventArgs) Handles txtroomtype.TextChanged
+
+    End Sub
+
+    Private Sub txtid_TextChanged(sender As Object, e As EventArgs) Handles txtid.TextChanged
+
+    End Sub
+
+
+    Private Sub txtmaxperson_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtnumberpeople_ValueChanged(sender As Object, e As EventArgs) Handles txtmaxperson.ValueChanged
+
     End Sub
 End Class
