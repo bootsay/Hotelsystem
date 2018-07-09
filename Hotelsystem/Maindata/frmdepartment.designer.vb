@@ -36,13 +36,13 @@ Partial Class frmdepartment
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtname = New System.Windows.Forms.TextBox()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -58,9 +58,9 @@ Partial Class frmdepartment
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupPanel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(558, 561)
+        Me.GroupPanel1.Size = New System.Drawing.Size(717, 740)
         '
         '
         '
@@ -81,6 +81,14 @@ Partial Class frmdepartment
         Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -93,12 +101,13 @@ Partial Class frmdepartment
         Me.TableLayoutPanel1.Controls.Add(Me.dgvshow, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(552, 555)
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 165.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(711, 734)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
@@ -111,8 +120,8 @@ Partial Class frmdepartment
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.ToolStripButton1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(3)
-        Me.ToolStrip1.Size = New System.Drawing.Size(552, 45)
+        Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(4)
+        Me.ToolStrip1.Size = New System.Drawing.Size(711, 47)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -186,52 +195,68 @@ Partial Class frmdepartment
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
+        '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.txtname)
         Me.Panel1.Controls.Add(Me.txtid)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(3, 48)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(4, 51)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(546, 87)
+        Me.Panel1.Size = New System.Drawing.Size(703, 83)
         Me.Panel1.TabIndex = 2
         '
         'txtname
         '
-        Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtname.Location = New System.Drawing.Point(106, 43)
+        Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtname.Location = New System.Drawing.Point(136, 44)
+        Me.txtname.Margin = New System.Windows.Forms.Padding(4)
         Me.txtname.Name = "txtname"
-        Me.txtname.Size = New System.Drawing.Size(352, 34)
+        Me.txtname.Size = New System.Drawing.Size(451, 35)
         Me.txtname.TabIndex = 3
         '
         'txtid
         '
-        Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(106, 6)
+        Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid.Location = New System.Drawing.Point(136, 6)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(352, 34)
+        Me.txtid.Size = New System.Drawing.Size(451, 35)
         Me.txtid.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(39, 46)
+        Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(68, 48)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 27)
+        Me.Label2.Size = New System.Drawing.Size(66, 29)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ພະແນກ:"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(47, 9)
+        Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(76, 10)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 27)
+        Me.Label1.Size = New System.Drawing.Size(58, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -252,39 +277,29 @@ Partial Class frmdepartment
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.dgvshow.Location = New System.Drawing.Point(3, 141)
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.Location = New System.Drawing.Point(4, 142)
+        Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvshow.Name = "dgvshow"
         Me.dgvshow.ReadOnly = True
         Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.RowTemplate.Height = 28
-        Me.dgvshow.Size = New System.Drawing.Size(546, 411)
+        Me.dgvshow.Size = New System.Drawing.Size(703, 588)
         Me.dgvshow.TabIndex = 3
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = Global.HotelSystem.My.Resources.Resources._1489493744_exit
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'frmdepartment
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 22.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(558, 561)
+        Me.ClientSize = New System.Drawing.Size(717, 740)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
         Me.FlattenMDIBorder = False
-        Me.Font = New System.Drawing.Font("Saysettha OT", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmdepartment"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.TitleText = "ພະແນກ"

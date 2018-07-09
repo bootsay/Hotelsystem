@@ -22,10 +22,10 @@ Partial Class frmcategory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcategory))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.dgvshow = New System.Windows.Forms.DataGridView()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnsave = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -41,12 +41,11 @@ Partial Class frmcategory
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupPanel1
@@ -95,9 +94,9 @@ Partial Class frmcategory
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Transparent
         Me.TableLayoutPanel1.ColumnCount = 1
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.dgvshow, 0, 2)
         Me.TableLayoutPanel1.Controls.Add(Me.ToolStrip1, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Panel1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.dgvshow, 0, 2)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4)
@@ -108,6 +107,20 @@ Partial Class frmcategory
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(558, 555)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'dgvshow
+        '
+        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvshow.Location = New System.Drawing.Point(3, 142)
+        Me.dgvshow.Name = "dgvshow"
+        Me.dgvshow.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White
+        Me.dgvshow.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black
+        Me.dgvshow.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.dgvshow.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
+        Me.dgvshow.RowTemplate.Height = 30
+        Me.dgvshow.Size = New System.Drawing.Size(552, 410)
+        Me.dgvshow.TabIndex = 3
         '
         'ToolStrip1
         '
@@ -132,7 +145,7 @@ Partial Class frmcategory
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(87, 36)
+        Me.btnsave.Size = New System.Drawing.Size(90, 36)
         Me.btnsave.Text = "ບັນທືກ"
         '
         'ToolStripSeparator1
@@ -147,7 +160,7 @@ Partial Class frmcategory
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(66, 36)
+        Me.btndelete.Size = New System.Drawing.Size(69, 36)
         Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator2
@@ -162,7 +175,7 @@ Partial Class frmcategory
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(84, 36)
+        Me.btnedit.Size = New System.Drawing.Size(87, 36)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
         'ToolStripSeparator3
@@ -176,7 +189,7 @@ Partial Class frmcategory
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(84, 36)
+        Me.btnupdate.Size = New System.Drawing.Size(87, 36)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripSeparator4
@@ -191,7 +204,7 @@ Partial Class frmcategory
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(102, 36)
+        Me.btnnew.Size = New System.Drawing.Size(105, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
         'Panel1
@@ -237,7 +250,7 @@ Partial Class frmcategory
         Me.Label2.Location = New System.Drawing.Point(5, 46)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(91, 24)
+        Me.Label2.Size = New System.Drawing.Size(93, 27)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ຊະນິດສີນຄ້າ:"
         '
@@ -248,40 +261,13 @@ Partial Class frmcategory
         Me.Label1.Location = New System.Drawing.Point(14, 13)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 24)
+        Me.Label1.Size = New System.Drawing.Size(55, 27)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
-        'dgvshow
-        '
-        Me.dgvshow.AllowUserToAddRows = False
-        Me.dgvshow.AllowUserToDeleteRows = False
-        Me.dgvshow.AllowUserToResizeColumns = False
-        Me.dgvshow.AllowUserToResizeRows = False
-        Me.dgvshow.BackgroundColor = System.Drawing.SystemColors.ButtonFace
-        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvshow.Location = New System.Drawing.Point(4, 143)
-        Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
-        Me.dgvshow.Name = "dgvshow"
-        Me.dgvshow.ReadOnly = True
-        Me.dgvshow.RowHeadersVisible = False
-        Me.dgvshow.RowTemplate.Height = 28
-        Me.dgvshow.Size = New System.Drawing.Size(550, 408)
-        Me.dgvshow.TabIndex = 3
-        '
         'frmcategory
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(564, 561)
         Me.Controls.Add(Me.GroupPanel1)
@@ -297,11 +283,11 @@ Partial Class frmcategory
         Me.GroupPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -322,5 +308,5 @@ Partial Class frmcategory
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents dgvshow As DevComponents.DotNetBar.Controls.DataGridViewX
+    Friend WithEvents dgvshow As System.Windows.Forms.DataGridView
 End Class

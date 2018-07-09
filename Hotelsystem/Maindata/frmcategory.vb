@@ -52,19 +52,6 @@
         enablesave()
     End Sub
 
-    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
-        Try
-            With dgvshow
-                txtid.Text = .CurrentRow.Cells(0).Value
-                txttype.Text = .CurrentRow.Cells(1).Value
-                txttype.ReadOnly = True
-                enableedit()
-            End With
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
         txttype.ReadOnly = False
         txttype.Select()
@@ -90,5 +77,20 @@
         enablesave()
     End Sub
 
-    
+    Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
+
+    End Sub
+
+    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
+        Try
+            With dgvshow
+                txtid.Text = .CurrentRow.Cells(0).Value
+                txttype.Text = .CurrentRow.Cells(1).Value
+                txttype.ReadOnly = True
+                enableedit()
+            End With
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

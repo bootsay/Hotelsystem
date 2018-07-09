@@ -105,7 +105,20 @@
         Me.Close()
     End Sub
 
-    Private Sub btnAddProvince_Click(sender As Object, e As EventArgs) Handles btnAddProvince.Click
-        frmdepartment.Show()
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmdepartment.ShowDialog()
+    End Sub
+
+    Private Sub txtposition_TextChanged(sender As Object, e As EventArgs) Handles txtposition.TextChanged
+
+    End Sub
+
+    Private Sub cbdepartment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbdepartment.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtid_TextChanged(sender As Object, e As EventArgs) Handles txtid.TextChanged
+
     End Sub
 End Class

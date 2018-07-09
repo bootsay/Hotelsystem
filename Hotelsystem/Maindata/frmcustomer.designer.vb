@@ -22,25 +22,29 @@ Partial Class frmcustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcustomer))
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnsave = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.btndelete = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnupdate = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnedit = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.btnclose = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel3 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel4 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel5 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel6 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel7 = New System.Windows.Forms.ToolStripLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ButtonX5 = New DevComponents.DotNetBar.ButtonX()
-        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
-        Me.ButtonX4 = New DevComponents.DotNetBar.ButtonX()
-        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
-        Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
-        Me.btnAddProvince = New DevComponents.DotNetBar.ButtonX()
         Me.cbprovince = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.cbdistrict = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.chkActivate = New System.Windows.Forms.CheckBox()
@@ -64,7 +68,6 @@ Partial Class frmcustomer
         Me.txtTel = New System.Windows.Forms.TextBox()
         Me.txtNationality = New System.Windows.Forms.TextBox()
         Me.txtIdcard = New System.Windows.Forms.TextBox()
-        Me.txtid = New System.Windows.Forms.TextBox()
         Me.txtPassport = New System.Windows.Forms.TextBox()
         Me.txtSurname = New System.Windows.Forms.TextBox()
         Me.txtCustomerName = New System.Windows.Forms.TextBox()
@@ -73,9 +76,16 @@ Partial Class frmcustomer
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtCustomerID = New System.Windows.Forms.TextBox()
+        Me.txtid = New System.Windows.Forms.TextBox()
         Me.dgvcustomer = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.miniToolStrip = New System.Windows.Forms.ToolStrip()
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -96,9 +106,9 @@ Partial Class frmcustomer
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 251.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 206.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1346, 732)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1348, 697)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'ToolStrip1
@@ -109,11 +119,11 @@ Partial Class frmcustomer
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.ImageScalingSize = New System.Drawing.Size(10, 10)
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.btndelete, Me.btnupdate, Me.btnedit, Me.btnnew, Me.btnclose, Me.ToolStripSeparator1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator5, Me.btndelete, Me.ToolStripSeparator4, Me.btnupdate, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnnew, Me.btnclose, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripSeparator6, Me.ToolStripLabel2, Me.ToolStripSeparator7, Me.ToolStripLabel3, Me.ToolStripSeparator9, Me.ToolStripLabel4, Me.ToolStripSeparator8, Me.ToolStripLabel5, Me.ToolStripSeparator10, Me.ToolStripLabel6, Me.ToolStripSeparator11, Me.ToolStripLabel7})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.ToolStrip1.Size = New System.Drawing.Size(1346, 55)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1348, 55)
         Me.ToolStrip1.TabIndex = 2
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -127,6 +137,11 @@ Partial Class frmcustomer
         Me.btnsave.Size = New System.Drawing.Size(90, 55)
         Me.btnsave.Text = "ບັນທືກ"
         '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 55)
+        '
         'btndelete
         '
         Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
@@ -136,6 +151,11 @@ Partial Class frmcustomer
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(69, 52)
         Me.btndelete.Text = "ລືບ"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 55)
         '
         'btnupdate
         '
@@ -147,6 +167,11 @@ Partial Class frmcustomer
         Me.btnupdate.Size = New System.Drawing.Size(87, 52)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 55)
+        '
         'btnedit
         '
         Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Edit_page
@@ -156,6 +181,11 @@ Partial Class frmcustomer
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(87, 52)
         Me.btnedit.Text = "ແກ້ໄຂ"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 55)
         '
         'btnnew
         '
@@ -182,14 +212,64 @@ Partial Class frmcustomer
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 55)
         '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(101, 52)
+        Me.ToolStripLabel1.Text = "ເພີມປະເພດລູກຄ້າ"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(86, 52)
+        Me.ToolStripLabel2.Text = "ເພີມລາຄາຫ້ອງ"
+        '
+        'ToolStripLabel3
+        '
+        Me.ToolStripLabel3.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ToolStripLabel3.Name = "ToolStripLabel3"
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(80, 52)
+        Me.ToolStripLabel3.Text = "ເພີມຄຳນຳໜ້າ"
+        '
+        'ToolStripLabel4
+        '
+        Me.ToolStripLabel4.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.ToolStripLabel4.Name = "ToolStripLabel4"
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(80, 52)
+        Me.ToolStripLabel4.Text = "ເພີມຄຳນຳໜ້າ"
+        '
+        'ToolStripLabel5
+        '
+        Me.ToolStripLabel5.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel5.ForeColor = System.Drawing.Color.Blue
+        Me.ToolStripLabel5.Name = "ToolStripLabel5"
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(54, 52)
+        Me.ToolStripLabel5.Text = "ເພີມບ້ານ"
+        '
+        'ToolStripLabel6
+        '
+        Me.ToolStripLabel6.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel6.ForeColor = System.Drawing.Color.Blue
+        Me.ToolStripLabel6.Name = "ToolStripLabel6"
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(58, 52)
+        Me.ToolStripLabel6.Text = "ເພີມເມືອງ"
+        '
+        'ToolStripLabel7
+        '
+        Me.ToolStripLabel7.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel7.ForeColor = System.Drawing.Color.Blue
+        Me.ToolStripLabel7.Name = "ToolStripLabel7"
+        Me.ToolStripLabel7.Size = New System.Drawing.Size(62, 52)
+        Me.ToolStripLabel7.Text = "ເພີມແຂວງ"
+        '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.ButtonX5)
-        Me.Panel1.Controls.Add(Me.ButtonX2)
-        Me.Panel1.Controls.Add(Me.ButtonX4)
-        Me.Panel1.Controls.Add(Me.ButtonX3)
-        Me.Panel1.Controls.Add(Me.ButtonX1)
-        Me.Panel1.Controls.Add(Me.btnAddProvince)
         Me.Panel1.Controls.Add(Me.cbprovince)
         Me.Panel1.Controls.Add(Me.cbdistrict)
         Me.Panel1.Controls.Add(Me.chkActivate)
@@ -213,7 +293,6 @@ Partial Class frmcustomer
         Me.Panel1.Controls.Add(Me.txtTel)
         Me.Panel1.Controls.Add(Me.txtNationality)
         Me.Panel1.Controls.Add(Me.txtIdcard)
-        Me.Panel1.Controls.Add(Me.txtid)
         Me.Panel1.Controls.Add(Me.txtPassport)
         Me.Panel1.Controls.Add(Me.txtSurname)
         Me.Panel1.Controls.Add(Me.txtCustomerName)
@@ -222,141 +301,43 @@ Partial Class frmcustomer
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.txtCustomerID)
+        Me.Panel1.Controls.Add(Me.txtid)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(3, 59)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1340, 243)
+        Me.Panel1.Size = New System.Drawing.Size(1342, 198)
         Me.Panel1.TabIndex = 3
-        '
-        'ButtonX5
-        '
-        Me.ButtonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX5.ForeColor = System.Drawing.Color.Blue
-        Me.ButtonX5.Image = CType(resources.GetObject("ButtonX5.Image"), System.Drawing.Image)
-        Me.ButtonX5.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.ButtonX5.Location = New System.Drawing.Point(1120, 117)
-        Me.ButtonX5.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonX5.Name = "ButtonX5"
-        Me.ButtonX5.Size = New System.Drawing.Size(101, 35)
-        Me.ButtonX5.TabIndex = 28
-        Me.ButtonX5.Text = "ເພີມແຂວງ"
-        Me.ButtonX5.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
-        '
-        'ButtonX2
-        '
-        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX2.ForeColor = System.Drawing.Color.Blue
-        Me.ButtonX2.Image = CType(resources.GetObject("ButtonX2.Image"), System.Drawing.Image)
-        Me.ButtonX2.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.ButtonX2.Location = New System.Drawing.Point(1182, 12)
-        Me.ButtonX2.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonX2.Name = "ButtonX2"
-        Me.ButtonX2.Size = New System.Drawing.Size(131, 35)
-        Me.ButtonX2.TabIndex = 28
-        Me.ButtonX2.Text = "ເພີມລາຄາຫ້ອງ"
-        Me.ButtonX2.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
-        '
-        'ButtonX4
-        '
-        Me.ButtonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX4.ForeColor = System.Drawing.Color.Blue
-        Me.ButtonX4.Image = CType(resources.GetObject("ButtonX4.Image"), System.Drawing.Image)
-        Me.ButtonX4.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.ButtonX4.Location = New System.Drawing.Point(999, 117)
-        Me.ButtonX4.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonX4.Name = "ButtonX4"
-        Me.ButtonX4.Size = New System.Drawing.Size(101, 35)
-        Me.ButtonX4.TabIndex = 28
-        Me.ButtonX4.Text = "ເພີມເມືອງ"
-        Me.ButtonX4.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
-        '
-        'ButtonX3
-        '
-        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX3.ForeColor = System.Drawing.Color.Blue
-        Me.ButtonX3.Image = CType(resources.GetObject("ButtonX3.Image"), System.Drawing.Image)
-        Me.ButtonX3.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.ButtonX3.Location = New System.Drawing.Point(999, 65)
-        Me.ButtonX3.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonX3.Name = "ButtonX3"
-        Me.ButtonX3.Size = New System.Drawing.Size(129, 35)
-        Me.ButtonX3.TabIndex = 28
-        Me.ButtonX3.Text = "ເພີມຄຳນຳໜ້າ"
-        Me.ButtonX3.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
-        '
-        'ButtonX1
-        '
-        Me.ButtonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.ButtonX1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonX1.ForeColor = System.Drawing.Color.Blue
-        Me.ButtonX1.Image = CType(resources.GetObject("ButtonX1.Image"), System.Drawing.Image)
-        Me.ButtonX1.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.ButtonX1.Location = New System.Drawing.Point(1148, 65)
-        Me.ButtonX1.Margin = New System.Windows.Forms.Padding(4)
-        Me.ButtonX1.Name = "ButtonX1"
-        Me.ButtonX1.Size = New System.Drawing.Size(101, 35)
-        Me.ButtonX1.TabIndex = 28
-        Me.ButtonX1.Text = "ເພີມບ້ານ"
-        Me.ButtonX1.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
-        '
-        'btnAddProvince
-        '
-        Me.btnAddProvince.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnAddProvince.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnAddProvince.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddProvince.ForeColor = System.Drawing.Color.Blue
-        Me.btnAddProvince.Image = CType(resources.GetObject("btnAddProvince.Image"), System.Drawing.Image)
-        Me.btnAddProvince.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.btnAddProvince.Location = New System.Drawing.Point(997, 12)
-        Me.btnAddProvince.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnAddProvince.Name = "btnAddProvince"
-        Me.btnAddProvince.Size = New System.Drawing.Size(157, 35)
-        Me.btnAddProvince.TabIndex = 28
-        Me.btnAddProvince.Text = "ເພີມປະເພດລູກຄ້າ"
-        Me.btnAddProvince.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
         '
         'cbprovince
         '
-        Me.cbprovince.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbprovince.DisplayMember = "Text"
         Me.cbprovince.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbprovince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbprovince.FormattingEnabled = True
         Me.cbprovince.ItemHeight = 29
-        Me.cbprovince.Location = New System.Drawing.Point(412, 82)
+        Me.cbprovince.Location = New System.Drawing.Point(412, 81)
         Me.cbprovince.Name = "cbprovince"
-        Me.cbprovince.Size = New System.Drawing.Size(217, 35)
+        Me.cbprovince.Size = New System.Drawing.Size(219, 35)
         Me.cbprovince.TabIndex = 27
         '
         'cbdistrict
         '
-        Me.cbdistrict.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbdistrict.DisplayMember = "Text"
         Me.cbdistrict.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbdistrict.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbdistrict.FormattingEnabled = True
         Me.cbdistrict.ItemHeight = 29
-        Me.cbdistrict.Location = New System.Drawing.Point(413, 123)
+        Me.cbdistrict.Location = New System.Drawing.Point(412, 119)
         Me.cbdistrict.Name = "cbdistrict"
-        Me.cbdistrict.Size = New System.Drawing.Size(217, 35)
+        Me.cbdistrict.Size = New System.Drawing.Size(220, 35)
         Me.cbdistrict.TabIndex = 26
         '
         'chkActivate
         '
         Me.chkActivate.AutoSize = True
-        Me.chkActivate.Location = New System.Drawing.Point(757, 199)
+        Me.chkActivate.Location = New System.Drawing.Point(982, 163)
         Me.chkActivate.Name = "chkActivate"
         Me.chkActivate.Size = New System.Drawing.Size(76, 33)
         Me.chkActivate.TabIndex = 25
@@ -366,7 +347,7 @@ Partial Class frmcustomer
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(704, 120)
+        Me.Label12.Location = New System.Drawing.Point(707, 120)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(48, 29)
         Me.Label12.TabIndex = 24
@@ -375,7 +356,7 @@ Partial Class frmcustomer
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(3, 86)
+        Me.Label14.Location = New System.Drawing.Point(20, 86)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(83, 29)
         Me.Label14.TabIndex = 24
@@ -384,7 +365,7 @@ Partial Class frmcustomer
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(363, 164)
+        Me.Label15.Location = New System.Drawing.Point(367, 162)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(45, 29)
         Me.Label15.TabIndex = 24
@@ -393,7 +374,7 @@ Partial Class frmcustomer
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(361, 126)
+        Me.Label8.Location = New System.Drawing.Point(360, 124)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 29)
         Me.Label8.TabIndex = 24
@@ -402,7 +383,7 @@ Partial Class frmcustomer
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(356, 86)
+        Me.Label10.Location = New System.Drawing.Point(355, 84)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(55, 29)
         Me.Label10.TabIndex = 24
@@ -410,8 +391,6 @@ Partial Class frmcustomer
         '
         'cbcustomertype
         '
-        Me.cbcustomertype.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbcustomertype.DisplayMember = "Text"
         Me.cbcustomertype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbcustomertype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -419,13 +398,11 @@ Partial Class frmcustomer
         Me.cbcustomertype.ItemHeight = 29
         Me.cbcustomertype.Location = New System.Drawing.Point(105, 46)
         Me.cbcustomertype.Name = "cbcustomertype"
-        Me.cbcustomertype.Size = New System.Drawing.Size(217, 35)
+        Me.cbcustomertype.Size = New System.Drawing.Size(219, 35)
         Me.cbcustomertype.TabIndex = 23
         '
         'cbRoomrate
         '
-        Me.cbRoomrate.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbRoomrate.DisplayMember = "Text"
         Me.cbRoomrate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbRoomrate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -433,13 +410,11 @@ Partial Class frmcustomer
         Me.cbRoomrate.ItemHeight = 29
         Me.cbRoomrate.Location = New System.Drawing.Point(105, 83)
         Me.cbRoomrate.Name = "cbRoomrate"
-        Me.cbRoomrate.Size = New System.Drawing.Size(217, 35)
+        Me.cbRoomrate.Size = New System.Drawing.Size(219, 35)
         Me.cbRoomrate.TabIndex = 23
         '
         'cbtitlename
         '
-        Me.cbtitlename.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbtitlename.DisplayMember = "Text"
         Me.cbtitlename.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbtitlename.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -447,27 +422,25 @@ Partial Class frmcustomer
         Me.cbtitlename.ItemHeight = 29
         Me.cbtitlename.Location = New System.Drawing.Point(105, 120)
         Me.cbtitlename.Name = "cbtitlename"
-        Me.cbtitlename.Size = New System.Drawing.Size(217, 35)
+        Me.cbtitlename.Size = New System.Drawing.Size(219, 35)
         Me.cbtitlename.TabIndex = 23
         '
         'cbvillage
         '
-        Me.cbvillage.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbvillage.DisplayMember = "Text"
         Me.cbvillage.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbvillage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbvillage.FormattingEnabled = True
         Me.cbvillage.ItemHeight = 29
-        Me.cbvillage.Location = New System.Drawing.Point(414, 161)
+        Me.cbvillage.Location = New System.Drawing.Point(412, 157)
         Me.cbvillage.Name = "cbvillage"
-        Me.cbvillage.Size = New System.Drawing.Size(216, 35)
+        Me.cbvillage.Size = New System.Drawing.Size(220, 35)
         Me.cbvillage.TabIndex = 23
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(634, 46)
+        Me.Label11.Location = New System.Drawing.Point(635, 45)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(120, 29)
         Me.Label11.TabIndex = 22
@@ -476,7 +449,7 @@ Partial Class frmcustomer
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(325, 8)
+        Me.Label9.Location = New System.Drawing.Point(327, 8)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(84, 29)
         Me.Label9.TabIndex = 22
@@ -485,7 +458,7 @@ Partial Class frmcustomer
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 12)
+        Me.Label1.Location = New System.Drawing.Point(7, 12)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 29)
         Me.Label1.TabIndex = 15
@@ -494,7 +467,7 @@ Partial Class frmcustomer
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(709, 83)
+        Me.Label7.Location = New System.Drawing.Point(717, 83)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(37, 29)
         Me.Label7.TabIndex = 12
@@ -503,7 +476,7 @@ Partial Class frmcustomer
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(344, 48)
+        Me.Label6.Location = New System.Drawing.Point(345, 47)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(65, 29)
         Me.Label6.TabIndex = 12
@@ -512,7 +485,7 @@ Partial Class frmcustomer
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(698, 160)
+        Me.Label13.Location = New System.Drawing.Point(702, 160)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(53, 29)
         Me.Label13.TabIndex = 11
@@ -529,7 +502,7 @@ Partial Class frmcustomer
         '
         'txtFax
         '
-        Me.txtFax.Location = New System.Drawing.Point(757, 117)
+        Me.txtFax.Location = New System.Drawing.Point(757, 120)
         Me.txtFax.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtFax.Name = "txtFax"
         Me.txtFax.Size = New System.Drawing.Size(217, 35)
@@ -537,7 +510,7 @@ Partial Class frmcustomer
         '
         'txtTel
         '
-        Me.txtTel.Location = New System.Drawing.Point(757, 79)
+        Me.txtTel.Location = New System.Drawing.Point(757, 82)
         Me.txtTel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtTel.Name = "txtTel"
         Me.txtTel.Size = New System.Drawing.Size(217, 35)
@@ -545,7 +518,7 @@ Partial Class frmcustomer
         '
         'txtNationality
         '
-        Me.txtNationality.Location = New System.Drawing.Point(412, 44)
+        Me.txtNationality.Location = New System.Drawing.Point(412, 43)
         Me.txtNationality.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtNationality.Name = "txtNationality"
         Me.txtNationality.Size = New System.Drawing.Size(217, 35)
@@ -553,24 +526,15 @@ Partial Class frmcustomer
         '
         'txtIdcard
         '
-        Me.txtIdcard.Location = New System.Drawing.Point(757, 42)
+        Me.txtIdcard.Location = New System.Drawing.Point(757, 44)
         Me.txtIdcard.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtIdcard.Name = "txtIdcard"
         Me.txtIdcard.Size = New System.Drawing.Size(217, 35)
         Me.txtIdcard.TabIndex = 3
         '
-        'txtid
-        '
-        Me.txtid.Location = New System.Drawing.Point(105, 204)
-        Me.txtid.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.txtid.Name = "txtid"
-        Me.txtid.Size = New System.Drawing.Size(93, 35)
-        Me.txtid.TabIndex = 3
-        Me.txtid.Visible = False
-        '
         'txtPassport
         '
-        Me.txtPassport.Location = New System.Drawing.Point(757, 5)
+        Me.txtPassport.Location = New System.Drawing.Point(757, 6)
         Me.txtPassport.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtPassport.Name = "txtPassport"
         Me.txtPassport.Size = New System.Drawing.Size(217, 35)
@@ -578,15 +542,15 @@ Partial Class frmcustomer
         '
         'txtSurname
         '
-        Me.txtSurname.Location = New System.Drawing.Point(413, 5)
+        Me.txtSurname.Location = New System.Drawing.Point(412, 5)
         Me.txtSurname.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtSurname.Name = "txtSurname"
-        Me.txtSurname.Size = New System.Drawing.Size(217, 35)
+        Me.txtSurname.Size = New System.Drawing.Size(218, 35)
         Me.txtSurname.TabIndex = 3
         '
         'txtCustomerName
         '
-        Me.txtCustomerName.Location = New System.Drawing.Point(105, 158)
+        Me.txtCustomerName.Location = New System.Drawing.Point(105, 157)
         Me.txtCustomerName.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCustomerName.Name = "txtCustomerName"
         Me.txtCustomerName.Size = New System.Drawing.Size(217, 35)
@@ -594,7 +558,7 @@ Partial Class frmcustomer
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(757, 157)
+        Me.txtEmail.Location = New System.Drawing.Point(757, 158)
         Me.txtEmail.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(217, 35)
@@ -603,7 +567,7 @@ Partial Class frmcustomer
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(671, 8)
+        Me.Label2.Location = New System.Drawing.Point(680, 8)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 29)
         Me.Label2.TabIndex = 7
@@ -612,7 +576,7 @@ Partial Class frmcustomer
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(27, 160)
+        Me.Label4.Location = New System.Drawing.Point(38, 160)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(65, 29)
         Me.Label4.TabIndex = 7
@@ -621,7 +585,7 @@ Partial Class frmcustomer
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(2, 49)
+        Me.Label3.Location = New System.Drawing.Point(3, 49)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(100, 29)
         Me.Label3.TabIndex = 6
@@ -629,12 +593,22 @@ Partial Class frmcustomer
         '
         'txtCustomerID
         '
-        Me.txtCustomerID.Location = New System.Drawing.Point(105, 8)
+        Me.txtCustomerID.Location = New System.Drawing.Point(105, 9)
         Me.txtCustomerID.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtCustomerID.Name = "txtCustomerID"
         Me.txtCustomerID.ReadOnly = True
         Me.txtCustomerID.Size = New System.Drawing.Size(217, 35)
         Me.txtCustomerID.TabIndex = 1
+        '
+        'txtid
+        '
+        Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtid.Location = New System.Drawing.Point(120, 12)
+        Me.txtid.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.txtid.Name = "txtid"
+        Me.txtid.Size = New System.Drawing.Size(93, 27)
+        Me.txtid.TabIndex = 3
+        Me.txtid.Visible = False
         '
         'dgvcustomer
         '
@@ -646,14 +620,15 @@ Partial Class frmcustomer
         Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvcustomer.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvcustomer.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
-        Me.dgvcustomer.Location = New System.Drawing.Point(3, 310)
+        Me.dgvcustomer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvcustomer.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvcustomer.Location = New System.Drawing.Point(3, 265)
         Me.dgvcustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvcustomer.Name = "dgvcustomer"
         Me.dgvcustomer.ReadOnly = True
@@ -664,7 +639,7 @@ Partial Class frmcustomer
         Me.dgvcustomer.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvcustomer.RowTemplate.Height = 28
         Me.dgvcustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvcustomer.Size = New System.Drawing.Size(1340, 343)
+        Me.dgvcustomer.Size = New System.Drawing.Size(1342, 428)
         Me.dgvcustomer.TabIndex = 4
         '
         'miniToolStrip
@@ -689,9 +664,10 @@ Partial Class frmcustomer
         Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
         Me.GroupPanel1.Controls.Add(Me.TableLayoutPanel1)
         Me.GroupPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupPanel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(1352, 763)
+        Me.GroupPanel1.Size = New System.Drawing.Size(1354, 733)
         '
         '
         '
@@ -712,19 +688,56 @@ Partial Class frmcustomer
         Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
         Me.GroupPanel1.Text = "ເພີ້ມລູກຄ້າ"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 55)
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 55)
+        '
+        'ToolStripSeparator8
+        '
+        Me.ToolStripSeparator8.Name = "ToolStripSeparator8"
+        Me.ToolStripSeparator8.Size = New System.Drawing.Size(6, 55)
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 55)
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 55)
+        '
+        'ToolStripSeparator11
+        '
+        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 55)
         '
         'frmcustomer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1352, 763)
-        Me.ControlBox = False
+        Me.ClientSize = New System.Drawing.Size(1354, 733)
         Me.Controls.Add(Me.GroupPanel1)
         Me.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmcustomer"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -784,10 +797,21 @@ Partial Class frmcustomer
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtid As System.Windows.Forms.TextBox
-    Friend WithEvents ButtonX5 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents ButtonX4 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents ButtonX3 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents btnAddProvince As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel3 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel4 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel5 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel6 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel7 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator8 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator11 As System.Windows.Forms.ToolStripSeparator
 End Class

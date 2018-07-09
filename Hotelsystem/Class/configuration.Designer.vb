@@ -64,7 +64,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("ADMIN\SQL2012")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("27.254.172.47")>  _
     Public Property servername() As String
         Get
             Return CType(Me("servername"),String)
