@@ -9,7 +9,7 @@ Public Class tbfreserve
     Public Function save(reserveNo As String, reserveid As Integer, customerNo As String, roomid As String, datereserve As String, datecheckin As String, datecheckout As String, numberofpax As Integer, remark As String, statusid As String, userid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfreserve(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datecheckout,numberofpax,remark,statusid,userid,statuscheckin)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & CInt(numberofpax) & "',N'" & remark & "',N'" & statusid & "','" & userid & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfreserve(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datecheckout,numberofpax,remark,statusid,userid,statuscheckin)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & CInt(numberofpax) & "',N'" & remark & "','" & statusid & "','" & userid & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -154,9 +154,6 @@ Public Class tbfreserve
                 .Columns(2).HeaderText = "ນາມຊື່"
                 .Columns(3).HeaderText = "ຊື່"
                 .Columns(4).HeaderText = "ນາມສະກຸນ"
-                .Columns(5).HeaderText = "ຊັ້ນ"
-                .Columns(6).HeaderText = "ປະເພດຫ້ອງ"
-                .Columns(7).HeaderText = "ເບີຫ້ອງ"
                 .Columns(8).HeaderText = "ສັນຊາດ"
                 .Columns(9).HeaderText = "ທີ່ຢູ່ບ້ານ"
                 .Columns(10).HeaderText = "ເມືອງ"
@@ -167,6 +164,9 @@ Public Class tbfreserve
                 .Columns(15).HeaderText = "ເບີໂທລະສັບ"
                 .Columns(16).HeaderText = "ແຟັກ"
                 .Columns(17).HeaderText = "ອີເມວ"
+                .Columns(5).HeaderText = "ຊັ້ນ"
+                .Columns(6).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(7).HeaderText = "ເບີຫ້ອງ"
                 .Columns(18).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(19).HeaderText = "ວັນທີຈອງ"
                 .Columns(20).HeaderText = "ວັນທີເຊັກອິນ"

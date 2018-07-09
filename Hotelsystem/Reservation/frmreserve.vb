@@ -180,7 +180,7 @@
         End If
 
 
-        reserve.save(txtid.Text, reserveid, txtcustomerid.Text, txtroomid.Text, Format(CDate(txtdatereserve.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckin.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckout.Text), "MM/dd/yyyy"), txtnumberpeople.Text, txtNote.Text, 2, 1)
+        reserve.save(txtid.Text, reserveid, txtcustomerid.Text, txtroomid.Text, Format(CDate(txtdatereserve.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckin.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckout.Text), "MM/dd/yyyy"), txtnumberpeople.Text, txtNote.Text, 2, frmmain.userid)
         room.updateroom(txtroomid.Text, 2)
         reserve.loadtbfreserve(dgvlist)
         txtclear()
@@ -202,7 +202,7 @@
             txtid.Select()
             Return
         End If
-        reserve.update(txtid.Text, reserveid, txtcustomerid.Text, txtroomid.Text, Format(CDate(txtdatereserve.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckin.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckout.Text), "MM/dd/yyyy"), txtnumberpeople.Text, txtNote.Text, 2, 1)
+        reserve.update(txtid.Text, reserveid, txtcustomerid.Text, txtroomid.Text, Format(CDate(txtdatereserve.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckin.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckout.Text), "MM/dd/yyyy"), txtnumberpeople.Text, txtNote.Text, 2, frmmain.userid)
         room.updateroom(txtroomid.Text, 2)
         reserve.loadtbfreserve(dgvlist)
         txtid.Text = reserve.runidNO
@@ -223,14 +223,19 @@
                 txtnumberpeople.Text = .CurrentRow.Cells(22).Value
                 txtNote.Text = .CurrentRow.Cells(23).Value
                 txtuser.Text = .CurrentRow.Cells(24).Value
+
                 txtcustomerid.Text = .CurrentRow.Cells(26).Value
+
                 txtuserid.Text = .CurrentRow.Cells(27).Value
                 txtroomid.Text = .CurrentRow.Cells(28).Value
                 txtprice.Text = .CurrentRow.Cells(29).Value
 
 
-                enableedit()
+
             End With
+
+            enableedit()
+            btnedit.Enabled = True
         Catch ex As Exception
 
         End Try

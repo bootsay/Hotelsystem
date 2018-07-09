@@ -40,7 +40,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("PHONE\PHONE")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("27.254.172.47")>  _
     Public Property servername() As String
         Get
             Return CType(Me("servername"),String)
@@ -64,7 +64,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("sa")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("bootvong")>  _
     Public Property username() As String
         Get
             Return CType(Me("username"),String)
@@ -76,7 +76,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("99491232")>  _
+     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10))>  _
     Public Property password() As String
         Get
             Return CType(Me("password"),String)
