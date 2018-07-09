@@ -5,22 +5,17 @@
     <Setting Name="dbname" Type="System.String" Scope="User">
       <Value Profile="(Default)">dbhotelsystem</Value>
     </Setting>
-    <Setting Name="servername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">27.254.172.47</Value>
-    </Setting>
     <Setting Name="printername" Type="System.String" Scope="User">
       <Value Profile="(Default)">Adobe PDF</Value>
+    </Setting>
+    <Setting Name="servername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">27.254.172.47</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
       <Value Profile="(Default)">bootvong</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
-<<<<<<< HEAD
       <Value Profile="(Default)">@ITadmin2018@admin</Value>
-=======
-      <Value Profile="(Default)">@ITadmin2018@admin
-</Value>
->>>>>>> 975af47c16b9359cda89975993f11e4459f3d08f
     </Setting>
   </Settings>
 </SettingsFile>

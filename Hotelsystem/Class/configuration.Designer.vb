@@ -40,18 +40,6 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("27.254.172.47")>  _
-    Public Property servername() As String
-        Get
-            Return CType(Me("servername"),String)
-        End Get
-        Set
-            Me("servername") = value
-        End Set
-    End Property
-    
-    <Global.System.Configuration.UserScopedSettingAttribute(),  _
-     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("Adobe PDF")>  _
     Public Property printername() As String
         Get
@@ -59,6 +47,18 @@ Partial Friend NotInheritable Class configuration
         End Get
         Set
             Me("printername") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("27.254.172.47")>  _
+    Public Property servername() As String
+        Get
+            Return CType(Me("servername"),String)
+        End Get
+        Set
+            Me("servername") = value
         End Set
     End Property
     
@@ -76,11 +76,7 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-<<<<<<< HEAD
      Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin")>  _
-=======
-     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10))>  _
->>>>>>> 975af47c16b9359cda89975993f11e4459f3d08f
     Public Property password() As String
         Get
             Return CType(Me("password"),String)

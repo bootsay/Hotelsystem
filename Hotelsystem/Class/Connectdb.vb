@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class connectdb
     Public conn As New SqlConnection
-    Public user As String = configuration.Default.username
+    Public user As String = Configuration.Default.username
     Public password As String = configuration.Default.password
 
     Public str As String = "Data Source=27.254.172.47;Initial Catalog=dbhotelsystem;User ID=bootvong; password=@ITadmin2018@admin"
