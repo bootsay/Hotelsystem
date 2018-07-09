@@ -1,5 +1,6 @@
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\bin\Debug\HotelSystem.exe.config
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.exe
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.xml
@@ -54,6 +55,8 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.fr
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.vbproj.GenerateResource.Cache
 >>>>>>> 222b76c2646306aa0e90431deee779b15864714c
 >>>>>>> 975af47c16b9359cda89975993f11e4459f3d08f
+=======
+>>>>>>> d460dba63206a979866e3de5342d099995f5870b
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\bin\Debug\HotelSystem.exe
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\bin\Debug\HotelSystem.pdb
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\bin\Debug\HotelSystem.xml
@@ -96,4 +99,10 @@ C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmshowroo
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmreserve.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmshowroomreserve.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.vbproj.GenerateResource.Cache
+<<<<<<< HEAD
 >>>>>>> fedd50442de4c474e9a59223f71a9820f516467f
+=======
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.exe
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.xml
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.pdb
+>>>>>>> d460dba63206a979866e3de5342d099995f5870b

@@ -137,6 +137,15 @@
     <Compile Include="frmlogin.vb">
       <SubType>Form</SubType>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="frmmain.designer.vb">
+      <DependentUpon>frmmain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> d460dba63206a979866e3de5342d099995f5870b
     <Compile Include="House_keeping\frmitemlist.designer.vb">
       <DependentUpon>frmitemlist.vb</DependentUpon>
     </Compile>
