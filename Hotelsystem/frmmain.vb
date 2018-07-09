@@ -139,6 +139,11 @@
         closeform.closeform()
         closeform.f = frmcheckin
         closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
 
@@ -146,6 +151,11 @@
         closeform.closeform()
         closeform.f = frmcheckout
         closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
 

@@ -171,6 +171,22 @@ HotelSystem
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:HotelSystem.My.Resources.Resources.hotel_dirty">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:HotelSystem.My.Resources.Resources.hotel_empty">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:HotelSystem.My.Resources.Resources.hotel_notempty">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:HotelSystem.My.Resources.Resources.hotel_outofforder">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:HotelSystem.My.Resources.Resources.hotelcheckout">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

@@ -69,6 +69,7 @@ Partial Class frmroommap
         '
         Me.cbroomtype.DisplayMember = "Text"
         Me.cbroomtype.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbroomtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbroomtype.FormattingEnabled = True
         Me.cbroomtype.ItemHeight = 29
         Me.cbroomtype.Location = New System.Drawing.Point(1, 126)
@@ -90,6 +91,7 @@ Partial Class frmroommap
         '
         Me.cbfloor.DisplayMember = "Text"
         Me.cbfloor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbfloor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbfloor.FormattingEnabled = True
         Me.cbfloor.ItemHeight = 29
         Me.cbfloor.Location = New System.Drawing.Point(3, 52)
