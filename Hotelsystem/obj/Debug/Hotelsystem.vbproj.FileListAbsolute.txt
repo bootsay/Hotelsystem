@@ -8,7 +8,6 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.ex
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.exe
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.pdb
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.xml
-=======
 C:\Users\dell\Documents\GitHub\Hotelsystem1\Hotelsystem\obj\Debug\HotelSystem.exe
 C:\Users\dell\Documents\GitHub\Hotelsystem1\Hotelsystem\obj\Debug\HotelSystem.xml
 C:\Users\dell\Documents\GitHub\Hotelsystem1\Hotelsystem\obj\Debug\HotelSystem.pdb
@@ -97,13 +96,4 @@ C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmshowroo
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmreserve.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmshowroomreserve.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.vbproj.GenerateResource.Cache
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.exe
-C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.xml
-C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.pdb
-=======
->>>>>>> f52bd5ddf87533adf070e86324d08129271def18
->>>>>>> 975af47c16b9359cda89975993f11e4459f3d08f
 >>>>>>> fedd50442de4c474e9a59223f71a9820f516467f

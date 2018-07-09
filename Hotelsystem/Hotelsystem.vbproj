@@ -137,13 +137,6 @@
     <Compile Include="frmlogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmmain.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmmain.Designer.vb">
-      <DependentUpon>frmmain.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="House_keeping\frmitemlist.designer.vb">
       <DependentUpon>frmitemlist.vb</DependentUpon>
     </Compile>
@@ -367,9 +360,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmmain.resx">
-      <DependentUpon>frmmain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="House_keeping\frmitemlist.resx">
       <DependentUpon>frmitemlist.vb</DependentUpon>
