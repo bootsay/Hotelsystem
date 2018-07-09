@@ -3,7 +3,9 @@ Public Class connectdb
     Public conn As New SqlConnection
     Public user As String = configuration.Default.username
     Public password As String = configuration.Default.password
-    Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; User ID='" & user & "';Password='" & password & "'"
+
+    Public str As String = "Data Source=27.254.172.47;Initial Catalog=dbhotelsystem;User ID=bootvong; password=@ITadmin2018@admin"
+    'Public str As String = "data source='" & configuration.Default.servername & "'; initial catalog='" & configuration.Default.dbname & "'; User ID='" & user & "';Password='" & password & "'"
     Public Function connect()
         Try
             With conn

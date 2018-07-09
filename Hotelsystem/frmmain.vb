@@ -1,5 +1,5 @@
 ﻿Public Class frmmain
-    Public userid As Integer
+    Public userid As Integer = 1
     Public laoname As String
     Public level As String
     Dim closeform As New formclose
@@ -170,6 +170,18 @@
     Private Sub reservation_Click(sender As Object, e As EventArgs) Handles reservation.Click
         closeform.closeform()
         closeform.f = frmreserve
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
+
+    Private Sub ButtonItem3_Click(sender As Object, e As EventArgs) Handles ButtonItem3.Click
+        closeform.closeform()
+        closeform.f = frmitemlist
         closeform.f.MdiParent = Me
         closeform.f.WindowState = FormWindowState.Normal
         closeform.f.ControlBox = False
