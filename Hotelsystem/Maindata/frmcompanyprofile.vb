@@ -106,26 +106,6 @@ Public Class frmcompanyprofile
         enablesave()
 
     End Sub
-    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
-        Try
-            With dgvshow
-                txtbsnnid.Text = .CurrentRow.Cells(0).Value
-                txtname.Text = .CurrentRow.Cells(1).Value
-                txtaddress.Text = .CurrentRow.Cells(2).Value
-                txttel.Text = .CurrentRow.Cells(3).Value
-                txtfax.Text = .CurrentRow.Cells(4).Value
-                txtemail.Text = .CurrentRow.Cells(5).Value
-                dtstart.Text = .CurrentRow.Cells(6).Value
-                com.showimage(dgvshow)
-                enablesave()
-                disabletext()
-                btnedit.Enabled = True
-                btndelete.Enabled = True
-            End With
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
         txtname.Select()
@@ -175,5 +155,27 @@ Public Class frmcompanyprofile
         com.loadtbcompanyprofile(dgvshow)
         txtname.Select()
         enablesave()
+    End Sub
+
+
+    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
+        Try
+            With dgvshow
+                txtbsnnid.Text = .CurrentRow.Cells(0).Value
+                txtname.Text = .CurrentRow.Cells(1).Value
+                txtaddress.Text = .CurrentRow.Cells(2).Value
+                txttel.Text = .CurrentRow.Cells(3).Value
+                txtfax.Text = .CurrentRow.Cells(4).Value
+                txtemail.Text = .CurrentRow.Cells(5).Value
+                dtstart.Text = .CurrentRow.Cells(6).Value
+                com.showimage(dgvshow)
+                enablesave()
+                disabletext()
+                btnedit.Enabled = True
+                btndelete.Enabled = True
+            End With
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

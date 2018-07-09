@@ -23,9 +23,12 @@ Partial Class frmmarkettype
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmmarkettype))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnsave = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -42,12 +45,11 @@ Partial Class frmmarkettype
         Me.txtmarkettype = New System.Windows.Forms.TextBox()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
+        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupPanel1
@@ -60,7 +62,7 @@ Partial Class frmmarkettype
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(639, 506)
+        Me.GroupPanel1.Size = New System.Drawing.Size(542, 506)
         '
         '
         '
@@ -105,10 +107,53 @@ Partial Class frmmarkettype
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 3
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 106.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 91.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(633, 500)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(536, 500)
         Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'dgvshow
+        '
+        Me.dgvshow.AllowUserToAddRows = False
+        Me.dgvshow.AllowUserToDeleteRows = False
+        Me.dgvshow.AllowUserToResizeColumns = False
+        Me.dgvshow.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvshow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvshow.EnableHeadersVisualStyles = False
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.Location = New System.Drawing.Point(3, 145)
+        Me.dgvshow.Name = "dgvshow"
+        Me.dgvshow.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvshow.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvshow.RowHeadersVisible = False
+        Me.dgvshow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
+        Me.dgvshow.RowTemplate.Height = 30
+        Me.dgvshow.Size = New System.Drawing.Size(530, 352)
+        Me.dgvshow.TabIndex = 3
         '
         'ToolStrip1
         '
@@ -121,7 +166,7 @@ Partial Class frmmarkettype
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Padding = New System.Windows.Forms.Padding(6)
-        Me.ToolStrip1.Size = New System.Drawing.Size(633, 51)
+        Me.ToolStrip1.Size = New System.Drawing.Size(536, 51)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -212,19 +257,19 @@ Partial Class frmmarkettype
         Me.Panel1.Controls.Add(Me.txtmarkettype)
         Me.Panel1.Controls.Add(Me.txtid)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel1.Location = New System.Drawing.Point(4, 55)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(625, 98)
+        Me.Panel1.Size = New System.Drawing.Size(528, 83)
         Me.Panel1.TabIndex = 2
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(28, 51)
+        Me.Label3.Location = New System.Drawing.Point(3, 49)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(111, 29)
@@ -236,10 +281,10 @@ Partial Class frmmarkettype
         Me.txtmarkettype.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtmarkettype.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtmarkettype.Location = New System.Drawing.Point(142, 49)
+        Me.txtmarkettype.Location = New System.Drawing.Point(117, 47)
         Me.txtmarkettype.Margin = New System.Windows.Forms.Padding(4)
         Me.txtmarkettype.Name = "txtmarkettype"
-        Me.txtmarkettype.Size = New System.Drawing.Size(418, 35)
+        Me.txtmarkettype.Size = New System.Drawing.Size(405, 35)
         Me.txtmarkettype.TabIndex = 3
         '
         'txtid
@@ -247,56 +292,29 @@ Partial Class frmmarkettype
         Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(142, 11)
+        Me.txtid.Location = New System.Drawing.Point(117, 9)
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(418, 35)
+        Me.txtid.Size = New System.Drawing.Size(405, 35)
         Me.txtid.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(81, 14)
+        Me.Label1.Location = New System.Drawing.Point(56, 12)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(58, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
-        'dgvshow
-        '
-        Me.dgvshow.AllowUserToAddRows = False
-        Me.dgvshow.AllowUserToDeleteRows = False
-        Me.dgvshow.AllowUserToResizeColumns = False
-        Me.dgvshow.AllowUserToResizeRows = False
-        Me.dgvshow.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
-        Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
-        Me.dgvshow.Location = New System.Drawing.Point(3, 160)
-        Me.dgvshow.Name = "dgvshow"
-        Me.dgvshow.ReadOnly = True
-        Me.dgvshow.RowHeadersVisible = False
-        Me.dgvshow.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        Me.dgvshow.RowTemplate.Height = 30
-        Me.dgvshow.Size = New System.Drawing.Size(627, 337)
-        Me.dgvshow.TabIndex = 3
-        '
         'frmmarkettype
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(639, 506)
+        Me.ClientSize = New System.Drawing.Size(542, 506)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
@@ -311,11 +329,11 @@ Partial Class frmmarkettype
         Me.GroupPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel1.PerformLayout()
+        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.dgvshow, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

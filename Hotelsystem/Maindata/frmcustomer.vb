@@ -240,29 +240,37 @@
         End Try
     End Sub
 
-    Private Sub btnAddProvince_Click(sender As Object, e As EventArgs) Handles btnAddProvince.Click
-        frmcustomertype.Show()
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmcustomertype.ShowDialog()
     End Sub
 
-    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles ButtonX2.Click
-        frmroomrate.Show()
-    End Sub
-
-    Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles ButtonX3.Click
-        frmtitlename.Show()
-    End Sub
-
-    Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
-        frmvillage.Show()
-    End Sub
-
-    Private Sub ButtonX4_Click(sender As Object, e As EventArgs) Handles ButtonX4.Click
-        frmdistrict.Show()
-    End Sub
-
-    Private Sub ButtonX5_Click(sender As Object, e As EventArgs) Handles ButtonX5.Click
-        frmprovience.Show()
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmroomrate.ShowDialog()
     End Sub
 
 
+    Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
+        frmtitlename.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
+        frmvillage.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripLabel6.Click
+        frmdistrict.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripLabel7_Click(sender As Object, e As EventArgs) Handles ToolStripLabel7.Click
+        frmprovience.ShowDialog()
+    End Sub
+
+    Private Sub cbcustomertype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcustomertype.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub txtCustomerID_TextChanged(sender As Object, e As EventArgs) Handles txtCustomerID.TextChanged
+
+    End Sub
 End Class

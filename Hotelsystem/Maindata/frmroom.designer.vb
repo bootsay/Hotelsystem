@@ -23,6 +23,8 @@ Partial Class frmroom
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmroom))
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -122,7 +124,7 @@ Partial Class frmroom
         '
         Me.ToolStrip1.BackColor = System.Drawing.Color.Transparent
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1, Me.btnnew})
@@ -140,7 +142,7 @@ Partial Class frmroom
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(79, 36)
+        Me.btnsave.Size = New System.Drawing.Size(94, 36)
         Me.btnsave.Text = "ບັນທືກ"
         '
         'ToolStripSeparator1
@@ -155,7 +157,7 @@ Partial Class frmroom
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(63, 36)
+        Me.btndelete.Size = New System.Drawing.Size(71, 36)
         Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator2
@@ -170,7 +172,7 @@ Partial Class frmroom
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(77, 36)
+        Me.btnedit.Size = New System.Drawing.Size(91, 36)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
         'ToolStripSeparator3
@@ -184,7 +186,7 @@ Partial Class frmroom
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(77, 36)
+        Me.btnupdate.Size = New System.Drawing.Size(91, 36)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripButton1
@@ -205,7 +207,7 @@ Partial Class frmroom
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(90, 36)
+        Me.btnnew.Size = New System.Drawing.Size(111, 36)
         Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
         '
         'Panel1
@@ -381,21 +383,37 @@ Partial Class frmroom
         Me.dgvshow.AllowUserToDeleteRows = False
         Me.dgvshow.AllowUserToResizeColumns = False
         Me.dgvshow.AllowUserToResizeRows = False
-        Me.dgvshow.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvshow.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvshow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvshow.EnableHeadersVisualStyles = False
         Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(3, 210)
         Me.dgvshow.Name = "dgvshow"
         Me.dgvshow.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvshow.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.RowTemplate.Height = 35
         Me.dgvshow.Size = New System.Drawing.Size(974, 445)
