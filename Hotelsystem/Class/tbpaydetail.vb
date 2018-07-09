@@ -85,6 +85,8 @@ Public Class tbpaydetail
                 .Columns(0).HeaderText = "ລະຫັດລາຍລະອຽດຈ່າຍເງິນ"
                 .Columns(1).HeaderText = "ເລກທີບິນ"
                 .Columns(2).HeaderText = "ຈ່າຍທັງໝົດ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

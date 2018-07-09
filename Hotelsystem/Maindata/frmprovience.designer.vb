@@ -36,8 +36,9 @@ Partial Class frmprovience
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnAddCountry = New DevComponents.DotNetBar.ButtonX()
         Me.cbCountry = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.txtProvince = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -61,7 +62,7 @@ Partial Class frmprovience
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(717, 709)
+        Me.GroupPanel1.Size = New System.Drawing.Size(632, 709)
         '
         '
         '
@@ -82,6 +83,14 @@ Partial Class frmprovience
         Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
         Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
         Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel1.TabIndex = 0
         '
         'TableLayoutPanel1
@@ -100,7 +109,7 @@ Partial Class frmprovience
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 158.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(711, 703)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(626, 703)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
@@ -110,10 +119,10 @@ Partial Class frmprovience
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.ToolStripButton1})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripSeparator4, Me.btnnew, Me.ToolStripButton1, Me.ToolStripSeparator5, Me.ToolStripLabel1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(711, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(626, 39)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -185,7 +194,7 @@ Partial Class frmprovience
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'ToolStripButton1
         '
@@ -198,9 +207,20 @@ Partial Class frmprovience
         Me.ToolStripButton1.Size = New System.Drawing.Size(36, 36)
         Me.ToolStripButton1.Text = "ToolStripButton1"
         '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 39)
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(82, 36)
+        Me.ToolStripLabel1.Text = "ເພີ່ມປະເທດ"
+        '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.btnAddCountry)
         Me.Panel1.Controls.Add(Me.cbCountry)
         Me.Panel1.Controls.Add(Me.txtProvince)
         Me.Panel1.Controls.Add(Me.Label3)
@@ -211,24 +231,8 @@ Partial Class frmprovience
         Me.Panel1.Location = New System.Drawing.Point(4, 43)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(703, 124)
+        Me.Panel1.Size = New System.Drawing.Size(618, 124)
         Me.Panel1.TabIndex = 2
-        '
-        'btnAddCountry
-        '
-        Me.btnAddCountry.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnAddCountry.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnAddCountry.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddCountry.ForeColor = System.Drawing.Color.Blue
-        Me.btnAddCountry.Image = CType(resources.GetObject("btnAddCountry.Image"), System.Drawing.Image)
-        Me.btnAddCountry.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.btnAddCountry.Location = New System.Drawing.Point(366, 42)
-        Me.btnAddCountry.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnAddCountry.Name = "btnAddCountry"
-        Me.btnAddCountry.Size = New System.Drawing.Size(111, 35)
-        Me.btnAddCountry.TabIndex = 25
-        Me.btnAddCountry.Text = "ເພີມປະເທດ"
-        Me.btnAddCountry.TextAlignment = DevComponents.DotNetBar.eButtonTextAlignment.Left
         '
         'cbCountry
         '
@@ -239,25 +243,27 @@ Partial Class frmprovience
         Me.cbCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCountry.FormattingEnabled = True
         Me.cbCountry.ItemHeight = 29
-        Me.cbCountry.Location = New System.Drawing.Point(90, 42)
+        Me.cbCountry.Location = New System.Drawing.Point(81, 42)
         Me.cbCountry.Name = "cbCountry"
-        Me.cbCountry.Size = New System.Drawing.Size(256, 35)
+        Me.cbCountry.Size = New System.Drawing.Size(523, 35)
         Me.cbCountry.TabIndex = 24
         '
         'txtProvince
         '
+        Me.txtProvince.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtProvince.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProvince.Location = New System.Drawing.Point(90, 80)
+        Me.txtProvince.Location = New System.Drawing.Point(81, 80)
         Me.txtProvince.Margin = New System.Windows.Forms.Padding(4)
         Me.txtProvince.Name = "txtProvince"
-        Me.txtProvince.Size = New System.Drawing.Size(256, 34)
+        Me.txtProvince.Size = New System.Drawing.Size(522, 34)
         Me.txtProvince.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(36, 84)
+        Me.Label3.Location = New System.Drawing.Point(27, 84)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(51, 27)
@@ -266,19 +272,21 @@ Partial Class frmprovience
         '
         'txtid
         '
+        Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtid.Location = New System.Drawing.Point(90, 4)
+        Me.txtid.Location = New System.Drawing.Point(81, 4)
         Me.txtid.Margin = New System.Windows.Forms.Padding(4)
         Me.txtid.Name = "txtid"
         Me.txtid.ReadOnly = True
-        Me.txtid.Size = New System.Drawing.Size(256, 34)
+        Me.txtid.Size = New System.Drawing.Size(522, 34)
         Me.txtid.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 46)
+        Me.Label2.Location = New System.Drawing.Point(17, 46)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 27)
@@ -289,7 +297,7 @@ Partial Class frmprovience
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(32, 8)
+        Me.Label1.Location = New System.Drawing.Point(23, 8)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 27)
@@ -306,14 +314,14 @@ Partial Class frmprovience
         Me.dgvshow.ReadOnly = True
         Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvshow.Size = New System.Drawing.Size(704, 526)
+        Me.dgvshow.Size = New System.Drawing.Size(620, 526)
         Me.dgvshow.TabIndex = 3
         '
         'frmprovience
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(717, 709)
+        Me.ClientSize = New System.Drawing.Size(632, 709)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
@@ -354,8 +362,9 @@ Partial Class frmprovience
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtProvince As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents btnAddCountry As DevComponents.DotNetBar.ButtonX
     Friend WithEvents cbCountry As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents dgvshow As System.Windows.Forms.DataGridView
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
 End Class

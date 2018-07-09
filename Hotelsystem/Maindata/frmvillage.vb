@@ -108,15 +108,6 @@
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
     End Sub
-
-    Private Sub btnAddDistrict_Click(sender As Object, e As EventArgs) Handles btnAddDistrict.Click
-        frmdistrict.Show()
-    End Sub
-
-    Private Sub btnAddProvince_Click(sender As Object, e As EventArgs) Handles btnAddProvince.Click
-        frmprovience.Show()
-    End Sub
-
     Private Sub btnAddCountry_Click(sender As Object, e As EventArgs)
         frmcountry.Show()
     End Sub
@@ -127,5 +118,21 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmprovience.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmdistrict.ShowDialog()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub txtid_TextChanged(sender As Object, e As EventArgs) Handles txtid.TextChanged
+
     End Sub
 End Class

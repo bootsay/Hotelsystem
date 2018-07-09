@@ -86,6 +86,8 @@ Public Class tbdistrict
                 .Columns(1).HeaderText = "ແຂວງ"
                 .Columns(2).HeaderText = "ເມືອງ"
                 .Columns(3).Visible = False
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

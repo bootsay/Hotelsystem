@@ -70,7 +70,7 @@ Partial Class frmcompanyprofile
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(887, 664)
+        Me.GroupPanel1.Size = New System.Drawing.Size(847, 664)
         '
         '
         '
@@ -116,7 +116,7 @@ Partial Class frmcompanyprofile
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(881, 658)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(841, 658)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'dgvshow
@@ -130,7 +130,7 @@ Partial Class frmcompanyprofile
         Me.dgvshow.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.dgvshow.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black
         Me.dgvshow.RowTemplate.Height = 30
-        Me.dgvshow.Size = New System.Drawing.Size(875, 459)
+        Me.dgvshow.Size = New System.Drawing.Size(835, 459)
         Me.dgvshow.TabIndex = 4
         '
         'ToolStrip1
@@ -143,7 +143,7 @@ Partial Class frmcompanyprofile
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1, Me.btnnew})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(881, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(841, 39)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -221,7 +221,7 @@ Partial Class frmcompanyprofile
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(105, 36)
-        Me.btnnew.Text = "ເພີ້ມໃຫ່ມ"
+        Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'Panel1
         '
@@ -243,7 +243,7 @@ Partial Class frmcompanyprofile
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(3, 42)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(875, 148)
+        Me.Panel1.Size = New System.Drawing.Size(835, 148)
         Me.Panel1.TabIndex = 2
         '
         'dtstart
@@ -256,21 +256,18 @@ Partial Class frmcompanyprofile
         '
         'pimage
         '
-        Me.pimage.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pimage.ErrorImage = CType(resources.GetObject("pimage.ErrorImage"), System.Drawing.Image)
         Me.pimage.Image = CType(resources.GetObject("pimage.Image"), System.Drawing.Image)
-        Me.pimage.Location = New System.Drawing.Point(755, 3)
+        Me.pimage.Location = New System.Drawing.Point(713, 3)
         Me.pimage.Name = "pimage"
-        Me.pimage.Size = New System.Drawing.Size(100, 118)
+        Me.pimage.Size = New System.Drawing.Size(100, 109)
         Me.pimage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pimage.TabIndex = 16
         Me.pimage.TabStop = False
         '
         'txtemail
         '
-        Me.txtemail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtemail.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtemail.Location = New System.Drawing.Point(440, 40)
         Me.txtemail.Name = "txtemail"
@@ -299,8 +296,6 @@ Partial Class frmcompanyprofile
         '
         'txtfax
         '
-        Me.txtfax.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtfax.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtfax.Location = New System.Drawing.Point(440, 3)
         Me.txtfax.Name = "txtfax"
@@ -319,8 +314,6 @@ Partial Class frmcompanyprofile
         '
         'txttel
         '
-        Me.txttel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txttel.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txttel.Location = New System.Drawing.Point(81, 113)
         Me.txttel.Name = "txttel"
@@ -339,8 +332,6 @@ Partial Class frmcompanyprofile
         '
         'txtaddress
         '
-        Me.txtaddress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtaddress.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtaddress.Location = New System.Drawing.Point(81, 76)
         Me.txtaddress.Name = "txtaddress"
@@ -359,8 +350,6 @@ Partial Class frmcompanyprofile
         '
         'txtname
         '
-        Me.txtname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname.Location = New System.Drawing.Point(81, 39)
         Me.txtname.Name = "txtname"
@@ -405,7 +394,7 @@ Partial Class frmcompanyprofile
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(887, 664)
+        Me.ClientSize = New System.Drawing.Size(847, 664)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True

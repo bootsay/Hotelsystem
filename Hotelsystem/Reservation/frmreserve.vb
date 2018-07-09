@@ -111,7 +111,7 @@
         txtuser.Text = 1
         txtprice.Clear()
         txtNote.Clear()
-        txtnumberpeople.Clear()
+        'txtnumberpeople.Clear()
         txtcustomername.Clear()
         txtroomno.Clear()
     End Sub
@@ -156,7 +156,7 @@
         txtwrite()
     End Sub
 
-    Private Sub txtnumberpeople_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnumberpeople.KeyPress
+    Private Sub txtnumberpeople_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             e.Handled = True
         End If
@@ -264,17 +264,128 @@
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         Try
-            If txtsearch.Text = "" Then
-                reserve.loadtbfreserve(dgvlist)
+            If rid.Checked = True Then
+                If txtsearch.Text = "" Then
+                    reserve.loadtbfreserve(dgvlist)
+                Else
+                    reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                End If
+            ElseIf rroom.Checked = True Then
+                If txtsearch.Text = "" Then
+                    reserve.loadtbfreserve(dgvlist)
+                Else
+                    reserve.loadtbfreserveSearch(dgvlist, txtserchroom.Text)
+                End If
             Else
-                reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                reserve.loadtbfreserveSearchorderdate(dgvlist, Format(CDate(txtdate1.Text), "MM/dd/yyyy"), Format(CDate(txtdate3.Text), "MM/dd/yyyy"))
             End If
+       
         Catch ex As Exception
 
         End Try
     End Sub
 
     Private Sub dgvlist_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvlist.CellContentClick
+
+    End Sub
+
+    Private Sub rtype_CheckedChanged(sender As Object, e As EventArgs) Handles rid.CheckedChanged
+        Try
+            If rid.Checked = True Then
+                txtsearch.Visible = True
+                txtserchroom.Visible = False
+                txtdate1.Visible = False
+                txtdate2.Visible = False
+                txtdate3.Visible = False
+                txtsearch.Focus()
+            Else
+                txtsearch.Visible = True
+                txtserchroom.Visible = False
+                txtdate1.Visible = False
+                txtdate2.Visible = False
+                txtdate3.Visible = False
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub rname_CheckedChanged(sender As Object, e As EventArgs) Handles rroom.CheckedChanged
+        Try
+            If rroom.Checked = True Then
+                txtsearch.Visible = False
+                txtserchroom.Visible = True
+                txtdate1.Visible = False
+                txtdate2.Visible = False
+                txtdate3.Visible = False
+                txtserchroom.Focus()
+            Else
+                txtserchroom.Visible = False
+                txtsearch.Visible = True
+                txtdate1.Visible = False
+                txtdate2.Visible = False
+                txtdate3.Visible = False
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub rdate_CheckedChanged(sender As Object, e As EventArgs) Handles rdate.CheckedChanged
+        Try
+            If rdate.Checked = True Then
+                txtsearch.Visible = False
+                txtdate1.Visible = True
+                txtdate2.Visible = True
+                txtdate3.Visible = True
+                txtdate1.Select()
+            Else
+                txtsearch.Visible = True
+                txtdate1.Visible = False
+                txtdate2.Visible = False
+                txtdate3.Visible = False
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
+
+    End Sub
+
+    Private Sub txtserchroom_KeyDown(sender As Object, e As KeyEventArgs) Handles txtserchroom.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Then
+                If txtsearch.Text = "" Then
+                    reserve.loadtbfreserve(dgvlist)
+                Else
+                    reserve.loadtbfreserveSearch(dgvlist, txtserchroom.Text)
+                End If
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
+
+    End Sub
+
+    Private Sub txtserchroom_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtserchroom.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtserchroom_TextChanged(sender As Object, e As EventArgs) Handles txtserchroom.TextChanged
+
+    End Sub
+
+    Private Sub txtnumberpeople_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub IntegerInput1_ValueChanged(sender As Object, e As EventArgs) Handles txtnumberpeople.ValueChanged
 
     End Sub
 End Class

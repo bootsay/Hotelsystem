@@ -84,6 +84,7 @@ Public Class tbcategory
             With dgv
                 .Columns(0).HeaderText = "ລໍາດັບ"
                 .Columns(1).HeaderText = "ຊະນິດສີນຄ້າ"
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

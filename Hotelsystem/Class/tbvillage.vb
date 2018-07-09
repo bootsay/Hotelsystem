@@ -87,7 +87,8 @@ Public Class tbvillage
                 .Columns(3).HeaderText = "ບ້ານ"
                 .Columns(4).Visible = False
                 .Columns(5).Visible = False
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With

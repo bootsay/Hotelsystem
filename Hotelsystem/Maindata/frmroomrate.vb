@@ -111,4 +111,24 @@
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
     End Sub
+
+    Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
+
+    End Sub
+
+    Private Sub txtprice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprice.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtprice_TextChanged(sender As Object, e As EventArgs) Handles txtprice.TextChanged
+        Try
+            Dim tem As Double = txtprice.Text
+            txtprice.Text = tem.ToString("N0")
+            txtprice.SelectionStart = txtprice.TextLength
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

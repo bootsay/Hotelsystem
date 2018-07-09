@@ -86,7 +86,8 @@ Public Class tbposition
                 .Columns(1).HeaderText = "ພະແນກ"
                 .Columns(2).HeaderText = "ຕຳແໜ່ງ"
                 .Columns(3).Visible = False
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

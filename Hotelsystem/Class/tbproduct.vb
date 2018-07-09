@@ -144,8 +144,8 @@ Public Class tbproduct
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

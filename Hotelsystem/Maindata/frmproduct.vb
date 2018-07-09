@@ -172,11 +172,49 @@ Public Class frmproduct
         End Try
     End Sub
 
-    Private Sub btnsubcategory_Click(sender As Object, e As EventArgs) Handles btnsubcategory.Click
-        frmunit.Show()
+
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
     End Sub
 
-    Private Sub btnaddcategory_Click(sender As Object, e As EventArgs) Handles btnaddcategory.Click
-        frmcategory.Show()
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmcategory.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmunit.ShowDialog()
+    End Sub
+
+    Private Sub txtsale_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtsale.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtsale_TextChanged(sender As Object, e As EventArgs) Handles txtsale.TextChanged
+        Try
+            Dim tem As Double = txtsale.Text
+            txtsale.Text = tem.ToString("N0")
+            txtsale.SelectionStart = txtsale.TextLength
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub txtbuy_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtbuy.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtbuy_TextChanged(sender As Object, e As EventArgs) Handles txtbuy.TextChanged
+        Try
+            Dim tem As Double = txtbuy.Text
+            txtbuy.Text = tem.ToString("N0")
+            txtbuy.SelectionStart = txtbuy.TextLength
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

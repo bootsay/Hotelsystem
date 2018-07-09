@@ -79,10 +79,6 @@
         enablesave()
     End Sub
 
-    
-    Private Sub btnAddCountry_Click(sender As Object, e As EventArgs) Handles btnAddCountry.Click
-        frmcountry.Show()
-    End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
@@ -107,5 +103,9 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmcountry.ShowDialog()
     End Sub
 End Class
