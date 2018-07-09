@@ -6,16 +6,16 @@
       <Value Profile="(Default)">dbhotelsystem</Value>
     </Setting>
     <Setting Name="servername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">PHONE\PHONE</Value>
+      <Value Profile="(Default)">27.254.172.47</Value>
     </Setting>
     <Setting Name="printername" Type="System.String" Scope="User">
       <Value Profile="(Default)">Adobe PDF</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sa</Value>
+      <Value Profile="(Default)">bootvong</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">99491232</Value>
+      <Value Profile="(Default)">@ITadmin2018@admin</Value>
     </Setting>
   </Settings>
 </SettingsFile>

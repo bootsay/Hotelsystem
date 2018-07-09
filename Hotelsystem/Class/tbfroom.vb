@@ -5,11 +5,11 @@ Public Class tbfroom
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
-    Public Function getroom(floorid As Integer, dt As DataTable)
+    Public Function getroom(floorid As Integer, typename As String, dt As DataTable)
         cn.connect()
         Try
             dt.Clear()
-            da = New SqlDataAdapter("select * from viewroominfo where locationid='" & floorid & "'", cn.conn)
+            da = New SqlDataAdapter("select * from viewroominfo where locationid='" & floorid & "' and romtypename like N'%" & typename & "%' and activate='True'", cn.conn)
             da.Fill(dt)
 
         Catch ex As Exception
