@@ -205,4 +205,16 @@
         closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
+
+    Private Sub customer_Click(sender As Object, e As EventArgs) Handles customer.Click
+        closeform.closeform()
+        closeform.f = frmcustomer
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
 End Class

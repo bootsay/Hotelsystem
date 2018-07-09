@@ -5,7 +5,16 @@ Public Class tbfcheckin
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
-
+    Public Function selectReserveNO(reserveNO As String, dt As DataTable)
+        cn.connect()
+        Try
+            dt.Clear()
+            da = New SqlDataAdapter("select * from viewreserve where reserveNO='" & reserveNO & "'", cn.conn)
+            da.Fill(dt)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Function
     Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
         Try
