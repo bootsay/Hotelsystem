@@ -40,13 +40,13 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.Configuration.DefaultSettingValueAttribute("27.254.172.47")>  _
-    Public Property servername() As String
+     Global.System.Configuration.DefaultSettingValueAttribute("CD7220NU")>  _
+    Public Property Displayname() As String
         Get
-            Return CType(Me("servername"),String)
+            Return CType(Me("Displayname"),String)
         End Get
         Set
-            Me("servername") = value
+            Me("Displayname") = value
         End Set
     End Property
     
@@ -64,6 +64,18 @@ Partial Friend NotInheritable Class configuration
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.Configuration.DefaultSettingValueAttribute("ADMIN\SQL2012")>  _
+    Public Property servername() As String
+        Get
+            Return CType(Me("servername"),String)
+        End Get
+        Set
+            Me("servername") = value
+        End Set
+    End Property
+    
+    <Global.System.Configuration.UserScopedSettingAttribute(),  _
+     Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Configuration.DefaultSettingValueAttribute("bootvong")>  _
     Public Property username() As String
         Get
@@ -73,20 +85,10 @@ Partial Friend NotInheritable Class configuration
             Me("username") = value
         End Set
     End Property
-<<<<<<< HEAD
     
     <Global.System.Configuration.UserScopedSettingAttribute(),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-'<<<<<<< HEAD
-    '     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin")>  _
-    '=======
-    '     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10))>  _
-    '>>>>>>> 975af47c16b9359cda89975993f11e4459f3d08f
-=======
-   <Global.System.Configuration.UserScopedSettingAttribute(),  _
-      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-      Global.System.Configuration.DefaultSettingValueAttribute("bootvong")> _
->>>>>>> 715ce6231d8da40644c3122f8e79f39307271ad7
+     Global.System.Configuration.DefaultSettingValueAttribute("@ITadmin2018@admin")>  _
     Public Property password() As String
         Get
             Return CType(Me("password"),String)

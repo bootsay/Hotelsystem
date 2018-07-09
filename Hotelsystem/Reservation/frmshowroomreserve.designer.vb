@@ -27,7 +27,9 @@ Partial Class frmshowroomreserve
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cblevel = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.rlevel = New System.Windows.Forms.RadioButton()
         Me.rname = New System.Windows.Forms.RadioButton()
         Me.rtype = New System.Windows.Forms.RadioButton()
         Me.cbtype = New DevComponents.DotNetBar.Controls.ComboBoxEx()
@@ -98,6 +100,7 @@ Partial Class frmshowroomreserve
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cblevel)
         Me.Panel1.Controls.Add(Me.GroupPanel2)
         Me.Panel1.Controls.Add(Me.cbtype)
         Me.Panel1.Controls.Add(Me.txtsearch)
@@ -107,15 +110,30 @@ Partial Class frmshowroomreserve
         Me.Panel1.Size = New System.Drawing.Size(686, 44)
         Me.Panel1.TabIndex = 0
         '
+        'cblevel
+        '
+        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cblevel.DisplayMember = "Text"
+        Me.cblevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cblevel.FormattingEnabled = True
+        Me.cblevel.ItemHeight = 29
+        Me.cblevel.Location = New System.Drawing.Point(210, 4)
+        Me.cblevel.Name = "cblevel"
+        Me.cblevel.Size = New System.Drawing.Size(470, 35)
+        Me.cblevel.TabIndex = 29
+        '
         'GroupPanel2
         '
         Me.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control
         Me.GroupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel2.Controls.Add(Me.rlevel)
         Me.GroupPanel2.Controls.Add(Me.rname)
         Me.GroupPanel2.Controls.Add(Me.rtype)
         Me.GroupPanel2.Location = New System.Drawing.Point(3, 2)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(148, 40)
+        Me.GroupPanel2.Size = New System.Drawing.Size(201, 40)
         '
         '
         '
@@ -146,23 +164,35 @@ Partial Class frmshowroomreserve
         Me.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel2.TabIndex = 28
         '
+        'rlevel
+        '
+        Me.rlevel.AutoSize = True
+        Me.rlevel.BackColor = System.Drawing.Color.Transparent
+        Me.rlevel.Location = New System.Drawing.Point(86, 1)
+        Me.rlevel.Name = "rlevel"
+        Me.rlevel.Size = New System.Drawing.Size(51, 33)
+        Me.rlevel.TabIndex = 2
+        Me.rlevel.TabStop = True
+        Me.rlevel.Text = "ຊັ້ນ"
+        Me.rlevel.UseVisualStyleBackColor = False
+        '
         'rname
         '
         Me.rname.AutoSize = True
         Me.rname.BackColor = System.Drawing.Color.Transparent
-        Me.rname.Location = New System.Drawing.Point(89, 4)
+        Me.rname.Location = New System.Drawing.Point(142, 1)
         Me.rname.Name = "rname"
-        Me.rname.Size = New System.Drawing.Size(45, 33)
+        Me.rname.Size = New System.Drawing.Size(41, 33)
         Me.rname.TabIndex = 1
         Me.rname.TabStop = True
-        Me.rname.Text = "ຊື່:"
+        Me.rname.Text = "ຊື່"
         Me.rname.UseVisualStyleBackColor = False
         '
         'rtype
         '
         Me.rtype.AutoSize = True
         Me.rtype.BackColor = System.Drawing.Color.Transparent
-        Me.rtype.Location = New System.Drawing.Point(10, 4)
+        Me.rtype.Location = New System.Drawing.Point(5, 1)
         Me.rtype.Name = "rtype"
         Me.rtype.Size = New System.Drawing.Size(76, 33)
         Me.rtype.TabIndex = 0
@@ -179,18 +209,18 @@ Partial Class frmshowroomreserve
         Me.cbtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbtype.FormattingEnabled = True
         Me.cbtype.ItemHeight = 29
-        Me.cbtype.Location = New System.Drawing.Point(157, 6)
+        Me.cbtype.Location = New System.Drawing.Point(210, 4)
         Me.cbtype.Name = "cbtype"
-        Me.cbtype.Size = New System.Drawing.Size(523, 35)
+        Me.cbtype.Size = New System.Drawing.Size(470, 35)
         Me.cbtype.TabIndex = 27
         '
         'txtsearch
         '
         Me.txtsearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtsearch.Location = New System.Drawing.Point(157, 6)
+        Me.txtsearch.Location = New System.Drawing.Point(210, 4)
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(523, 35)
+        Me.txtsearch.Size = New System.Drawing.Size(470, 35)
         Me.txtsearch.TabIndex = 1
         '
         'dgvroom
@@ -210,7 +240,7 @@ Partial Class frmshowroomreserve
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvroom.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvroom.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvroom.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvroom.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvroom.Location = New System.Drawing.Point(3, 53)
         Me.dgvroom.Name = "dgvroom"
         Me.dgvroom.ReadOnly = True
@@ -254,4 +284,6 @@ Partial Class frmshowroomreserve
     Friend WithEvents GroupPanel2 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents rname As System.Windows.Forms.RadioButton
     Friend WithEvents rtype As System.Windows.Forms.RadioButton
+    Friend WithEvents rlevel As System.Windows.Forms.RadioButton
+    Friend WithEvents cblevel As DevComponents.DotNetBar.Controls.ComboBoxEx
 End Class

@@ -170,7 +170,7 @@ Public Class tbproduct
                 .Columns(3).HeaderText = "ຫົວໜ່ວຍ"
                 .Columns(4).Visible = False
                 .Columns(5).HeaderText = "ລາຄາຂາຍ"
-                .Columns(6).HeaderText = "ຈຳນວນສະຕ໋ອກ"
+                '.Columns(6).HeaderText = "ຈຳນວນສະຕ໋ອກ"
                 .Columns(7).Visible = False
                 .Columns(8).Visible = False
                 .Columns(9).Visible = False
@@ -180,8 +180,8 @@ Public Class tbproduct
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 '.Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).Visible = False
                 '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

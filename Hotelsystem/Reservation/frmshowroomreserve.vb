@@ -1,10 +1,12 @@
 ﻿Public Class frmshowroomreserve
     Dim room As New tbfroom
     Dim roomrtype As New tbfroomtype
+    Dim level As New tbfroomlocation
     Private Sub frmshowunit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             room.loadtbfroomshow(dgvroom)
             roomrtype.comboroomtype(cbtype)
+            level.comboroomlocation(cblevel)
             rname.Checked = True
             txtsearch.Select()
 
@@ -62,6 +64,7 @@
         Try
             If rname.Checked = True Then
                 cbtype.Text = "%"
+                cblevel.Text = "%"
                 room.loadtbfroomName(dgvroom, txtsearch.Text)
             End If
         Catch ex As Exception
@@ -90,6 +93,7 @@
         Try
             If rtype.Checked = True Then
                 txtsearch.Text = "%"
+                cblevel.Text = "%"
                 'MessageBox.Show(cbtype.SelectedValue)
                 room.loadtbfroomType(dgvroom, cbtype.SelectedValue)
 
@@ -98,23 +102,45 @@
 
         End Try
     End Sub
-
-
     Private Sub dgvroom_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvroom.CellMouseUp
-        With dgvroom
-            If frmreserve.frmcreatereserve = True Then
-                frmreserve.txtroomid.Text = .CurrentRow.Cells(0).Value
-                frmreserve.txtroomno.Text = .CurrentRow.Cells(3).Value
-                Me.Close()
+        Try
+            With dgvroom
+                If frmreserve.frmcreatereserve = True Then
+                    frmreserve.txtroomid.Text = .CurrentRow.Cells(0).Value
+                    frmreserve.txtroomno.Text = .CurrentRow.Cells(3).Value
+                    Me.Close()
+                End If
+            End With
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+    Private Sub rlevel_CheckedChanged(sender As Object, e As EventArgs) Handles rlevel.CheckedChanged
+        If rlevel.Checked = True Then
+            txtsearch.Visible = False
+            cbtype.Visible = False
+            cblevel.Visible = True
+        Else
+            txtsearch.Visible = True
+            cbtype.Visible = False
+            cblevel.Visible = False
+        End If
+    End Sub
+
+    Private Sub cblevel_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cblevel.SelectedIndexChanged
+        Try
+            If rlevel.Checked = True Then
+                txtsearch.Text = "%"
+                cbtype.Text = "%"
+                room.loadtbfroomLevel(dgvroom, cblevel.SelectedValue)
             End If
-        End With
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub dgvroom_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvroom.CellContentClick
-
-    End Sub
-
-    Private Sub GroupPanel1_Click(sender As Object, e As EventArgs) Handles GroupPanel1.Click
 
     End Sub
 End Class

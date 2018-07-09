@@ -198,7 +198,7 @@
             txtid.Select()
             Return
         End If
-        itemlist.update(txtid.Text, txtroomid.Text, txtproid.Text, txtqty.Text, txtprice.Text, txttotalprice.Text, Format(CDate(txtdateadd.Text), "MM/dd/yyyy"), "ປົກກະຕິ", txtuserid.Text)
+        itemlist.update(txtid.Text, txtroomid.Text, txtproid.Text, txtqty.Text, txtprice.Text, txttotalprice.Text, Format(CDate(txtdateadd.Text), "MM/dd/yyyy"), "ປົກກະຕິ", frmmain.userid)
         itemlist.loaditemlistbyroom(dgvlist, txtroomno.Text)
         txtclear()
         txtid.Text = itemlist.runid
@@ -220,7 +220,7 @@
         '    txtuser.Select()
         '    Return
         'End If
-        itemlist.save(txtid.Text, txtroomid.Text, txtproid.Text, txtqty.Text, txtprice.Text, txttotalprice.Text, Format(CDate(txtdateadd.Text), "MM/dd/yyyy"), "ປົກກະຕິ", txtuserid.Text)
+        itemlist.save(txtid.Text, txtroomid.Text, txtproid.Text, txtqty.Text, txtprice.Text, txttotalprice.Text, Format(CDate(txtdateadd.Text), "MM/dd/yyyy"), "ປົກກະຕິ", frmmain.userid)
         'room.updateroom(txtroomid.Text, 2)
         itemlist.loaditemlistbyroom(dgvlist, txtroomno.Text)
         txtclear()

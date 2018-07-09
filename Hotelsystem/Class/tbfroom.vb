@@ -21,7 +21,7 @@ Public Class tbfroom
     Public Function save(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As Integer, des As String, activate As String, statusid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfroom(roomid,roomtypeid,locationid,phone_ext,room_id,des,activate,statusid)values('" & roomid & "','" & roomtypeid & "','" & locationid & "','" & phone_ext & "','" & room_id & "','" & des & "','" & activate & "','" & statusid & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfroom(roomid,roomtypeid,locationid,phone_ext,room_id,des,activate,statusid)values('" & roomid & "','" & roomtypeid & "','" & locationid & "','" & phone_ext & "','" & room_id & "',N'" & des & "','" & activate & "','" & statusid & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -64,7 +64,7 @@ Public Class tbfroom
     Public Function update(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As Integer, des As String, activate As String, statusid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfroom set roomtypeid='" & roomtypeid & "', locationid='" & locationid & "', phone_ext='" & phone_ext & "', room_id='" & room_id & "', des='" & des & "', activate='" & activate & "', statusid='" & statusid & "' where roomid='" & roomid & "'", cn.conn)
+            cm = New SqlCommand("update tbfroom set roomtypeid='" & roomtypeid & "', locationid='" & locationid & "', phone_ext='" & phone_ext & "', room_id='" & room_id & "', des=N'" & des & "', activate='" & activate & "', statusid='" & statusid & "' where roomid='" & roomid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -128,7 +128,7 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).HeaderText = "ຄຳອະທິບາຍ"
                 .Columns(6).HeaderText = "ໃຊ້ງານ"
                 .Columns(7).HeaderText = "ສະຖານະ"
@@ -151,7 +151,7 @@ Public Class tbfroom
     Public Function loadtbfroomshow(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where statusid=3 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where statusid=1 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -165,7 +165,7 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False
@@ -188,7 +188,7 @@ Public Class tbfroom
     Public Function loadtbfroomshowlist(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where statusid=2 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where statusid=3 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -201,7 +201,7 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False
@@ -224,7 +224,7 @@ Public Class tbfroom
     Public Function loadtbfroomName(dgv As DataGridView, name As String)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where room_id like N'%" & name & "%'and statusid=3 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where room_id like N'%" & name & "%'and statusid=1 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -238,7 +238,7 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False
@@ -261,7 +261,7 @@ Public Class tbfroom
     Public Function loadtbfroomNamelist(dgv As DataGridView, name As String)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where room_id like N'%" & name & "%'and statusid=2 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where room_id like N'%" & name & "%'and statusid=3 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -275,7 +275,44 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
+                .Columns(5).Visible = False
+                .Columns(6).Visible = False
+                .Columns(7).Visible = False
+                .Columns(8).Visible = False
+                .Columns(9).Visible = False
+                .Columns(10).Visible = False
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                '.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                '.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function loadtbfroomLevel(dgv As DataGridView, Level As Integer)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewroom where locationid='" & Level & "'and statusid=1 order by roomid", cn.conn)
+            da.Fill(ds, "pt")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt")
+            dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
+            With dgv
+                .ReadOnly = True
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
+                .Columns(3).HeaderText = "ເບີຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False
@@ -298,7 +335,7 @@ Public Class tbfroom
     Public Function loadtbfroomType(dgv As DataGridView, Type As Integer)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where roomtypeid='" & Type & "'and statusid=3 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where roomtypeid='" & Type & "'and statusid=1 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -312,7 +349,7 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False
@@ -335,7 +372,7 @@ Public Class tbfroom
     Public Function loadtbfroomTypelist(dgv As DataGridView, Type As Integer)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where roomtypeid='" & Type & "'and statusid=2 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where roomtypeid='" & Type & "'and statusid=3 order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -349,7 +386,44 @@ Public Class tbfroom
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
-                .Columns(4).HeaderText = "ໂທລະສັບຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
+                .Columns(5).Visible = False
+                .Columns(6).Visible = False
+                .Columns(7).Visible = False
+                .Columns(8).Visible = False
+                .Columns(9).Visible = False
+                .Columns(10).Visible = False
+                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                '.Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                '.Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function loadtbfroomLevellist(dgv As DataGridView, Level As Integer)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewroom where locationid='" & Level & "'and statusid=3 order by roomid", cn.conn)
+            da.Fill(ds, "pt")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt")
+            dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
+            With dgv
+                .ReadOnly = True
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
+                .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
+                .Columns(3).HeaderText = "ເບີຫ້ອງ"
+                .Columns(4).HeaderText = "ເບີໂທລະສັບຫ້ອງ"
                 .Columns(5).Visible = False
                 .Columns(6).Visible = False
                 .Columns(7).Visible = False

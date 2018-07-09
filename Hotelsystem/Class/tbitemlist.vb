@@ -168,7 +168,7 @@ Public Class tbitemlist
                 .Columns(9).Visible = False
                 .Columns(10).Visible = False
                 .Columns(11).Visible = False
-                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(0).Visible = False
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells

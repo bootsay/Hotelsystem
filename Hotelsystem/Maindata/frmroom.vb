@@ -3,14 +3,14 @@ Public Class frmroom
     Dim room As New tbfroom
     Dim roomtype As New tbfroomtype
     Dim roomlocation As New tbfroomlocation
-    Dim roomstatus As New tbroomstatus
+    Dim status As New tbstatusall
     Private Sub frmbusinessvb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtid.Text = room.runid
             room.loadtbfroom(dgvshow)
             roomtype.comboroomtype(cbroomtype)
             roomlocation.comboroomlocation(cbroomlocation)
-            roomstatus.comboroomstatus(cbstatus)
+            status.combostatus(cbstatus)
             enablesave()
             txtphone.Select()
         Catch ex As Exception
@@ -103,8 +103,8 @@ Public Class frmroom
                 txtid.Text = .CurrentRow.Cells(0).Value
                 cbroomtype.Text = .CurrentRow.Cells(1).Value
                 cbroomlocation.Text = .CurrentRow.Cells(2).Value
-                txtphone.Text = .CurrentRow.Cells(3).Value
-                txtroomid.Text = .CurrentRow.Cells(4).Value
+                txtroomid.Text = .CurrentRow.Cells(3).Value
+                txtphone.Text = .CurrentRow.Cells(4).Value
                 txtdes.Text = .CurrentRow.Cells(5).Value
                 chkactivate.Checked = .CurrentRow.Cells(6).Value
                 cbstatus.Text = .CurrentRow.Cells(7).Value
@@ -162,7 +162,7 @@ Public Class frmroom
         txtroomid.Clear()
         txtdes.Clear()
         txtphone.ReadOnly = False
-        txtid.Text = roomstatus.runid
+        txtid.Text = room.runid
         room.loadtbfroom(dgvshow)
         txtphone.Select()
         txtphone.Enabled = True
@@ -173,5 +173,13 @@ Public Class frmroom
         cbstatus.Enabled = True
         chkactivate.Enabled = True
         enablesave()
+    End Sub
+
+    Private Sub chkactivate_CheckedChanged(sender As Object, e As EventArgs) Handles chkactivate.CheckedChanged
+
+    End Sub
+
+    Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
+
     End Sub
 End Class
