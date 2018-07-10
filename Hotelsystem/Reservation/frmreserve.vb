@@ -16,6 +16,7 @@
     Dim room As New tbfroom
     Dim reserve As New tbfreserve
     Dim reserveid As Integer
+    Public frmroom1 As Boolean = False
     Private Sub btnbrown_Click(sender As Object, e As EventArgs) Handles btnbrown1.Click
         frmcreatereserve = True
         frmshowcustomer.ShowDialog()
@@ -60,7 +61,6 @@
             room_id = roomdt.Rows(0).Item(0)
             txtroomno.Text = roomdt.Rows(0).Item(4)
         Else
-
         End If
         frmcreatereserve = False
     End Sub
@@ -377,15 +377,4 @@
         End If
     End Sub
 
-    Private Sub txtserchroom_TextChanged(sender As Object, e As EventArgs) Handles txtserchroom.TextChanged
-
-    End Sub
-
-    Private Sub txtnumberpeople_TextChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub IntegerInput1_ValueChanged(sender As Object, e As EventArgs) Handles txtnumberpeople.ValueChanged
-
-    End Sub
 End Class

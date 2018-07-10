@@ -9,7 +9,7 @@ Public Class tbfroomrate
     Public Function save(roomrateid As Integer, roomtypeid As Integer, roomtyperateid As Integer, price As Double, des As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfroomrate(roomrateid,roomtypeid,roomtyperateid,price,des)values('" & roomrateid & "','" & roomtypeid & "','" & roomtyperateid & "','" & price & "','" & des & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfroomrate(roomrateid,roomtypeid,roomtyperateid,price,des)values('" & roomrateid & "','" & roomtypeid & "','" & roomtyperateid & "','" & price & "',N'" & des & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -39,7 +39,7 @@ Public Class tbfroomrate
     Public Function update(roomrateid As Integer, roomtypeid As Integer, roomtyperateid As Integer, price As Double, des As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfroomrate set roomtypeid='" & roomtypeid & "', roomtyperateid='" & roomtyperateid & "', price='" & price & "', des='" & des & "' where roomrateid='" & roomrateid & "'", cn.conn)
+            cm = New SqlCommand("update tbfroomrate set roomtypeid='" & roomtypeid & "', roomtyperateid='" & roomtyperateid & "', price='" & price & "', des=N'" & des & "' where roomrateid='" & roomrateid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -106,7 +106,7 @@ Public Class tbfroomrate
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbfroomrate", cn.conn)
+            da = New SqlDataAdapter("select * from tbfroomrate order by roomrateid desc", cn.conn)
             da.Fill(dt)
 
             With cb

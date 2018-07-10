@@ -96,7 +96,7 @@ Public Class tbcategory
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbcategory", cn.conn)
+            da = New SqlDataAdapter("select * from tbcategory  order by cateid desc", cn.conn)
             da.Fill(dt)
 
             With cb

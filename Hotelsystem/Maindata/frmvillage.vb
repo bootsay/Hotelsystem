@@ -2,6 +2,9 @@
     Dim village As New tbvillage
     Dim province As New tbprovince
     Dim district As New tbdistrict
+    Public frmprovience1 As Boolean = False
+
+    Public frmdistrict1 As Boolean = False
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         If cbprovince.SelectedValue < 1 Then
             MessageBox.Show("ກະລຸນາເລືອກແຂວງ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -121,11 +124,20 @@
     End Sub
 
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmprovience1 = True
         frmprovience.ShowDialog()
+        frmprovience.Close()
+        province.comboprovince(cbprovince)
+        frmprovience1 = False
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+
+        frmdistrict1 = True
         frmdistrict.ShowDialog()
+        frmdistrict.Close()
+        province.comboprovince(cbprovince)
+        frmdistrict1 = False
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint

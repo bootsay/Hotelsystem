@@ -1,6 +1,7 @@
 ﻿Public Class frmprovience
     Dim cate As New tbprovince
     Dim countrys As New tbcountry
+    Public frmcountry1 As Boolean = False
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         If txtProvince.Text = "" Then
             MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -106,6 +107,10 @@
     End Sub
 
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmcountry1 = True
         frmcountry.ShowDialog()
+        frmcountry.Close()
+        countrys.combocountry(cbCountry)
+        frmcountry1 = False
     End Sub
 End Class

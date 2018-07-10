@@ -96,7 +96,7 @@ Public Class tbdepartment
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbdepartment", cn.conn)
+            da = New SqlDataAdapter("select * from tbdepartment  order by deptid desc", cn.conn)
             da.Fill(dt)
 
             With cb

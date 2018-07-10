@@ -94,7 +94,7 @@ Public Class tbfcustomertype
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbfcustomertype", cn.conn)
+            da = New SqlDataAdapter("select * from tbfcustomertype order by customertypeid desc", cn.conn)
             da.Fill(dt)
 
             With cb
@@ -107,4 +107,20 @@ Public Class tbfcustomertype
         End Try
         Return True
     End Function
+    'Public Function Selectcustomertype(cb As ComboBox)
+    '    cn.connect()
+    '    Dim dt As New DataTable
+    '    Try
+    '        da = New SqlDataAdapter("select * from tbfcustomertype order by customertypeid desc", cn.conn)
+    '        da.Fill(dt)
+    '        With cb
+    '            .DataSource = dt
+    '            .DisplayMember = dt.Columns("customertypename").ToString
+    '            .ValueMember = dt.Columns("customertypeid").ToString
+    '        End With
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '    End Try
+    '    Return True
+    'End Function
 End Class

@@ -101,7 +101,7 @@ Public Class tbvillage
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbvillage where districtid='" & districtid & "'", cn.conn)
+            da = New SqlDataAdapter("select * from tbvillage where districtid='" & districtid & "'order by villageid desc", cn.conn)
             da.Fill(dt)
 
             With cb

@@ -57,18 +57,6 @@
         enablesave()
     End Sub
 
-    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
-        Try
-            With dgvshow
-                txtid.Text = .CurrentRow.Cells(0).Value
-                txtroomtyperate.Text = .CurrentRow.Cells(1).Value
-                txtroomtyperate.ReadOnly = True
-                enableedit()
-            End With
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
         txtroomtyperate.ReadOnly = False
@@ -97,5 +85,22 @@
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         Me.Close()
+    End Sub
+
+    Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
+
+    End Sub
+
+    Private Sub dgvshow_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvshow.CellMouseUp
+        Try
+            With dgvshow
+                txtid.Text = .CurrentRow.Cells(0).Value
+                txtroomtyperate.Text = .CurrentRow.Cells(1).Value
+                txtroomtyperate.ReadOnly = True
+                enableedit()
+            End With
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

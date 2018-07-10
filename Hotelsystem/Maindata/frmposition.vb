@@ -1,6 +1,7 @@
 ﻿Public Class frmposition
     Dim position As New tbposition
     Dim department As New tbdepartment
+    Public frmdepartment1 As Boolean = False
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
 
         If txtposition.Text = "" Then
@@ -107,7 +108,12 @@
 
 
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+
+        frmdepartment1 = True
         frmdepartment.ShowDialog()
+        frmdepartment.Close()
+        department.combodepartment(cbdepartment)
+        frmdepartment1 = False
     End Sub
 
     Private Sub txtposition_TextChanged(sender As Object, e As EventArgs) Handles txtposition.TextChanged

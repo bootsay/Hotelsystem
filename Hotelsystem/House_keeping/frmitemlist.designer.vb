@@ -22,8 +22,8 @@ Partial Class frmitemlist
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtqty = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -52,11 +52,11 @@ Partial Class frmitemlist
         Me.txtroomno = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.txtproid = New System.Windows.Forms.TextBox()
         Me.txtroomid = New System.Windows.Forms.TextBox()
+        Me.txtuserid = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgvproduct = New System.Windows.Forms.DataGridView()
         Me.dgvlist = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.txtuserid = New System.Windows.Forms.TextBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -158,7 +158,7 @@ Partial Class frmitemlist
         Me.btnsave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnsave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnsave.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnsave.Image = Global.Hotelsystem.My.Resources.Resources.Save_icon
+        Me.btnsave.Image = Global.HotelSystem.My.Resources.Resources.Save_icon
         Me.btnsave.ImageFixedSize = New System.Drawing.Size(32, 32)
         Me.btnsave.Location = New System.Drawing.Point(119, 3)
         Me.btnsave.Name = "btnsave"
@@ -171,7 +171,7 @@ Partial Class frmitemlist
         Me.btnedit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnedit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnedit.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnedit.Image = Global.Hotelsystem.My.Resources.Resources.Add_product
+        Me.btnedit.Image = Global.HotelSystem.My.Resources.Resources.Add_product
         Me.btnedit.Location = New System.Drawing.Point(215, 3)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(88, 45)
@@ -183,7 +183,7 @@ Partial Class frmitemlist
         Me.btnupdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnupdate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnupdate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnupdate.Image = Global.Hotelsystem.My.Resources.Resources._1472720664_document_open
+        Me.btnupdate.Image = Global.HotelSystem.My.Resources.Resources._1472720664_document_open
         Me.btnupdate.Location = New System.Drawing.Point(309, 3)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(92, 45)
@@ -195,7 +195,7 @@ Partial Class frmitemlist
         Me.btndelete.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btndelete.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btndelete.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btndelete.Image = Global.Hotelsystem.My.Resources.Resources.Delete
+        Me.btndelete.Image = Global.HotelSystem.My.Resources.Resources.Delete
         Me.btndelete.Location = New System.Drawing.Point(407, 3)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(46, 45)
@@ -389,6 +389,15 @@ Partial Class frmitemlist
         Me.txtroomid.Size = New System.Drawing.Size(93, 27)
         Me.txtroomid.TabIndex = 50
         '
+        'txtuserid
+        '
+        Me.txtuserid.Enabled = False
+        Me.txtuserid.Font = New System.Drawing.Font("Saysettha OT", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtuserid.Location = New System.Drawing.Point(203, 85)
+        Me.txtuserid.Name = "txtuserid"
+        Me.txtuserid.Size = New System.Drawing.Size(93, 27)
+        Me.txtuserid.TabIndex = 52
+        '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -440,34 +449,25 @@ Partial Class frmitemlist
         Me.dgvlist.AllowUserToResizeColumns = False
         Me.dgvlist.AllowUserToResizeRows = False
         Me.dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 3)
         Me.dgvlist.Name = "dgvlist"
         Me.dgvlist.ReadOnly = True
         Me.dgvlist.RowHeadersVisible = False
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.RowTemplate.Height = 30
         Me.dgvlist.Size = New System.Drawing.Size(878, 472)
         Me.dgvlist.TabIndex = 1
-        '
-        'txtuserid
-        '
-        Me.txtuserid.Enabled = False
-        Me.txtuserid.Font = New System.Drawing.Font("Saysettha OT", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtuserid.Location = New System.Drawing.Point(203, 85)
-        Me.txtuserid.Name = "txtuserid"
-        Me.txtuserid.Size = New System.Drawing.Size(93, 27)
-        Me.txtuserid.TabIndex = 52
         '
         'frmitemlist
         '

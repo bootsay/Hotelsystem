@@ -4,6 +4,8 @@ Public Class frmroom
     Dim roomtype As New tbfroomtype
     Dim roomlocation As New tbfroomlocation
     Dim status As New tbstatusall
+    Public frmroomtype1 As Boolean = False
+    Public frmroomlocation1 As Boolean = False
     Private Sub frmbusinessvb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtid.Text = room.runid
@@ -181,5 +183,21 @@ Public Class frmroom
 
     Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
 
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmroomtype1 = True
+        frmroomtype.ShowDialog()
+        frmroomtype.Close()
+        roomtype.comboroomtype(cbroomtype)
+        frmroomtype1 = False
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmroomlocation1 = True
+        frmroomlocation.ShowDialog()
+        frmroomlocation.Close()
+        roomlocation.comboroomlocation(cbroomlocation)
+        frmroomlocation1 = False
     End Sub
 End Class
