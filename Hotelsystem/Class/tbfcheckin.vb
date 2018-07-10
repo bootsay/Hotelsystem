@@ -5,31 +5,6 @@ Public Class tbfcheckin
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
-    Public Function Check_exitreserverRoom(roomid As Integer)
-        cn.connect()
-        Dim id As Integer
-        Try
-            cm = New SqlCommand("select count(room_id) as count from tbfreserver where statusid=3")
-            re = cm.ExecuteReader
-            If re.HasRows Then
-                While re.Read
-                    If re.GetValue(0) Is DBNull.Value Then
-                        id = 0
-                    Else
-                        id = re.GetValue(0)
-                    End If
-                End While
-            Else
-                id = 0
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        re.Close()
-        cm.Dispose()
-        cn.conn.Close()
-        Return id
-    End Function
     Public Function selectReserveNO(reserveNO As String, dt As DataTable)
         cn.connect()
         Try
@@ -43,10 +18,10 @@ Public Class tbfcheckin
         End Try
         Return True
     End Function
-    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfcheckin values('" & checkinNO & "','" & checkinid & "','" & userid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,reserveNO,inoutid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark)values('" & checkinNO & "','" & checkinid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
                 cm.Dispose()

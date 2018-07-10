@@ -69,8 +69,6 @@ Public Class tbcategory
             MessageBox.Show(ex.Message)
         End Try
         re.Close()
-        cm.Dispose()
-        cn.conn.Close()
         Return id
     End Function
 
