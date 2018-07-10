@@ -13,14 +13,20 @@
     Public frmvillage1 As Boolean = False
     Public frmdistrict1 As Boolean = False
     Public frmprovience1 As Boolean = False
+    Public frmcountry1 As Boolean = False
+    Dim countrys As New tbcountry
     Private Sub frmcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtCustomerID.Text = customer.runidNO
             customertype.combocustomertype(cbcustomertype)
             roomrate.comboroomrate(cbRoomrate)
             titlename.combotitlename(cbtitlename)
+
+            countrys.combocountry(cbcountry)
+
             province.comboprovince(cbprovince)
             customer.loadtbcustomer(dgvcustomer)
+
             enableSave()
             txtCustomerName.Select()
 
@@ -28,26 +34,26 @@
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-    Private Sub enableSave()
+    Private Sub enablesave()
         btnsave.Enabled = True
+        btndelete.Enabled = False
         btnedit.Enabled = False
         btnupdate.Enabled = False
-        btndelete.Enabled = False
-        btnnew.Enabled = False
-    End Sub
-    Private Sub enableEdit()
-        btnsave.Enabled = False
-        btnedit.Enabled = True
-        btnupdate.Enabled = False
-        btndelete.Enabled = True
         btnnew.Enabled = True
     End Sub
-    Private Sub enableUpdate()
+    Private Sub enableedit()
         btnsave.Enabled = False
+        btndelete.Enabled = True
+        btnedit.Enabled = True
+        btnupdate.Enabled = False
+        btnnew.Enabled = True
+    End Sub
+    Private Sub enableupdate()
+        btnsave.Enabled = False
+        btndelete.Enabled = False
         btnedit.Enabled = False
         btnupdate.Enabled = True
-        btndelete.Enabled = False
-        btnnew.Enabled = False
+        btnnew.Enabled = True
     End Sub
     Private Sub cleartext()
         txtCustomerName.Clear()
@@ -312,5 +318,25 @@
 
     Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles ToolStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub ToolStripLabel4_Click_1(sender As Object, e As EventArgs) Handles ToolStripLabel4.Click
+        frmcountry1 = True
+        frmcountry.ShowDialog()
+        frmcountry.Close()
+        countrys.combocountry(cbcountry)
+        frmcountry1 = False
+    End Sub
+
+    Private Sub cbcountry_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcountry.SelectedIndexChanged
+        Try
+            countrys.comprovinceall(cbcountry.SelectedValue, cbprovince)
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

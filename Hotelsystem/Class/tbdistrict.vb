@@ -9,7 +9,7 @@ Public Class tbdistrict
     Public Function save(districtid As Integer, provinceid As Integer, districtname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbdistrict(districtid,provinceid,districtname) values('" & districtid & "','" & provinceid & "','" & districtname & "')", cn.conn)
+            cm = New SqlCommand("insert into tbdistrict(districtid,provinceid,districtname) values('" & districtid & "','" & provinceid & "',N'" & districtname & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -40,7 +40,7 @@ Public Class tbdistrict
     Public Function update(districtid As Integer, provinceid As Integer, districtname As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbdistrict set provinceid='" & provinceid & "',districtname='" & districtname & "' where districtid='" & districtid & "'", cn.conn)
+            cm = New SqlCommand("update tbdistrict set provinceid='" & provinceid & "',districtname=N'" & districtname & "' where districtid='" & districtid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else

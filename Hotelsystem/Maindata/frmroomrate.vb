@@ -2,6 +2,8 @@
     Dim roomrate As New tbfroomrate
     Dim roomtype As New tbfroomtype
     Dim roomtyperate As New tbfroomtyperate
+    Public frmroomtype1 As Boolean = False
+    Public frmroomtyperate1 As Boolean = False
     Private Sub frmemployee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtid.Text = roomrate.runid
         roomtype.comboroomtype(cbroomtype)
@@ -130,5 +132,21 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmroomtype1 = True
+        frmroomtype.ShowDialog()
+        frmroomtype.Close()
+        roomtype.comboroomtype(cbroomtype)
+        frmroomtype1 = False
+    End Sub
+
+    Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmroomtyperate1 = True
+        frmroomtyperate.ShowDialog()
+        frmroomtyperate.Close()
+        roomtyperate.comboroomtyperate(cbroomtyperate)
+        frmroomtyperate1 = False
     End Sub
 End Class

@@ -180,8 +180,8 @@ Public Class tbfreserve
                 .Columns(28).Visible = False
                 .Columns(29).Visible = False
                 .Columns(30).Visible = False
-                .Columns(31).Visible = False
-                .Columns(32).Visible = False
+                '.Columns(31).Visible = False
+                '.Columns(32).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -258,8 +258,8 @@ Public Class tbfreserve
                 .Columns(28).Visible = False
                 .Columns(29).Visible = False
                 .Columns(30).Visible = False
-                .Columns(31).Visible = False
-                .Columns(32).Visible = False
+                '.Columns(31).Visible = False
+                '.Columns(32).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -335,8 +335,8 @@ Public Class tbfreserve
                 .Columns(28).Visible = False
                 .Columns(29).Visible = False
                 .Columns(30).Visible = False
-                .Columns(31).Visible = False
-                .Columns(32).Visible = False
+                '.Columns(31).Visible = False
+                '.Columns(32).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells

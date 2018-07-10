@@ -216,22 +216,19 @@
             With dgvlist
                 txtid.Text = .CurrentRow.Cells(0).Value
                 txtcustomername.Text = .CurrentRow.Cells(3).Value
-                txtroomno.Text = .CurrentRow.Cells(6).Value
+                txtroomno.Text = .CurrentRow.Cells(17).Value
                 txtdatereserve.Text = .CurrentRow.Cells(19).Value
                 txtdatecheckin.Text = .CurrentRow.Cells(20).Value
                 txtdatecheckout.Text = .CurrentRow.Cells(21).Value
                 txtnumberpeople.Text = .CurrentRow.Cells(22).Value
                 txtNote.Text = .CurrentRow.Cells(23).Value
                 txtuser.Text = .CurrentRow.Cells(24).Value
-
                 txtcustomerid.Text = .CurrentRow.Cells(26).Value
-
+                'statusname.Text = .CurrentRow.Cells(25).Value
                 txtuserid.Text = .CurrentRow.Cells(27).Value
                 txtroomid.Text = .CurrentRow.Cells(28).Value
                 txtprice.Text = .CurrentRow.Cells(29).Value
-
-
-
+                'statusid.Text = .CurrentRow.Cells(30).Value
             End With
 
             enableedit()

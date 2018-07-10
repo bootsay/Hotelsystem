@@ -24,6 +24,15 @@ Partial Class frmmain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
+        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
+        Me.roominformation = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar3 = New DevComponents.DotNetBar.RibbonBar()
+        Me.checkout = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar2 = New DevComponents.DotNetBar.RibbonBar()
+        Me.checkin = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar1 = New DevComponents.DotNetBar.RibbonBar()
+        Me.customer = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonPanel2 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar11 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem13 = New DevComponents.DotNetBar.ButtonItem()
@@ -75,15 +84,6 @@ Partial Class frmmain
         Me.reservatininfo = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar12 = New DevComponents.DotNetBar.RibbonBar()
         Me.reservation = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
-        Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
-        Me.roominformation = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonBar3 = New DevComponents.DotNetBar.RibbonBar()
-        Me.checkout = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonBar2 = New DevComponents.DotNetBar.RibbonBar()
-        Me.checkin = New DevComponents.DotNetBar.ButtonItem()
-        Me.RibbonBar1 = New DevComponents.DotNetBar.RibbonBar()
-        Me.customer = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonPanel7 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar20 = New DevComponents.DotNetBar.RibbonBar()
         Me.foloinfo = New DevComponents.DotNetBar.ButtonItem()
@@ -119,10 +119,10 @@ Partial Class frmmain
         Me.ButtonItem12 = New DevComponents.DotNetBar.ButtonItem()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
         Me.RibbonControl1.SuspendLayout()
+        Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
         Me.RibbonPanel6.SuspendLayout()
         Me.RibbonPanel5.SuspendLayout()
-        Me.RibbonPanel1.SuspendLayout()
         Me.RibbonPanel7.SuspendLayout()
         Me.RibbonPanel4.SuspendLayout()
         Me.SuspendLayout()
@@ -169,6 +169,187 @@ Partial Class frmmain
         Me.RibbonControl1.TabGroupHeight = 0
         Me.RibbonControl1.TabIndex = 0
         Me.RibbonControl1.Text = "RibbonControl1"
+        '
+        'RibbonPanel1
+        '
+        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel1.Controls.Add(Me.RibbonBar4)
+        Me.RibbonPanel1.Controls.Add(Me.RibbonBar3)
+        Me.RibbonPanel1.Controls.Add(Me.RibbonBar2)
+        Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
+        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 51)
+        Me.RibbonPanel1.Name = "RibbonPanel1"
+        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel1.Size = New System.Drawing.Size(1018, 60)
+        '
+        '
+        '
+        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel1.TabIndex = 1
+        '
+        'RibbonBar4
+        '
+        Me.RibbonBar4.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar4.ContainerControlProcessDialogKey = True
+        Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.roominformation})
+        Me.RibbonBar4.Location = New System.Drawing.Point(558, 0)
+        Me.RibbonBar4.Name = "RibbonBar4"
+        Me.RibbonBar4.Size = New System.Drawing.Size(126, 57)
+        Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar4.TabIndex = 3
+        Me.RibbonBar4.Text = "RibbonBar4"
+        '
+        '
+        '
+        Me.RibbonBar4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar4.TitleVisible = False
+        '
+        'roominformation
+        '
+        Me.roominformation.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.roominformation.Image = Global.HotelSystem.My.Resources.Resources.Menu
+        Me.roominformation.Name = "roominformation"
+        Me.roominformation.SubItemsExpandWidth = 14
+        Me.roominformation.Text = "ຂໍ້ມູນຫ້ອງ"
+        '
+        'RibbonBar3
+        '
+        Me.RibbonBar3.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar3.ContainerControlProcessDialogKey = True
+        Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.checkout})
+        Me.RibbonBar3.Location = New System.Drawing.Point(331, 0)
+        Me.RibbonBar3.Name = "RibbonBar3"
+        Me.RibbonBar3.Size = New System.Drawing.Size(227, 57)
+        Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar3.TabIndex = 2
+        Me.RibbonBar3.Text = "RibbonBar3"
+        '
+        '
+        '
+        Me.RibbonBar3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar3.TitleVisible = False
+        '
+        'checkout
+        '
+        Me.checkout.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.checkout.Image = Global.HotelSystem.My.Resources.Resources.hotelcheckout
+        Me.checkout.ImageFixedSize = New System.Drawing.Size(50, 50)
+        Me.checkout.Name = "checkout"
+        Me.checkout.SubItemsExpandWidth = 14
+        Me.checkout.Text = "ອອກຫ້ອງ(Check Out)"
+        '
+        'RibbonBar2
+        '
+        Me.RibbonBar2.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar2.ContainerControlProcessDialogKey = True
+        Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.checkin})
+        Me.RibbonBar2.Location = New System.Drawing.Point(144, 0)
+        Me.RibbonBar2.Name = "RibbonBar2"
+        Me.RibbonBar2.Size = New System.Drawing.Size(187, 57)
+        Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar2.TabIndex = 1
+        Me.RibbonBar2.Text = "RibbonBar2"
+        '
+        '
+        '
+        Me.RibbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar2.TitleVisible = False
+        '
+        'checkin
+        '
+        Me.checkin.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.checkin.Image = Global.HotelSystem.My.Resources.Resources.checkin
+        Me.checkin.Name = "checkin"
+        Me.checkin.SubItemsExpandWidth = 14
+        Me.checkin.Text = "ເຂົ້າຫ້ອງ(Check In)"
+        '
+        'RibbonBar1
+        '
+        Me.RibbonBar1.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar1.ContainerControlProcessDialogKey = True
+        Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.customer})
+        Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
+        Me.RibbonBar1.Name = "RibbonBar1"
+        Me.RibbonBar1.Size = New System.Drawing.Size(141, 57)
+        Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar1.TabIndex = 0
+        Me.RibbonBar1.Text = "RibbonBar1"
+        '
+        '
+        '
+        Me.RibbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar1.TitleVisible = False
+        '
+        'customer
+        '
+        Me.customer.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.customer.FontBold = True
+        Me.customer.Image = Global.HotelSystem.My.Resources.Resources.person_man
+        Me.customer.ImageFixedSize = New System.Drawing.Size(40, 40)
+        Me.customer.Name = "customer"
+        Me.customer.SubItemsExpandWidth = 14
+        Me.customer.Text = "ຂໍ້ມູນລູກຄ້າ"
         '
         'RibbonPanel2
         '
@@ -846,187 +1027,6 @@ Partial Class frmmain
         Me.reservation.SubItemsExpandWidth = 14
         Me.reservation.Text = "ຈອງຫ້ອງ"
         '
-        'RibbonPanel1
-        '
-        Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel1.Controls.Add(Me.RibbonBar4)
-        Me.RibbonPanel1.Controls.Add(Me.RibbonBar3)
-        Me.RibbonPanel1.Controls.Add(Me.RibbonBar2)
-        Me.RibbonPanel1.Controls.Add(Me.RibbonBar1)
-        Me.RibbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel1.Location = New System.Drawing.Point(0, 51)
-        Me.RibbonPanel1.Name = "RibbonPanel1"
-        Me.RibbonPanel1.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel1.Size = New System.Drawing.Size(1018, 60)
-        '
-        '
-        '
-        Me.RibbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel1.TabIndex = 1
-        '
-        'RibbonBar4
-        '
-        Me.RibbonBar4.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar4.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar4.ContainerControlProcessDialogKey = True
-        Me.RibbonBar4.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar4.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.roominformation})
-        Me.RibbonBar4.Location = New System.Drawing.Point(558, 0)
-        Me.RibbonBar4.Name = "RibbonBar4"
-        Me.RibbonBar4.Size = New System.Drawing.Size(126, 57)
-        Me.RibbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar4.TabIndex = 3
-        Me.RibbonBar4.Text = "RibbonBar4"
-        '
-        '
-        '
-        Me.RibbonBar4.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar4.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar4.TitleVisible = False
-        '
-        'roominformation
-        '
-        Me.roominformation.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.roominformation.Image = Global.HotelSystem.My.Resources.Resources.Menu
-        Me.roominformation.Name = "roominformation"
-        Me.roominformation.SubItemsExpandWidth = 14
-        Me.roominformation.Text = "ຂໍ້ມູນຫ້ອງ"
-        '
-        'RibbonBar3
-        '
-        Me.RibbonBar3.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar3.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar3.ContainerControlProcessDialogKey = True
-        Me.RibbonBar3.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar3.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.checkout})
-        Me.RibbonBar3.Location = New System.Drawing.Point(331, 0)
-        Me.RibbonBar3.Name = "RibbonBar3"
-        Me.RibbonBar3.Size = New System.Drawing.Size(227, 57)
-        Me.RibbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar3.TabIndex = 2
-        Me.RibbonBar3.Text = "RibbonBar3"
-        '
-        '
-        '
-        Me.RibbonBar3.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar3.TitleVisible = False
-        '
-        'checkout
-        '
-        Me.checkout.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.checkout.Image = Global.HotelSystem.My.Resources.Resources.hotelcheckout
-        Me.checkout.ImageFixedSize = New System.Drawing.Size(50, 50)
-        Me.checkout.Name = "checkout"
-        Me.checkout.SubItemsExpandWidth = 14
-        Me.checkout.Text = "ອອກຫ້ອງ(Check Out)"
-        '
-        'RibbonBar2
-        '
-        Me.RibbonBar2.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar2.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar2.ContainerControlProcessDialogKey = True
-        Me.RibbonBar2.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar2.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.checkin})
-        Me.RibbonBar2.Location = New System.Drawing.Point(144, 0)
-        Me.RibbonBar2.Name = "RibbonBar2"
-        Me.RibbonBar2.Size = New System.Drawing.Size(187, 57)
-        Me.RibbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar2.TabIndex = 1
-        Me.RibbonBar2.Text = "RibbonBar2"
-        '
-        '
-        '
-        Me.RibbonBar2.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar2.TitleVisible = False
-        '
-        'checkin
-        '
-        Me.checkin.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.checkin.Image = Global.HotelSystem.My.Resources.Resources.checkin
-        Me.checkin.Name = "checkin"
-        Me.checkin.SubItemsExpandWidth = 14
-        Me.checkin.Text = "ເຂົ້າຫ້ອງ(Check In)"
-        '
-        'RibbonBar1
-        '
-        Me.RibbonBar1.AutoOverflowEnabled = True
-        '
-        '
-        '
-        Me.RibbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar1.ContainerControlProcessDialogKey = True
-        Me.RibbonBar1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.customer})
-        Me.RibbonBar1.Location = New System.Drawing.Point(3, 0)
-        Me.RibbonBar1.Name = "RibbonBar1"
-        Me.RibbonBar1.Size = New System.Drawing.Size(141, 57)
-        Me.RibbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar1.TabIndex = 0
-        Me.RibbonBar1.Text = "RibbonBar1"
-        '
-        '
-        '
-        Me.RibbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.RibbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar1.TitleVisible = False
-        '
-        'customer
-        '
-        Me.customer.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.customer.FontBold = True
-        Me.customer.Image = Global.HotelSystem.My.Resources.Resources.person_man
-        Me.customer.ImageFixedSize = New System.Drawing.Size(40, 40)
-        Me.customer.Name = "customer"
-        Me.customer.SubItemsExpandWidth = 14
-        Me.customer.Text = "ຂໍ້ມູນລູກຄ້າ"
-        '
         'RibbonPanel7
         '
         Me.RibbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -1429,7 +1429,7 @@ Partial Class frmmain
         '
         'frmmain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1018, 756)
         Me.ControlBox = False
@@ -1444,10 +1444,10 @@ Partial Class frmmain
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
+        Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
         Me.RibbonPanel6.ResumeLayout(False)
         Me.RibbonPanel5.ResumeLayout(False)
-        Me.RibbonPanel1.ResumeLayout(False)
         Me.RibbonPanel7.ResumeLayout(False)
         Me.RibbonPanel4.ResumeLayout(False)
         Me.ResumeLayout(False)

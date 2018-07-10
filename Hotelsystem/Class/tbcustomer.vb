@@ -132,13 +132,18 @@ Public Class tbcustomer
                 .Columns(7).HeaderText = "ບ້ານ"
                 .Columns(8).HeaderText = "ເມືອງ"
                 .Columns(9).HeaderText = "ແຂວງ"
-                .Columns(10).HeaderText = "ພາສປອດ"
-                .Columns(11).HeaderText = "ເລກບັດປະຈຳຕົວ"
-                .Columns(12).HeaderText = "ເບີໂທ"
-                .Columns(13).HeaderText = "ແຟັກ"
-                .Columns(14).HeaderText = "ອີເມວ"
-                .Columns(15).HeaderText = "ລາຄາຫ້ອງ"
-                .Columns(16).HeaderText = "ໃຊ້ງານ"
+                .Columns(10).HeaderText = "ປະເທດ"
+                .Columns(11).HeaderText = "ພາສປອດ"
+                .Columns(12).HeaderText = "ເລກບັດປະຈຳຕົວ"
+                .Columns(13).HeaderText = "ເບີໂທ"
+                .Columns(14).HeaderText = "ແຟັກ"
+                .Columns(15).HeaderText = "ອີເມວ"
+                .Columns(16).HeaderText = "ລາຄາຫ້ອງ"
+                .Columns(17).HeaderText = "ໃຊ້ງານ"
+                .Columns(18).Visible = False
+                .Columns(19).Visible = False
+                .Columns(20).Visible = False
+                .Columns(21).Visible = False
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -154,11 +159,8 @@ Public Class tbcustomer
                 .Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(15).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(17).Visible = False
-                .Columns(18).Visible = False
-                .Columns(19).Visible = False
-                .Columns(20).Visible = False
+                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -188,13 +190,18 @@ Public Class tbcustomer
                 .Columns(7).HeaderText = "ບ້ານ"
                 .Columns(8).HeaderText = "ເມືອງ"
                 .Columns(9).HeaderText = "ແຂວງ"
-                .Columns(10).HeaderText = "ພາສປອດ"
-                .Columns(11).HeaderText = "ເລກບັດປະຈຳຕົວ"
-                .Columns(12).HeaderText = "ເບີໂທ"
-                .Columns(13).HeaderText = "ແຟັກ"
-                .Columns(14).HeaderText = "ອີເມວ"
-                .Columns(15).HeaderText = "ລາຄາຫ້ອງ"
-                .Columns(16).HeaderText = "ໃຊ້ງານ"
+                .Columns(10).HeaderText = "ປະເທດ"
+                .Columns(11).HeaderText = "ພາສປອດ"
+                .Columns(12).HeaderText = "ເລກບັດປະຈຳຕົວ"
+                .Columns(13).HeaderText = "ເບີໂທ"
+                .Columns(14).HeaderText = "ແຟັກ"
+                .Columns(15).HeaderText = "ອີເມວ"
+                .Columns(16).HeaderText = "ລາຄາຫ້ອງ"
+                .Columns(17).HeaderText = "ໃຊ້ງານ"
+                .Columns(18).Visible = False
+                .Columns(19).Visible = False
+                .Columns(20).Visible = False
+                .Columns(21).Visible = False
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -210,11 +217,8 @@ Public Class tbcustomer
                 .Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(15).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(17).Visible = False
-                .Columns(18).Visible = False
-                .Columns(19).Visible = False
-                .Columns(20).Visible = False
+                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -244,13 +248,18 @@ Public Class tbcustomer
                 .Columns(7).HeaderText = "ບ້ານ"
                 .Columns(8).HeaderText = "ເມືອງ"
                 .Columns(9).HeaderText = "ແຂວງ"
-                .Columns(10).HeaderText = "ພາສປອດ"
-                .Columns(11).HeaderText = "ເລກບັດປະຈຳຕົວ"
-                .Columns(12).HeaderText = "ເບີໂທ"
-                .Columns(13).HeaderText = "ແຟັກ"
-                .Columns(14).HeaderText = "ອີເມວ"
-                .Columns(15).HeaderText = "ລາຄາຫ້ອງ"
-                .Columns(16).HeaderText = "ໃຊ້ງານ"
+                .Columns(10).HeaderText = "ປະເທດ"
+                .Columns(11).HeaderText = "ພາສປອດ"
+                .Columns(12).HeaderText = "ເລກບັດປະຈຳຕົວ"
+                .Columns(13).HeaderText = "ເບີໂທ"
+                .Columns(14).HeaderText = "ແຟັກ"
+                .Columns(15).HeaderText = "ອີເມວ"
+                .Columns(16).HeaderText = "ລາຄາຫ້ອງ"
+                .Columns(17).HeaderText = "ໃຊ້ງານ"
+                .Columns(18).Visible = False
+                .Columns(19).Visible = False
+                .Columns(20).Visible = False
+                .Columns(21).Visible = False
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
@@ -266,11 +275,8 @@ Public Class tbcustomer
                 .Columns(13).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(14).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(15).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                .Columns(17).Visible = False
-                .Columns(18).Visible = False
-                .Columns(19).Visible = False
-                .Columns(20).Visible = False
+                .Columns(16).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(17).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)

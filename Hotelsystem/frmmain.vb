@@ -206,6 +206,7 @@
         closeform.f.Show()
     End Sub
 
+
     Private Sub customer_Click(sender As Object, e As EventArgs) Handles customer.Click
         closeform.closeform()
         closeform.f = frmcustomer
