@@ -4,19 +4,23 @@
     Dim level As New tbfroomlocation
     Private Sub frmshowroomitemlist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            room.loadtbfroomshowlist(dgvroom)
-            roomrtype.comboroomtype(cbtype)
-            level.comboroomlocation(cblevel)
-            rname.Checked = True
-            txtsearch.Select()
-
+            rtype.Checked = True
             If rtype.Checked = True Then
                 txtsearch.Visible = False
                 cbtype.Visible = True
+                roomrtype.comboroomtype(cbtype)
             Else
+                level.comboroomlocation(cblevel)
+                room.loadtbfroomshowlist(dgvroom)
                 txtsearch.Visible = True
                 cbtype.Visible = False
             End If
+
+
+
+            rname.Checked = True
+            txtsearch.Select()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -65,11 +69,17 @@
 
 
     Private Sub dgvroom_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvroom.CellMouseUp
+        Dim fmcheckin As frmcheckin = DirectCast(Application.OpenForms("frmcheckin"), frmcheckin)
         Try
             With dgvroom
                 If frmitemlist.frmitemlist = True Then
                     frmitemlist.txtroomid.Text = .CurrentRow.Cells(0).Value
                     frmitemlist.txtroomno.Text = .CurrentRow.Cells(3).Value
+                    Me.Close()
+                End If
+                If frmcheckin.formcheckin = True Then
+                    fmcheckin.room_id = .CurrentRow.Cells(0).Value
+                    frmcheckin.txtroomno.Text = .CurrentRow.Cells(3).Value
                     Me.Close()
                 End If
             End With

@@ -27,14 +27,14 @@ Partial Class frmshowroomlistitem
         Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cblevel = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.rlevel = New System.Windows.Forms.RadioButton()
         Me.rname = New System.Windows.Forms.RadioButton()
         Me.rtype = New System.Windows.Forms.RadioButton()
         Me.cbtype = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.dgvroom = New DevComponents.DotNetBar.Controls.DataGridViewX()
-        Me.rlevel = New System.Windows.Forms.RadioButton()
-        Me.cblevel = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -110,6 +110,20 @@ Partial Class frmshowroomlistitem
         Me.Panel1.Size = New System.Drawing.Size(686, 44)
         Me.Panel1.TabIndex = 0
         '
+        'cblevel
+        '
+        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cblevel.DisplayMember = "Text"
+        Me.cblevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cblevel.FormattingEnabled = True
+        Me.cblevel.ItemHeight = 29
+        Me.cblevel.Location = New System.Drawing.Point(194, 4)
+        Me.cblevel.Name = "cblevel"
+        Me.cblevel.Size = New System.Drawing.Size(489, 35)
+        Me.cblevel.TabIndex = 30
+        '
         'GroupPanel2
         '
         Me.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control
@@ -150,13 +164,25 @@ Partial Class frmshowroomlistitem
         Me.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel2.TabIndex = 28
         '
+        'rlevel
+        '
+        Me.rlevel.AutoSize = True
+        Me.rlevel.BackColor = System.Drawing.Color.Transparent
+        Me.rlevel.Location = New System.Drawing.Point(86, 5)
+        Me.rlevel.Name = "rlevel"
+        Me.rlevel.Size = New System.Drawing.Size(48, 28)
+        Me.rlevel.TabIndex = 3
+        Me.rlevel.TabStop = True
+        Me.rlevel.Text = "ຊັ້ນ"
+        Me.rlevel.UseVisualStyleBackColor = False
+        '
         'rname
         '
         Me.rname.AutoSize = True
         Me.rname.BackColor = System.Drawing.Color.Transparent
-        Me.rname.Location = New System.Drawing.Point(137, 0)
+        Me.rname.Location = New System.Drawing.Point(137, 4)
         Me.rname.Name = "rname"
-        Me.rname.Size = New System.Drawing.Size(41, 33)
+        Me.rname.Size = New System.Drawing.Size(38, 28)
         Me.rname.TabIndex = 1
         Me.rname.TabStop = True
         Me.rname.Text = "ຊື່"
@@ -166,9 +192,9 @@ Partial Class frmshowroomlistitem
         '
         Me.rtype.AutoSize = True
         Me.rtype.BackColor = System.Drawing.Color.Transparent
-        Me.rtype.Location = New System.Drawing.Point(10, 0)
+        Me.rtype.Location = New System.Drawing.Point(10, 4)
         Me.rtype.Name = "rtype"
-        Me.rtype.Size = New System.Drawing.Size(76, 33)
+        Me.rtype.Size = New System.Drawing.Size(73, 28)
         Me.rtype.TabIndex = 0
         Me.rtype.TabStop = True
         Me.rtype.Text = "ປະເພດ"
@@ -224,35 +250,9 @@ Partial Class frmshowroomlistitem
         Me.dgvroom.Size = New System.Drawing.Size(686, 536)
         Me.dgvroom.TabIndex = 1
         '
-        'rlevel
-        '
-        Me.rlevel.AutoSize = True
-        Me.rlevel.BackColor = System.Drawing.Color.Transparent
-        Me.rlevel.Location = New System.Drawing.Point(86, 1)
-        Me.rlevel.Name = "rlevel"
-        Me.rlevel.Size = New System.Drawing.Size(51, 33)
-        Me.rlevel.TabIndex = 3
-        Me.rlevel.TabStop = True
-        Me.rlevel.Text = "ຊັ້ນ"
-        Me.rlevel.UseVisualStyleBackColor = False
-        '
-        'cblevel
-        '
-        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cblevel.DisplayMember = "Text"
-        Me.cblevel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cblevel.FormattingEnabled = True
-        Me.cblevel.ItemHeight = 29
-        Me.cblevel.Location = New System.Drawing.Point(194, 4)
-        Me.cblevel.Name = "cblevel"
-        Me.cblevel.Size = New System.Drawing.Size(489, 35)
-        Me.cblevel.TabIndex = 30
-        '
         'frmshowroomlistitem
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 21.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(698, 598)
         Me.Controls.Add(Me.GroupPanel1)

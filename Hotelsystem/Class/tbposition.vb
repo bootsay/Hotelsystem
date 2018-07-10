@@ -12,6 +12,8 @@ Public Class tbposition
             cm = New SqlCommand("insert into tbposition(positionid,deptid,positionname) values('" & positionid & "','" & deptid & "',N'" & positionname & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່?", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -28,6 +30,8 @@ Public Class tbposition
             cm = New SqlCommand("delete from tbposition where positionid='" & positionid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່?", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -43,6 +47,8 @@ Public Class tbposition
             cm = New SqlCommand("update tbposition set deptid=N'" & deptid & "',positionname=N'" & positionname & "' where positionid='" & positionid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -69,6 +75,8 @@ Public Class tbposition
             MessageBox.Show(ex.Message)
         End Try
         re.Close()
+        cm.Dispose()
+        cn.conn.Close()
         Return id
     End Function
 
@@ -84,14 +92,31 @@ Public Class tbposition
             With dgv
                 .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ພະແນກ"
-                .Columns(2).HeaderText = "ຕຳແໜ່ງ"
+                .Columns(2).HeaderText = "ຕໍາແໜ່ງ"
                 .Columns(3).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function comboposition(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbposition  order by positionid desc", cn.conn)
+            da.Fill(dt)
 
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("posname").ToString
+                .ValueMember = dt.Columns("positionid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function

@@ -12,13 +12,13 @@
       <Value Profile="(Default)">Adobe PDF</Value>
     </Setting>
     <Setting Name="servername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">27.254.172.47</Value>
+      <Value Profile="(Default)">DESKTOP-CQKLPMF\SQL2012</Value>
     </Setting>
     <Setting Name="username" Type="System.String" Scope="User">
-      <Value Profile="(Default)">bootvong</Value>
+      <Value Profile="(Default)">sa</Value>
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">@ITadmin2018@admin</Value>
+      <Value Profile="(Default)">bootvong</Value>
     </Setting>
   </Settings>
 </SettingsFile>
