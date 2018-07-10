@@ -1,6 +1,6 @@
 ﻿Public Class frmcheckin
-    Public frmcreatereserve As Boolean = False
-    Dim markettype As New tbfmarkettype
+    Public formcheckin As Boolean = False
+
     Private pCase As Integer
     Private btnSelector As New Button()
     Private rowIndex As Integer = 0
@@ -19,23 +19,28 @@
     Dim checkins As New tbfcheckin
     Public Customerid As String
     Dim roomratetype As New tbfroomtyperate
+    Dim bookingtype As New tbfbookingtype
+    Dim usetype As New tbfusetype
+    Dim markettype As New tbfmarkettype
+    Dim mealtype As New tbmealtype
+
     Private Sub btnbrown_Click(sender As Object, e As EventArgs) Handles btnbrown1.Click
-        frmcreatereserve = True
+        formcheckin = True
         frmshowcustomer.ShowDialog()
         frmshowcustomer.Close()
-        frmcreatereserve = False
+        formcheckin = False
     End Sub
 
     Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles btnbrown2.Click
 
-        frmcreatereserve = True
+        formcheckin = True
         frmshowroomlistitem.ShowDialog()
         frmshowroomlistitem.Close()
-        frmcreatereserve = False
+        formcheckin = False
     End Sub
 
     Private Sub btncustomer_Click(sender As Object, e As EventArgs) Handles btncus.Click
-        frmcreatereserve = True
+        formcheckin = True
         frmcustomer.ShowDialog()
         frmcustomer.Close()
         Dim customerdt As New DataTable
@@ -49,11 +54,11 @@
 
         End If
 
-        frmcreatereserve = False
+        formcheckin = False
     End Sub
 
     Private Sub ButtonX2_Click(sender As Object, e As EventArgs)
-        frmcreatereserve = True
+        formcheckin = True
         frmroom.ShowDialog()
         frmroom.Close()
         Dim roomdt As New DataTable
@@ -65,14 +70,23 @@
         Else
 
         End If
-        frmcreatereserve = False
+        formcheckin = False
     End Sub
 
     Private Sub frmcreatereserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        bookingtype.combobookingtype(cbbooktype)
+        dtsearch1.Text = Today.Date
+        dtsearch2.Text = Today.Date
+        usetype.combousetype(cbstaytype)
+        mealtype.combomealtype(cbfood)
+
+
         btnnew.Enabled = True
         btnsave.Enabled = False
         btnedit.Enabled = False
         btnupdate.Enabled = False
+
+
     End Sub
 
     Private Sub txtprice_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtprice.KeyPress
@@ -312,6 +326,7 @@
 
   
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
+        Dim frm As frmmain = DirectCast(Application.OpenForms("frmmain"), frmmain)
         If txtcustomername.Text = "" Then
             MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             txtcustomername.Select()
@@ -333,7 +348,7 @@
         If txtreserverNO_search.Text = "" Then
             txtreserverNO_search.Text = "0"
         End If
-        'checkins.save(checkno, checkid, txtreserverNO_search.Text, 1, Customerid, )
+        checkins.save(checkno, checkid, frm.userid, txtreserverNO_search.Text, txtroomno.Text, Customerid, cbbooktype.SelectedValue, cbmarket.SelectedValue, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"), txtnumberpeople.Text, cbfood.SelectedValue, cbstaytype.SelectedValue, txtNote.Text)
         'room.updateroom(txtroomid.Text, 2)
         reserve.loadtbfreserve(dgvlist)
         txtclear()
