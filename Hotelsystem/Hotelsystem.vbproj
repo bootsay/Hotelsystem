@@ -46,12 +46,18 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -143,6 +149,12 @@
       <DependentUpon>frmmain.vb</DependentUpon>
     </Compile>
     <Compile Include="frmmain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmreportreservation.designer.vb">
+      <DependentUpon>frmreportreservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmreportreservation.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="House_keeping\frmitemlist.designer.vb">
@@ -346,6 +358,77 @@
     <Compile Include="Reception\frmshowroomlistitem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\CryReportCustNational.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportCustNational.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportCustSort.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportCustSort.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportDeparture.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportDeparture.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportGroupCheckinGraph.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportGroupCheckinGraph.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReporthistorycheckinpt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReporthistorycheckinpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\cryReportprovince.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryReportprovince.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportReserved.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportReserved.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportRoomOcc.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportRoomOcc.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportRoomStatus.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportRoomStatus.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CryReportSumCust.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CryReportSumCust.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reservation\frmreserve.designer.vb">
       <DependentUpon>frmreserve.vb</DependentUpon>
     </Compile>
@@ -371,6 +454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmreportreservation.resx">
+      <DependentUpon>frmreportreservation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="House_keeping\frmitemlist.resx">
       <DependentUpon>frmitemlist.vb</DependentUpon>
@@ -471,6 +557,50 @@
     <EmbeddedResource Include="Reception\frmshowroomlistitem.resx">
       <DependentUpon>frmshowroomlistitem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportCustNational.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportCustNational.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportCustSort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportCustSort.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportDeparture.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportDeparture.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportGroupCheckinGraph.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportGroupCheckinGraph.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReporthistorycheckinpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReporthistorycheckinpt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\cryReportprovince.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryReportprovince.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportReserved.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportReserved.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportRoomOcc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportRoomOcc.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportRoomStatus.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportRoomStatus.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CryReportSumCust.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CryReportSumCust.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservation\frmreserve.resx">
       <DependentUpon>frmreserve.vb</DependentUpon>
     </EmbeddedResource>
@@ -495,6 +625,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReportDataset.xsc">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataset.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ReportDataset.xss">
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </None>
     <None Include="Resources\hotel.png" />
   </ItemGroup>
   <ItemGroup>
@@ -709,7 +850,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Financial\" />
-    <Folder Include="Report\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hotel empty.png" />
@@ -728,6 +868,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\room1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
