@@ -318,7 +318,7 @@ Partial Class frmuser
         Me.cbposition.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbposition.FormattingEnabled = True
         Me.cbposition.ItemHeight = 29
-        Me.cbposition.Location = New System.Drawing.Point(716, 40)
+        Me.cbposition.Location = New System.Drawing.Point(716, 42)
         Me.cbposition.Name = "cbposition"
         Me.cbposition.Size = New System.Drawing.Size(581, 35)
         Me.cbposition.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -372,7 +372,7 @@ Partial Class frmuser
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cblevel.FormattingEnabled = True
-        Me.cblevel.Location = New System.Drawing.Point(159, 119)
+        Me.cblevel.Location = New System.Drawing.Point(159, 118)
         Me.cblevel.Margin = New System.Windows.Forms.Padding(4)
         Me.cblevel.Name = "cblevel"
         Me.cblevel.Size = New System.Drawing.Size(1139, 37)
@@ -399,7 +399,7 @@ Partial Class frmuser
         '
         'txteng
         '
-        Me.txteng.Location = New System.Drawing.Point(159, 40)
+        Me.txteng.Location = New System.Drawing.Point(159, 42)
         Me.txteng.Margin = New System.Windows.Forms.Padding(4)
         Me.txteng.Name = "txteng"
         Me.txteng.Size = New System.Drawing.Size(453, 35)

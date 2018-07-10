@@ -22,10 +22,10 @@ Partial Class frmreserve
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnprint = New DevComponents.DotNetBar.ButtonX()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btncancel = New DevComponents.DotNetBar.ButtonX()
@@ -48,6 +48,7 @@ Partial Class frmreserve
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvlist = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtnumberpeople = New DevComponents.Editors.IntegerInput()
         Me.txtserchroom = New System.Windows.Forms.TextBox()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
         Me.rroom = New System.Windows.Forms.RadioButton()
@@ -74,15 +75,14 @@ Partial Class frmreserve
         Me.txtdate3 = New System.Windows.Forms.DateTimePicker()
         Me.txtdate2 = New System.Windows.Forms.Label()
         Me.txtdate1 = New System.Windows.Forms.DateTimePicker()
-        Me.txtnumberpeople = New DevComponents.Editors.IntegerInput()
         Me.Panel2.SuspendLayout()
         Me.GroupPanel3.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvlist, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        Me.GroupPanel2.SuspendLayout()
         CType(Me.txtnumberpeople, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupPanel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnprint
@@ -146,7 +146,7 @@ Partial Class frmreserve
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(5, 158)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(62, 29)
+        Me.Label5.Size = New System.Drawing.Size(57, 29)
         Me.Label5.TabIndex = 41
         Me.Label5.Text = "ຄົ້ນຫາ:"
         '
@@ -215,6 +215,7 @@ Partial Class frmreserve
         '
         Me.btnnew.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnnew.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnnew.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnnew.Location = New System.Drawing.Point(3, 3)
         Me.btnnew.Name = "btnnew"
         Me.btnnew.Size = New System.Drawing.Size(103, 45)
@@ -225,6 +226,7 @@ Partial Class frmreserve
         '
         Me.btnsave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnsave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnsave.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnsave.ImageFixedSize = New System.Drawing.Size(32, 32)
         Me.btnsave.Location = New System.Drawing.Point(112, 3)
         Me.btnsave.Name = "btnsave"
@@ -236,6 +238,7 @@ Partial Class frmreserve
         '
         Me.btnedit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnedit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnedit.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnedit.Location = New System.Drawing.Point(3, 54)
         Me.btnedit.Name = "btnedit"
         Me.btnedit.Size = New System.Drawing.Size(103, 45)
@@ -246,6 +249,7 @@ Partial Class frmreserve
         '
         Me.btnupdate.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnupdate.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnupdate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnupdate.Location = New System.Drawing.Point(112, 54)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(95, 45)
@@ -345,39 +349,39 @@ Partial Class frmreserve
         Me.dgvlist.AllowUserToDeleteRows = False
         Me.dgvlist.AllowUserToResizeColumns = False
         Me.dgvlist.AllowUserToResizeRows = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
         Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 207)
         Me.dgvlist.Name = "dgvlist"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvlist.RowHeadersVisible = False
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvlist.RowTemplate.Height = 28
         Me.dgvlist.Size = New System.Drawing.Size(1200, 392)
         Me.dgvlist.TabIndex = 0
@@ -420,10 +424,26 @@ Partial Class frmreserve
         Me.Panel1.Controls.Add(Me.txtdate2)
         Me.Panel1.Controls.Add(Me.txtdate1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1200, 198)
         Me.Panel1.TabIndex = 1
+        '
+        'txtnumberpeople
+        '
+        '
+        '
+        '
+        Me.txtnumberpeople.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtnumberpeople.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtnumberpeople.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.txtnumberpeople.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
+        Me.txtnumberpeople.Location = New System.Drawing.Point(336, 80)
+        Me.txtnumberpeople.Name = "txtnumberpeople"
+        Me.txtnumberpeople.ShowUpDown = True
+        Me.txtnumberpeople.Size = New System.Drawing.Size(272, 35)
+        Me.txtnumberpeople.TabIndex = 52
         '
         'txtserchroom
         '
@@ -442,6 +462,7 @@ Partial Class frmreserve
         Me.GroupPanel2.Controls.Add(Me.rroom)
         Me.GroupPanel2.Controls.Add(Me.rid)
         Me.GroupPanel2.Controls.Add(Me.rdate)
+        Me.GroupPanel2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(81, 154)
         Me.GroupPanel2.Name = "GroupPanel2"
         Me.GroupPanel2.Size = New System.Drawing.Size(279, 40)
@@ -479,6 +500,7 @@ Partial Class frmreserve
         '
         Me.rroom.AutoSize = True
         Me.rroom.BackColor = System.Drawing.Color.Transparent
+        Me.rroom.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.rroom.Location = New System.Drawing.Point(123, 0)
         Me.rroom.Name = "rroom"
         Me.rroom.Size = New System.Drawing.Size(82, 33)
@@ -491,6 +513,7 @@ Partial Class frmreserve
         '
         Me.rid.AutoSize = True
         Me.rid.BackColor = System.Drawing.Color.Transparent
+        Me.rid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.rid.Location = New System.Drawing.Point(0, 0)
         Me.rid.Name = "rid"
         Me.rid.Size = New System.Drawing.Size(123, 33)
@@ -503,6 +526,7 @@ Partial Class frmreserve
         '
         Me.rdate.AutoSize = True
         Me.rdate.BackColor = System.Drawing.Color.Transparent
+        Me.rdate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.rdate.Location = New System.Drawing.Point(205, 0)
         Me.rdate.Name = "rdate"
         Me.rdate.Size = New System.Drawing.Size(65, 33)
@@ -568,7 +592,7 @@ Partial Class frmreserve
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(2, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 29)
+        Me.Label2.Size = New System.Drawing.Size(77, 29)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "ຜູ້ອອກບີນ:"
         '
@@ -585,7 +609,7 @@ Partial Class frmreserve
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(2, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 29)
+        Me.Label1.Size = New System.Drawing.Size(58, 29)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -594,7 +618,7 @@ Partial Class frmreserve
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(613, 43)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(79, 29)
+        Me.Label11.Size = New System.Drawing.Size(72, 29)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "ວັນທີເຂົ້າ:"
         '
@@ -604,7 +628,7 @@ Partial Class frmreserve
         Me.Label3.ForeColor = System.Drawing.Color.DarkRed
         Me.Label3.Location = New System.Drawing.Point(607, 82)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 29)
+        Me.Label3.Size = New System.Drawing.Size(78, 29)
         Me.Label3.TabIndex = 25
         Me.Label3.Text = "ວັນທີອອກ:"
         '
@@ -613,7 +637,7 @@ Partial Class frmreserve
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(3, 83)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 29)
+        Me.Label8.Size = New System.Drawing.Size(76, 29)
         Me.Label8.TabIndex = 30
         Me.Label8.Text = "ວັນທີຈອງ:"
         '
@@ -622,7 +646,7 @@ Partial Class frmreserve
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(246, 85)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(93, 29)
+        Me.Label12.Size = New System.Drawing.Size(85, 29)
         Me.Label12.TabIndex = 33
         Me.Label12.Text = "ຈໍານວນຄົນ:"
         '
@@ -631,7 +655,7 @@ Partial Class frmreserve
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(1, 120)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 29)
+        Me.Label4.Size = New System.Drawing.Size(78, 29)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "ໜາຍເຫດ:"
         '
@@ -640,7 +664,7 @@ Partial Class frmreserve
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(281, 46)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(58, 29)
+        Me.Label13.Size = New System.Drawing.Size(53, 29)
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "ລາຄາ:"
         '
@@ -649,7 +673,7 @@ Partial Class frmreserve
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(280, 6)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(60, 29)
+        Me.Label14.Size = New System.Drawing.Size(55, 29)
         Me.Label14.TabIndex = 37
         Me.Label14.Text = "ລູກຄ້າ:"
         '
@@ -719,7 +743,7 @@ Partial Class frmreserve
         Me.txtdate2.ForeColor = System.Drawing.Color.DarkRed
         Me.txtdate2.Location = New System.Drawing.Point(622, 160)
         Me.txtdate2.Name = "txtdate2"
-        Me.txtdate2.Size = New System.Drawing.Size(35, 29)
+        Me.txtdate2.Size = New System.Drawing.Size(33, 29)
         Me.txtdate2.TabIndex = 48
         Me.txtdate2.Text = "ຫາ"
         '
@@ -730,21 +754,6 @@ Partial Class frmreserve
         Me.txtdate1.Name = "txtdate1"
         Me.txtdate1.Size = New System.Drawing.Size(254, 35)
         Me.txtdate1.TabIndex = 47
-        '
-        'txtnumberpeople
-        '
-        '
-        '
-        '
-        Me.txtnumberpeople.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.txtnumberpeople.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtnumberpeople.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.txtnumberpeople.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Left
-        Me.txtnumberpeople.Location = New System.Drawing.Point(336, 80)
-        Me.txtnumberpeople.Name = "txtnumberpeople"
-        Me.txtnumberpeople.ShowUpDown = True
-        Me.txtnumberpeople.Size = New System.Drawing.Size(272, 35)
-        Me.txtnumberpeople.TabIndex = 52
         '
         'frmreserve
         '
@@ -767,9 +776,9 @@ Partial Class frmreserve
         CType(Me.dgvlist, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.txtnumberpeople, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupPanel2.ResumeLayout(False)
         Me.GroupPanel2.PerformLayout()
-        CType(Me.txtnumberpeople, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

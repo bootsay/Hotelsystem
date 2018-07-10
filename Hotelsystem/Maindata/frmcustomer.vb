@@ -6,6 +6,13 @@
     Dim province As New tbprovince
     Dim district As New tbdistrict
     Dim village As New tbvillage
+    Public type As String
+    Public frmcustomertype1 As Boolean = False
+    Public frmroomrate1 As Boolean = False
+    Public frmtitlename1 As Boolean = False
+    Public frmvillage1 As Boolean = False
+    Public frmdistrict1 As Boolean = False
+    Public frmprovience1 As Boolean = False
     Private Sub frmcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtCustomerID.Text = customer.runidNO
@@ -242,28 +249,57 @@
 
 
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+        frmcustomertype1 = True
         frmcustomertype.ShowDialog()
+        frmcustomertype.Close()
+        customertype.combocustomertype(cbcustomertype)
+        frmcustomertype1 = False
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+
+        frmroomrate1 = True
         frmroomrate.ShowDialog()
+        frmroomrate.Close()
+        roomrate.comboroomrate(cbRoomrate)
+        frmroomrate1 = False
+
     End Sub
 
 
     Private Sub ToolStripLabel3_Click(sender As Object, e As EventArgs) Handles ToolStripLabel3.Click
+
+        frmtitlename1 = True
         frmtitlename.ShowDialog()
+        frmtitlename.Close()
+        titlename.combotitlename(cbtitlename)
+        frmtitlename1 = False
     End Sub
 
     Private Sub ToolStripLabel5_Click(sender As Object, e As EventArgs) Handles ToolStripLabel5.Click
+
+        frmvillage1 = True
         frmvillage.ShowDialog()
+        frmvillage.Close()
+        village.combovillage(cbdistrict.SelectedValue, cbvillage)
+        frmvillage1 = False
     End Sub
 
     Private Sub ToolStripLabel6_Click(sender As Object, e As EventArgs) Handles ToolStripLabel6.Click
+        frmdistrict1 = True
         frmdistrict.ShowDialog()
+        frmdistrict.Close()
+        district.combodistrict(cbprovince.SelectedValue, cbdistrict)
+        frmdistrict1 = False
     End Sub
 
     Private Sub ToolStripLabel7_Click(sender As Object, e As EventArgs) Handles ToolStripLabel7.Click
+
+        frmprovience1 = True
         frmprovience.ShowDialog()
+        frmprovience.Close()
+        province.comboprovince(cbprovince)
+        frmprovience1 = False
     End Sub
 
     Private Sub cbcustomertype_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbcustomertype.SelectedIndexChanged
@@ -271,6 +307,10 @@
     End Sub
 
     Private Sub txtCustomerID_TextChanged(sender As Object, e As EventArgs) Handles txtCustomerID.TextChanged
+
+    End Sub
+
+    Private Sub ToolStripLabel4_Click(sender As Object, e As EventArgs)
 
     End Sub
 End Class

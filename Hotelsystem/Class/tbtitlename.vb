@@ -96,7 +96,7 @@ Public Class tbtitlename
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbtitlename", cn.conn)
+            da = New SqlDataAdapter("select * from tbtitlename order by titlenameid desc", cn.conn)
             da.Fill(dt)
 
             With cb

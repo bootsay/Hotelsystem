@@ -99,7 +99,7 @@ Public Class tbdistrict
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbdistrict where provinceid='" & provinceid & "'", cn.conn)
+            da = New SqlDataAdapter("select * from tbdistrict where provinceid='" & provinceid & "'order by districtid desc", cn.conn)
             da.Fill(dt)
             With cb
                 .DataSource = dt

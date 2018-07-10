@@ -3,6 +3,8 @@ Public Class frmproduct
     Dim product As New tbproduct
     Dim cate As New tbcategory
     Dim unit As New tbunit
+    Public frmcategory1 As Boolean = False
+    Public frmunit1 As Boolean = False
     Private Sub frmproduct1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtProductNO.Text = product.runidNO
@@ -179,11 +181,20 @@ Public Class frmproduct
     End Sub
 
     Private Sub ToolStripLabel1_Click(sender As Object, e As EventArgs) Handles ToolStripLabel1.Click
+
+        frmcategory1 = True
         frmcategory.ShowDialog()
+        frmcategory.Close()
+        cate.combocategory(cbcategory)
+        frmcategory1 = False
     End Sub
 
     Private Sub ToolStripLabel2_Click(sender As Object, e As EventArgs) Handles ToolStripLabel2.Click
+        frmunit1 = True
         frmunit.ShowDialog()
+        frmunit.Close()
+        unit.combounit(cbunit)
+        frmunit1 = False
     End Sub
 
     Private Sub txtsale_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtsale.KeyPress

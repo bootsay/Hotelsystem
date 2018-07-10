@@ -104,7 +104,7 @@ Public Class tbfroomtype
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbfroomtype order by roomtypeid", cn.conn)
+            da = New SqlDataAdapter("select * from tbfroomtype order by roomtypeid desc", cn.conn)
             da.Fill(dt)
             With cb
                 .DataSource = dt

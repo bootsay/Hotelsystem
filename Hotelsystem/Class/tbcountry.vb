@@ -95,7 +95,7 @@ Public Class tbcountry
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbcountry", cn.conn)
+            da = New SqlDataAdapter("select * from tbcountry order by countryid desc", cn.conn)
             da.Fill(dt)
 
             With cb

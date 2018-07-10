@@ -55,6 +55,11 @@ Partial Class frmroom
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -71,7 +76,7 @@ Partial Class frmroom
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(887, 664)
+        Me.GroupPanel1.Size = New System.Drawing.Size(916, 664)
         '
         '
         '
@@ -117,7 +122,7 @@ Partial Class frmroom
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(881, 658)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(910, 658)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'ToolStrip1
@@ -127,10 +132,10 @@ Partial Class frmroom
         Me.ToolStrip1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStrip1.GripMargin = New System.Windows.Forms.Padding(5)
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1, Me.btnnew})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnsave, Me.ToolStripSeparator1, Me.btndelete, Me.ToolStripSeparator2, Me.btnedit, Me.ToolStripSeparator3, Me.btnupdate, Me.ToolStripButton1, Me.ToolStripSeparator6, Me.btnnew, Me.ToolStripSeparator4, Me.ToolStripLabel1, Me.ToolStripSeparator5, Me.ToolStripLabel2})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(881, 39)
+        Me.ToolStrip1.Size = New System.Drawing.Size(910, 39)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -230,7 +235,7 @@ Partial Class frmroom
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 42)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(875, 157)
+        Me.Panel1.Size = New System.Drawing.Size(904, 157)
         Me.Panel1.TabIndex = 2
         '
         'chkactivate
@@ -248,7 +253,7 @@ Partial Class frmroom
         Me.cbstatus.FormattingEnabled = True
         Me.cbstatus.Location = New System.Drawing.Point(483, 112)
         Me.cbstatus.Name = "cbstatus"
-        Me.cbstatus.Size = New System.Drawing.Size(263, 37)
+        Me.cbstatus.Size = New System.Drawing.Size(292, 37)
         Me.cbstatus.TabIndex = 12
         '
         'cbroomlocation
@@ -269,8 +274,6 @@ Partial Class frmroom
         '
         'txtphone
         '
-        Me.txtphone.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtphone.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtphone.Location = New System.Drawing.Point(105, 118)
         Me.txtphone.Name = "txtphone"
@@ -279,13 +282,11 @@ Partial Class frmroom
         '
         'txtdes
         '
-        Me.txtdes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtdes.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtdes.Location = New System.Drawing.Point(483, 42)
         Me.txtdes.Multiline = True
         Me.txtdes.Name = "txtdes"
-        Me.txtdes.Size = New System.Drawing.Size(263, 66)
+        Me.txtdes.Size = New System.Drawing.Size(292, 66)
         Me.txtdes.TabIndex = 5
         '
         'Label8
@@ -310,12 +311,10 @@ Partial Class frmroom
         '
         'txtroomid
         '
-        Me.txtroomid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtroomid.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtroomid.Location = New System.Drawing.Point(483, 4)
         Me.txtroomid.Name = "txtroomid"
-        Me.txtroomid.Size = New System.Drawing.Size(263, 34)
+        Me.txtroomid.Size = New System.Drawing.Size(292, 34)
         Me.txtroomid.TabIndex = 5
         '
         'Label7
@@ -416,15 +415,44 @@ Partial Class frmroom
         Me.dgvshow.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvshow.RowHeadersVisible = False
         Me.dgvshow.RowTemplate.Height = 35
-        Me.dgvshow.Size = New System.Drawing.Size(875, 450)
+        Me.dgvshow.Size = New System.Drawing.Size(904, 450)
         Me.dgvshow.TabIndex = 3
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(110, 36)
+        Me.ToolStripLabel1.Text = "ເພີ່ມປະເພດຫ້ອງ"
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(106, 36)
+        Me.ToolStripLabel2.Text = "ຊັ້ນ (ທີ່ຕັ້ງຫ້ອງ)"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 39)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(6, 39)
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 39)
         '
         'frmroom
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(887, 664)
+        Me.ClientSize = New System.Drawing.Size(916, 664)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
         Me.DoubleBuffered = True
@@ -476,4 +504,9 @@ Partial Class frmroom
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents btnnew As System.Windows.Forms.ToolStripButton
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
 End Class
