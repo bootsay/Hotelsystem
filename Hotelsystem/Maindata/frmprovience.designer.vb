@@ -313,6 +313,7 @@ Partial Class frmprovience
         Me.dgvshow.Name = "dgvshow"
         Me.dgvshow.ReadOnly = True
         Me.dgvshow.RowHeadersVisible = False
+        Me.dgvshow.RowTemplate.Height = 30
         Me.dgvshow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvshow.Size = New System.Drawing.Size(620, 526)
         Me.dgvshow.TabIndex = 3

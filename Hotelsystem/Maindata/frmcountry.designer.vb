@@ -290,7 +290,7 @@ Partial Class frmcountry
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvshow.EnableHeadersVisualStyles = False
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(4, 142)
         Me.dgvshow.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvshow.Name = "dgvshow"
@@ -306,7 +306,7 @@ Partial Class frmcountry
         Me.dgvshow.RowHeadersVisible = False
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvshow.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvshow.RowTemplate.Height = 28
+        Me.dgvshow.RowTemplate.Height = 30
         Me.dgvshow.Size = New System.Drawing.Size(543, 354)
         Me.dgvshow.TabIndex = 3
         '

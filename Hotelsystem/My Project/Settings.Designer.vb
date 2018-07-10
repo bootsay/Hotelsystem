@@ -53,6 +53,16 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=ADMIN\SQL2012;Initial Catalog=dbhotelsystem;User ID=sa;Password=2012")>  _
+        Public ReadOnly Property dbhotelsystemConnectionString() As String
+            Get
+                Return CType(Me("dbhotelsystemConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
@@ -63,7 +73,7 @@ Namespace My
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute()>  _
     Friend Module MySettingsProperty
         
-        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")> _
+        <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
         Friend ReadOnly Property Settings() As Global.HotelSystem.My.MySettings
             Get
                 Return Global.HotelSystem.My.MySettings.Default

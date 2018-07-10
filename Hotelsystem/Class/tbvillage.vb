@@ -103,7 +103,6 @@ Public Class tbvillage
         Try
             da = New SqlDataAdapter("select * from tbvillage where districtid='" & districtid & "'order by villageid desc", cn.conn)
             da.Fill(dt)
-
             With cb
                 .DataSource = dt
                 .DisplayMember = dt.Columns("villagename").ToString

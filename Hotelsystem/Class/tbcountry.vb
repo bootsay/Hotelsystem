@@ -108,6 +108,23 @@ Public Class tbcountry
         End Try
         Return True
     End Function
+
+    Public Function comprovinceall(countryid As Integer, cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbprovince where countryid='" & countryid & "'order by provinceid desc", cn.conn)
+            da.Fill(dt)
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("provincename").ToString
+                .ValueMember = dt.Columns("provinceid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
     Public Function comboprovince(cb As ComboBox)
         cn.connect()
         Dim dt As New DataTable

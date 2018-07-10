@@ -101,7 +101,7 @@ Public Class tbprovince
         Try
             da = New SqlDataAdapter("select * from tbprovince order by provinceid desc", cn.conn)
             da.Fill(dt)
-
+            'dt.Rows.Add("0", "ບໍ່ມີແຂວງ")
             With cb
                 .DataSource = dt
                 .DisplayMember = dt.Columns("provincename").ToString
