@@ -11,9 +11,12 @@ Public Class tbfcheckin
             dt.Clear()
             da = New SqlDataAdapter("select * from viewreserve where reserveNO='" & reserveNO & "'", cn.conn)
             da.Fill(dt)
+            da.Dispose()
+            cn.conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+        Return True
     End Function
     Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
@@ -21,6 +24,8 @@ Public Class tbfcheckin
             cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,reserveNO,inoutid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark)values('" & checkinNO & "','" & checkinid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
