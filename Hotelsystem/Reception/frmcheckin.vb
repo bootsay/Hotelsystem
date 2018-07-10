@@ -153,34 +153,6 @@
             e.Handled = True
         End If
     End Sub
-
-    Private Sub btnsave_Click(sender As Object, e As EventArgs)
-        If txtcustomername.Text = "" Then
-            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtcustomername.Select()
-            Return
-        End If
-        If txtnumberpeople.Text = "" Then
-            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtnumberpeople.Select()
-            Return
-        End If
-        If txtroomno.Text = "" Then
-            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            txtroomno.Select()
-            Return
-        End If
-
-
-        'reserve.save(txtid.Text, reserveid, txtcusid.Text, txtroomid.Text, Format(CDate(txtdatereserve.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckin.Text), "MM/dd/yyyy"), Format(CDate(txtdatecheckout.Text), "MM/dd/yyyy"), txtnumberpeople.Text, txtNote.Text, "ປົກກະຕິ", 1, "NO")
-        'room.updateroom(txtroomid.Text, 2)
-        reserve.loadtbfreserve(dgvlist)
-        txtclear()
-        txtid.Text = reserve.runidNO
-        txtid.Select()
-        enablesave()
-    End Sub
-
     Private Sub btnedit_Click(sender As Object, e As EventArgs)
         txtid.ReadOnly = False
         txtid.Select()
@@ -331,8 +303,43 @@
             dtsearch1.Visible = False
             dtsearch2.Visible = False
         End If
+        markettype.combomarkettype(cbmarket)
+        roomratetype.comboroomtyperate(cbpricetype)
         txtid.Text = checkins.runidNO
         enablesave()
         txtwrite()
     End Sub
+
+  
+    Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
+        If txtcustomername.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtcustomername.Select()
+            Return
+        End If
+        If txtnumberpeople.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtnumberpeople.Select()
+            Return
+        End If
+        If txtroomno.Text = "" Then
+            MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            txtroomno.Select()
+            Return
+        End If
+
+        Dim checkno As String = checkins.runidNO
+        Dim checkid As Integer = checkins.runid
+        If txtreserverNO_search.Text = "" Then
+            txtreserverNO_search.Text = "0"
+        End If
+        'checkins.save(checkno, checkid, txtreserverNO_search.Text, 1, Customerid, )
+        'room.updateroom(txtroomid.Text, 2)
+        reserve.loadtbfreserve(dgvlist)
+        txtclear()
+        txtid.Text = reserve.runidNO
+        txtid.Select()
+        enablesave()
+    End Sub
+  
 End Class
