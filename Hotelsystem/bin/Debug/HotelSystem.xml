@@ -367,6 +367,10 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:HotelSystem.ReportDataset.tbcompanyprofileDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:HotelSystem.ReportDataset.viewproductRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -407,6 +411,10 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:HotelSystem.ReportDataset.tbcompanyprofileRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:HotelSystem.ReportDataset.viewproductRowChangeEvent">
 	<summary>
 Row event argument class
@@ -444,6 +452,10 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:HotelSystem.ReportDataset.viewreserveRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:HotelSystem.ReportDataset.tbcompanyprofileRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -488,6 +500,10 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:HotelSystem.ReportDatasetTableAdapters.viewreserveTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:HotelSystem.ReportDatasetTableAdapters.tbcompanyprofileTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

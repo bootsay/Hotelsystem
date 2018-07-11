@@ -110,7 +110,70 @@ Public Class tbfcheckin
         End Try
         Return id
     End Function
+    Public Function search_checkinby_datein(dt1 As String, dt2 As String, dgv As DataGridView)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewcheckin where checkindate>='" & dt1 & "' and checkindate<='" & dt2 & "'", cn.conn)
+            da.Fill(ds, "pt1")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt1")
+            dgv.DataSource = ds.Tables(0)
+            format_viewcheckin(dgv)
 
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function search_checkinby_Name(name As String, dgv As DataGridView)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewcheckin where cusname like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da.Fill(ds, "pt1")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt1")
+            dgv.DataSource = ds.Tables(0)
+            format_viewcheckin(dgv)
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function search_checkinby_roomNO(name As String, dgv As DataGridView)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewcheckin where room_id like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da.Fill(ds, "pt1")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt1")
+            dgv.DataSource = ds.Tables(0)
+            format_viewcheckin(dgv)
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
+    Public Function search_checkinby_IDCard(name As String, dgv As DataGridView)
+        cn.connect()
+        Try
+            da = New SqlDataAdapter("select * from viewcheckin where idcard like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da.Fill(ds, "pt1")
+            ds.Tables.Clear()
+            da.Fill(ds, "pt1")
+            dgv.DataSource = ds.Tables(0)
+            format_viewcheckin(dgv)
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
     Public Function loadtbfcheckin(dgv As DataGridView)
         cn.connect()
         Try
@@ -119,7 +182,7 @@ Public Class tbfcheckin
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
-            dgv.Refresh()
+            format_viewcheckin(dgv)
 
         
         Catch ex As Exception
@@ -140,35 +203,37 @@ Public Class tbfcheckin
             .Columns(6).HeaderText = "ປະເພດລູກຄ້າ"
             .Columns(7).HeaderText = "ຫົວຂໍ້"
             .Columns(8).HeaderText = "ຊື່"
-            .Columns(8).HeaderText = "ນາມສະກຸນ"
-            .Columns(8).HeaderText = "ບັດສະປ໋ອດ"
-            .Columns(8).HeaderText = "ບັດປະຈໍາຕົວ"
-            .Columns(8).HeaderText = "ເບີໂທ"
-            .Columns(8).HeaderText = "ແຟ່ກ"
-            .Columns(8).HeaderText = "ອີເມວ"
-            .Columns(9).HeaderText = "ຊັ້ນຊາດ"
-            .Columns(10).HeaderText = "ບ້ານ"
-            .Columns(11).HeaderText = "ເມືອງ"
-            .Columns(12).HeaderText = "ແຂວງ"
-            .Columns(13).HeaderText = "ປະເທດ"
-            .Columns(14).HeaderText = "ປະເພດສັງຈອງ"
-            .Columns(15).HeaderText = "ປະເພດຕະຫຼາດ"
-            .Columns(16).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
-            .Columns(17).HeaderText = "ວັນທີແຈ້ງອອກ"
-            .Columns(18).HeaderText = "ຈຳນວນຄົນ"
-            .Columns(19).HeaderText = "ປະເພດຄາບເຂົ້າ"
-            .Columns(20).HeaderText = "ປະເພດນຳໃຊ້"
-            .Columns(21).HeaderText = "ໝາຍເຫດ"
-            .Columns(22).Visible = False
-            .Columns(23).Visible = False
-            .Columns(24).Visible = False
-            .Columns(25).Visible = False
-            .Columns(26).Visible = False
-            .Columns(27).Visible = False
-            .Columns(28).Visible = False
+            .Columns(9).HeaderText = "ນາມສະກຸນ"
+            .Columns(10).HeaderText = "ບັດສະປ໋ອດ"
+            .Columns(11).HeaderText = "ບັດປະຈໍາຕົວ"
+            .Columns(12).HeaderText = "ເບີໂທ"
+            .Columns(13).HeaderText = "ແຟ່ກ"
+            .Columns(14).HeaderText = "ອີເມວ"
+            .Columns(15).HeaderText = "ຊັ້ນຊາດ"
+            .Columns(16).HeaderText = "ບ້ານ"
+            .Columns(17).HeaderText = "ເມືອງ"
+            .Columns(18).HeaderText = "ແຂວງ"
+            .Columns(19).HeaderText = "ປະເທດ"
+            .Columns(20).HeaderText = "ປະເພດສັງຈອງ"
+            .Columns(21).HeaderText = "ປະເພດຕະຫຼາດ"
+            .Columns(22).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
+            .Columns(23).HeaderText = "ວັນທີແຈ້ງອອກ"
+            .Columns(24).HeaderText = "ຈໍານວນຄົນ"
+            .Columns(25).HeaderText = "ປະເພດຄາບເຂົ້າ"
+            .Columns(26).HeaderText = "ປະເພດນໍາໃຊ້"
+            .Columns(27).HeaderText = "ໝາຍເຫດ"
+            .Columns(28).HeaderText = "ສະຖານະ"
             .Columns(29).Visible = False
             .Columns(30).Visible = False
             .Columns(31).Visible = False
+            .Columns(32).Visible = False
+            .Columns(33).Visible = False
+            .Columns(34).Visible = False
+            .Columns(35).Visible = False
+            .Columns(36).Visible = False
+            .Columns(37).Visible = False
+            .Columns(38).Visible = False
         End With
+        Return True
     End Function
 End Class

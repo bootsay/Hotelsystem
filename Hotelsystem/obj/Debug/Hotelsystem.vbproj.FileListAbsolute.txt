@@ -99,3 +99,4 @@ C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportG
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportDeparture.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportCustNational.resources
 C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportCustSort.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportRoomStatus.resources
