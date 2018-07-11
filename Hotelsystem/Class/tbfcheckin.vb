@@ -121,45 +121,54 @@ Public Class tbfcheckin
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
 
-            With dgv
-                .ReadOnly = True
-                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).HeaderText = "ເລກທີແຈ້ງເຂົ້າ"
-                .Columns(1).Visible = False
-                .Columns(2).HeaderText = "ທີ່ຕັ້ງຫ້ອງ"
-                .Columns(3).HeaderText = "ປະເພດຫ້ອງ"
-                .Columns(4).HeaderText = "ເບີຫ້ອງ"
-                .Columns(5).HeaderText = "ປະເພດລູກຄ້າ"
-                .Columns(6).HeaderText = "ຄຳນຳໜ້າ"
-                .Columns(7).HeaderText = "ຊື່"
-                .Columns(8).HeaderText = "ນາມສະກຸນ"
-                .Columns(9).HeaderText = "ຊັ້ນຊາດ"
-                .Columns(10).HeaderText = "ບ້ານ"
-                .Columns(11).HeaderText = "ເມືອງ"
-                .Columns(12).HeaderText = "ແຂວງ"
-                .Columns(13).HeaderText = "ປະເທດ"
-                .Columns(14).HeaderText = "ປະເພດສັງຈອງ"
-                .Columns(15).HeaderText = "ປະເພດຕະຫຼາດ"
-                .Columns(16).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
-                .Columns(17).HeaderText = "ວັນທີແຈ້ງອອກ"
-                .Columns(18).HeaderText = "ຈຳນວນຄົນ"
-                .Columns(19).HeaderText = "ປະເພດຄາບເຂົ້າ"
-                .Columns(20).HeaderText = "ປະເພດນຳໃຊ້"
-                .Columns(21).HeaderText = "ໝາຍເຫດ"
-                .Columns(22).Visible = False
-                .Columns(23).Visible = False
-                .Columns(24).Visible = False
-                .Columns(25).Visible = False
-                .Columns(26).Visible = False
-                .Columns(27).Visible = False
-                .Columns(28).Visible = False
-                .Columns(29).Visible = False
-                .Columns(30).Visible = False
-                .Columns(31).Visible = False
-            End With
+        
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
         Return True
+    End Function
+    Public Function format_viewcheckin(dgv As DataGridView)
+        With dgv
+            .ReadOnly = True
+            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .Columns(0).HeaderText = "ເລກທີແຈ້ງເຂົ້າ"
+            .Columns(1).HeaderText = "ເລກທີຈອງ"
+            .Columns(2).HeaderText = "ຜູ້ບັນທືກ"
+            .Columns(3).HeaderText = "ທີ່ຕັ້ງຫ້ອງ"
+            .Columns(4).HeaderText = "ປະເພດຫ້ອງ"
+            .Columns(5).HeaderText = "ເບີຫ້ອງ"
+            .Columns(6).HeaderText = "ປະເພດລູກຄ້າ"
+            .Columns(7).HeaderText = "ຫົວຂໍ້"
+            .Columns(8).HeaderText = "ຊື່"
+            .Columns(8).HeaderText = "ນາມສະກຸນ"
+            .Columns(8).HeaderText = "ບັດສະປ໋ອດ"
+            .Columns(8).HeaderText = "ບັດປະຈໍາຕົວ"
+            .Columns(8).HeaderText = "ເບີໂທ"
+            .Columns(8).HeaderText = "ແຟ່ກ"
+            .Columns(8).HeaderText = "ອີເມວ"
+            .Columns(9).HeaderText = "ຊັ້ນຊາດ"
+            .Columns(10).HeaderText = "ບ້ານ"
+            .Columns(11).HeaderText = "ເມືອງ"
+            .Columns(12).HeaderText = "ແຂວງ"
+            .Columns(13).HeaderText = "ປະເທດ"
+            .Columns(14).HeaderText = "ປະເພດສັງຈອງ"
+            .Columns(15).HeaderText = "ປະເພດຕະຫຼາດ"
+            .Columns(16).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
+            .Columns(17).HeaderText = "ວັນທີແຈ້ງອອກ"
+            .Columns(18).HeaderText = "ຈຳນວນຄົນ"
+            .Columns(19).HeaderText = "ປະເພດຄາບເຂົ້າ"
+            .Columns(20).HeaderText = "ປະເພດນຳໃຊ້"
+            .Columns(21).HeaderText = "ໝາຍເຫດ"
+            .Columns(22).Visible = False
+            .Columns(23).Visible = False
+            .Columns(24).Visible = False
+            .Columns(25).Visible = False
+            .Columns(26).Visible = False
+            .Columns(27).Visible = False
+            .Columns(28).Visible = False
+            .Columns(29).Visible = False
+            .Columns(30).Visible = False
+            .Columns(31).Visible = False
+        End With
     End Function
 End Class
