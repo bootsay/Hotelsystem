@@ -151,10 +151,40 @@
     <Compile Include="frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmreport\frmreportreservation.designer.vb">
-      <DependentUpon>frmreportreservation.vb</DependentUpon>
+    <Compile Include="frmreport\frmReportReserved.designer.vb">
+      <DependentUpon>frmReportReserved.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmreport\frmreportreservation.vb">
+    <Compile Include="frmreport\frmReportReserved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmReportprovince.designer.vb">
+      <DependentUpon>frmReportprovince.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportprovince.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmReportGroupCheckinGraph.designer.vb">
+      <DependentUpon>frmReportGroupCheckinGraph.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportGroupCheckinGraph.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmReportDeparture.designer.vb">
+      <DependentUpon>frmReportDeparture.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportDeparture.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmReportCustNational.designer.vb">
+      <DependentUpon>frmReportCustNational.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportCustNational.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmReportCustSort.designer.vb">
+      <DependentUpon>frmReportCustSort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportCustSort.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="House_keeping\frmitemlist.designer.vb">
@@ -417,7 +447,7 @@
       <DependentUpon>CryReportRoomStatus.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CryReportSumCust.vb">
+    <Compile Include="Reservation\CryReportSumCust.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CryReportSumCust.rpt</DependentUpon>
@@ -455,8 +485,23 @@
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmreport\frmreportreservation.resx">
-      <DependentUpon>frmreportreservation.vb</DependentUpon>
+    <EmbeddedResource Include="frmreport\frmReportReserved.resx">
+      <DependentUpon>frmReportReserved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportprovince.resx">
+      <DependentUpon>frmReportprovince.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportGroupCheckinGraph.resx">
+      <DependentUpon>frmReportGroupCheckinGraph.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportDeparture.resx">
+      <DependentUpon>frmReportDeparture.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportCustNational.resx">
+      <DependentUpon>frmReportCustNational.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportCustSort.resx">
+      <DependentUpon>frmReportCustSort.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="House_keeping\frmitemlist.resx">
       <DependentUpon>frmitemlist.vb</DependentUpon>
@@ -593,7 +638,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportRoomStatus.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CryReportSumCust.rpt">
+    <EmbeddedResource Include="Reservation\CryReportSumCust.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportSumCust.vb</LastGenOutput>
     </EmbeddedResource>
