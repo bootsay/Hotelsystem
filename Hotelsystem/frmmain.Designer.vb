@@ -135,10 +135,10 @@ Partial Class frmmain
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CaptionVisible = True
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
-        Me.RibbonControl1.Controls.Add(Me.RibbonPanel6)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel5)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel7)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel6)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel4)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
@@ -1137,10 +1137,10 @@ Partial Class frmmain
         Me.RibbonPanel4.Controls.Add(Me.RibbonBar14)
         Me.RibbonPanel4.Controls.Add(Me.RibbonBar13)
         Me.RibbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel4.Location = New System.Drawing.Point(0, 0)
+        Me.RibbonPanel4.Location = New System.Drawing.Point(0, 51)
         Me.RibbonPanel4.Name = "RibbonPanel4"
         Me.RibbonPanel4.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel4.Size = New System.Drawing.Size(1018, 111)
+        Me.RibbonPanel4.Size = New System.Drawing.Size(1018, 60)
         '
         '
         '
@@ -1172,7 +1172,7 @@ Partial Class frmmain
         Me.RibbonBar15.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem17})
         Me.RibbonBar15.Location = New System.Drawing.Point(514, 0)
         Me.RibbonBar15.Name = "RibbonBar15"
-        Me.RibbonBar15.Size = New System.Drawing.Size(275, 108)
+        Me.RibbonBar15.Size = New System.Drawing.Size(275, 57)
         Me.RibbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar15.TabIndex = 5
         Me.RibbonBar15.Text = "RibbonBar15"
@@ -1222,7 +1222,7 @@ Partial Class frmmain
         Me.RibbonBar14.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem16})
         Me.RibbonBar14.Location = New System.Drawing.Point(221, 0)
         Me.RibbonBar14.Name = "RibbonBar14"
-        Me.RibbonBar14.Size = New System.Drawing.Size(293, 108)
+        Me.RibbonBar14.Size = New System.Drawing.Size(293, 57)
         Me.RibbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar14.TabIndex = 4
         Me.RibbonBar14.Text = "RibbonBar14"
@@ -1272,7 +1272,7 @@ Partial Class frmmain
         Me.RibbonBar13.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem15})
         Me.RibbonBar13.Location = New System.Drawing.Point(3, 0)
         Me.RibbonBar13.Name = "RibbonBar13"
-        Me.RibbonBar13.Size = New System.Drawing.Size(218, 108)
+        Me.RibbonBar13.Size = New System.Drawing.Size(218, 57)
         Me.RibbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonBar13.TabIndex = 3
         Me.RibbonBar13.Text = "RibbonBar13"
@@ -1429,7 +1429,7 @@ Partial Class frmmain
         '
         'frmmain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1018, 756)
         Me.ControlBox = False
