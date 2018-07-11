@@ -151,6 +151,12 @@
     <Compile Include="frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmreport\frmReportRoomStatus.designer.vb">
+      <DependentUpon>frmReportRoomStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportRoomStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmreport\frmReportReserved.designer.vb">
       <DependentUpon>frmReportReserved.vb</DependentUpon>
     </Compile>
@@ -393,6 +399,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Report\Companyprofile.vb">
+      <DependentUpon>Companyprofile.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Report\CryReportCustNational.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -435,10 +447,10 @@
       <DependentUpon>CryReportReserved.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CryReportRoomOcc.vb">
+    <Compile Include="Report\billReserved.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CryReportRoomOcc.rpt</DependentUpon>
+      <DependentUpon>billReserved.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\CryReportRoomStatus.vb">
@@ -453,10 +465,10 @@
       <DependentUpon>CryReportSumCust.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CrystalReport1.vb">
+    <Compile Include="Report\billCheckout.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>billCheckout.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reservation\frmreserve.designer.vb">
@@ -484,6 +496,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportRoomStatus.resx">
+      <DependentUpon>frmReportRoomStatus.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmreport\frmReportReserved.resx">
       <DependentUpon>frmReportReserved.vb</DependentUpon>
@@ -602,6 +617,10 @@
     <EmbeddedResource Include="Reception\frmshowroomlistitem.resx">
       <DependentUpon>frmshowroomlistitem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\Companyprofile.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Companyprofile.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\CryReportCustNational.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportCustNational.vb</LastGenOutput>
@@ -630,9 +649,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportReserved.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CryReportRoomOcc.rpt">
+    <EmbeddedResource Include="Report\billReserved.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CryReportRoomOcc.vb</LastGenOutput>
+      <LastGenOutput>billReserved.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\CryReportRoomStatus.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -642,9 +661,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportSumCust.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CrystalReport1.rpt">
+    <EmbeddedResource Include="Report\billCheckout.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+      <LastGenOutput>billCheckout.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservation\frmreserve.resx">
       <DependentUpon>frmreserve.vb</DependentUpon>

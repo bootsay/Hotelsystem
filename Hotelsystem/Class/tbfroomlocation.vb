@@ -96,7 +96,7 @@ Public Class tbfroomlocation
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbfroomlocation order by locationid", cn.conn)
+            da = New SqlDataAdapter("select * from tbfroomlocation order by locationid desc", cn.conn)
             da.Fill(dt)
             With cb
                 .DataSource = dt

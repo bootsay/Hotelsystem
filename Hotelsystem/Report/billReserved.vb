@@ -18,7 +18,7 @@ Imports System
 Imports System.ComponentModel
 
 
-Public Class CryReportRoomOcc
+Public Class billReserved
     Inherits ReportClass
     
     Public Sub New()
@@ -27,7 +27,7 @@ Public Class CryReportRoomOcc
     
     Public Overrides Property ResourceName() As String
         Get
-            Return "CryReportRoomOcc.rpt"
+            Return "billReserved.rpt"
         End Get
         Set
             'Do nothing
@@ -45,7 +45,7 @@ Public Class CryReportRoomOcc
     
     Public Overrides Property FullResourceName() As String
         Get
-            Return "HotelSystem.CryReportRoomOcc.rpt"
+            Return "HotelSystem.billReserved.rpt"
         End Get
         Set
             'Do nothing
@@ -110,7 +110,7 @@ Public Class CryReportRoomOcc
 End Class
 
 <System.Drawing.ToolboxBitmapAttribute(GetType(CrystalDecisions.[Shared].ExportOptions), "report.bmp")>  _
-Public Class CachedCryReportRoomOcc
+Public Class CachedbillReserved
     Inherits Component
     Implements ICachedReport
     
@@ -152,7 +152,7 @@ Public Class CachedCryReportRoomOcc
     End Property
     
     Public Overridable Function CreateReport() As CrystalDecisions.CrystalReports.Engine.ReportDocument Implements CrystalDecisions.ReportSource.ICachedReport.CreateReport
-        Dim rpt As CryReportRoomOcc = New CryReportRoomOcc()
+        Dim rpt As billReserved = New billReserved()
         rpt.Site = Me.Site
         Return rpt
     End Function
