@@ -92,3 +92,10 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.ex
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.xml
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.pdb
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.vbprojResolveAssemblyReference.cache
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.vbprojResolveAssemblyReference.cache
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportReserved.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportprovince.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportGroupCheckinGraph.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportDeparture.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportCustNational.resources
+C:\Users\BOOT\Documents\Hotelsystem\HotelSystem\obj\Debug\HotelSystem.frmReportCustSort.resources

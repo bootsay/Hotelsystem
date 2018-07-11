@@ -18,10 +18,10 @@ Public Class tbfcheckin
         End Try
         Return True
     End Function
-    Public Function save(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfcheckin(checkinNO,checkinid,reserveNO,inoutid,customerNO,bookingtypeid,markettypeid,checkindate,checkoutdate,numberofpax, mealtypeid,usetypeid,remark)values('" & checkinNO & "','" & checkinid & "','" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfcheckin values('" & checkinNO & "','" & checkinid & "','" & userid & "', '" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
                 cm.Dispose()
