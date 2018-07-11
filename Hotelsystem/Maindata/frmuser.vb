@@ -1,6 +1,4 @@
 ﻿Public Class frmuser
-    Dim dept As New tbdepartment
-    Dim position As New tbposition
     Dim user As New tbuser
 
     Dim frmsale1 As String
@@ -47,7 +45,6 @@
     Dim btnapprove51 As String
     Dim btncancel51 As String
 
-
     Private Sub enablesave()
         btnsave.Enabled = True
         btndelete.Enabled = False
@@ -78,8 +75,7 @@
             enablesave()
             user.combolevel(cblevel)
             cbadmin.Checked = True
-            dept.combodepartment(cbdepartment)
-            position.comboposition(cbposition)
+
         Catch ex As Exception
 
         End Try
@@ -95,7 +91,7 @@
     Private Sub Enabletext()
         txteng.ReadOnly = False
         txtlao.ReadOnly = False
-
+    
         txtpassword.ReadOnly = False
     End Sub
     Private Sub cleartext()
@@ -319,7 +315,7 @@
             txtlao.Select()
             Return
         End If
-
+   
         If txtpassword.Text = "" Then
             MessageBox.Show("ກະລຸນາປ້ອນລະຫັດການໍາໃຊ້ລະບົບ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtpassword.Select()
@@ -352,7 +348,7 @@
             txtid.Text = .CurrentRow.Cells(0).Value
             txteng.Text = .CurrentRow.Cells(1).Value
             txtlao.Text = .CurrentRow.Cells(2).Value
-
+          
             txtpassword.Text = .CurrentRow.Cells(5).Value
             cblevel.Text = .CurrentRow.Cells(6).Value
             txtuserid.Text = .CurrentRow.Cells(0).Value
@@ -590,7 +586,7 @@
             txtlao.Select()
             Return
         End If
-
+     
         If txtpassword.Text = "" Then
             MessageBox.Show("ກະລຸນາປ້ອນລະຫັດການໍາໃຊ້ລະບົບ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtpassword.Select()

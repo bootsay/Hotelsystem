@@ -95,7 +95,7 @@ Public Class tbfbookingtype
         cn.connect()
         Dim dt As New DataTable
         Try
-            da = New SqlDataAdapter("select * from tbfbookingtype", cn.conn)
+            da = New SqlDataAdapter("select * from tbfbookingtype  order by bookingtypeid desc", cn.conn)
             da.Fill(dt)
 
             With cb

@@ -210,13 +210,14 @@
                 cbvillage.Text = .CurrentRow.Cells(7).Value
                 cbdistrict.Text = .CurrentRow.Cells(8).Value
                 cbprovince.Text = .CurrentRow.Cells(9).Value
-                txtPassport.Text = .CurrentRow.Cells(10).Value
-                txtIdcard.Text = .CurrentRow.Cells(11).Value
-                txtTel.Text = .CurrentRow.Cells(12).Value
-                txtFax.Text = .CurrentRow.Cells(13).Value
-                txtEmail.Text = .CurrentRow.Cells(14).Value
-                cbRoomrate.Text = .CurrentRow.Cells(15).Value
-                chkActivate.Checked = .CurrentRow.Cells(16).Value
+                cbcountry.Text = .CurrentRow.Cells(10).Value
+                txtPassport.Text = .CurrentRow.Cells(11).Value
+                txtIdcard.Text = .CurrentRow.Cells(12).Value
+                txtTel.Text = .CurrentRow.Cells(13).Value
+                txtFax.Text = .CurrentRow.Cells(14).Value
+                txtEmail.Text = .CurrentRow.Cells(15).Value
+                cbRoomrate.Text = .CurrentRow.Cells(16).Value
+                chkActivate.Checked = .CurrentRow.Cells(17).Value
                 disabletext()
                 enableEdit()
             End With
@@ -338,5 +339,9 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub dgvcustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcustomer.CellContentClick
+
     End Sub
 End Class

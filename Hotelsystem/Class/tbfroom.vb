@@ -11,10 +11,9 @@ Public Class tbfroom
             dt.Clear()
             da = New SqlDataAdapter("select * from viewroominfo where locationid='" & floorid & "' and romtypename like N'%" & typename & "%' and activate='True'", cn.conn)
             da.Fill(dt)
-            da.Dispose()
-            cn.conn.Close()
+
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+
         End Try
         Return True
     End Function
@@ -25,8 +24,6 @@ Public Class tbfroom
             cm = New SqlCommand("insert into tbfroom(roomid,roomtypeid,locationid,phone_ext,room_id,des,activate,statusid)values('" & roomid & "','" & roomtypeid & "','" & locationid & "','" & phone_ext & "','" & room_id & "',N'" & des & "','" & activate & "','" & statusid & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
-                cm.Dispose()
-                cn.conn.Close()
             Else
 
             End If
@@ -55,8 +52,6 @@ Public Class tbfroom
             cm = New SqlCommand("delete from tbfroom where roomid='" & roomid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
-                cm.Dispose()
-                cn.conn.Close()
             Else
 
             End If
@@ -72,8 +67,6 @@ Public Class tbfroom
             cm = New SqlCommand("update tbfroom set roomtypeid='" & roomtypeid & "', locationid='" & locationid & "', phone_ext='" & phone_ext & "', room_id='" & room_id & "', des=N'" & des & "', activate='" & activate & "', statusid='" & statusid & "' where roomid='" & roomid & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
-                cm.Dispose()
-                cn.conn.Close()
             Else
 
             End If
@@ -89,8 +82,6 @@ Public Class tbfroom
             cm = New SqlCommand("update tbfroom set statusid='" & statusid & "' where roomid='" & roomid & "'", cn.conn)
             'If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
             cm.ExecuteNonQuery()
-            cm.Dispose()
-            cn.conn.Close()
             'Else
 
             'End If
@@ -117,9 +108,6 @@ Public Class tbfroom
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        re.Close()
-        cm.Dispose()
-        cn.conn.Close()
         Return id
     End Function
 
@@ -127,10 +115,12 @@ Public Class tbfroom
         cn.connect()
         Try
             da = New SqlDataAdapter("select * from viewroom order by roomid", cn.conn)
-            da.Fill(ds, "pt9")
+            da.Fill(ds, "pt")
             ds.Tables.Clear()
-            da.Fill(ds, "pt9")
+            da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
@@ -162,10 +152,12 @@ Public Class tbfroom
         cn.connect()
         Try
             da = New SqlDataAdapter("select * from viewroom where statusid=1 order by roomid", cn.conn)
-            da.Fill(ds, "pt3")
+            da.Fill(ds, "pt")
             ds.Tables.Clear()
-            da.Fill(ds, "pt3")
+            da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
@@ -197,13 +189,15 @@ Public Class tbfroom
         cn.connect()
         Try
             da = New SqlDataAdapter("select * from viewroom where statusid=3 order by roomid", cn.conn)
-            da.Fill(ds, "pt1")
+            da.Fill(ds, "pt")
             ds.Tables.Clear()
-            da.Fill(ds, "pt1")
+            da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
             With dgv
                 .ReadOnly = True
-                .Columns(0).Visible = False
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -235,10 +229,12 @@ Public Class tbfroom
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
-
-                .Columns(0).Visible = False
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -274,7 +270,8 @@ Public Class tbfroom
 
             With dgv
                 .ReadOnly = True
-                .Columns(0).Visible = False
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -306,10 +303,12 @@ Public Class tbfroom
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
-
-                .Columns(0).Visible = False
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -341,10 +340,12 @@ Public Class tbfroom
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).Visible = False
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -376,10 +377,12 @@ Public Class tbfroom
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).Visible = False
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"
@@ -411,9 +414,12 @@ Public Class tbfroom
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
+            dgv.Refresh()
+
             With dgv
                 .ReadOnly = True
-                .Columns(0).Visible = False
+                .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+                .Columns(0).HeaderText = "ລະຫັດ"
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"

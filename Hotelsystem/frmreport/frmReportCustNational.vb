@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports CrystalDecisions.CrystalReports.Engine
-Public Class frmreportreservation
+Public Class frmReportCustNational
     Dim cn As New connectdb
     Dim da As New SqlDataAdapter
     Dim dt, dt1, dt2 As New DataTable
@@ -23,7 +23,7 @@ Public Class frmreportreservation
             MessageBox.Show(ex.Message)
         End Try
     End Sub
- 
+
     Private Sub btncry_Click(sender As Object, e As EventArgs) Handles btncry.Click
         Try
             Dim subname As String = Nothing
