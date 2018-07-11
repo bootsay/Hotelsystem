@@ -193,7 +193,7 @@ Public Class tbfcheckin
     Public Function format_viewcheckin(dgv As DataGridView)
         With dgv
             .ReadOnly = True
-            .SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            .AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
             .Columns(0).HeaderText = "ເລກທີແຈ້ງເຂົ້າ"
             .Columns(1).HeaderText = "ເລກທີຈອງ"
             .Columns(2).HeaderText = "ຜູ້ບັນທືກ"
@@ -215,7 +215,7 @@ Public Class tbfcheckin
             .Columns(18).HeaderText = "ແຂວງ"
             .Columns(19).HeaderText = "ປະເທດ"
             .Columns(20).HeaderText = "ປະເພດສັງຈອງ"
-            .Columns(21).HeaderText = "ປະເພດຕະຫຼາດ"
+            .Columns(21).HeaderText = "ຕະຫຼາດ"
             .Columns(22).HeaderText = "ວັນທີເເຈ້ງເຂົ້າ"
             .Columns(23).HeaderText = "ວັນທີແຈ້ງອອກ"
             .Columns(24).HeaderText = "ຈໍານວນຄົນ"

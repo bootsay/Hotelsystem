@@ -22,7 +22,7 @@ Public Class tbuser
     Public Function update(user_id As Integer, username As String, laoname As String, department As String, position As String, password As String, autority As Integer, auth As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbuser set username=N'" & username & "',laoname=N'" & laoname & "', department=N'" & department & "', position=N'" & position & "', password='" & password & "', level_id='" & autority & "', auth='" & auth & "' where user_id='" & user_id & "'", cn.conn)
+            cm = New SqlCommand("update tbuser set username=N'" & username & "',laoname=N'" & laoname & "', department=N'" & department & "', position=N'" & position & "', password='" & password & "', level_id='" & autority & "', auth='" & auth & "' where userid='" & user_id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -36,7 +36,7 @@ Public Class tbuser
     Public Function delete(user_id As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("delete from tbuser where user_id='" & user_id & "'", cn.conn)
+            cm = New SqlCommand("delete from tbuser where userid='" & user_id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -83,7 +83,7 @@ Public Class tbuser
         Dim idd As Integer = Nothing
         cn.connect()
         Try
-            cm = New SqlCommand("select top 1 user_id from tbuser order by user_id desc", cn.conn)
+            cm = New SqlCommand("select top 1 userid from tbuser order by userid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -92,6 +92,9 @@ Public Class tbuser
             Else
                 idd = 1001
             End If
+            re.Close()
+            cm.Dispose()
+            cn.conn.Close()
             re.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -108,7 +111,7 @@ Public Class tbuser
             With cb
                 .DataSource = dt
                 .DisplayMember = dt.Columns("levelname").ToString
-                .ValueMember = dt.Columns("level_id").ToString
+                .ValueMember = dt.Columns("levelid").ToString
             End With
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -118,7 +121,7 @@ Public Class tbuser
     Public Function updateauth(id As Integer, auth As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbuser set auth='" & auth & "' where user_id='" & id & "'", cn.conn)
+            cm = New SqlCommand("update tbuser set auth='" & auth & "' where userid='" & id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການປັບປຸງສິດທິຂອງຜູ້ໃຊ້ແທ້ບໍ່ ?", "ຄໍາຖາມ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -133,7 +136,7 @@ Public Class tbuser
         Dim auth As String = Nothing
         cn.connect()
         'Try
-        cm = New SqlCommand("select auth from tbuser where user_id='" & id & "'", cn.conn)
+        cm = New SqlCommand("select auth from tbuser where userid='" & id & "'", cn.conn)
         re = cm.ExecuteReader
         If re.HasRows Then
             While re.Read
@@ -165,6 +168,9 @@ Public Class tbuser
         Catch ex As Exception
 
         End Try
+        re.Close()
+        cm.Dispose()
+        cn.conn.Close()
         Return duplicatename
     End Function
 
