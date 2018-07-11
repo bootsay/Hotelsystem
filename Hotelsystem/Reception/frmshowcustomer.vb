@@ -79,7 +79,7 @@
                 If frmreserve.frmcreatereserve = True Then
                     frmreserve.txtcustomerid.Text = .CurrentRow.Cells(1).Value
                     frmreserve.txtcustomername.Text = .CurrentRow.Cells(4).Value
-                    frmreserve.txtprice.Text = .CurrentRow.Cells(15).Value
+                    frmreserve.txtprice.Text = .CurrentRow.Cells(16).Value
                     Me.Close()
                 End If
             End With

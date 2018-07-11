@@ -218,4 +218,16 @@
         closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
+
+    Private Sub frmcompanyprofile_Click(sender As Object, e As EventArgs) Handles btnfrmcompanyprofile.Click
+        closeform.closeform()
+        closeform.f = frmcompanyprofile
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
 End Class

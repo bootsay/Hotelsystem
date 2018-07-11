@@ -2,7 +2,7 @@
 Public Class frmcompanyprofile
     Dim com As New tbcompanyprofile
     Private Sub frmbusinessvb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        txtbsnnid.Text = com.runid
+        'txtbsnnid.Text = com.runid
         com.loadtbcompanyprofile(dgvshow)
         txtname.Select           
         enablesave()
@@ -11,8 +11,8 @@ Public Class frmcompanyprofile
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         Try
 
-            If txtname.Text = "" Then
-                MessageBox.Show("ກະລຸນາເພີ້ມຂໍ້ມູນໃຫ້ສໍາເລັດ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            If txtbsnnid.Text = "" Then
+                MessageBox.Show("ທ່ານບໍ່ສາມາດເພີ່ມຂໍ້ມູນໄດ້ອີກແລ້ວ", "ຄໍາແນະນໍາ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 txtname.Select()
                 Return
             End If
@@ -36,7 +36,7 @@ Public Class frmcompanyprofile
                 txtfax.Select()
                 Return
             End If
-            com.save(txtbsnnid.Text, txtname.Text, txtaddress.Text, txttel.Text, txtfax.Text, txtemail.Text, Format(CDate(dtstart.Text), "MM/dd/yyyy"))
+            com.save(txtbsnnid.Text, txtname.Text, txtaddress.Text, txttel.Text, txtfax.Text, txtemail.Text, Format(CDate(txtdatemake.Text), "MM/dd/yyyy"))
             txtname.Clear()
             btnsave.Enabled = False
             com.loadtbcompanyprofile(dgvshow)
@@ -46,7 +46,7 @@ Public Class frmcompanyprofile
             txtclear()
 
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            'MessageBox.Show(ex.Message)
         End Try
     End Sub
     Private Sub enablesave()
@@ -76,7 +76,7 @@ Public Class frmcompanyprofile
         txttel.Enabled = False
         txtfax.Enabled = False
         txtemail.Enabled = False
-        dtstart.Enabled = False
+        txtdatemake.Enabled = False
         pimage.Enabled = False
     End Sub
     Private Sub enabletext()
@@ -85,7 +85,7 @@ Public Class frmcompanyprofile
         txttel.Enabled = True
         txtfax.Enabled = True
         txtemail.Enabled = True
-        dtstart.Enabled = True
+        txtdatemake.Enabled = True
         pimage.Enabled = True
     End Sub
     Private Sub txtclear()
@@ -117,7 +117,7 @@ Public Class frmcompanyprofile
 
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         Try
-            com.update(txtbsnnid.Text, txtname.Text, txtaddress.Text, txttel.Text, txtfax.Text, txtemail.Text, Format(CDate(dtstart.Text), "MM/dd/yyyy"))
+            com.update(txtbsnnid.Text, txtname.Text, txtaddress.Text, txttel.Text, txtfax.Text, txtemail.Text, Format(CDate(txtdatemake.Text), "MM/dd/yyyy"))
             txtname.Clear()
             btnsave.Enabled = False
             com.loadtbcompanyprofile(dgvshow)
@@ -152,6 +152,19 @@ Public Class frmcompanyprofile
         txtclear()
         enabletext()
         txtbsnnid.Text = com.runid
+        If txtbsnnid.Text = 2 Then
+            txtbsnnid.Text = ""
+            txtaddress.Enabled = False
+            txtbsnnid.Enabled = False
+            txtemail.Enabled = False
+            txtfax.Enabled = False
+            txtname.Enabled = False
+            txttel.Enabled = False
+            txtdatemake.Enabled = False
+            pimage.Enabled = False
+        Else
+
+        End If
         com.loadtbcompanyprofile(dgvshow)
         txtname.Select()
         enablesave()
@@ -167,7 +180,7 @@ Public Class frmcompanyprofile
                 txttel.Text = .CurrentRow.Cells(3).Value
                 txtfax.Text = .CurrentRow.Cells(4).Value
                 txtemail.Text = .CurrentRow.Cells(5).Value
-                dtstart.Text = .CurrentRow.Cells(6).Value
+                txtdatemake.Text = .CurrentRow.Cells(6).Value
                 com.showimage(dgvshow)
                 enablesave()
                 disabletext()
@@ -177,5 +190,9 @@ Public Class frmcompanyprofile
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub txtbsnnid_TextChanged(sender As Object, e As EventArgs) Handles txtbsnnid.TextChanged
+
     End Sub
 End Class

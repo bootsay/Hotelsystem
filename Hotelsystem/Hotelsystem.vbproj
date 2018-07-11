@@ -459,7 +459,7 @@
       <DependentUpon>CryReportRoomStatus.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reservation\CryReportSumCust.vb">
+    <Compile Include="Report\CryReportSumCust.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CryReportSumCust.rpt</DependentUpon>
@@ -657,7 +657,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportRoomStatus.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reservation\CryReportSumCust.rpt">
+    <EmbeddedResource Include="Report\CryReportSumCust.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportSumCust.vb</LastGenOutput>
     </EmbeddedResource>

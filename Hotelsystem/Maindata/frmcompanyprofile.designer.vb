@@ -37,7 +37,7 @@ Partial Class frmcompanyprofile
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dtstart = New System.Windows.Forms.DateTimePicker()
+        Me.txtdatemake = New System.Windows.Forms.DateTimePicker()
         Me.pimage = New System.Windows.Forms.PictureBox()
         Me.txtemail = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -225,7 +225,7 @@ Partial Class frmcompanyprofile
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.dtstart)
+        Me.Panel1.Controls.Add(Me.txtdatemake)
         Me.Panel1.Controls.Add(Me.pimage)
         Me.Panel1.Controls.Add(Me.txtemail)
         Me.Panel1.Controls.Add(Me.Label8)
@@ -246,13 +246,13 @@ Partial Class frmcompanyprofile
         Me.Panel1.Size = New System.Drawing.Size(835, 148)
         Me.Panel1.TabIndex = 2
         '
-        'dtstart
+        'txtdatemake
         '
-        Me.dtstart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtstart.Location = New System.Drawing.Point(440, 77)
-        Me.dtstart.Name = "dtstart"
-        Me.dtstart.Size = New System.Drawing.Size(263, 35)
-        Me.dtstart.TabIndex = 17
+        Me.txtdatemake.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.txtdatemake.Location = New System.Drawing.Point(440, 77)
+        Me.txtdatemake.Name = "txtdatemake"
+        Me.txtdatemake.Size = New System.Drawing.Size(263, 35)
+        Me.txtdatemake.TabIndex = 17
         '
         'pimage
         '
@@ -445,7 +445,7 @@ Partial Class frmcompanyprofile
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtfax As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents dtstart As System.Windows.Forms.DateTimePicker
+    Friend WithEvents txtdatemake As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnnew As System.Windows.Forms.ToolStripButton
     Friend WithEvents dgvshow As System.Windows.Forms.DataGridView
 End Class
