@@ -230,4 +230,65 @@
         closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
+
+    Private Sub ButtonItem22_Click(sender As Object, e As EventArgs) Handles ButtonItem22.Click
+        closeform.closeform()
+        closeform.f = frmReportSumCustomer
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
+
+    Private Sub ButtonItem21_Click(sender As Object, e As EventArgs) Handles ButtonItem21.Click
+        closeform.closeform()
+        closeform.f = frmReportReserved
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
+
+
+    Private Sub ButtonItem24_Click(sender As Object, e As EventArgs) Handles ButtonItem24.Click
+        closeform.closeform()
+        closeform.f = frmReportRoomStatus
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
+
+    Private Sub ButtonItem19_Click(sender As Object, e As EventArgs) Handles ButtonItem19.Click
+        closeform.closeform()
+        closeform.f = frmReportCustSort
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
+
+    Private Sub ButtonItem23_Click(sender As Object, e As EventArgs) Handles ButtonItem23.Click
+        closeform.closeform()
+        closeform.f = frmReportGroupCheckinGraph
+        closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
+        closeform.f.Show()
+    End Sub
 End Class

@@ -562,7 +562,7 @@ Partial Class frmreserve
         Me.txtcustomername.Location = New System.Drawing.Point(337, 4)
         Me.txtcustomername.Name = "txtcustomername"
         Me.txtcustomername.ReadOnly = True
-        Me.txtcustomername.Size = New System.Drawing.Size(78, 35)
+        Me.txtcustomername.Size = New System.Drawing.Size(153, 35)
         Me.txtcustomername.TabIndex = 3
         Me.txtcustomername.WatermarkText = "ກະລຸນາເລືອກລູກຄ້າ"
         '

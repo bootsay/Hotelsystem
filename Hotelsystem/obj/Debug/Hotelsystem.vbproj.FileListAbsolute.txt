@@ -106,3 +106,4 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.vb
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.exe
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.xml
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.pdb
+C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.frmReportSumCustomer.resources

@@ -151,6 +151,12 @@
     <Compile Include="frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmreport\frmReportSumCustomer.designer.vb">
+      <DependentUpon>frmReportSumCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmReportSumCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmreport\frmReportRoomStatus.designer.vb">
       <DependentUpon>frmReportRoomStatus.vb</DependentUpon>
     </Compile>
@@ -181,10 +187,10 @@
     <Compile Include="frmreport\frmReportDeparture.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmreport\frmReportCustNational.designer.vb">
+    <Compile Include="Financial\frmReportCustNational.designer.vb">
       <DependentUpon>frmReportCustNational.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmreport\frmReportCustNational.vb">
+    <Compile Include="Financial\frmReportCustNational.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmreport\frmReportCustSort.designer.vb">
@@ -394,7 +400,7 @@
     <Compile Include="Reception\frmshowroomlistitem.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportDataset.Designer.vb">
+    <Compile Include="Report\ReportDataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReportDataset.xsd</DependentUpon>
@@ -429,10 +435,10 @@
       <DependentUpon>CryReportGroupCheckinGraph.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CryReporthistorycheckinpt.vb">
+    <Compile Include="Report\CryReporthistorycheckin.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CryReporthistorycheckinpt.rpt</DependentUpon>
+      <DependentUpon>CryReporthistorycheckin.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\cryReportprovince.vb">
@@ -459,10 +465,10 @@
       <DependentUpon>CryReportRoomStatus.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Report\CryReportSumCust.vb">
+    <Compile Include="Report\CryReportSumCustomer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CryReportSumCust.rpt</DependentUpon>
+      <DependentUpon>CryReportSumCustomer.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Report\billCheckout.vb">
@@ -497,6 +503,9 @@
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmReportSumCustomer.resx">
+      <DependentUpon>frmReportSumCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmreport\frmReportRoomStatus.resx">
       <DependentUpon>frmReportRoomStatus.vb</DependentUpon>
     </EmbeddedResource>
@@ -512,7 +521,7 @@
     <EmbeddedResource Include="frmreport\frmReportDeparture.resx">
       <DependentUpon>frmReportDeparture.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmreport\frmReportCustNational.resx">
+    <EmbeddedResource Include="Financial\frmReportCustNational.resx">
       <DependentUpon>frmReportCustNational.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmreport\frmReportCustSort.resx">
@@ -637,9 +646,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportGroupCheckinGraph.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CryReporthistorycheckinpt.rpt">
+    <EmbeddedResource Include="Report\CryReporthistorycheckin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CryReporthistorycheckinpt.vb</LastGenOutput>
+      <LastGenOutput>CryReporthistorycheckin.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\cryReportprovince.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -657,9 +666,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CryReportRoomStatus.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\CryReportSumCust.rpt">
+    <EmbeddedResource Include="Report\CryReportSumCustomer.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CryReportSumCust.vb</LastGenOutput>
+      <LastGenOutput>CryReportSumCustomer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\billCheckout.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -689,15 +698,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ReportDataset.xsc">
+    <None Include="Report\ReportDataset.xsc">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </None>
-    <None Include="ReportDataset.xsd">
+    <None Include="Report\ReportDataset.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ReportDataset.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ReportDataset.xss">
+    <None Include="Report\ReportDataset.xss">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </None>
     <None Include="Resources\hotel.png" />
@@ -912,9 +921,7 @@
   <ItemGroup>
     <None Include="Resources\door.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Financial\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\hotel empty.png" />
   </ItemGroup>

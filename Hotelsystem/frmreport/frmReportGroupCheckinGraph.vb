@@ -34,8 +34,8 @@ Public Class frmReportGroupCheckinGraph
             End With
             cry.SetDatabaseLogon(cn.user, cn.password)
             cry.SetDataSource(dt)
-            cry.SetParameterValue("dt1", date1.Text)
-            cry.SetParameterValue("dt2", date2.Text)
+            cry.SetParameterValue("StartDate", date1.Text)
+            cry.SetParameterValue("EndDate", date2.Text)
             CrystalReportViewer1.ReportSource = cry
         Catch ex As Exception
             MessageBox.Show(ex.Message)

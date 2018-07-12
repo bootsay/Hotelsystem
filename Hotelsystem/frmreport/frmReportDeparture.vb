@@ -32,7 +32,7 @@ Public Class frmReportDeparture
             Else
                 Dim rows As DataRowView = cbmarkettry.SelectedItem
                 Dim row As DataRow = rows.Row
-                subname = row(3).ToString
+                'subname = row(3).ToString
             End If
             dt.Clear()
             cn.connect()
