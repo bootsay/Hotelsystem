@@ -23,7 +23,7 @@ Partial Class frmuser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -118,6 +118,8 @@ Partial Class frmuser
         Me.frmsumarysale = New System.Windows.Forms.CheckBox()
         Me.frmsalelistapprove = New System.Windows.Forms.CheckBox()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
+        Me.chkActivate = New System.Windows.Forms.CheckBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -217,7 +219,7 @@ Partial Class frmuser
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(5, 1, 0, 2)
         Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(88, 36)
+        Me.btnsave.Size = New System.Drawing.Size(86, 36)
         Me.btnsave.Text = "ບັນທືກ"
         '
         'ToolStripSeparator1
@@ -232,7 +234,7 @@ Partial Class frmuser
         Me.btndelete.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(68, 36)
+        Me.btndelete.Size = New System.Drawing.Size(66, 36)
         Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator2
@@ -247,7 +249,7 @@ Partial Class frmuser
         Me.btnedit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(84, 36)
+        Me.btnedit.Size = New System.Drawing.Size(82, 36)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
         'ToolStripSeparator3
@@ -261,7 +263,7 @@ Partial Class frmuser
         Me.btnupdate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(86, 36)
+        Me.btnupdate.Size = New System.Drawing.Size(84, 36)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripSeparator4
@@ -276,7 +278,7 @@ Partial Class frmuser
         Me.btnnew.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(100, 36)
+        Me.btnnew.Size = New System.Drawing.Size(98, 36)
         Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'btnclose
@@ -290,6 +292,8 @@ Partial Class frmuser
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label16)
+        Me.Panel1.Controls.Add(Me.chkActivate)
         Me.Panel1.Controls.Add(Me.cbposition)
         Me.Panel1.Controls.Add(Me.cbdepartment)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -342,7 +346,7 @@ Partial Class frmuser
         Me.Label7.Location = New System.Drawing.Point(12, 123)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(112, 29)
+        Me.Label7.Size = New System.Drawing.Size(109, 24)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "ສິດທິການນຳໃຊ້:"
         '
@@ -352,7 +356,7 @@ Partial Class frmuser
         Me.Label6.Location = New System.Drawing.Point(625, 84)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(58, 29)
+        Me.Label6.Size = New System.Drawing.Size(55, 24)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "ລະຫັດ:"
         '
@@ -362,20 +366,18 @@ Partial Class frmuser
         Me.Label5.Location = New System.Drawing.Point(625, 47)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 29)
+        Me.Label5.Size = New System.Drawing.Size(65, 24)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "ຕໍາແໜ່ງ:"
         '
         'cblevel
         '
-        Me.cblevel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cblevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cblevel.FormattingEnabled = True
         Me.cblevel.Location = New System.Drawing.Point(159, 118)
         Me.cblevel.Margin = New System.Windows.Forms.Padding(4)
         Me.cblevel.Name = "cblevel"
-        Me.cblevel.Size = New System.Drawing.Size(1139, 37)
+        Me.cblevel.Size = New System.Drawing.Size(453, 32)
         Me.cblevel.TabIndex = 10
         '
         'txtpassword
@@ -420,7 +422,7 @@ Partial Class frmuser
         Me.Label4.Location = New System.Drawing.Point(625, 13)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 29)
+        Me.Label4.Size = New System.Drawing.Size(63, 24)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "ພະແນກ:"
         '
@@ -430,7 +432,7 @@ Partial Class frmuser
         Me.Label3.Location = New System.Drawing.Point(12, 76)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(119, 29)
+        Me.Label3.Size = New System.Drawing.Size(116, 24)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "ຊື່ຜູ້ໃຊ້ພາສາລາວ:"
         '
@@ -440,7 +442,7 @@ Partial Class frmuser
         Me.Label2.Location = New System.Drawing.Point(12, 43)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 29)
+        Me.Label2.Size = New System.Drawing.Size(105, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ຊື່ເຂົ້າໃຊ້ລະບົບ:"
         '
@@ -450,7 +452,7 @@ Partial Class frmuser
         Me.Label1.Location = New System.Drawing.Point(12, 9)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 29)
+        Me.Label1.Size = New System.Drawing.Size(55, 24)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -498,16 +500,16 @@ Partial Class frmuser
         Me.dgvuser.AllowUserToResizeRows = False
         Me.dgvuser.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvuser.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvuser.Location = New System.Drawing.Point(1, 1)
         Me.dgvuser.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvuser.Name = "dgvuser"
@@ -616,7 +618,7 @@ Partial Class frmuser
         Me.frmreportdaily.Location = New System.Drawing.Point(8, 56)
         Me.frmreportdaily.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportdaily.Name = "frmreportdaily"
-        Me.frmreportdaily.Size = New System.Drawing.Size(77, 26)
+        Me.frmreportdaily.Size = New System.Drawing.Size(76, 23)
         Me.frmreportdaily.TabIndex = 36
         Me.frmreportdaily.Text = "ລາຍງານ"
         Me.frmreportdaily.UseVisualStyleBackColor = False
@@ -630,7 +632,7 @@ Partial Class frmuser
         Me.frmincome_outcome.Location = New System.Drawing.Point(8, 19)
         Me.frmincome_outcome.Margin = New System.Windows.Forms.Padding(4)
         Me.frmincome_outcome.Name = "frmincome_outcome"
-        Me.frmincome_outcome.Size = New System.Drawing.Size(116, 26)
+        Me.frmincome_outcome.Size = New System.Drawing.Size(115, 23)
         Me.frmincome_outcome.TabIndex = 27
         Me.frmincome_outcome.Text = "ບັນທືກປະຈໍາວັນ"
         Me.frmincome_outcome.UseVisualStyleBackColor = False
@@ -700,7 +702,7 @@ Partial Class frmuser
         Me.Label15.Location = New System.Drawing.Point(4, 306)
         Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(89, 24)
+        Me.Label15.Size = New System.Drawing.Size(89, 21)
         Me.Label15.TabIndex = 38
         Me.Label15.Text = "+ ຂາຍສີນຄ້າ"
         Me.Label15.Visible = False
@@ -714,7 +716,7 @@ Partial Class frmuser
         Me.btncancel5.Location = New System.Drawing.Point(141, 333)
         Me.btncancel5.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel5.Name = "btncancel5"
-        Me.btncancel5.Size = New System.Drawing.Size(70, 26)
+        Me.btncancel5.Size = New System.Drawing.Size(69, 23)
         Me.btncancel5.TabIndex = 36
         Me.btncancel5.Text = "ຍົກເລີກ"
         Me.btncancel5.UseVisualStyleBackColor = False
@@ -729,7 +731,7 @@ Partial Class frmuser
         Me.btnapprove5.Location = New System.Drawing.Point(9, 333)
         Me.btnapprove5.Margin = New System.Windows.Forms.Padding(4)
         Me.btnapprove5.Name = "btnapprove5"
-        Me.btnapprove5.Size = New System.Drawing.Size(97, 26)
+        Me.btnapprove5.Size = New System.Drawing.Size(96, 23)
         Me.btnapprove5.TabIndex = 37
         Me.btnapprove5.Text = "ອະນຸມັດຂາຍ"
         Me.btnapprove5.UseVisualStyleBackColor = False
@@ -744,7 +746,7 @@ Partial Class frmuser
         Me.Label14.Location = New System.Drawing.Point(4, 248)
         Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(132, 24)
+        Me.Label14.Size = New System.Drawing.Size(132, 21)
         Me.Label14.TabIndex = 35
         Me.Label14.Text = "+ ໃບຊ້ອມແປງສີນຄ້າ"
         '
@@ -757,7 +759,7 @@ Partial Class frmuser
         Me.btncancel4.Location = New System.Drawing.Point(9, 275)
         Me.btncancel4.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel4.Name = "btncancel4"
-        Me.btncancel4.Size = New System.Drawing.Size(70, 26)
+        Me.btncancel4.Size = New System.Drawing.Size(69, 23)
         Me.btncancel4.TabIndex = 33
         Me.btncancel4.Text = "ຍົກເລີກ"
         Me.btncancel4.UseVisualStyleBackColor = False
@@ -771,7 +773,7 @@ Partial Class frmuser
         Me.Label13.Location = New System.Drawing.Point(4, 189)
         Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(87, 24)
+        Me.Label13.Size = New System.Drawing.Size(87, 21)
         Me.Label13.TabIndex = 32
         Me.Label13.Text = "+ ເບີກສີນຄ້າ"
         '
@@ -784,7 +786,7 @@ Partial Class frmuser
         Me.Label12.Location = New System.Drawing.Point(4, 73)
         Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(90, 24)
+        Me.Label12.Size = New System.Drawing.Size(90, 21)
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "+ ສັ່ງຊື້ສິນຄ້າ"
         '
@@ -797,7 +799,7 @@ Partial Class frmuser
         Me.Label11.Location = New System.Drawing.Point(4, 131)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(130, 24)
+        Me.Label11.Size = New System.Drawing.Size(130, 21)
         Me.Label11.TabIndex = 30
         Me.Label11.Text = "+ ຮັບສີນຄ້າເຂົ້າສາງ"
         '
@@ -810,7 +812,7 @@ Partial Class frmuser
         Me.Label10.Location = New System.Drawing.Point(4, 15)
         Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(134, 24)
+        Me.Label10.Size = New System.Drawing.Size(134, 21)
         Me.Label10.TabIndex = 29
         Me.Label10.Text = "+ ຈັດການຂໍ້ມູນສີນຄ້າ"
         '
@@ -823,7 +825,7 @@ Partial Class frmuser
         Me.btncancel3.Location = New System.Drawing.Point(141, 217)
         Me.btncancel3.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel3.Name = "btncancel3"
-        Me.btncancel3.Size = New System.Drawing.Size(70, 26)
+        Me.btncancel3.Size = New System.Drawing.Size(69, 23)
         Me.btncancel3.TabIndex = 25
         Me.btncancel3.Text = "ຍົກເລີກ"
         Me.btncancel3.UseVisualStyleBackColor = False
@@ -837,7 +839,7 @@ Partial Class frmuser
         Me.btncancel2.Location = New System.Drawing.Point(9, 101)
         Me.btncancel2.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel2.Name = "btncancel2"
-        Me.btncancel2.Size = New System.Drawing.Size(70, 26)
+        Me.btncancel2.Size = New System.Drawing.Size(69, 23)
         Me.btncancel2.TabIndex = 26
         Me.btncancel2.Text = "ຍົກເລີກ"
         Me.btncancel2.UseVisualStyleBackColor = False
@@ -851,7 +853,7 @@ Partial Class frmuser
         Me.btncancel1.Location = New System.Drawing.Point(141, 160)
         Me.btncancel1.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel1.Name = "btncancel1"
-        Me.btncancel1.Size = New System.Drawing.Size(70, 26)
+        Me.btncancel1.Size = New System.Drawing.Size(69, 23)
         Me.btncancel1.TabIndex = 21
         Me.btncancel1.Text = "ຍົກເລີກ"
         Me.btncancel1.UseVisualStyleBackColor = False
@@ -865,7 +867,7 @@ Partial Class frmuser
         Me.btnupdate4.Location = New System.Drawing.Point(9, 43)
         Me.btnupdate4.Margin = New System.Windows.Forms.Padding(4)
         Me.btnupdate4.Name = "btnupdate4"
-        Me.btnupdate4.Size = New System.Drawing.Size(63, 26)
+        Me.btnupdate4.Size = New System.Drawing.Size(62, 23)
         Me.btnupdate4.TabIndex = 20
         Me.btnupdate4.Text = "ປັບປຸງ"
         Me.btnupdate4.UseVisualStyleBackColor = False
@@ -879,7 +881,7 @@ Partial Class frmuser
         Me.btnreceive1.Location = New System.Drawing.Point(9, 159)
         Me.btnreceive1.Margin = New System.Windows.Forms.Padding(4)
         Me.btnreceive1.Name = "btnreceive1"
-        Me.btnreceive1.Size = New System.Drawing.Size(81, 26)
+        Me.btnreceive1.Size = New System.Drawing.Size(80, 23)
         Me.btnreceive1.TabIndex = 24
         Me.btnreceive1.Text = "ຮັບສີນຄ້າ"
         Me.btnreceive1.UseVisualStyleBackColor = False
@@ -893,7 +895,7 @@ Partial Class frmuser
         Me.btndelete4.Location = New System.Drawing.Point(141, 43)
         Me.btndelete4.Margin = New System.Windows.Forms.Padding(4)
         Me.btndelete4.Name = "btndelete4"
-        Me.btndelete4.Size = New System.Drawing.Size(47, 26)
+        Me.btndelete4.Size = New System.Drawing.Size(46, 23)
         Me.btndelete4.TabIndex = 20
         Me.btndelete4.Text = "ລືບ"
         Me.btndelete4.UseVisualStyleBackColor = False
@@ -907,7 +909,7 @@ Partial Class frmuser
         Me.btnapprove3.Location = New System.Drawing.Point(9, 217)
         Me.btnapprove3.Margin = New System.Windows.Forms.Padding(4)
         Me.btnapprove3.Name = "btnapprove3"
-        Me.btnapprove3.Size = New System.Drawing.Size(97, 26)
+        Me.btnapprove3.Size = New System.Drawing.Size(96, 23)
         Me.btnapprove3.TabIndex = 28
         Me.btnapprove3.Text = "ອະນຸມັດຂາຍ"
         Me.btnapprove3.UseVisualStyleBackColor = False
@@ -966,7 +968,7 @@ Partial Class frmuser
         Me.frmreportcustomer.Location = New System.Drawing.Point(6, 159)
         Me.frmreportcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportcustomer.Name = "frmreportcustomer"
-        Me.frmreportcustomer.Size = New System.Drawing.Size(117, 28)
+        Me.frmreportcustomer.Size = New System.Drawing.Size(117, 25)
         Me.frmreportcustomer.TabIndex = 31
         Me.frmreportcustomer.Text = "ລາຍງານລູກຄ້າ"
         Me.frmreportcustomer.UseVisualStyleBackColor = False
@@ -980,7 +982,7 @@ Partial Class frmuser
         Me.frmcustomerdebit.Location = New System.Drawing.Point(6, 88)
         Me.frmcustomerdebit.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcustomerdebit.Name = "frmcustomerdebit"
-        Me.frmcustomerdebit.Size = New System.Drawing.Size(124, 28)
+        Me.frmcustomerdebit.Size = New System.Drawing.Size(124, 25)
         Me.frmcustomerdebit.TabIndex = 25
         Me.frmcustomerdebit.Text = "ຂໍ້ມູນລູກຄ້າຕິດໜີ້"
         Me.frmcustomerdebit.UseVisualStyleBackColor = False
@@ -995,7 +997,7 @@ Partial Class frmuser
         Me.frmcustomer.Location = New System.Drawing.Point(6, 53)
         Me.frmcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcustomer.Name = "frmcustomer"
-        Me.frmcustomer.Size = New System.Drawing.Size(163, 28)
+        Me.frmcustomer.Size = New System.Drawing.Size(163, 25)
         Me.frmcustomer.TabIndex = 24
         Me.frmcustomer.Text = "ເພີ້ມຂໍ້ມູນລູກຄ້າ/ຮ້ານຄ້າ"
         Me.frmcustomer.UseVisualStyleBackColor = False
@@ -1009,7 +1011,7 @@ Partial Class frmuser
         Me.frmdebitcustomer.Location = New System.Drawing.Point(6, 124)
         Me.frmdebitcustomer.Margin = New System.Windows.Forms.Padding(4)
         Me.frmdebitcustomer.Name = "frmdebitcustomer"
-        Me.frmdebitcustomer.Size = New System.Drawing.Size(124, 28)
+        Me.frmdebitcustomer.Size = New System.Drawing.Size(124, 25)
         Me.frmdebitcustomer.TabIndex = 30
         Me.frmdebitcustomer.Text = "ຂໍ້ມູນຕິດໜີ້ລູກຄ້າ"
         Me.frmdebitcustomer.UseVisualStyleBackColor = False
@@ -1024,7 +1026,7 @@ Partial Class frmuser
         Me.frmaddress.Location = New System.Drawing.Point(6, 18)
         Me.frmaddress.Margin = New System.Windows.Forms.Padding(4)
         Me.frmaddress.Name = "frmaddress"
-        Me.frmaddress.Size = New System.Drawing.Size(74, 28)
+        Me.frmaddress.Size = New System.Drawing.Size(74, 25)
         Me.frmaddress.TabIndex = 20
         Me.frmaddress.Text = "ຂໍ້ມູນທີຢູ່"
         Me.frmaddress.UseVisualStyleBackColor = False
@@ -1097,7 +1099,7 @@ Partial Class frmuser
         Me.cbadmin.Location = New System.Drawing.Point(356, 8)
         Me.cbadmin.Margin = New System.Windows.Forms.Padding(4)
         Me.cbadmin.Name = "cbadmin"
-        Me.cbadmin.Size = New System.Drawing.Size(177, 28)
+        Me.cbadmin.Size = New System.Drawing.Size(177, 25)
         Me.cbadmin.TabIndex = 21
         Me.cbadmin.Text = "ສິດທິຂອງຜູ້ບໍລິຫານລະບົບ"
         Me.cbadmin.UseVisualStyleBackColor = False
@@ -1111,7 +1113,7 @@ Partial Class frmuser
         Me.cbuser.Location = New System.Drawing.Point(116, 8)
         Me.cbuser.Margin = New System.Windows.Forms.Padding(4)
         Me.cbuser.Name = "cbuser"
-        Me.cbuser.Size = New System.Drawing.Size(112, 28)
+        Me.cbuser.Size = New System.Drawing.Size(112, 25)
         Me.cbuser.TabIndex = 20
         Me.cbuser.Text = "ສິດທິຂອງຜູ້ໃຊ້"
         Me.cbuser.UseVisualStyleBackColor = False
@@ -1141,7 +1143,7 @@ Partial Class frmuser
         Me.Label9.Location = New System.Drawing.Point(303, 44)
         Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(54, 27)
+        Me.Label9.Size = New System.Drawing.Size(52, 24)
         Me.Label9.TabIndex = 19
         Me.Label9.Text = "ຊື່ຜູ້ໃຊ້:"
         '
@@ -1152,7 +1154,7 @@ Partial Class frmuser
         Me.Label8.Location = New System.Drawing.Point(32, 45)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 27)
+        Me.Label8.Size = New System.Drawing.Size(81, 24)
         Me.Label8.TabIndex = 18
         Me.Label8.Text = "ລະຫັດຜູ້ໃຊ້:"
         '
@@ -1213,7 +1215,7 @@ Partial Class frmuser
         Me.frmother.Location = New System.Drawing.Point(9, 269)
         Me.frmother.Margin = New System.Windows.Forms.Padding(4)
         Me.frmother.Name = "frmother"
-        Me.frmother.Size = New System.Drawing.Size(82, 26)
+        Me.frmother.Size = New System.Drawing.Size(81, 23)
         Me.frmother.TabIndex = 29
         Me.frmother.Text = "ຂໍ້ມູນອື່ນໆ"
         Me.frmother.UseVisualStyleBackColor = False
@@ -1227,7 +1229,7 @@ Partial Class frmuser
         Me.frmconfig.Location = New System.Drawing.Point(9, 232)
         Me.frmconfig.Margin = New System.Windows.Forms.Padding(4)
         Me.frmconfig.Name = "frmconfig"
-        Me.frmconfig.Size = New System.Drawing.Size(96, 26)
+        Me.frmconfig.Size = New System.Drawing.Size(95, 23)
         Me.frmconfig.TabIndex = 28
         Me.frmconfig.Text = "ຕັ້ງຄ່າລະບົບ"
         Me.frmconfig.UseVisualStyleBackColor = False
@@ -1241,7 +1243,7 @@ Partial Class frmuser
         Me.frmbackup.Location = New System.Drawing.Point(9, 196)
         Me.frmbackup.Margin = New System.Windows.Forms.Padding(4)
         Me.frmbackup.Name = "frmbackup"
-        Me.frmbackup.Size = New System.Drawing.Size(100, 26)
+        Me.frmbackup.Size = New System.Drawing.Size(99, 23)
         Me.frmbackup.TabIndex = 25
         Me.frmbackup.Text = "ແບັກອັບຂໍ້ມູນ"
         Me.frmbackup.UseVisualStyleBackColor = False
@@ -1255,7 +1257,7 @@ Partial Class frmuser
         Me.frmbusiness.Location = New System.Drawing.Point(9, 160)
         Me.frmbusiness.Margin = New System.Windows.Forms.Padding(4)
         Me.frmbusiness.Name = "frmbusiness"
-        Me.frmbusiness.Size = New System.Drawing.Size(91, 26)
+        Me.frmbusiness.Size = New System.Drawing.Size(90, 23)
         Me.frmbusiness.TabIndex = 26
         Me.frmbusiness.Text = "ຂໍ້ມູນບໍລິສັດ"
         Me.frmbusiness.UseVisualStyleBackColor = False
@@ -1269,7 +1271,7 @@ Partial Class frmuser
         Me.frmsalename.Location = New System.Drawing.Point(9, 124)
         Me.frmsalename.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsalename.Name = "frmsalename"
-        Me.frmsalename.Size = New System.Drawing.Size(113, 26)
+        Me.frmsalename.Size = New System.Drawing.Size(112, 23)
         Me.frmsalename.TabIndex = 21
         Me.frmsalename.Text = "ພະນັກງານຂາຍ"
         Me.frmsalename.UseVisualStyleBackColor = False
@@ -1283,7 +1285,7 @@ Partial Class frmuser
         Me.frmmainproduct.Location = New System.Drawing.Point(9, 18)
         Me.frmmainproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmmainproduct.Name = "frmmainproduct"
-        Me.frmmainproduct.Size = New System.Drawing.Size(132, 26)
+        Me.frmmainproduct.Size = New System.Drawing.Size(131, 23)
         Me.frmmainproduct.TabIndex = 20
         Me.frmmainproduct.Text = "ຂໍ້ມູນພື້ນຖານສີນຄ້າ"
         Me.frmmainproduct.UseVisualStyleBackColor = False
@@ -1297,7 +1299,7 @@ Partial Class frmuser
         Me.frmexchange.Location = New System.Drawing.Point(9, 88)
         Me.frmexchange.Margin = New System.Windows.Forms.Padding(4)
         Me.frmexchange.Name = "frmexchange"
-        Me.frmexchange.Size = New System.Drawing.Size(114, 26)
+        Me.frmexchange.Size = New System.Drawing.Size(113, 23)
         Me.frmexchange.TabIndex = 24
         Me.frmexchange.Text = "ອັດຕາແລກປ່ຽນ"
         Me.frmexchange.UseVisualStyleBackColor = False
@@ -1311,7 +1313,7 @@ Partial Class frmuser
         Me.frmuser1.Location = New System.Drawing.Point(9, 53)
         Me.frmuser1.Margin = New System.Windows.Forms.Padding(4)
         Me.frmuser1.Name = "frmuser1"
-        Me.frmuser1.Size = New System.Drawing.Size(101, 26)
+        Me.frmuser1.Size = New System.Drawing.Size(100, 23)
         Me.frmuser1.TabIndex = 20
         Me.frmuser1.Text = "ເພີ້ມຜູ້ໃຊ້ງານ"
         Me.frmuser1.UseVisualStyleBackColor = False
@@ -1372,7 +1374,7 @@ Partial Class frmuser
         Me.frmcheckstock.Location = New System.Drawing.Point(10, 52)
         Me.frmcheckstock.Margin = New System.Windows.Forms.Padding(4)
         Me.frmcheckstock.Name = "frmcheckstock"
-        Me.frmcheckstock.Size = New System.Drawing.Size(117, 26)
+        Me.frmcheckstock.Size = New System.Drawing.Size(116, 23)
         Me.frmcheckstock.TabIndex = 35
         Me.frmcheckstock.Text = "ກວດສອບສິນຄ້າ"
         Me.frmcheckstock.UseVisualStyleBackColor = False
@@ -1386,7 +1388,7 @@ Partial Class frmuser
         Me.frmstockreport.Location = New System.Drawing.Point(10, 222)
         Me.frmstockreport.Margin = New System.Windows.Forms.Padding(4)
         Me.frmstockreport.Name = "frmstockreport"
-        Me.frmstockreport.Size = New System.Drawing.Size(100, 26)
+        Me.frmstockreport.Size = New System.Drawing.Size(99, 23)
         Me.frmstockreport.TabIndex = 34
         Me.frmstockreport.Text = "ລາຍງານສາງ"
         Me.frmstockreport.UseVisualStyleBackColor = False
@@ -1400,7 +1402,7 @@ Partial Class frmuser
         Me.frmreceiveproduct.Location = New System.Drawing.Point(10, 120)
         Me.frmreceiveproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreceiveproduct.Name = "frmreceiveproduct"
-        Me.frmreceiveproduct.Size = New System.Drawing.Size(125, 26)
+        Me.frmreceiveproduct.Size = New System.Drawing.Size(124, 23)
         Me.frmreceiveproduct.TabIndex = 30
         Me.frmreceiveproduct.Text = "ຮັບສີນຄ້າເຂົ້າສາງ"
         Me.frmreceiveproduct.UseVisualStyleBackColor = False
@@ -1414,7 +1416,7 @@ Partial Class frmuser
         Me.frmorder.Location = New System.Drawing.Point(10, 86)
         Me.frmorder.Margin = New System.Windows.Forms.Padding(4)
         Me.frmorder.Name = "frmorder"
-        Me.frmorder.Size = New System.Drawing.Size(88, 26)
+        Me.frmorder.Size = New System.Drawing.Size(87, 23)
         Me.frmorder.TabIndex = 24
         Me.frmorder.Text = "ສັ່ງຊື້ສີນຄ້າ"
         Me.frmorder.UseVisualStyleBackColor = False
@@ -1428,7 +1430,7 @@ Partial Class frmuser
         Me.frmproduct12.Location = New System.Drawing.Point(10, 18)
         Me.frmproduct12.Margin = New System.Windows.Forms.Padding(4)
         Me.frmproduct12.Name = "frmproduct12"
-        Me.frmproduct12.Size = New System.Drawing.Size(89, 26)
+        Me.frmproduct12.Size = New System.Drawing.Size(88, 23)
         Me.frmproduct12.TabIndex = 20
         Me.frmproduct12.Text = "ຂໍ້ມູນສີນຄ້າ"
         Me.frmproduct12.UseVisualStyleBackColor = False
@@ -1442,7 +1444,7 @@ Partial Class frmuser
         Me.frmstockin_out.Location = New System.Drawing.Point(10, 188)
         Me.frmstockin_out.Margin = New System.Windows.Forms.Padding(4)
         Me.frmstockin_out.Name = "frmstockin_out"
-        Me.frmstockin_out.Size = New System.Drawing.Size(86, 26)
+        Me.frmstockin_out.Size = New System.Drawing.Size(85, 23)
         Me.frmstockin_out.TabIndex = 32
         Me.frmstockin_out.Text = "ເບີກສີນຄ້າ"
         Me.frmstockin_out.UseVisualStyleBackColor = False
@@ -1456,7 +1458,7 @@ Partial Class frmuser
         Me.frmreturnproduct.Location = New System.Drawing.Point(10, 154)
         Me.frmreturnproduct.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreturnproduct.Name = "frmreturnproduct"
-        Me.frmreturnproduct.Size = New System.Drawing.Size(97, 26)
+        Me.frmreturnproduct.Size = New System.Drawing.Size(96, 23)
         Me.frmreturnproduct.TabIndex = 31
         Me.frmreturnproduct.Text = "ສົ່ງຄືນສີນຄ້າ"
         Me.frmreturnproduct.UseVisualStyleBackColor = False
@@ -1515,7 +1517,7 @@ Partial Class frmuser
         Me.frmproductinfo.Location = New System.Drawing.Point(8, 53)
         Me.frmproductinfo.Margin = New System.Windows.Forms.Padding(4)
         Me.frmproductinfo.Name = "frmproductinfo"
-        Me.frmproductinfo.Size = New System.Drawing.Size(89, 26)
+        Me.frmproductinfo.Size = New System.Drawing.Size(88, 23)
         Me.frmproductinfo.TabIndex = 36
         Me.frmproductinfo.Text = "ຂໍ້ມູນສີນຄ້າ"
         Me.frmproductinfo.UseVisualStyleBackColor = False
@@ -1529,7 +1531,7 @@ Partial Class frmuser
         Me.frmsale11.Location = New System.Drawing.Point(8, 18)
         Me.frmsale11.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsale11.Name = "frmsale11"
-        Me.frmsale11.Size = New System.Drawing.Size(88, 26)
+        Me.frmsale11.Size = New System.Drawing.Size(87, 23)
         Me.frmsale11.TabIndex = 33
         Me.frmsale11.Text = "ຂາຍສີນຄ້າ"
         Me.frmsale11.UseVisualStyleBackColor = False
@@ -1543,7 +1545,7 @@ Partial Class frmuser
         Me.frmreportsale.Location = New System.Drawing.Point(8, 159)
         Me.frmreportsale.Margin = New System.Windows.Forms.Padding(4)
         Me.frmreportsale.Name = "frmreportsale"
-        Me.frmreportsale.Size = New System.Drawing.Size(127, 26)
+        Me.frmreportsale.Size = New System.Drawing.Size(126, 23)
         Me.frmreportsale.TabIndex = 27
         Me.frmreportsale.Text = "ລາຍງານການຂາຍ"
         Me.frmreportsale.UseVisualStyleBackColor = False
@@ -1557,7 +1559,7 @@ Partial Class frmuser
         Me.frmsumarysale.Location = New System.Drawing.Point(8, 124)
         Me.frmsumarysale.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsumarysale.Name = "frmsumarysale"
-        Me.frmsumarysale.Size = New System.Drawing.Size(121, 26)
+        Me.frmsumarysale.Size = New System.Drawing.Size(120, 23)
         Me.frmsumarysale.TabIndex = 24
         Me.frmsumarysale.Text = "ສັງລວມການຂາຍ"
         Me.frmsumarysale.UseVisualStyleBackColor = False
@@ -1571,7 +1573,7 @@ Partial Class frmuser
         Me.frmsalelistapprove.Location = New System.Drawing.Point(8, 88)
         Me.frmsalelistapprove.Margin = New System.Windows.Forms.Padding(4)
         Me.frmsalelistapprove.Name = "frmsalelistapprove"
-        Me.frmsalelistapprove.Size = New System.Drawing.Size(104, 26)
+        Me.frmsalelistapprove.Size = New System.Drawing.Size(103, 23)
         Me.frmsalelistapprove.TabIndex = 20
         Me.frmsalelistapprove.Text = "ລາຍກາຍຂາຍ"
         Me.frmsalelistapprove.UseVisualStyleBackColor = False
@@ -1582,9 +1584,29 @@ Partial Class frmuser
         Me.TabItem3.Name = "TabItem3"
         Me.TabItem3.Text = "ກໍານົດສີດທິ"
         '
+        'chkActivate
+        '
+        Me.chkActivate.AutoSize = True
+        Me.chkActivate.Location = New System.Drawing.Point(716, 124)
+        Me.chkActivate.Name = "chkActivate"
+        Me.chkActivate.Size = New System.Drawing.Size(73, 28)
+        Me.chkActivate.TabIndex = 26
+        Me.chkActivate.Text = "ໃຊ້ງານ"
+        Me.chkActivate.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(628, 119)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(70, 24)
+        Me.Label16.TabIndex = 27
+        Me.Label16.Text = "ສະຖານະ:"
+        '
         'frmuser
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 27.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1314, 733)
         Me.ControlBox = False
@@ -1720,4 +1742,6 @@ Partial Class frmuser
     Friend WithEvents frmincome_outcome As System.Windows.Forms.CheckBox
     Friend WithEvents cbposition As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents cbdepartment As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents chkActivate As System.Windows.Forms.CheckBox
 End Class

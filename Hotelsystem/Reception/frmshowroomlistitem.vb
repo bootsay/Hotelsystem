@@ -2,6 +2,7 @@
     Dim room As New tbfroom
     Dim roomrtype As New tbfroomtype
     Dim level As New tbfroomlocation
+    Public getformname As String
     Private Sub frmshowroomitemlist_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             room.loadtbfroomshowlist(dgvroom)
@@ -23,6 +24,7 @@
     End Sub
     Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
         Try
+           
             If rname.Checked = True Then
                 cbtype.Text = "%"
                 room.loadtbfroomNamelist(dgvroom, txtsearch.Text)
@@ -66,13 +68,23 @@
 
     Private Sub dgvroom_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvroom.CellMouseUp
         Try
-            With dgvroom
-                If frmitemlist.frmitemlist = True Then
-                    frmitemlist.txtroomid.Text = .CurrentRow.Cells(0).Value
-                    frmitemlist.txtroomno.Text = .CurrentRow.Cells(3).Value
+            If getformname = "CHIN" Then
+                Dim frmin As frmcheckin = DirectCast(Application.OpenForms("frmcheckin"), frmcheckin)
+                With dgvroom
+                    frmin.room_id = .CurrentRow.Cells(0).Value
+                    frmin.txtroomno.Text = .CurrentRow.Cells(3).Value
                     Me.Close()
-                End If
-            End With
+                End With
+            Else
+                With dgvroom
+                    If frmitemlist.frmitemlist = True Then
+                        frmitemlist.txtroomid.Text = .CurrentRow.Cells(0).Value
+                        frmitemlist.txtroomno.Text = .CurrentRow.Cells(3).Value
+                        Me.Close()
+                    End If
+                End With
+            End If
+         
         Catch ex As Exception
 
         End Try

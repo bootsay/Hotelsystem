@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class frmcustomer
-    Inherits System.Windows.Forms.Form
+    Inherits DevComponents.DotNetBar.Office2007Form
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,10 +22,10 @@ Partial Class frmcustomer
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btnsave = New System.Windows.Forms.ToolStripButton()
@@ -138,7 +138,7 @@ Partial Class frmcustomer
         Me.btnsave.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnsave.Margin = New System.Windows.Forms.Padding(10, 0, 10, 0)
         Me.btnsave.Name = "btnsave"
-        Me.btnsave.Size = New System.Drawing.Size(90, 55)
+        Me.btnsave.Size = New System.Drawing.Size(87, 55)
         Me.btnsave.Text = "ບັນທືກ"
         '
         'ToolStripSeparator5
@@ -153,7 +153,7 @@ Partial Class frmcustomer
         Me.btndelete.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btndelete.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.btndelete.Name = "btndelete"
-        Me.btndelete.Size = New System.Drawing.Size(69, 52)
+        Me.btndelete.Size = New System.Drawing.Size(66, 52)
         Me.btndelete.Text = "ລືບ"
         '
         'ToolStripSeparator4
@@ -168,7 +168,7 @@ Partial Class frmcustomer
         Me.btnupdate.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnupdate.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.btnupdate.Name = "btnupdate"
-        Me.btnupdate.Size = New System.Drawing.Size(87, 52)
+        Me.btnupdate.Size = New System.Drawing.Size(84, 52)
         Me.btnupdate.Text = "ປັບປຸງ"
         '
         'ToolStripSeparator2
@@ -183,7 +183,7 @@ Partial Class frmcustomer
         Me.btnedit.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnedit.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.btnedit.Name = "btnedit"
-        Me.btnedit.Size = New System.Drawing.Size(87, 52)
+        Me.btnedit.Size = New System.Drawing.Size(84, 52)
         Me.btnedit.Text = "ແກ້ໄຂ"
         '
         'ToolStripSeparator3
@@ -198,7 +198,7 @@ Partial Class frmcustomer
         Me.btnnew.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.btnnew.Margin = New System.Windows.Forms.Padding(10, 1, 10, 2)
         Me.btnnew.Name = "btnnew"
-        Me.btnnew.Size = New System.Drawing.Size(105, 52)
+        Me.btnnew.Size = New System.Drawing.Size(102, 52)
         Me.btnnew.Text = "ເພີ່ມໃຫ່ມ"
         '
         'btnclose
@@ -220,7 +220,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(120, 52)
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(118, 52)
         Me.ToolStripLabel1.Text = "ເພີ່ມປະເພດລູກຄ້າ"
         '
         'ToolStripSeparator6
@@ -233,7 +233,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(101, 52)
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(99, 52)
         Me.ToolStripLabel2.Text = "ເພີ່ມລາຄາຫ້ອງ"
         '
         'ToolStripSeparator7
@@ -246,7 +246,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel3.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(94, 52)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(92, 52)
         Me.ToolStripLabel3.Text = "ເພີ່ມຄຳນຳໜ້າ"
         '
         'ToolStripSeparator9
@@ -259,7 +259,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel4.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel4.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(82, 52)
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(80, 52)
         Me.ToolStripLabel4.Text = "ເພີ່ມປະເທດ"
         '
         'ToolStripSeparator10
@@ -272,7 +272,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel7.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel7.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel7.Name = "ToolStripLabel7"
-        Me.ToolStripLabel7.Size = New System.Drawing.Size(72, 52)
+        Me.ToolStripLabel7.Size = New System.Drawing.Size(70, 52)
         Me.ToolStripLabel7.Text = "ເພີ່ມແຂວງ"
         '
         'ToolStripSeparator11
@@ -285,7 +285,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel6.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel6.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel6.Name = "ToolStripLabel6"
-        Me.ToolStripLabel6.Size = New System.Drawing.Size(70, 52)
+        Me.ToolStripLabel6.Size = New System.Drawing.Size(68, 52)
         Me.ToolStripLabel6.Text = "ເພີ່ມເມືອງ"
         '
         'ToolStripSeparator8
@@ -298,7 +298,7 @@ Partial Class frmcustomer
         Me.ToolStripLabel5.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripLabel5.ForeColor = System.Drawing.Color.Blue
         Me.ToolStripLabel5.Name = "ToolStripLabel5"
-        Me.ToolStripLabel5.Size = New System.Drawing.Size(65, 52)
+        Me.ToolStripLabel5.Size = New System.Drawing.Size(63, 52)
         Me.ToolStripLabel5.Text = "ເພີ່ມບ້ານ"
         '
         'Panel1
@@ -362,7 +362,7 @@ Partial Class frmcustomer
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(681, 10)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(63, 29)
+        Me.Label16.Size = New System.Drawing.Size(60, 24)
         Me.Label16.TabIndex = 28
         Me.Label16.Text = "ປະເທດ:"
         '
@@ -393,9 +393,9 @@ Partial Class frmcustomer
         'chkActivate
         '
         Me.chkActivate.AutoSize = True
-        Me.chkActivate.Location = New System.Drawing.Point(1216, 48)
+        Me.chkActivate.Location = New System.Drawing.Point(1040, 47)
         Me.chkActivate.Name = "chkActivate"
-        Me.chkActivate.Size = New System.Drawing.Size(76, 33)
+        Me.chkActivate.Size = New System.Drawing.Size(73, 28)
         Me.chkActivate.TabIndex = 25
         Me.chkActivate.Text = "ໃຊ້ງານ"
         Me.chkActivate.UseVisualStyleBackColor = True
@@ -405,7 +405,7 @@ Partial Class frmcustomer
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(20, 86)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(83, 29)
+        Me.Label14.Size = New System.Drawing.Size(80, 24)
         Me.Label14.TabIndex = 24
         Me.Label14.Text = "ລາຄາຫ້ອງ:"
         '
@@ -414,7 +414,7 @@ Partial Class frmcustomer
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(700, 124)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(45, 29)
+        Me.Label15.Size = New System.Drawing.Size(42, 24)
         Me.Label15.TabIndex = 24
         Me.Label15.Text = "ບ້ານ:"
         '
@@ -423,7 +423,7 @@ Partial Class frmcustomer
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(693, 86)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(51, 29)
+        Me.Label8.Size = New System.Drawing.Size(48, 24)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "ເມືອງ:"
         '
@@ -432,7 +432,7 @@ Partial Class frmcustomer
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(688, 46)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(55, 29)
+        Me.Label10.Size = New System.Drawing.Size(52, 24)
         Me.Label10.TabIndex = 24
         Me.Label10.Text = "ແຂວງ:"
         '
@@ -489,7 +489,7 @@ Partial Class frmcustomer
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(324, 120)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(120, 29)
+        Me.Label11.Size = New System.Drawing.Size(117, 24)
         Me.Label11.TabIndex = 22
         Me.Label11.Text = "ເລກບັດປະຈຳຕົວ:"
         '
@@ -498,7 +498,7 @@ Partial Class frmcustomer
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(361, 8)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(84, 29)
+        Me.Label9.Size = New System.Drawing.Size(81, 24)
         Me.Label9.TabIndex = 22
         Me.Label9.Text = "ນາມສະກຸນ:"
         '
@@ -507,7 +507,7 @@ Partial Class frmcustomer
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(7, 12)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(96, 29)
+        Me.Label1.Size = New System.Drawing.Size(93, 24)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "ລະຫັດລູກຄ້າ:"
         '
@@ -516,7 +516,7 @@ Partial Class frmcustomer
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(406, 158)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(37, 29)
+        Me.Label7.Size = New System.Drawing.Size(34, 24)
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "ໂທ:"
         '
@@ -525,7 +525,7 @@ Partial Class frmcustomer
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(379, 47)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(65, 29)
+        Me.Label6.Size = New System.Drawing.Size(62, 24)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "ຊັ້ນຊາດ:"
         '
@@ -534,7 +534,7 @@ Partial Class frmcustomer
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(985, 9)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(53, 29)
+        Me.Label13.Size = New System.Drawing.Size(50, 24)
         Me.Label13.TabIndex = 11
         Me.Label13.Text = "ອີເມວ:"
         '
@@ -543,7 +543,7 @@ Partial Class frmcustomer
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(27, 123)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(76, 29)
+        Me.Label5.Size = New System.Drawing.Size(73, 24)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "ຄຳນຳໜ້າ:"
         '
@@ -616,7 +616,7 @@ Partial Class frmcustomer
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(369, 83)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(75, 29)
+        Me.Label2.Size = New System.Drawing.Size(72, 24)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "ພາສປອດ:"
         '
@@ -625,7 +625,7 @@ Partial Class frmcustomer
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(38, 160)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(65, 29)
+        Me.Label4.Size = New System.Drawing.Size(62, 24)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "ຊື່ລູກຄ້າ:"
         '
@@ -634,7 +634,7 @@ Partial Class frmcustomer
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(3, 49)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 29)
+        Me.Label3.Size = New System.Drawing.Size(97, 24)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "ປະເພດລູກຄ້າ:"
         '
@@ -662,7 +662,7 @@ Partial Class frmcustomer
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(698, 161)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(48, 29)
+        Me.Label12.Size = New System.Drawing.Size(45, 24)
         Me.Label12.TabIndex = 24
         Me.Label12.Text = "ແຟ໋ກ:"
         '
@@ -672,23 +672,23 @@ Partial Class frmcustomer
         Me.dgvcustomer.AllowUserToDeleteRows = False
         Me.dgvcustomer.AllowUserToResizeColumns = False
         Me.dgvcustomer.AllowUserToResizeRows = False
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvcustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvcustomer.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvcustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvcustomer.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvcustomer.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvcustomer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvcustomer.EnableHeadersVisualStyles = False
         Me.dgvcustomer.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
@@ -696,18 +696,18 @@ Partial Class frmcustomer
         Me.dgvcustomer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.dgvcustomer.Name = "dgvcustomer"
         Me.dgvcustomer.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvcustomer.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvcustomer.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvcustomer.RowHeadersVisible = False
         Me.dgvcustomer.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvcustomer.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvcustomer.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvcustomer.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvcustomer.RowTemplate.Height = 28
         Me.dgvcustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -772,12 +772,15 @@ Partial Class frmcustomer
         '
         'frmcustomer
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1354, 733)
         Me.ControlBox = False
         Me.Controls.Add(Me.GroupPanel1)
+        Me.DoubleBuffered = True
+        Me.EnableGlass = False
+        Me.FlattenMDIBorder = False
         Me.Font = New System.Drawing.Font("Saysettha OT", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)

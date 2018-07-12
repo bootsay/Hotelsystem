@@ -33,7 +33,7 @@ Partial Class frmcheckin
         Me.cbstaytype = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtreserveNO = New System.Windows.Forms.TextBox()
         Me.cbbooktype = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -176,7 +176,7 @@ Partial Class frmcheckin
         Me.Panel1.Controls.Add(Me.cbstaytype)
         Me.Panel1.Controls.Add(Me.Label19)
         Me.Panel1.Controls.Add(Me.Label18)
-        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.txtreserveNO)
         Me.Panel1.Controls.Add(Me.cbbooktype)
         Me.Panel1.Controls.Add(Me.Label17)
         Me.Panel1.Controls.Add(Me.Label16)
@@ -239,7 +239,7 @@ Partial Class frmcheckin
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(407, 164)
+        Me.Label19.Location = New System.Drawing.Point(411, 164)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(87, 24)
         Me.Label19.TabIndex = 72
@@ -254,14 +254,14 @@ Partial Class frmcheckin
         Me.Label18.TabIndex = 71
         Me.Label18.Text = "ເລກຈອງ:"
         '
-        'TextBox2
+        'txtreserveNO
         '
-        Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(87, 79)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(304, 35)
-        Me.TextBox2.TabIndex = 70
+        Me.txtreserveNO.Enabled = False
+        Me.txtreserveNO.Location = New System.Drawing.Point(87, 79)
+        Me.txtreserveNO.Name = "txtreserveNO"
+        Me.txtreserveNO.ReadOnly = True
+        Me.txtreserveNO.Size = New System.Drawing.Size(304, 35)
+        Me.txtreserveNO.TabIndex = 70
         '
         'cbbooktype
         '
@@ -679,7 +679,7 @@ Partial Class frmcheckin
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(397, 47)
+        Me.Label7.Location = New System.Drawing.Point(401, 47)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(97, 24)
         Me.Label7.TabIndex = 53
@@ -701,7 +701,7 @@ Partial Class frmcheckin
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(399, 85)
+        Me.Label8.Location = New System.Drawing.Point(403, 85)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(95, 24)
         Me.Label8.TabIndex = 51
@@ -725,11 +725,11 @@ Partial Class frmcheckin
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(440, 13)
+        Me.Label6.Location = New System.Drawing.Point(438, 13)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(54, 24)
+        Me.Label6.Size = New System.Drawing.Size(60, 24)
         Me.Label6.TabIndex = 43
-        Me.Label6.Text = "ຊື່ຫ້ອງ:"
+        Me.Label6.Text = "ເບີຫ້ອງ:"
         '
         'txtprice
         '
@@ -896,7 +896,7 @@ Partial Class frmcheckin
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(444, 127)
+        Me.Label13.Location = New System.Drawing.Point(448, 127)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(50, 24)
         Me.Label13.TabIndex = 36
@@ -925,6 +925,7 @@ Partial Class frmcheckin
         '
         Me.btncancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btncancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btncancel.Image = Global.HotelSystem.My.Resources.Resources.edit_delete_icon
         Me.btncancel.ImageFixedSize = New System.Drawing.Size(32, 32)
         Me.btncancel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
         Me.btncancel.Location = New System.Drawing.Point(180, 3)
@@ -937,6 +938,8 @@ Partial Class frmcheckin
         '
         Me.btnprint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnprint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnprint.Image = Global.HotelSystem.My.Resources.Resources.cashier
+        Me.btnprint.ImageFixedSize = New System.Drawing.Size(32, 32)
         Me.btnprint.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
         Me.btnprint.Location = New System.Drawing.Point(3, 4)
         Me.btnprint.Name = "btnprint"
@@ -1175,7 +1178,7 @@ Partial Class frmcheckin
     Friend WithEvents txtnumberpeople As DevComponents.Editors.IntegerInput
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtreserveNO As System.Windows.Forms.TextBox
     Friend WithEvents cbbooktype As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents cbstaytype As DevComponents.DotNetBar.Controls.ComboBoxEx

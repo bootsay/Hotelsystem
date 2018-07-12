@@ -5,12 +5,14 @@ Public Class tbuser
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
-    Public Function save(id As Integer, username As String, laoname As String, department As String, position As String, password As String, autority As Integer, auth As String)
+    Public Function save(id As Integer, laoname As String, username As String, password As String, department As Integer, position As Integer, levleid As Integer, auth As String, activates As Boolean)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbuser values('" & id & "', N'" & username & "',N'" & laoname & "', N'" & department & "', N'" & position & "', '" & password & "', N'" & autority & "','" & auth & "')", cn.conn)
+            cm = New SqlCommand("insert into tbuser values('" & id & "', N'" & laoname & "',N'" & username & "', N'" & password & "', N'" & department & "', '" & position & "', N'" & levleid & "','" & auth & "','" & activates & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -19,12 +21,14 @@ Public Class tbuser
         End Try
         Return True
     End Function
-    Public Function update(user_id As Integer, username As String, laoname As String, department As String, position As String, password As String, autority As Integer, auth As String)
+    Public Function update(id As Integer, laoname As String, username As String, password As String, department As Integer, position As Integer, levleid As Integer, auth As String, activates As Boolean)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbuser set username=N'" & username & "',laoname=N'" & laoname & "', department=N'" & department & "', position=N'" & position & "', password='" & password & "', level_id='" & autority & "', auth='" & auth & "' where userid='" & user_id & "'", cn.conn)
+            cm = New SqlCommand("update tbuser set userlao=N'" & laoname & "',username=N'" & username & "', password='" & password & "',deptid=N'" & department & "', positionid=N'" & position & "',level_id='" & levleid & "', auth='" & auth & "', activateid='" & activates & "' where userid='" & id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -39,6 +43,8 @@ Public Class tbuser
             cm = New SqlCommand("delete from tbuser where userid='" & user_id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -57,21 +63,20 @@ Public Class tbuser
             dgv.DataSource = ds.Tables(0)
             dgv.Refresh()
             With dgv
+                .AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
                 .Columns(0).HeaderText = "ລໍາດັບ"
-                .Columns(1).HeaderText = "ຊຶ່ເຂົ້າລະບົບ"
-                .Columns(2).HeaderText = "ຊື່ພາສາລາວ"
-                .Columns(3).HeaderText = "ພະແນກ"
-                .Columns(4).HeaderText = "ຕໍາແໜ່ງ"
-                .Columns(5).HeaderText = "ລະຫັດ"
+                .Columns(1).HeaderText = "ຊື່ພາສາລາວ"
+                .Columns(2).HeaderText = "ຊຶ່ເຂົ້າລະບົບ"
+                .Columns(3).HeaderText = "ລະຫັດ"
+                .Columns(4).HeaderText = "ພະແນກ"
+                .Columns(5).HeaderText = "ຕໍາແໜ່ງ"
                 .Columns(6).HeaderText = "ສິດທິ"
                 .Columns(7).Visible = False
-                .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(8).HeaderText = "ສະຖານະ"
+                .Columns(9).Visible = False
+                .Columns(10).Visible = False
+                .Columns(11).Visible = False
+
             End With
 
         Catch ex As Exception

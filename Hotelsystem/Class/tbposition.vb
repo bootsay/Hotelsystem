@@ -95,4 +95,21 @@ Public Class tbposition
         End Try
         Return True
     End Function
+    Public Function comboposition(cb As ComboBox)
+        cn.connect()
+        Dim dt As New DataTable
+        Try
+            da = New SqlDataAdapter("select * from tbposition  order by positionid desc", cn.conn)
+            da.Fill(dt)
+
+            With cb
+                .DataSource = dt
+                .DisplayMember = dt.Columns("posname").ToString
+                .ValueMember = dt.Columns("positionid").ToString
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return True
+    End Function
 End Class

@@ -112,7 +112,7 @@ Public Class tbcustomer
     Public Function loadtbcustomer(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewcustomer", cn.conn)
+            da = New SqlDataAdapter("select * from viewcustomer order by customerid asc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")

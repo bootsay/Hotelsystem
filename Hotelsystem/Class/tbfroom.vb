@@ -197,7 +197,7 @@ Public Class tbfroom
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect
-                .Columns(0).HeaderText = "ລະຫັດ"
+                .Columns(0).Visible = False
                 .Columns(1).HeaderText = "ປະເພດຫ້ອງ"
                 .Columns(2).HeaderText = "ທີຕັ້ງຫ້ອງ"
                 .Columns(3).HeaderText = "ເບີຫ້ອງ"

@@ -25,18 +25,17 @@
     Dim mealtype As New tbmealtype
 
     Private Sub btnbrown_Click(sender As Object, e As EventArgs) Handles btnbrown1.Click
-        formcheckin = True
+        frmshowcustomer.getform = "CHIN"
         frmshowcustomer.ShowDialog()
         frmshowcustomer.Close()
-        formcheckin = False
+        frmshowcustomer.getform = ""
     End Sub
 
     Private Sub ButtonX3_Click(sender As Object, e As EventArgs) Handles btnbrown2.Click
-
-        formcheckin = True
+        frmshowroomlistitem.getformname = "CHIN"
         frmshowroomlistitem.ShowDialog()
         frmshowroomlistitem.Close()
-        formcheckin = False
+        frmshowroomlistitem.getformname = ""
     End Sub
 
     Private Sub btncustomer_Click(sender As Object, e As EventArgs) Handles btncus.Click
@@ -312,7 +311,7 @@
     End Sub
 
     Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
-        checkins.loadtbfcheckin(dgvlist)
+        checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy"), dgvlist)
         dt1.Text = Today.Date
         dt2.Text = Today.Date
         rddate.Checked = True
@@ -328,8 +327,10 @@
         markettype.combomarkettype(cbmarket)
         roomratetype.comboroomtyperate(cbpricetype)
         txtid.Text = checkins.runidNO
-        enablesave()
+
         txtwrite()
+        txtclear()
+        enablesave()
     End Sub
 
   
@@ -356,6 +357,7 @@
         If txtreserverNO_search.Text = "" Then
             txtreserverNO_search.Text = "0"
         End If
+
         checkins.save(checkno, checkid, frm.userid, txtreserverNO_search.Text, txtroomno.Text, Customerid, cbbooktype.SelectedValue, cbmarket.SelectedValue, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"), txtnumberpeople.Text, cbfood.SelectedValue, cbstaytype.SelectedValue, txtNote.Text)
         'room.updateroom(txtroomid.Text, 2)
         reserve.loadtbfreserve(dgvlist)
@@ -379,5 +381,36 @@
             dgvlist.DataSource = Nothing
             checkins.search_checkinby_IDCard(txtsearch.Text, dgvlist)
         End If
+    End Sub
+
+    Private Sub dgvlist_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvlist.CellMouseUp
+        Try
+            With dgvlist
+                txtid.Text = .CurrentRow.Cells(0).Value
+                txtuser.Text = .CurrentRow.Cells(2).Value
+                If .CurrentRow.Cells(1).Value Is DBNull.Value Then
+                    txtreserveNO.Text = ""
+                Else
+                    txtreserveNO.Text = .CurrentRow.Cells(1).Value
+                End If
+
+                dt1.Text = .CurrentRow.Cells(24).Value
+                dt2.Text = .CurrentRow.Cells(25).Value
+                txtroomno.Text = .CurrentRow.Cells(5).Value
+                txtcustomername.Text = .CurrentRow.Cells(10).Value
+                txtcustomertype.Text = .CurrentRow.Cells(8).Value
+                cbpricetype.Text = .CurrentRow.Cells(6).Value
+                txtprice.Text = .CurrentRow.Cells(7).Value
+                cbbooktype.Text = .CurrentRow.Cells(22).Value
+                cbmarket.Text = .CurrentRow.Cells(23).Value
+                cbfood.Text = .CurrentRow.Cells(27).Value
+                txtnumberpeople.Text = .CurrentRow.Cells(26).Value
+                cbstaytype.Text = .CurrentRow.Cells(28).Value
+                txtNote.Text = .CurrentRow.Cells(29).Value
+
+            End With
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class

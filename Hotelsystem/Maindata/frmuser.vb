@@ -1,6 +1,7 @@
 ﻿Public Class frmuser
     Dim user As New tbuser
-
+    Dim dept As New tbdepartment
+    Dim positions As New tbposition
     Dim frmsale1 As String
     Dim frmproductinfo11 As String
     Dim frmsumarysale111 As String
@@ -68,17 +69,18 @@
     End Sub
 
     Private Sub frmuser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            txtid.Text = user.runid
-            user.loaduser(dgvuser)
-            txteng.Select()
-            enablesave()
-            user.combolevel(cblevel)
-            cbadmin.Checked = True
+        'Try
+        txtid.Text = user.runid
+        user.loaduser(dgvuser)
+        txteng.Select()
+        enablesave()
+        user.combolevel(cblevel)
+        cbadmin.Checked = True
+        dept.combodepartment(cbdepartment)
+        positions.comboposition(cbposition)
+        'Catch ex As Exception
 
-        Catch ex As Exception
-
-        End Try
+        'End Try
     End Sub
     Private Sub disabletext()
         txteng.ReadOnly = True
@@ -325,7 +327,13 @@
             MessageBox.Show("ກະລຸນາເລືອກສິດທິການນໍາໃຊ້", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        user.save(txtid.Text, txteng.Text, txtlao.Text, cbdepartment.SelectedValue, cbposition.SelectedValue, txtpassword.Text, cblevel.SelectedValue, auth)
+        Dim activates As Boolean
+        If chkActivate.Checked = True Then
+            activates = True
+        Else
+            activates = False
+        End If
+        user.save(txtid.Text, txtlao.Text, txteng.Text, txtpassword.Text, cbdepartment.SelectedValue, cbposition.SelectedValue, cblevel.SelectedValue, auth, activates)
         cleartext()
         txtid.Text = user.runid
         user.loaduser(dgvuser)
@@ -335,7 +343,7 @@
 
     Private Sub dgvuser_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles dgvuser.CellFormatting
         Try
-            If e.ColumnIndex = 5 Then
+            If e.ColumnIndex = 3 Then
                 e.Value = "****"
             End If
         Catch ex As Exception
@@ -346,13 +354,14 @@
     Private Sub dgvuser_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvuser.CellMouseUp
         With dgvuser
             txtid.Text = .CurrentRow.Cells(0).Value
-            txteng.Text = .CurrentRow.Cells(1).Value
-            txtlao.Text = .CurrentRow.Cells(2).Value
+            txteng.Text = .CurrentRow.Cells(2).Value
+            txtlao.Text = .CurrentRow.Cells(1).Value
           
-            txtpassword.Text = .CurrentRow.Cells(5).Value
+            txtpassword.Text = .CurrentRow.Cells(3).Value
+            cbdepartment.Text = .CurrentRow.Cells(5).Value
             cblevel.Text = .CurrentRow.Cells(6).Value
             txtuserid.Text = .CurrentRow.Cells(0).Value
-            txtusername.Text = .CurrentRow.Cells(6).Value
+
 
             disabletext()
             enableedit()
@@ -596,7 +605,13 @@
             MessageBox.Show("ກະລຸນາເລືອກສິດທິການນໍາໃຊ້", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
-        user.update(txtid.Text, txteng.Text, txtlao.Text, cbdepartment.SelectedValue, cbposition.SelectedValue, txtpassword.Text, cblevel.SelectedValue, auth)
+        Dim activates As Boolean
+        If chkActivate.Checked = True Then
+            activates = True
+        Else
+            activates = False
+        End If
+        user.update(txtid.Text, txtlao.Text, txteng.Text, txtpassword.Text, cbdepartment.SelectedValue, cbposition.SelectedValue, cblevel.SelectedValue, auth, activates)
         cleartext()
         txtid.Text = user.runid
         user.loaduser(dgvuser)

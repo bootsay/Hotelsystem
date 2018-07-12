@@ -3,11 +3,12 @@
     Dim custype As New tbfcustomertype
     Dim custype1 As String
     Public createreserve As Boolean = False
+    Public getform As String
     Private Sub frmshowcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             customer.loadtbcustomer(dgvcus)
             custype.combocustomertype(cbtype)
-            rname.Checked = True
+            rtype.Checked = True
             txtsearch.Focus()
         Catch ex As Exception
 
@@ -74,7 +75,18 @@
     End Sub
 
     Private Sub dgvcus_CellMouseUp(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvcus.CellMouseUp
-        Try
+        'Try
+        MessageBox.Show(getform)
+        If getform = "CHIN" Then
+            Dim fmcheckin As frmcheckin = DirectCast(Application.OpenForms("frmcheckin"), frmcheckin)
+            With dgvcus
+                fmcheckin.Customerid = .CurrentRow.Cells(1).Value
+                fmcheckin.txtcustomername.Text = .CurrentRow.Cells(4).Value
+                fmcheckin.txtprice.Text = .CurrentRow.Cells(15).Value
+                Me.Close()
+
+            End With
+        Else
             With dgvcus
                 If frmreserve.frmcreatereserve = True Then
                     frmreserve.txtcustomerid.Text = .CurrentRow.Cells(1).Value
@@ -83,13 +95,13 @@
                     Me.Close()
                 End If
             End With
+        End If
 
-        Catch ex As Exception
 
-        End Try
+
+        'Catch ex As Exception
+
+        'End Try
     End Sub
 
-    Private Sub dgvcus_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcus.CellContentClick
-
-    End Sub
 End Class
