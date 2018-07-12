@@ -24,6 +24,22 @@ Partial Class frmmain
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.RibbonControl1 = New DevComponents.DotNetBar.RibbonControl()
+        Me.RibbonPanel4 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar15 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem17 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem28 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem29 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar14 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem16 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem24 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem25 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar13 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem15 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem18 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem19 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem20 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem21 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem22 = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonPanel1 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar4 = New DevComponents.DotNetBar.RibbonBar()
         Me.roominformation = New DevComponents.DotNetBar.ButtonItem()
@@ -62,6 +78,7 @@ Partial Class frmmain
         Me.settingsystem = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem47 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem14 = New DevComponents.DotNetBar.ButtonItem()
+        Me.btnfrmcompanyprofile = New DevComponents.DotNetBar.ButtonItem()
         Me.RibbonBar10 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem10 = New DevComponents.DotNetBar.ButtonItem()
         Me.titlename = New DevComponents.DotNetBar.ButtonItem()
@@ -89,6 +106,7 @@ Partial Class frmmain
         Me.category = New DevComponents.DotNetBar.ButtonItem()
         Me.unit = New DevComponents.DotNetBar.ButtonItem()
         Me.addproduct = New DevComponents.DotNetBar.ButtonItem()
+<<<<<<< HEAD
         Me.RibbonPanel4 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonBar15 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem17 = New DevComponents.DotNetBar.ButtonItem()
@@ -106,6 +124,30 @@ Partial Class frmmain
         Me.ButtonItem21 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem22 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem23 = New DevComponents.DotNetBar.ButtonItem()
+=======
+        Me.RibbonPanel5 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar16 = New DevComponents.DotNetBar.RibbonBar()
+        Me.reservatininfo = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar12 = New DevComponents.DotNetBar.RibbonBar()
+        Me.reservation = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonPanel7 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar20 = New DevComponents.DotNetBar.RibbonBar()
+        Me.foloinfo = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar5 = New DevComponents.DotNetBar.RibbonBar()
+        Me.folio = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonPanel6 = New DevComponents.DotNetBar.RibbonPanel()
+        Me.RibbonBar21 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem4 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem5 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem31 = New DevComponents.DotNetBar.ButtonItem()
+        Me.ButtonItem32 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar19 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem3 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar18 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem2 = New DevComponents.DotNetBar.ButtonItem()
+        Me.RibbonBar17 = New DevComponents.DotNetBar.RibbonBar()
+        Me.ButtonItem1 = New DevComponents.DotNetBar.ButtonItem()
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         Me.RibbonPanel3 = New DevComponents.DotNetBar.RibbonPanel()
         Me.RibbonTabItem3 = New DevComponents.DotNetBar.RibbonTabItem()
         Me.RibbonTabItem1 = New DevComponents.DotNetBar.RibbonTabItem()
@@ -118,15 +160,27 @@ Partial Class frmmain
         Me.ButtonItem11 = New DevComponents.DotNetBar.ButtonItem()
         Me.ButtonItem12 = New DevComponents.DotNetBar.ButtonItem()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
+<<<<<<< HEAD
         Me.RibbonBar22 = New DevComponents.DotNetBar.RibbonBar()
         Me.ButtonItem26 = New DevComponents.DotNetBar.ButtonItem()
+=======
+        Me.ButtonItem23 = New DevComponents.DotNetBar.ButtonItem()
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         Me.RibbonControl1.SuspendLayout()
+        Me.RibbonPanel4.SuspendLayout()
         Me.RibbonPanel1.SuspendLayout()
+<<<<<<< HEAD
         Me.RibbonPanel5.SuspendLayout()
         Me.RibbonPanel7.SuspendLayout()
         Me.RibbonPanel6.SuspendLayout()
         Me.RibbonPanel2.SuspendLayout()
         Me.RibbonPanel4.SuspendLayout()
+=======
+        Me.RibbonPanel2.SuspendLayout()
+        Me.RibbonPanel5.SuspendLayout()
+        Me.RibbonPanel7.SuspendLayout()
+        Me.RibbonPanel6.SuspendLayout()
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         Me.SuspendLayout()
         '
         'RibbonControl1
@@ -136,12 +190,19 @@ Partial Class frmmain
         '
         Me.RibbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonControl1.CaptionVisible = True
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel4)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel1)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel5)
+<<<<<<< HEAD
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel4)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel2)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel6)
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel7)
+=======
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel7)
+        Me.RibbonControl1.Controls.Add(Me.RibbonPanel6)
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         Me.RibbonControl1.Controls.Add(Me.RibbonPanel3)
         Me.RibbonControl1.Dock = System.Windows.Forms.DockStyle.Top
         Me.RibbonControl1.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.RibbonTabItem3, Me.RibbonTabItem1, Me.RibbonTabItem5, Me.RibbonTabItem7, Me.RibbonTabItem6, Me.RibbonTabItem2, Me.RibbonTabItem4})
@@ -172,6 +233,196 @@ Partial Class frmmain
         Me.RibbonControl1.TabIndex = 0
         Me.RibbonControl1.Text = "RibbonControl1"
         '
+        'RibbonPanel4
+        '
+        Me.RibbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel4.Controls.Add(Me.RibbonBar15)
+        Me.RibbonPanel4.Controls.Add(Me.RibbonBar14)
+        Me.RibbonPanel4.Controls.Add(Me.RibbonBar13)
+        Me.RibbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel4.Location = New System.Drawing.Point(0, 51)
+        Me.RibbonPanel4.Name = "RibbonPanel4"
+        Me.RibbonPanel4.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel4.Size = New System.Drawing.Size(1018, 60)
+        '
+        '
+        '
+        Me.RibbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel4.TabIndex = 4
+        '
+        'RibbonBar15
+        '
+        Me.RibbonBar15.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar15.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar15.ContainerControlProcessDialogKey = True
+        Me.RibbonBar15.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar15.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem17})
+        Me.RibbonBar15.Location = New System.Drawing.Point(514, 0)
+        Me.RibbonBar15.Name = "RibbonBar15"
+        Me.RibbonBar15.Size = New System.Drawing.Size(275, 57)
+        Me.RibbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar15.TabIndex = 5
+        Me.RibbonBar15.Text = "RibbonBar15"
+        '
+        '
+        '
+        Me.RibbonBar15.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar15.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar15.TitleVisible = False
+        '
+        'ButtonItem17
+        '
+        Me.ButtonItem17.AutoExpandOnClick = True
+        Me.ButtonItem17.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem17.Image = Global.HotelSystem.My.Resources.Resources.Report
+        Me.ButtonItem17.Name = "ButtonItem17"
+        Me.ButtonItem17.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem28, Me.ButtonItem29})
+        Me.ButtonItem17.SubItemsExpandWidth = 14
+        Me.ButtonItem17.Text = "ລາຍງານບັນຊີການເງິນ(Financial)"
+        '
+        'ButtonItem28
+        '
+        Me.ButtonItem28.Name = "ButtonItem28"
+        Me.ButtonItem28.Text = "ລາຍງານການຮັບເງີນ"
+        '
+        'ButtonItem29
+        '
+        Me.ButtonItem29.Name = "ButtonItem29"
+        Me.ButtonItem29.Text = "ລາຍງານການຮັບເງິນເປັນກລາບ"
+        '
+        'RibbonBar14
+        '
+        Me.RibbonBar14.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar14.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar14.ContainerControlProcessDialogKey = True
+        Me.RibbonBar14.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar14.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem16})
+        Me.RibbonBar14.Location = New System.Drawing.Point(221, 0)
+        Me.RibbonBar14.Name = "RibbonBar14"
+        Me.RibbonBar14.Size = New System.Drawing.Size(293, 57)
+        Me.RibbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar14.TabIndex = 4
+        Me.RibbonBar14.Text = "RibbonBar14"
+        '
+        '
+        '
+        Me.RibbonBar14.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar14.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar14.TitleVisible = False
+        '
+        'ButtonItem16
+        '
+        Me.ButtonItem16.AutoExpandOnClick = True
+        Me.ButtonItem16.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem16.Image = Global.HotelSystem.My.Resources.Resources.Report
+        Me.ButtonItem16.Name = "ButtonItem16"
+        Me.ButtonItem16.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem24, Me.ButtonItem25})
+        Me.ButtonItem16.SubItemsExpandWidth = 14
+        Me.ButtonItem16.Text = "ລາຍງານແມ່ນບ້ານ(House Keeping)"
+        '
+        'ButtonItem24
+        '
+        Me.ButtonItem24.Name = "ButtonItem24"
+        Me.ButtonItem24.Text = "ລາຍງານຂໍ້ມູນຫ້ອງ"
+        '
+        'ButtonItem25
+        '
+        Me.ButtonItem25.Name = "ButtonItem25"
+        Me.ButtonItem25.Text = "ລາຍງານການກີນອາຫານຂອງແຕ່ລະຫ້ອງ"
+        '
+        'RibbonBar13
+        '
+        Me.RibbonBar13.AutoOverflowEnabled = True
+        '
+        '
+        '
+        Me.RibbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar13.ContainerControlProcessDialogKey = True
+        Me.RibbonBar13.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar13.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem15})
+        Me.RibbonBar13.Location = New System.Drawing.Point(3, 0)
+        Me.RibbonBar13.Name = "RibbonBar13"
+        Me.RibbonBar13.Size = New System.Drawing.Size(218, 57)
+        Me.RibbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar13.TabIndex = 3
+        Me.RibbonBar13.Text = "RibbonBar13"
+        '
+        '
+        '
+        Me.RibbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.RibbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar13.TitleVisible = False
+        '
+        'ButtonItem15
+        '
+        Me.ButtonItem15.AutoExpandOnClick = True
+        Me.ButtonItem15.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem15.Image = Global.HotelSystem.My.Resources.Resources.Report
+        Me.ButtonItem15.Name = "ButtonItem15"
+        Me.ButtonItem15.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem18, Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem21, Me.ButtonItem22, Me.ButtonItem23})
+        Me.ButtonItem15.SubItemsExpandWidth = 20
+        Me.ButtonItem15.Text = "ລາຍງານຕ້ອນຮັບ(Front)"
+        '
+        'ButtonItem18
+        '
+        Me.ButtonItem18.Name = "ButtonItem18"
+        Me.ButtonItem18.Text = "ລາຍງານ OCC"
+        '
+        'ButtonItem19
+        '
+        Me.ButtonItem19.Name = "ButtonItem19"
+        Me.ButtonItem19.Text = "ລາຍງານແຂກເຂົ້າພັກ"
+        '
+        'ButtonItem20
+        '
+        Me.ButtonItem20.Name = "ButtonItem20"
+        Me.ButtonItem20.Text = "ລາຍງານແຂກອອກ"
+        '
+        'ButtonItem21
+        '
+        Me.ButtonItem21.Name = "ButtonItem21"
+        Me.ButtonItem21.Text = "ລາຍງານການຈອງຫ້ອງ"
+        '
+        'ButtonItem22
+        '
+        Me.ButtonItem22.Name = "ButtonItem22"
+        Me.ButtonItem22.Text = "ລາຍງານສັງລວມລູກຄ້າ"
+        '
         'RibbonPanel1
         '
         Me.RibbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -197,6 +448,7 @@ Partial Class frmmain
         '
         Me.RibbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel1.TabIndex = 1
+        Me.RibbonPanel1.Visible = False
         '
         'RibbonBar4
         '
@@ -411,12 +663,22 @@ Partial Class frmmain
         '
         'reservatininfo
         '
+<<<<<<< HEAD
         Me.reservatininfo.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
         Me.reservatininfo.Image = Global.HotelSystem.My.Resources.Resources.edit_icon
         Me.reservatininfo.ImageFixedSize = New System.Drawing.Size(40, 40)
         Me.reservatininfo.Name = "reservatininfo"
         Me.reservatininfo.SubItemsExpandWidth = 14
         Me.reservatininfo.Text = "ຂໍ້ມູນການຈອງ"
+=======
+        Me.ButtonItem13.AutoExpandOnClick = True
+        Me.ButtonItem13.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem13.Image = Global.HotelSystem.My.Resources.Resources.Settings
+        Me.ButtonItem13.Name = "ButtonItem13"
+        Me.ButtonItem13.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.usercode, Me.settingsystem, Me.ButtonItem47, Me.ButtonItem14, Me.btnfrmcompanyprofile})
+        Me.ButtonItem13.SubItemsExpandWidth = 14
+        Me.ButtonItem13.Text = "ລະບົບ"
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         '
         'RibbonBar12
         '
@@ -439,6 +701,15 @@ Partial Class frmmain
         Me.RibbonBar12.TabIndex = 1
         Me.RibbonBar12.Text = "RibbonBar12"
         '
+<<<<<<< HEAD
+=======
+        'btnfrmcompanyprofile
+        '
+        Me.btnfrmcompanyprofile.Name = "btnfrmcompanyprofile"
+        Me.btnfrmcompanyprofile.Text = "ຂໍ້ມູນບໍລິສັດ"
+        '
+        'RibbonBar10
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         '
         '
         Me.RibbonBar12.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
@@ -560,6 +831,7 @@ Partial Class frmmain
         Me.folio.SubItemsExpandWidth = 14
         Me.folio.Text = "ອອກບີນ"
         '
+<<<<<<< HEAD
         'RibbonPanel6
         '
         Me.RibbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -759,6 +1031,9 @@ Partial Class frmmain
         Me.ButtonItem1.Text = "ສະຖານະຫ້ອງ"
         '
         'RibbonPanel2
+=======
+        'RibbonPanel5
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         '
         Me.RibbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.RibbonPanel2.Controls.Add(Me.RibbonBar11)
@@ -1133,201 +1408,203 @@ Partial Class frmmain
         Me.addproduct.Name = "addproduct"
         Me.addproduct.Text = "ເພີ້ມລາຍການສີນຄ້າ"
         '
-        'RibbonPanel4
+        'RibbonPanel6
         '
-        Me.RibbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonPanel4.Controls.Add(Me.RibbonBar15)
-        Me.RibbonPanel4.Controls.Add(Me.RibbonBar14)
-        Me.RibbonPanel4.Controls.Add(Me.RibbonBar13)
-        Me.RibbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RibbonPanel4.Location = New System.Drawing.Point(0, 51)
-        Me.RibbonPanel4.Name = "RibbonPanel4"
-        Me.RibbonPanel4.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
-        Me.RibbonPanel4.Size = New System.Drawing.Size(1018, 60)
+        Me.RibbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonPanel6.Controls.Add(Me.RibbonBar21)
+        Me.RibbonPanel6.Controls.Add(Me.RibbonBar19)
+        Me.RibbonPanel6.Controls.Add(Me.RibbonBar18)
+        Me.RibbonPanel6.Controls.Add(Me.RibbonBar17)
+        Me.RibbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RibbonPanel6.Location = New System.Drawing.Point(0, 51)
+        Me.RibbonPanel6.Name = "RibbonPanel6"
+        Me.RibbonPanel6.Padding = New System.Windows.Forms.Padding(3, 0, 3, 3)
+        Me.RibbonPanel6.Size = New System.Drawing.Size(1018, 60)
         '
         '
         '
-        Me.RibbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
         '
-        Me.RibbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
         '
-        Me.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonPanel4.TabIndex = 4
-        Me.RibbonPanel4.Visible = False
+        Me.RibbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonPanel6.TabIndex = 6
+        Me.RibbonPanel6.Visible = False
         '
-        'RibbonBar15
+        'RibbonBar21
         '
-        Me.RibbonBar15.AutoOverflowEnabled = True
+        Me.RibbonBar21.AutoOverflowEnabled = True
         '
         '
         '
-        Me.RibbonBar15.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar21.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
         '
-        Me.RibbonBar15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar15.ContainerControlProcessDialogKey = True
-        Me.RibbonBar15.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar15.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem17})
-        Me.RibbonBar15.Location = New System.Drawing.Point(514, 0)
-        Me.RibbonBar15.Name = "RibbonBar15"
-        Me.RibbonBar15.Size = New System.Drawing.Size(275, 57)
-        Me.RibbonBar15.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar15.TabIndex = 5
-        Me.RibbonBar15.Text = "RibbonBar15"
+        Me.RibbonBar21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar21.ContainerControlProcessDialogKey = True
+        Me.RibbonBar21.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar21.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem4})
+        Me.RibbonBar21.Location = New System.Drawing.Point(486, 0)
+        Me.RibbonBar21.Name = "RibbonBar21"
+        Me.RibbonBar21.Size = New System.Drawing.Size(141, 57)
+        Me.RibbonBar21.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar21.TabIndex = 6
+        Me.RibbonBar21.Text = "RibbonBar21"
         '
         '
         '
-        Me.RibbonBar15.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar21.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
         '
-        Me.RibbonBar15.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar15.TitleVisible = False
+        Me.RibbonBar21.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar21.TitleVisible = False
         '
-        'ButtonItem17
+        'ButtonItem4
         '
-        Me.ButtonItem17.AutoExpandOnClick = True
-        Me.ButtonItem17.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem17.Image = Global.HotelSystem.My.Resources.Resources.Report
-        Me.ButtonItem17.Name = "ButtonItem17"
-        Me.ButtonItem17.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem28, Me.ButtonItem29})
-        Me.ButtonItem17.SubItemsExpandWidth = 14
-        Me.ButtonItem17.Text = "ລາຍງານບັນຊີການເງິນ(Financial)"
+        Me.ButtonItem4.AutoExpandOnClick = True
+        Me.ButtonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem4.Image = Global.HotelSystem.My.Resources.Resources.add41
+        Me.ButtonItem4.Name = "ButtonItem4"
+        Me.ButtonItem4.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem5, Me.ButtonItem31, Me.ButtonItem32})
+        Me.ButtonItem4.SubItemsExpandWidth = 14
+        Me.ButtonItem4.Text = "ຂໍ້ມູນສີນຄ້າ"
         '
-        'ButtonItem28
+        'ButtonItem5
         '
-        Me.ButtonItem28.Name = "ButtonItem28"
-        Me.ButtonItem28.Text = "ລາຍງານການຮັບເງີນ"
+        Me.ButtonItem5.Name = "ButtonItem5"
+        Me.ButtonItem5.Text = "ປະເພດສີນຄ້າ"
         '
-        'ButtonItem29
+        'ButtonItem31
         '
-        Me.ButtonItem29.Name = "ButtonItem29"
-        Me.ButtonItem29.Text = "ລາຍງານການຮັບເງິນເປັນກລາບ"
+        Me.ButtonItem31.Name = "ButtonItem31"
+        Me.ButtonItem31.Text = "ຫົວໜ່ວຍ"
         '
-        'RibbonBar14
+        'ButtonItem32
         '
-        Me.RibbonBar14.AutoOverflowEnabled = True
+        Me.ButtonItem32.Name = "ButtonItem32"
+        Me.ButtonItem32.Text = "ເພີ້ມລາຍການສີນຄ້າ"
         '
+        'RibbonBar19
         '
+        Me.RibbonBar19.AutoOverflowEnabled = True
         '
-        Me.RibbonBar14.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
+        Me.RibbonBar19.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
-        Me.RibbonBar14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar14.ContainerControlProcessDialogKey = True
-        Me.RibbonBar14.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar14.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem16})
-        Me.RibbonBar14.Location = New System.Drawing.Point(221, 0)
-        Me.RibbonBar14.Name = "RibbonBar14"
-        Me.RibbonBar14.Size = New System.Drawing.Size(293, 57)
-        Me.RibbonBar14.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar14.TabIndex = 4
-        Me.RibbonBar14.Text = "RibbonBar14"
         '
         '
+        Me.RibbonBar19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar19.ContainerControlProcessDialogKey = True
+        Me.RibbonBar19.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar19.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem3})
+        Me.RibbonBar19.Location = New System.Drawing.Point(310, 0)
+        Me.RibbonBar19.Name = "RibbonBar19"
+        Me.RibbonBar19.Size = New System.Drawing.Size(176, 57)
+        Me.RibbonBar19.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar19.TabIndex = 5
+        Me.RibbonBar19.Text = "RibbonBar19"
         '
-        Me.RibbonBar14.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
+        Me.RibbonBar19.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
-        Me.RibbonBar14.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar14.TitleVisible = False
         '
-        'ButtonItem16
         '
-        Me.ButtonItem16.AutoExpandOnClick = True
-        Me.ButtonItem16.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem16.Image = Global.HotelSystem.My.Resources.Resources.Report
-        Me.ButtonItem16.Name = "ButtonItem16"
-        Me.ButtonItem16.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem24, Me.ButtonItem25})
-        Me.ButtonItem16.SubItemsExpandWidth = 14
-        Me.ButtonItem16.Text = "ລາຍງານແມ່ນບ້ານ(House Keeping)"
+        Me.RibbonBar19.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar19.TitleVisible = False
         '
-        'ButtonItem24
+        'ButtonItem3
         '
-        Me.ButtonItem24.Name = "ButtonItem24"
-        Me.ButtonItem24.Text = "ລາຍງານຂໍ້ມູນຫ້ອງ"
+        Me.ButtonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem3.Image = Global.HotelSystem.My.Resources.Resources.product
+        Me.ButtonItem3.Name = "ButtonItem3"
+        Me.ButtonItem3.SubItemsExpandWidth = 14
+        Me.ButtonItem3.Text = "ລົງລາຍການອາຫານ"
         '
-        'ButtonItem25
+        'RibbonBar18
         '
-        Me.ButtonItem25.Name = "ButtonItem25"
-        Me.ButtonItem25.Text = "ລາຍງານການກີນອາຫານຂອງແຕ່ລະຫ້ອງ"
+        Me.RibbonBar18.AutoOverflowEnabled = True
         '
-        'RibbonBar13
         '
-        Me.RibbonBar13.AutoOverflowEnabled = True
         '
+        Me.RibbonBar18.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
-        Me.RibbonBar13.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
+        Me.RibbonBar18.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar18.ContainerControlProcessDialogKey = True
+        Me.RibbonBar18.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar18.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem2})
+        Me.RibbonBar18.Location = New System.Drawing.Point(144, 0)
+        Me.RibbonBar18.Name = "RibbonBar18"
+        Me.RibbonBar18.Size = New System.Drawing.Size(166, 57)
+        Me.RibbonBar18.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar18.TabIndex = 4
+        Me.RibbonBar18.Text = "RibbonBar18"
         '
         '
-        Me.RibbonBar13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar13.ContainerControlProcessDialogKey = True
-        Me.RibbonBar13.Dock = System.Windows.Forms.DockStyle.Left
-        Me.RibbonBar13.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem15})
-        Me.RibbonBar13.Location = New System.Drawing.Point(3, 0)
-        Me.RibbonBar13.Name = "RibbonBar13"
-        Me.RibbonBar13.Size = New System.Drawing.Size(218, 57)
-        Me.RibbonBar13.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.RibbonBar13.TabIndex = 3
-        Me.RibbonBar13.Text = "RibbonBar13"
         '
+        Me.RibbonBar18.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
         '
-        Me.RibbonBar13.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
+        Me.RibbonBar18.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar18.TitleVisible = False
         '
+        'ButtonItem2
         '
-        Me.RibbonBar13.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.RibbonBar13.TitleVisible = False
+        Me.ButtonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem2.Image = Global.HotelSystem.My.Resources.Resources.door
+        Me.ButtonItem2.ImageFixedSize = New System.Drawing.Size(40, 40)
+        Me.ButtonItem2.Name = "ButtonItem2"
+        Me.ButtonItem2.SubItemsExpandWidth = 14
+        Me.ButtonItem2.Text = "ແປງສະຖານະຫ້ອງ"
         '
-        'ButtonItem15
+        'RibbonBar17
         '
-        Me.ButtonItem15.AutoExpandOnClick = True
-        Me.ButtonItem15.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
-        Me.ButtonItem15.Image = Global.HotelSystem.My.Resources.Resources.Report
-        Me.ButtonItem15.Name = "ButtonItem15"
-        Me.ButtonItem15.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem18, Me.ButtonItem19, Me.ButtonItem20, Me.ButtonItem21, Me.ButtonItem22, Me.ButtonItem23})
-        Me.ButtonItem15.SubItemsExpandWidth = 20
-        Me.ButtonItem15.Text = "ລາຍງານຕ້ອນຮັບ(Front)"
+        Me.RibbonBar17.AutoOverflowEnabled = True
         '
-        'ButtonItem18
         '
-        Me.ButtonItem18.Name = "ButtonItem18"
-        Me.ButtonItem18.Text = "ລາຍງານ OCC"
         '
-        'ButtonItem19
+        Me.RibbonBar17.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
-        Me.ButtonItem19.Name = "ButtonItem19"
-        Me.ButtonItem19.Text = "ລາຍງານແຂກເຂົ້າພັກ"
         '
-        'ButtonItem20
         '
-        Me.ButtonItem20.Name = "ButtonItem20"
-        Me.ButtonItem20.Text = "ລາຍງານແຂກອອກ"
+        Me.RibbonBar17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar17.ContainerControlProcessDialogKey = True
+        Me.RibbonBar17.Dock = System.Windows.Forms.DockStyle.Left
+        Me.RibbonBar17.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.ButtonItem1})
+        Me.RibbonBar17.Location = New System.Drawing.Point(3, 0)
+        Me.RibbonBar17.Name = "RibbonBar17"
+        Me.RibbonBar17.Size = New System.Drawing.Size(141, 57)
+        Me.RibbonBar17.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RibbonBar17.TabIndex = 3
+        Me.RibbonBar17.Text = "RibbonBar17"
         '
-        'ButtonItem21
         '
-        Me.ButtonItem21.Name = "ButtonItem21"
-        Me.ButtonItem21.Text = "ລາຍງານການຈອງຫ້ອງ"
         '
-        'ButtonItem22
+        Me.RibbonBar17.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         '
-        Me.ButtonItem22.Name = "ButtonItem22"
-        Me.ButtonItem22.Text = "ລາຍງານສັງລວມລູກຄ້າ"
         '
-        'ButtonItem23
         '
-        Me.ButtonItem23.Name = "ButtonItem23"
-        Me.ButtonItem23.Text = "ButtonItem23"
+        Me.RibbonBar17.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RibbonBar17.TitleVisible = False
+        '
+        'ButtonItem1
+        '
+        Me.ButtonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText
+        Me.ButtonItem1.Image = Global.HotelSystem.My.Resources.Resources.bed
+        Me.ButtonItem1.ImageFixedSize = New System.Drawing.Size(40, 40)
+        Me.ButtonItem1.Name = "ButtonItem1"
+        Me.ButtonItem1.SubItemsExpandWidth = 14
+        Me.ButtonItem1.Text = "ສະຖານະຫ້ອງ"
         '
         'RibbonPanel3
         '
@@ -1359,7 +1636,6 @@ Partial Class frmmain
         '
         'RibbonTabItem1
         '
-        Me.RibbonTabItem1.Checked = True
         Me.RibbonTabItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
         Me.RibbonTabItem1.Name = "RibbonTabItem1"
         Me.RibbonTabItem1.Panel = Me.RibbonPanel1
@@ -1391,6 +1667,7 @@ Partial Class frmmain
         '
         'RibbonTabItem4
         '
+        Me.RibbonTabItem4.Checked = True
         Me.RibbonTabItem4.Name = "RibbonTabItem4"
         Me.RibbonTabItem4.Panel = Me.RibbonPanel4
         Me.RibbonTabItem4.Text = "   ລາຍງານ   ."
@@ -1430,6 +1707,7 @@ Partial Class frmmain
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 1
         '
+<<<<<<< HEAD
         'RibbonBar22
         '
         Me.RibbonBar22.AutoOverflowEnabled = True
@@ -1468,10 +1746,16 @@ Partial Class frmmain
         Me.ButtonItem26.Name = "ButtonItem26"
         Me.ButtonItem26.SubItemsExpandWidth = 14
         Me.ButtonItem26.Text = "ບ໋ອກຫ້ອງ"
+=======
+        'ButtonItem23
+        '
+        Me.ButtonItem23.Name = "ButtonItem23"
+        Me.ButtonItem23.Text = "ລາຍງານແຂກເຂົ້າພັກແບບກຣາບ"
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         '
         'frmmain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1018, 756)
         Me.ControlBox = False
@@ -1486,12 +1770,20 @@ Partial Class frmmain
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.RibbonControl1.ResumeLayout(False)
         Me.RibbonControl1.PerformLayout()
+        Me.RibbonPanel4.ResumeLayout(False)
         Me.RibbonPanel1.ResumeLayout(False)
+<<<<<<< HEAD
         Me.RibbonPanel5.ResumeLayout(False)
         Me.RibbonPanel7.ResumeLayout(False)
         Me.RibbonPanel6.ResumeLayout(False)
         Me.RibbonPanel2.ResumeLayout(False)
         Me.RibbonPanel4.ResumeLayout(False)
+=======
+        Me.RibbonPanel2.ResumeLayout(False)
+        Me.RibbonPanel5.ResumeLayout(False)
+        Me.RibbonPanel7.ResumeLayout(False)
+        Me.RibbonPanel6.ResumeLayout(False)
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
         Me.ResumeLayout(False)
 
     End Sub
@@ -1545,7 +1837,6 @@ Partial Class frmmain
     Friend WithEvents ButtonItem20 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem21 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem22 As DevComponents.DotNetBar.ButtonItem
-    Friend WithEvents ButtonItem23 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents country As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents provience As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents district As DevComponents.DotNetBar.ButtonItem
@@ -1590,7 +1881,12 @@ Partial Class frmmain
     Friend WithEvents ButtonItem5 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem31 As DevComponents.DotNetBar.ButtonItem
     Friend WithEvents ButtonItem32 As DevComponents.DotNetBar.ButtonItem
+<<<<<<< HEAD
     Friend WithEvents RibbonBar22 As DevComponents.DotNetBar.RibbonBar
     Friend WithEvents ButtonItem26 As DevComponents.DotNetBar.ButtonItem
+=======
+    Friend WithEvents btnfrmcompanyprofile As DevComponents.DotNetBar.ButtonItem
+    Friend WithEvents ButtonItem23 As DevComponents.DotNetBar.ButtonItem
+>>>>>>> 49f66196e1f39517207a1655418b653d6be2f436
 
 End Class

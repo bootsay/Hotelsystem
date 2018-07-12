@@ -9,7 +9,7 @@ Public Class tbfreserve
     Public Function save(reserveNo As String, reserveid As Integer, customerNo As String, roomid As String, datereserve As String, datecheckin As String, datecheckout As String, numberofpax As Integer, remark As String, statusid As String, userid As Integer)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfreserve(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datecheckout,numberofpax,remark,statusid,userid,statuscheckin)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & CInt(numberofpax) & "',N'" & remark & "','" & statusid & "','" & userid & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfreserve(reserveNo,reserveid,customerNO,roomid,datereserve,datecheckin,datecheckout,numberofpax,remark,statusid,userid)values('" & reserveNo & "','" & reserveid & "','" & customerNo & "','" & roomid & "','" & datereserve & "','" & datecheckin & "','" & datecheckout & "','" & CInt(numberofpax) & "',N'" & remark & "','" & statusid & "','" & userid & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
