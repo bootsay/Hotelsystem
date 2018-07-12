@@ -132,6 +132,7 @@ Partial Class frmcheckin
         Me.dgvlist.AllowUserToDeleteRows = False
         Me.dgvlist.AllowUserToResizeColumns = False
         Me.dgvlist.AllowUserToResizeRows = False
+        Me.dgvlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))

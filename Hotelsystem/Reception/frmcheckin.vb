@@ -368,7 +368,7 @@
     Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         If rddate.Checked = True Then
             dgvlist.DataSource = Nothing
-            checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy'"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy'"), dgvlist)
+            checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy"), dgvlist)
         ElseIf rdname.Checked = True Then
             dgvlist.DataSource = Nothing
             checkins.search_checkinby_Name(txtsearch.Text, dgvlist)
