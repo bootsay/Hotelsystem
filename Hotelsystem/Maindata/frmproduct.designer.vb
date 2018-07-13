@@ -352,7 +352,7 @@ Partial Class frmproduct
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvshow.EnableHeadersVisualStyles = False
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(3, 183)
         Me.dgvshow.Name = "dgvshow"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -407,7 +407,6 @@ Partial Class frmproduct
         '
         'Label4
         '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
@@ -419,7 +418,6 @@ Partial Class frmproduct
         '
         'cbunit
         '
-        Me.cbunit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbunit.DisplayMember = "Text"
         Me.cbunit.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbunit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -445,8 +443,6 @@ Partial Class frmproduct
         '
         'cbcategory
         '
-        Me.cbcategory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbcategory.DisplayMember = "Text"
         Me.cbcategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -472,8 +468,6 @@ Partial Class frmproduct
         '
         'txtsale
         '
-        Me.txtsale.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtsale.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtsale.ForeColor = System.Drawing.Color.Black
         Me.txtsale.Location = New System.Drawing.Point(599, 83)
@@ -483,8 +477,6 @@ Partial Class frmproduct
         '
         'txtbuy
         '
-        Me.txtbuy.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtbuy.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbuy.ForeColor = System.Drawing.Color.Black
         Me.txtbuy.Location = New System.Drawing.Point(599, 45)
@@ -494,8 +486,6 @@ Partial Class frmproduct
         '
         'txtname
         '
-        Me.txtname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname.ForeColor = System.Drawing.Color.Black
         Me.txtname.Location = New System.Drawing.Point(110, 85)
@@ -538,8 +528,6 @@ Partial Class frmproduct
         '
         'txtProductNO
         '
-        Me.txtProductNO.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtProductNO.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProductNO.ForeColor = System.Drawing.Color.Black
         Me.txtProductNO.Location = New System.Drawing.Point(110, 7)
@@ -550,8 +538,6 @@ Partial Class frmproduct
         '
         'txtid
         '
-        Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtid.ForeColor = System.Drawing.Color.Black
         Me.txtid.Location = New System.Drawing.Point(259, 11)

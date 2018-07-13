@@ -24,9 +24,18 @@
     End Sub
 
     Private Sub addproduct_Click(sender As Object, e As EventArgs) Handles addproduct.Click
+        'closeform.closeform()
+        'closeform.f = frmproduct
+        'closeform.f.MdiParent = Me
+        'closeform.f.Show()
         closeform.closeform()
         closeform.f = frmproduct
         closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
+        closeform.f.ControlBox = False
+        closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
+        closeform.f.Text = ""
+        closeform.f.Dock = DockStyle.Fill
         closeform.f.Show()
     End Sub
 

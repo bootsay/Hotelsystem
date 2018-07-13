@@ -97,9 +97,11 @@ Public Class frmproduct
         Else
             activates = False
         End If
+        Dim idno As String = product.runidNO
+        Dim id As Integer = product.runid
         Dim stockqty As Integer = 0
 
-        product.update(txtProductNO.Text, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
+        product.update(idno, id, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
         product.loadtbproduct(dgvshow)
         txtProductNO.Text = product.runidNO
         enablesave()

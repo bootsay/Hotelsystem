@@ -31,8 +31,6 @@ Partial Public Class ReportDataset
     
     Private tableviewprovience As viewprovienceDataTable
     
-    Private tableviewcheckout As viewcheckoutDataTable
-    
     Private tableviewroom1 As viewroom1DataTable
     
     Private tableviewroomrate As viewroomrateDataTable
@@ -48,6 +46,10 @@ Partial Public Class ReportDataset
     Private tableviewcheckin As viewcheckinDataTable
     
     Private tableviewcustomer As viewcustomerDataTable
+    
+    Private tableviewitemlist As viewitemlistDataTable
+    
+    Private tableviewcheckout As viewcheckoutDataTable
     
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
@@ -87,9 +89,6 @@ Partial Public Class ReportDataset
             If (Not (ds.Tables("viewprovience")) Is Nothing) Then
                 MyBase.Tables.Add(New viewprovienceDataTable(ds.Tables("viewprovience")))
             End If
-            If (Not (ds.Tables("viewcheckout")) Is Nothing) Then
-                MyBase.Tables.Add(New viewcheckoutDataTable(ds.Tables("viewcheckout")))
-            End If
             If (Not (ds.Tables("viewroom1")) Is Nothing) Then
                 MyBase.Tables.Add(New viewroom1DataTable(ds.Tables("viewroom1")))
             End If
@@ -113,6 +112,12 @@ Partial Public Class ReportDataset
             End If
             If (Not (ds.Tables("viewcustomer")) Is Nothing) Then
                 MyBase.Tables.Add(New viewcustomerDataTable(ds.Tables("viewcustomer")))
+            End If
+            If (Not (ds.Tables("viewitemlist")) Is Nothing) Then
+                MyBase.Tables.Add(New viewitemlistDataTable(ds.Tables("viewitemlist")))
+            End If
+            If (Not (ds.Tables("viewcheckout")) Is Nothing) Then
+                MyBase.Tables.Add(New viewcheckoutDataTable(ds.Tables("viewcheckout")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -158,16 +163,6 @@ Partial Public Class ReportDataset
     Public ReadOnly Property viewprovience() As viewprovienceDataTable
         Get
             Return Me.tableviewprovience
-        End Get
-    End Property
-    
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-     Global.System.ComponentModel.Browsable(false),  _
-     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
-    Public ReadOnly Property viewcheckout() As viewcheckoutDataTable
-        Get
-            Return Me.tableviewcheckout
         End Get
     End Property
     
@@ -253,6 +248,26 @@ Partial Public Class ReportDataset
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property viewitemlist() As viewitemlistDataTable
+        Get
+            Return Me.tableviewitemlist
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property viewcheckout() As viewcheckoutDataTable
+        Get
+            Return Me.tableviewcheckout
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
      Global.System.ComponentModel.BrowsableAttribute(true),  _
      Global.System.ComponentModel.DesignerSerializationVisibilityAttribute(Global.System.ComponentModel.DesignerSerializationVisibility.Visible)>  _
     Public Overrides Property SchemaSerializationMode() As Global.System.Data.SchemaSerializationMode
@@ -327,9 +342,6 @@ Partial Public Class ReportDataset
             If (Not (ds.Tables("viewprovience")) Is Nothing) Then
                 MyBase.Tables.Add(New viewprovienceDataTable(ds.Tables("viewprovience")))
             End If
-            If (Not (ds.Tables("viewcheckout")) Is Nothing) Then
-                MyBase.Tables.Add(New viewcheckoutDataTable(ds.Tables("viewcheckout")))
-            End If
             If (Not (ds.Tables("viewroom1")) Is Nothing) Then
                 MyBase.Tables.Add(New viewroom1DataTable(ds.Tables("viewroom1")))
             End If
@@ -353,6 +365,12 @@ Partial Public Class ReportDataset
             End If
             If (Not (ds.Tables("viewcustomer")) Is Nothing) Then
                 MyBase.Tables.Add(New viewcustomerDataTable(ds.Tables("viewcustomer")))
+            End If
+            If (Not (ds.Tables("viewitemlist")) Is Nothing) Then
+                MyBase.Tables.Add(New viewitemlistDataTable(ds.Tables("viewitemlist")))
+            End If
+            If (Not (ds.Tables("viewcheckout")) Is Nothing) Then
+                MyBase.Tables.Add(New viewcheckoutDataTable(ds.Tables("viewcheckout")))
             End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
@@ -404,12 +422,6 @@ Partial Public Class ReportDataset
                 Me.tableviewprovience.InitVars
             End If
         End If
-        Me.tableviewcheckout = CType(MyBase.Tables("viewcheckout"),viewcheckoutDataTable)
-        If (initTable = true) Then
-            If (Not (Me.tableviewcheckout) Is Nothing) Then
-                Me.tableviewcheckout.InitVars
-            End If
-        End If
         Me.tableviewroom1 = CType(MyBase.Tables("viewroom1"),viewroom1DataTable)
         If (initTable = true) Then
             If (Not (Me.tableviewroom1) Is Nothing) Then
@@ -458,6 +470,18 @@ Partial Public Class ReportDataset
                 Me.tableviewcustomer.InitVars
             End If
         End If
+        Me.tableviewitemlist = CType(MyBase.Tables("viewitemlist"),viewitemlistDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableviewitemlist) Is Nothing) Then
+                Me.tableviewitemlist.InitVars
+            End If
+        End If
+        Me.tableviewcheckout = CType(MyBase.Tables("viewcheckout"),viewcheckoutDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableviewcheckout) Is Nothing) Then
+                Me.tableviewcheckout.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -474,8 +498,6 @@ Partial Public Class ReportDataset
         MyBase.Tables.Add(Me.tableviewroom)
         Me.tableviewprovience = New viewprovienceDataTable()
         MyBase.Tables.Add(Me.tableviewprovience)
-        Me.tableviewcheckout = New viewcheckoutDataTable()
-        MyBase.Tables.Add(Me.tableviewcheckout)
         Me.tableviewroom1 = New viewroom1DataTable()
         MyBase.Tables.Add(Me.tableviewroom1)
         Me.tableviewroomrate = New viewroomrateDataTable()
@@ -492,6 +514,10 @@ Partial Public Class ReportDataset
         MyBase.Tables.Add(Me.tableviewcheckin)
         Me.tableviewcustomer = New viewcustomerDataTable()
         MyBase.Tables.Add(Me.tableviewcustomer)
+        Me.tableviewitemlist = New viewitemlistDataTable()
+        MyBase.Tables.Add(Me.tableviewitemlist)
+        Me.tableviewcheckout = New viewcheckoutDataTable()
+        MyBase.Tables.Add(Me.tableviewcheckout)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -509,12 +535,6 @@ Partial Public Class ReportDataset
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeviewprovience() As Boolean
-        Return false
-    End Function
-    
-    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Private Function ShouldSerializeviewcheckout() As Boolean
         Return false
     End Function
     
@@ -563,6 +583,18 @@ Partial Public Class ReportDataset
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeviewcustomer() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeviewitemlist() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeviewcheckout() As Boolean
         Return false
     End Function
     
@@ -634,9 +666,6 @@ Partial Public Class ReportDataset
     Public Delegate Sub viewprovienceRowChangeEventHandler(ByVal sender As Object, ByVal e As viewprovienceRowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Delegate Sub viewcheckoutRowChangeEventHandler(ByVal sender As Object, ByVal e As viewcheckoutRowChangeEvent)
-    
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub viewroom1RowChangeEventHandler(ByVal sender As Object, ByVal e As viewroom1RowChangeEvent)
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -659,6 +688,12 @@ Partial Public Class ReportDataset
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub viewcustomerRowChangeEventHandler(ByVal sender As Object, ByVal e As viewcustomerRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub viewitemlistRowChangeEventHandler(ByVal sender As Object, ByVal e As viewitemlistRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub viewcheckoutRowChangeEventHandler(ByVal sender As Object, ByVal e As viewcheckoutRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -1708,743 +1743,6 @@ Partial Public Class ReportDataset
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "viewprovienceDataTable"
-            type.Attributes.Add(attribute2)
-            type.Particle = sequence
-            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
-            If xs.Contains(dsSchema.TargetNamespace) Then
-                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
-                Try 
-                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
-                    dsSchema.Write(s1)
-                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
-                    Do While schemas.MoveNext
-                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
-                        s2.SetLength(0)
-                        schema.Write(s2)
-                        If (s1.Length = s2.Length) Then
-                            s1.Position = 0
-                            s2.Position = 0
-                            
-                            Do While ((s1.Position <> s1.Length)  _
-                                        AndAlso (s1.ReadByte = s2.ReadByte))
-                                
-                                
-                            Loop
-                            If (s1.Position = s1.Length) Then
-                                Return type
-                            End If
-                        End If
-                        
-                    Loop
-                Finally
-                    If (Not (s1) Is Nothing) Then
-                        s1.Close
-                    End If
-                    If (Not (s2) Is Nothing) Then
-                        s2.Close
-                    End If
-                End Try
-            End If
-            xs.Add(dsSchema)
-            Return type
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the strongly named DataTable class.
-    '''</summary>
-    <Global.System.Serializable(),  _
-     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
-    Partial Public Class viewcheckoutDataTable
-        Inherits Global.System.Data.TypedTableBase(Of viewcheckoutRow)
-        
-        Private columncheckoutNO As Global.System.Data.DataColumn
-        
-        Private columncheckinNO As Global.System.Data.DataColumn
-        
-        Private columnuserlao As Global.System.Data.DataColumn
-        
-        Private columnlocationname As Global.System.Data.DataColumn
-        
-        Private columnromtypename As Global.System.Data.DataColumn
-        
-        Private columnroom_id As Global.System.Data.DataColumn
-        
-        Private columncustomertypename As Global.System.Data.DataColumn
-        
-        Private columntitlename As Global.System.Data.DataColumn
-        
-        Private columncusname As Global.System.Data.DataColumn
-        
-        Private columnsurname As Global.System.Data.DataColumn
-        
-        Private columnnationality As Global.System.Data.DataColumn
-        
-        Private columnvillagename As Global.System.Data.DataColumn
-        
-        Private columndistrictname As Global.System.Data.DataColumn
-        
-        Private columnprovincename As Global.System.Data.DataColumn
-        
-        Private columncountryname As Global.System.Data.DataColumn
-        
-        Private columnbookingtypename As Global.System.Data.DataColumn
-        
-        Private columnmarkettypename As Global.System.Data.DataColumn
-        
-        Private columncheckindate As Global.System.Data.DataColumn
-        
-        Private columncheckoutdate As Global.System.Data.DataColumn
-        
-        Private columnnumberofpax As Global.System.Data.DataColumn
-        
-        Private columnmealtypename As Global.System.Data.DataColumn
-        
-        Private columnusetypename As Global.System.Data.DataColumn
-        
-        Private columnremark As Global.System.Data.DataColumn
-        
-        Private columnstatusid As Global.System.Data.DataColumn
-        
-        Private columncheckinid As Global.System.Data.DataColumn
-        
-        Private columnuserid As Global.System.Data.DataColumn
-        
-        Private columnroomid As Global.System.Data.DataColumn
-        
-        Private columncustomerNO As Global.System.Data.DataColumn
-        
-        Private columnbookingtypeid As Global.System.Data.DataColumn
-        
-        Private columnmarkettypeid As Global.System.Data.DataColumn
-        
-        Private columnmealtypeid As Global.System.Data.DataColumn
-        
-        Private columnusetypeid As Global.System.Data.DataColumn
-        
-        Private columnvillageid As Global.System.Data.DataColumn
-        
-        Private columndatecheckout As Global.System.Data.DataColumn
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.TableName = "viewcheckout"
-            Me.BeginInit
-            Me.InitClass
-            Me.EndInit
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Friend Sub New(ByVal table As Global.System.Data.DataTable)
-            MyBase.New
-            Me.TableName = table.TableName
-            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
-                Me.CaseSensitive = table.CaseSensitive
-            End If
-            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
-                Me.Locale = table.Locale
-            End If
-            If (table.Namespace <> table.DataSet.Namespace) Then
-                Me.Namespace = table.Namespace
-            End If
-            Me.Prefix = table.Prefix
-            Me.MinimumCapacity = table.MinimumCapacity
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context)
-            Me.InitVars
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property checkoutNOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncheckoutNO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property checkinNOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncheckinNO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property userlaoColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnuserlao
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property locationnameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnlocationname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property romtypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnromtypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property room_idColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnroom_id
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property customertypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncustomertypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property titlenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columntitlename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property cusnameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncusname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property surnameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnsurname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property nationalityColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnationality
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property villagenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnvillagename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property districtnameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndistrictname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property provincenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnprovincename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property countrynameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncountryname
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property bookingtypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnbookingtypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property markettypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmarkettypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property checkindateColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncheckindate
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property checkoutdateColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncheckoutdate
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property numberofpaxColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnnumberofpax
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property mealtypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmealtypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property usetypenameColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnusetypename
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property remarkColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnremark
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property statusidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnstatusid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property checkinidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncheckinid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property useridColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnuserid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property roomidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnroomid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property customerNOColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columncustomerNO
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property bookingtypeidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnbookingtypeid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property markettypeidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmarkettypeid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property mealtypeidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnmealtypeid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property usetypeidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnusetypeid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property villageidColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columnvillageid
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property datecheckoutColumn() As Global.System.Data.DataColumn
-            Get
-                Return Me.columndatecheckout
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Browsable(false)>  _
-        Public ReadOnly Property Count() As Integer
-            Get
-                Return Me.Rows.Count
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Default ReadOnly Property Item(ByVal index As Integer) As viewcheckoutRow
-            Get
-                Return CType(Me.Rows(index),viewcheckoutRow)
-            End Get
-        End Property
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event viewcheckoutRowChanging As viewcheckoutRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event viewcheckoutRowChanged As viewcheckoutRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event viewcheckoutRowDeleting As viewcheckoutRowChangeEventHandler
-        
-        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Event viewcheckoutRowDeleted As viewcheckoutRowChangeEventHandler
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Sub AddviewcheckoutRow(ByVal row As viewcheckoutRow)
-            Me.Rows.Add(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddviewcheckoutRow( _
-                    ByVal checkoutNO As String,  _
-                    ByVal checkinNO As String,  _
-                    ByVal userlao As String,  _
-                    ByVal locationname As String,  _
-                    ByVal romtypename As String,  _
-                    ByVal room_id As Integer,  _
-                    ByVal customertypename As String,  _
-                    ByVal titlename As String,  _
-                    ByVal cusname As String,  _
-                    ByVal surname As String,  _
-                    ByVal nationality As String,  _
-                    ByVal villagename As String,  _
-                    ByVal districtname As String,  _
-                    ByVal provincename As String,  _
-                    ByVal countryname As String,  _
-                    ByVal bookingtypename As String,  _
-                    ByVal markettypename As String,  _
-                    ByVal checkindate As Date,  _
-                    ByVal checkoutdate As Date,  _
-                    ByVal numberofpax As Integer,  _
-                    ByVal mealtypename As String,  _
-                    ByVal usetypename As String,  _
-                    ByVal remark As String,  _
-                    ByVal statusid As Integer,  _
-                    ByVal checkinid As Integer,  _
-                    ByVal userid As Integer,  _
-                    ByVal roomid As Integer,  _
-                    ByVal customerNO As String,  _
-                    ByVal bookingtypeid As Integer,  _
-                    ByVal markettypeid As Integer,  _
-                    ByVal mealtypeid As Integer,  _
-                    ByVal usetypeid As Integer,  _
-                    ByVal villageid As Integer,  _
-                    ByVal datecheckout As Date) As viewcheckoutRow
-            Dim rowviewcheckoutRow As viewcheckoutRow = CType(Me.NewRow,viewcheckoutRow)
-            Dim columnValuesArray() As Object = New Object() {checkoutNO, checkinNO, userlao, locationname, romtypename, room_id, customertypename, titlename, cusname, surname, nationality, villagename, districtname, provincename, countryname, bookingtypename, markettypename, checkindate, checkoutdate, numberofpax, mealtypename, usetypename, remark, statusid, checkinid, userid, roomid, customerNO, bookingtypeid, markettypeid, mealtypeid, usetypeid, villageid, datecheckout}
-            rowviewcheckoutRow.ItemArray = columnValuesArray
-            Me.Rows.Add(rowviewcheckoutRow)
-            Return rowviewcheckoutRow
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overrides Function Clone() As Global.System.Data.DataTable
-            Dim cln As viewcheckoutDataTable = CType(MyBase.Clone,viewcheckoutDataTable)
-            cln.InitVars
-            Return cln
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
-            Return New viewcheckoutDataTable()
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Friend Sub InitVars()
-            Me.columncheckoutNO = MyBase.Columns("checkoutNO")
-            Me.columncheckinNO = MyBase.Columns("checkinNO")
-            Me.columnuserlao = MyBase.Columns("userlao")
-            Me.columnlocationname = MyBase.Columns("locationname")
-            Me.columnromtypename = MyBase.Columns("romtypename")
-            Me.columnroom_id = MyBase.Columns("room_id")
-            Me.columncustomertypename = MyBase.Columns("customertypename")
-            Me.columntitlename = MyBase.Columns("titlename")
-            Me.columncusname = MyBase.Columns("cusname")
-            Me.columnsurname = MyBase.Columns("surname")
-            Me.columnnationality = MyBase.Columns("nationality")
-            Me.columnvillagename = MyBase.Columns("villagename")
-            Me.columndistrictname = MyBase.Columns("districtname")
-            Me.columnprovincename = MyBase.Columns("provincename")
-            Me.columncountryname = MyBase.Columns("countryname")
-            Me.columnbookingtypename = MyBase.Columns("bookingtypename")
-            Me.columnmarkettypename = MyBase.Columns("markettypename")
-            Me.columncheckindate = MyBase.Columns("checkindate")
-            Me.columncheckoutdate = MyBase.Columns("checkoutdate")
-            Me.columnnumberofpax = MyBase.Columns("numberofpax")
-            Me.columnmealtypename = MyBase.Columns("mealtypename")
-            Me.columnusetypename = MyBase.Columns("usetypename")
-            Me.columnremark = MyBase.Columns("remark")
-            Me.columnstatusid = MyBase.Columns("statusid")
-            Me.columncheckinid = MyBase.Columns("checkinid")
-            Me.columnuserid = MyBase.Columns("userid")
-            Me.columnroomid = MyBase.Columns("roomid")
-            Me.columncustomerNO = MyBase.Columns("customerNO")
-            Me.columnbookingtypeid = MyBase.Columns("bookingtypeid")
-            Me.columnmarkettypeid = MyBase.Columns("markettypeid")
-            Me.columnmealtypeid = MyBase.Columns("mealtypeid")
-            Me.columnusetypeid = MyBase.Columns("usetypeid")
-            Me.columnvillageid = MyBase.Columns("villageid")
-            Me.columndatecheckout = MyBase.Columns("datecheckout")
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Sub InitClass()
-            Me.columncheckoutNO = New Global.System.Data.DataColumn("checkoutNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncheckoutNO)
-            Me.columncheckinNO = New Global.System.Data.DataColumn("checkinNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncheckinNO)
-            Me.columnuserlao = New Global.System.Data.DataColumn("userlao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnuserlao)
-            Me.columnlocationname = New Global.System.Data.DataColumn("locationname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnlocationname)
-            Me.columnromtypename = New Global.System.Data.DataColumn("romtypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnromtypename)
-            Me.columnroom_id = New Global.System.Data.DataColumn("room_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnroom_id)
-            Me.columncustomertypename = New Global.System.Data.DataColumn("customertypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncustomertypename)
-            Me.columntitlename = New Global.System.Data.DataColumn("titlename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columntitlename)
-            Me.columncusname = New Global.System.Data.DataColumn("cusname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncusname)
-            Me.columnsurname = New Global.System.Data.DataColumn("surname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnsurname)
-            Me.columnnationality = New Global.System.Data.DataColumn("nationality", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnationality)
-            Me.columnvillagename = New Global.System.Data.DataColumn("villagename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnvillagename)
-            Me.columndistrictname = New Global.System.Data.DataColumn("districtname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndistrictname)
-            Me.columnprovincename = New Global.System.Data.DataColumn("provincename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnprovincename)
-            Me.columncountryname = New Global.System.Data.DataColumn("countryname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncountryname)
-            Me.columnbookingtypename = New Global.System.Data.DataColumn("bookingtypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnbookingtypename)
-            Me.columnmarkettypename = New Global.System.Data.DataColumn("markettypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmarkettypename)
-            Me.columncheckindate = New Global.System.Data.DataColumn("checkindate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncheckindate)
-            Me.columncheckoutdate = New Global.System.Data.DataColumn("checkoutdate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncheckoutdate)
-            Me.columnnumberofpax = New Global.System.Data.DataColumn("numberofpax", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnnumberofpax)
-            Me.columnmealtypename = New Global.System.Data.DataColumn("mealtypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmealtypename)
-            Me.columnusetypename = New Global.System.Data.DataColumn("usetypename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnusetypename)
-            Me.columnremark = New Global.System.Data.DataColumn("remark", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnremark)
-            Me.columnstatusid = New Global.System.Data.DataColumn("statusid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnstatusid)
-            Me.columncheckinid = New Global.System.Data.DataColumn("checkinid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncheckinid)
-            Me.columnuserid = New Global.System.Data.DataColumn("userid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnuserid)
-            Me.columnroomid = New Global.System.Data.DataColumn("roomid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnroomid)
-            Me.columncustomerNO = New Global.System.Data.DataColumn("customerNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columncustomerNO)
-            Me.columnbookingtypeid = New Global.System.Data.DataColumn("bookingtypeid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnbookingtypeid)
-            Me.columnmarkettypeid = New Global.System.Data.DataColumn("markettypeid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmarkettypeid)
-            Me.columnmealtypeid = New Global.System.Data.DataColumn("mealtypeid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnmealtypeid)
-            Me.columnusetypeid = New Global.System.Data.DataColumn("usetypeid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnusetypeid)
-            Me.columnvillageid = New Global.System.Data.DataColumn("villageid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnvillageid)
-            Me.columndatecheckout = New Global.System.Data.DataColumn("datecheckout", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columndatecheckout)
-            Me.columncheckoutNO.AllowDBNull = false
-            Me.columncheckoutNO.MaxLength = 50
-            Me.columncheckinNO.AllowDBNull = false
-            Me.columncheckinNO.MaxLength = 50
-            Me.columnuserlao.MaxLength = 50
-            Me.columnlocationname.MaxLength = 50
-            Me.columnromtypename.MaxLength = 50
-            Me.columncustomertypename.MaxLength = 50
-            Me.columntitlename.MaxLength = 50
-            Me.columncusname.MaxLength = 50
-            Me.columnsurname.MaxLength = 50
-            Me.columnnationality.MaxLength = 50
-            Me.columnvillagename.MaxLength = 50
-            Me.columndistrictname.MaxLength = 50
-            Me.columnprovincename.MaxLength = 50
-            Me.columncountryname.MaxLength = 50
-            Me.columnbookingtypename.MaxLength = 50
-            Me.columnmarkettypename.MaxLength = 50
-            Me.columnmealtypename.MaxLength = 50
-            Me.columnusetypename.MaxLength = 50
-            Me.columnremark.MaxLength = 50
-            Me.columncustomerNO.MaxLength = 50
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function NewviewcheckoutRow() As viewcheckoutRow
-            Return CType(Me.NewRow,viewcheckoutRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
-            Return New viewcheckoutRow(builder)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Function GetRowType() As Global.System.Type
-            Return GetType(viewcheckoutRow)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanged(e)
-            If (Not (Me.viewcheckoutRowChangedEvent) Is Nothing) Then
-                RaiseEvent viewcheckoutRowChanged(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowChanging(e)
-            If (Not (Me.viewcheckoutRowChangingEvent) Is Nothing) Then
-                RaiseEvent viewcheckoutRowChanging(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleted(e)
-            If (Not (Me.viewcheckoutRowDeletedEvent) Is Nothing) Then
-                RaiseEvent viewcheckoutRowDeleted(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
-            MyBase.OnRowDeleting(e)
-            If (Not (Me.viewcheckoutRowDeletingEvent) Is Nothing) Then
-                RaiseEvent viewcheckoutRowDeleting(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
-            End If
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub RemoveviewcheckoutRow(ByVal row As viewcheckoutRow)
-            Me.Rows.Remove(row)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
-            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
-            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
-            Dim ds As ReportDataset = New ReportDataset()
-            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
-            any1.MinOccurs = New Decimal(0)
-            any1.MaxOccurs = Decimal.MaxValue
-            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any1)
-            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
-            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
-            any2.MinOccurs = New Decimal(1)
-            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
-            sequence.Items.Add(any2)
-            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute1.Name = "namespace"
-            attribute1.FixedValue = ds.Namespace
-            type.Attributes.Add(attribute1)
-            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
-            attribute2.Name = "tableTypeName"
-            attribute2.FixedValue = "viewcheckoutDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -6788,6 +6086,1072 @@ Partial Public Class ReportDataset
     End Class
     
     '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class viewitemlistDataTable
+        Inherits Global.System.Data.TypedTableBase(Of viewitemlistRow)
+        
+        Private columnitemlistid As Global.System.Data.DataColumn
+        
+        Private columnroom_id As Global.System.Data.DataColumn
+        
+        Private columnproname As Global.System.Data.DataColumn
+        
+        Private columnqty As Global.System.Data.DataColumn
+        
+        Private columnunitname As Global.System.Data.DataColumn
+        
+        Private columnprice As Global.System.Data.DataColumn
+        
+        Private columntotalprice As Global.System.Data.DataColumn
+        
+        Private columndateadd As Global.System.Data.DataColumn
+        
+        Private columnstatusid As Global.System.Data.DataColumn
+        
+        Private columnuserlao As Global.System.Data.DataColumn
+        
+        Private columnroomid As Global.System.Data.DataColumn
+        
+        Private columnproid As Global.System.Data.DataColumn
+        
+        Private columnuserid As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "viewitemlist"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property itemlistidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnitemlistid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property room_idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnroom_id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property pronameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnproname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property qtyColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnqty
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property unitnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnunitname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property priceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property totalpriceColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntotalprice
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property dateaddColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndateadd
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property statusidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnstatusid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property userlaoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuserlao
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property roomidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnroomid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property proidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnproid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property useridColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuserid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As viewitemlistRow
+            Get
+                Return CType(Me.Rows(index),viewitemlistRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewitemlistRowChanging As viewitemlistRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewitemlistRowChanged As viewitemlistRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewitemlistRowDeleting As viewitemlistRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewitemlistRowDeleted As viewitemlistRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddviewitemlistRow(ByVal row As viewitemlistRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddviewitemlistRow(ByVal itemlistid As Integer, ByVal room_id As Integer, ByVal proname As String, ByVal qty As Integer, ByVal unitname As String, ByVal price As Double, ByVal totalprice As Double, ByVal dateadd As Date, ByVal statusid As String, ByVal userlao As String, ByVal roomid As Integer, ByVal proid As Integer, ByVal userid As Integer) As viewitemlistRow
+            Dim rowviewitemlistRow As viewitemlistRow = CType(Me.NewRow,viewitemlistRow)
+            Dim columnValuesArray() As Object = New Object() {itemlistid, room_id, proname, qty, unitname, price, totalprice, dateadd, statusid, userlao, roomid, proid, userid}
+            rowviewitemlistRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowviewitemlistRow)
+            Return rowviewitemlistRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindByitemlistid(ByVal itemlistid As Integer) As viewitemlistRow
+            Return CType(Me.Rows.Find(New Object() {itemlistid}),viewitemlistRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As viewitemlistDataTable = CType(MyBase.Clone,viewitemlistDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New viewitemlistDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnitemlistid = MyBase.Columns("itemlistid")
+            Me.columnroom_id = MyBase.Columns("room_id")
+            Me.columnproname = MyBase.Columns("proname")
+            Me.columnqty = MyBase.Columns("qty")
+            Me.columnunitname = MyBase.Columns("unitname")
+            Me.columnprice = MyBase.Columns("price")
+            Me.columntotalprice = MyBase.Columns("totalprice")
+            Me.columndateadd = MyBase.Columns("dateadd")
+            Me.columnstatusid = MyBase.Columns("statusid")
+            Me.columnuserlao = MyBase.Columns("userlao")
+            Me.columnroomid = MyBase.Columns("roomid")
+            Me.columnproid = MyBase.Columns("proid")
+            Me.columnuserid = MyBase.Columns("userid")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnitemlistid = New Global.System.Data.DataColumn("itemlistid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnitemlistid)
+            Me.columnroom_id = New Global.System.Data.DataColumn("room_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnroom_id)
+            Me.columnproname = New Global.System.Data.DataColumn("proname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproname)
+            Me.columnqty = New Global.System.Data.DataColumn("qty", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnqty)
+            Me.columnunitname = New Global.System.Data.DataColumn("unitname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnunitname)
+            Me.columnprice = New Global.System.Data.DataColumn("price", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprice)
+            Me.columntotalprice = New Global.System.Data.DataColumn("totalprice", GetType(Double), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntotalprice)
+            Me.columndateadd = New Global.System.Data.DataColumn("dateadd", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndateadd)
+            Me.columnstatusid = New Global.System.Data.DataColumn("statusid", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnstatusid)
+            Me.columnuserlao = New Global.System.Data.DataColumn("userlao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuserlao)
+            Me.columnroomid = New Global.System.Data.DataColumn("roomid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnroomid)
+            Me.columnproid = New Global.System.Data.DataColumn("proid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnproid)
+            Me.columnuserid = New Global.System.Data.DataColumn("userid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuserid)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnitemlistid}, true))
+            Me.columnitemlistid.AllowDBNull = false
+            Me.columnitemlistid.Unique = true
+            Me.columnproname.MaxLength = 50
+            Me.columnunitname.MaxLength = 50
+            Me.columnstatusid.MaxLength = 50
+            Me.columnuserlao.MaxLength = 50
+            Me.columnuserid.AllowDBNull = false
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewviewitemlistRow() As viewitemlistRow
+            Return CType(Me.NewRow,viewitemlistRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New viewitemlistRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(viewitemlistRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.viewitemlistRowChangedEvent) Is Nothing) Then
+                RaiseEvent viewitemlistRowChanged(Me, New viewitemlistRowChangeEvent(CType(e.Row,viewitemlistRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.viewitemlistRowChangingEvent) Is Nothing) Then
+                RaiseEvent viewitemlistRowChanging(Me, New viewitemlistRowChangeEvent(CType(e.Row,viewitemlistRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.viewitemlistRowDeletedEvent) Is Nothing) Then
+                RaiseEvent viewitemlistRowDeleted(Me, New viewitemlistRowChangeEvent(CType(e.Row,viewitemlistRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.viewitemlistRowDeletingEvent) Is Nothing) Then
+                RaiseEvent viewitemlistRowDeleting(Me, New viewitemlistRowChangeEvent(CType(e.Row,viewitemlistRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveviewitemlistRow(ByVal row As viewitemlistRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As ReportDataset = New ReportDataset()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "viewitemlistDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class viewcheckoutDataTable
+        Inherits Global.System.Data.TypedTableBase(Of viewcheckoutRow)
+        
+        Private columncheckoutNO As Global.System.Data.DataColumn
+        
+        Private columncheckinid As Global.System.Data.DataColumn
+        
+        Private columnreserveNO As Global.System.Data.DataColumn
+        
+        Private columnroom_id As Global.System.Data.DataColumn
+        
+        Private columntitlename As Global.System.Data.DataColumn
+        
+        Private columncusname As Global.System.Data.DataColumn
+        
+        Private columnsurname As Global.System.Data.DataColumn
+        
+        Private columnnationality As Global.System.Data.DataColumn
+        
+        Private columnvillagename As Global.System.Data.DataColumn
+        
+        Private columndistrictname As Global.System.Data.DataColumn
+        
+        Private columnprovincename As Global.System.Data.DataColumn
+        
+        Private columncountryname As Global.System.Data.DataColumn
+        
+        Private columnpassport As Global.System.Data.DataColumn
+        
+        Private columnidcard As Global.System.Data.DataColumn
+        
+        Private columntel As Global.System.Data.DataColumn
+        
+        Private columnfax As Global.System.Data.DataColumn
+        
+        Private columnemail As Global.System.Data.DataColumn
+        
+        Private columnroomrateid As Global.System.Data.DataColumn
+        
+        Private columnactivate As Global.System.Data.DataColumn
+        
+        Private columncheckindate As Global.System.Data.DataColumn
+        
+        Private columndatecheckout As Global.System.Data.DataColumn
+        
+        Private columnnumberofpax As Global.System.Data.DataColumn
+        
+        Private columnuserlao As Global.System.Data.DataColumn
+        
+        Private columncheckoutid As Global.System.Data.DataColumn
+        
+        Private columnCheckinNO As Global.System.Data.DataColumn
+        
+        Private columncustomerNO As Global.System.Data.DataColumn
+        
+        Private columnuserid As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "viewcheckout"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property checkoutNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncheckoutNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property checkinidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncheckinid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property reserveNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnreserveNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property room_idColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnroom_id
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property titlenameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntitlename
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property cusnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncusname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property surnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnsurname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property nationalityColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnationality
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property villagenameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnvillagename
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property districtnameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndistrictname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property provincenameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnprovincename
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property countrynameColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncountryname
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property passportColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnpassport
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property idcardColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnidcard
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property telColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columntel
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property faxColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnfax
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property emailColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnemail
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property roomrateidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnroomrateid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property activateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnactivate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property checkindateColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncheckindate
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property datecheckoutColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columndatecheckout
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property numberofpaxColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnnumberofpax
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property userlaoColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuserlao
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property checkoutidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncheckoutid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property CheckinNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCheckinNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property customerNOColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columncustomerNO
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property useridColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnuserid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As viewcheckoutRow
+            Get
+                Return CType(Me.Rows(index),viewcheckoutRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewcheckoutRowChanging As viewcheckoutRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewcheckoutRowChanged As viewcheckoutRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewcheckoutRowDeleting As viewcheckoutRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event viewcheckoutRowDeleted As viewcheckoutRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddviewcheckoutRow(ByVal row As viewcheckoutRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddviewcheckoutRow( _
+                    ByVal checkoutNO As String,  _
+                    ByVal checkinid As Integer,  _
+                    ByVal reserveNO As String,  _
+                    ByVal room_id As Integer,  _
+                    ByVal titlename As String,  _
+                    ByVal cusname As String,  _
+                    ByVal surname As String,  _
+                    ByVal nationality As String,  _
+                    ByVal villagename As String,  _
+                    ByVal districtname As String,  _
+                    ByVal provincename As String,  _
+                    ByVal countryname As String,  _
+                    ByVal passport As String,  _
+                    ByVal idcard As String,  _
+                    ByVal tel As String,  _
+                    ByVal fax As String,  _
+                    ByVal email As String,  _
+                    ByVal roomrateid As Integer,  _
+                    ByVal activate As Boolean,  _
+                    ByVal checkindate As Date,  _
+                    ByVal datecheckout As Date,  _
+                    ByVal numberofpax As Integer,  _
+                    ByVal userlao As String,  _
+                    ByVal checkoutid As Integer,  _
+                    ByVal CheckinNO As String,  _
+                    ByVal customerNO As String,  _
+                    ByVal userid As Integer) As viewcheckoutRow
+            Dim rowviewcheckoutRow As viewcheckoutRow = CType(Me.NewRow,viewcheckoutRow)
+            Dim columnValuesArray() As Object = New Object() {checkoutNO, checkinid, reserveNO, room_id, titlename, cusname, surname, nationality, villagename, districtname, provincename, countryname, passport, idcard, tel, fax, email, roomrateid, activate, checkindate, datecheckout, numberofpax, userlao, checkoutid, CheckinNO, customerNO, userid}
+            rowviewcheckoutRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowviewcheckoutRow)
+            Return rowviewcheckoutRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function FindBycheckoutNO(ByVal checkoutNO As String) As viewcheckoutRow
+            Return CType(Me.Rows.Find(New Object() {checkoutNO}),viewcheckoutRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As viewcheckoutDataTable = CType(MyBase.Clone,viewcheckoutDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New viewcheckoutDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columncheckoutNO = MyBase.Columns("checkoutNO")
+            Me.columncheckinid = MyBase.Columns("checkinid")
+            Me.columnreserveNO = MyBase.Columns("reserveNO")
+            Me.columnroom_id = MyBase.Columns("room_id")
+            Me.columntitlename = MyBase.Columns("titlename")
+            Me.columncusname = MyBase.Columns("cusname")
+            Me.columnsurname = MyBase.Columns("surname")
+            Me.columnnationality = MyBase.Columns("nationality")
+            Me.columnvillagename = MyBase.Columns("villagename")
+            Me.columndistrictname = MyBase.Columns("districtname")
+            Me.columnprovincename = MyBase.Columns("provincename")
+            Me.columncountryname = MyBase.Columns("countryname")
+            Me.columnpassport = MyBase.Columns("passport")
+            Me.columnidcard = MyBase.Columns("idcard")
+            Me.columntel = MyBase.Columns("tel")
+            Me.columnfax = MyBase.Columns("fax")
+            Me.columnemail = MyBase.Columns("email")
+            Me.columnroomrateid = MyBase.Columns("roomrateid")
+            Me.columnactivate = MyBase.Columns("activate")
+            Me.columncheckindate = MyBase.Columns("checkindate")
+            Me.columndatecheckout = MyBase.Columns("datecheckout")
+            Me.columnnumberofpax = MyBase.Columns("numberofpax")
+            Me.columnuserlao = MyBase.Columns("userlao")
+            Me.columncheckoutid = MyBase.Columns("checkoutid")
+            Me.columnCheckinNO = MyBase.Columns("CheckinNO")
+            Me.columncustomerNO = MyBase.Columns("customerNO")
+            Me.columnuserid = MyBase.Columns("userid")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columncheckoutNO = New Global.System.Data.DataColumn("checkoutNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncheckoutNO)
+            Me.columncheckinid = New Global.System.Data.DataColumn("checkinid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncheckinid)
+            Me.columnreserveNO = New Global.System.Data.DataColumn("reserveNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnreserveNO)
+            Me.columnroom_id = New Global.System.Data.DataColumn("room_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnroom_id)
+            Me.columntitlename = New Global.System.Data.DataColumn("titlename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntitlename)
+            Me.columncusname = New Global.System.Data.DataColumn("cusname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncusname)
+            Me.columnsurname = New Global.System.Data.DataColumn("surname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnsurname)
+            Me.columnnationality = New Global.System.Data.DataColumn("nationality", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnationality)
+            Me.columnvillagename = New Global.System.Data.DataColumn("villagename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnvillagename)
+            Me.columndistrictname = New Global.System.Data.DataColumn("districtname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndistrictname)
+            Me.columnprovincename = New Global.System.Data.DataColumn("provincename", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnprovincename)
+            Me.columncountryname = New Global.System.Data.DataColumn("countryname", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncountryname)
+            Me.columnpassport = New Global.System.Data.DataColumn("passport", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnpassport)
+            Me.columnidcard = New Global.System.Data.DataColumn("idcard", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnidcard)
+            Me.columntel = New Global.System.Data.DataColumn("tel", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columntel)
+            Me.columnfax = New Global.System.Data.DataColumn("fax", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnfax)
+            Me.columnemail = New Global.System.Data.DataColumn("email", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnemail)
+            Me.columnroomrateid = New Global.System.Data.DataColumn("roomrateid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnroomrateid)
+            Me.columnactivate = New Global.System.Data.DataColumn("activate", GetType(Boolean), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnactivate)
+            Me.columncheckindate = New Global.System.Data.DataColumn("checkindate", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncheckindate)
+            Me.columndatecheckout = New Global.System.Data.DataColumn("datecheckout", GetType(Date), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columndatecheckout)
+            Me.columnnumberofpax = New Global.System.Data.DataColumn("numberofpax", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnnumberofpax)
+            Me.columnuserlao = New Global.System.Data.DataColumn("userlao", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuserlao)
+            Me.columncheckoutid = New Global.System.Data.DataColumn("checkoutid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncheckoutid)
+            Me.columnCheckinNO = New Global.System.Data.DataColumn("CheckinNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCheckinNO)
+            Me.columncustomerNO = New Global.System.Data.DataColumn("customerNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columncustomerNO)
+            Me.columnuserid = New Global.System.Data.DataColumn("userid", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnuserid)
+            Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columncheckoutNO}, true))
+            Me.columncheckoutNO.AllowDBNull = false
+            Me.columncheckoutNO.Unique = true
+            Me.columncheckoutNO.MaxLength = 50
+            Me.columnreserveNO.MaxLength = 10
+            Me.columntitlename.MaxLength = 50
+            Me.columncusname.MaxLength = 50
+            Me.columnsurname.MaxLength = 50
+            Me.columnnationality.MaxLength = 50
+            Me.columnvillagename.MaxLength = 50
+            Me.columndistrictname.MaxLength = 50
+            Me.columnprovincename.MaxLength = 50
+            Me.columncountryname.MaxLength = 50
+            Me.columnpassport.MaxLength = 50
+            Me.columnidcard.MaxLength = 50
+            Me.columntel.MaxLength = 50
+            Me.columnfax.MaxLength = 50
+            Me.columnemail.MaxLength = 50
+            Me.columnuserlao.MaxLength = 50
+            Me.columnCheckinNO.MaxLength = 10
+            Me.columncustomerNO.MaxLength = 10
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewviewcheckoutRow() As viewcheckoutRow
+            Return CType(Me.NewRow,viewcheckoutRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New viewcheckoutRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(viewcheckoutRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.viewcheckoutRowChangedEvent) Is Nothing) Then
+                RaiseEvent viewcheckoutRowChanged(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.viewcheckoutRowChangingEvent) Is Nothing) Then
+                RaiseEvent viewcheckoutRowChanging(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.viewcheckoutRowDeletedEvent) Is Nothing) Then
+                RaiseEvent viewcheckoutRowDeleted(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.viewcheckoutRowDeletingEvent) Is Nothing) Then
+                RaiseEvent viewcheckoutRowDeleting(Me, New viewcheckoutRowChangeEvent(CType(e.Row,viewcheckoutRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveviewcheckoutRow(ByVal row As viewcheckoutRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As ReportDataset = New ReportDataset()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "viewcheckoutDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
     '''Represents strongly named DataRow class.
     '''</summary>
     Partial Public Class viewproductRow
@@ -7486,908 +7850,6 @@ Partial Public Class ReportDataset
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetcountryidNull()
             Me(Me.tableviewprovience.countryidColumn) = Global.System.Convert.DBNull
-        End Sub
-    End Class
-    
-    '''<summary>
-    '''Represents strongly named DataRow class.
-    '''</summary>
-    Partial Public Class viewcheckoutRow
-        Inherits Global.System.Data.DataRow
-        
-        Private tableviewcheckout As viewcheckoutDataTable
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
-            MyBase.New(rb)
-            Me.tableviewcheckout = CType(Me.Table,viewcheckoutDataTable)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property checkoutNO() As String
-            Get
-                Return CType(Me(Me.tableviewcheckout.checkoutNOColumn),String)
-            End Get
-            Set
-                Me(Me.tableviewcheckout.checkoutNOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property checkinNO() As String
-            Get
-                Return CType(Me(Me.tableviewcheckout.checkinNOColumn),String)
-            End Get
-            Set
-                Me(Me.tableviewcheckout.checkinNOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property userlao() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.userlaoColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'userlao' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.userlaoColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property locationname() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.locationnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'locationname' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.locationnameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property romtypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.romtypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'romtypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.romtypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property room_id() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.room_idColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'room_id' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.room_idColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property customertypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.customertypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'customertypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.customertypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property titlename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.titlenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'titlename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.titlenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property cusname() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.cusnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'cusname' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.cusnameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property surname() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.surnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'surname' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.surnameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property nationality() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.nationalityColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'nationality' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.nationalityColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property villagename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.villagenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'villagename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.villagenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property districtname() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.districtnameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'districtname' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.districtnameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property provincename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.provincenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'provincename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.provincenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property countryname() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.countrynameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'countryname' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.countrynameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property bookingtypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.bookingtypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'bookingtypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.bookingtypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property markettypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.markettypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'markettypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.markettypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property checkindate() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.checkindateColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkindate' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.checkindateColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property checkoutdate() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.checkoutdateColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkoutdate' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.checkoutdateColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property numberofpax() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.numberofpaxColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'numberofpax' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.numberofpaxColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property mealtypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.mealtypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'mealtypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.mealtypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property usetypename() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.usetypenameColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'usetypename' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.usetypenameColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property remark() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.remarkColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'remark' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.remarkColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property statusid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.statusidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'statusid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.statusidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property checkinid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.checkinidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkinid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.checkinidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property userid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.useridColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'userid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.useridColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property roomid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.roomidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'roomid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.roomidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property customerNO() As String
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.customerNOColumn),String)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'customerNO' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.customerNOColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property bookingtypeid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.bookingtypeidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'bookingtypeid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.bookingtypeidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property markettypeid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.markettypeidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'markettypeid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.markettypeidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property mealtypeid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.mealtypeidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'mealtypeid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.mealtypeidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property usetypeid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.usetypeidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'usetypeid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.usetypeidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property villageid() As Integer
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.villageidColumn),Integer)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'villageid' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.villageidColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property datecheckout() As Date
-            Get
-                Try 
-                    Return CType(Me(Me.tableviewcheckout.datecheckoutColumn),Date)
-                Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'datecheckout' in table 'viewcheckout' is DBNull.", e)
-                End Try
-            End Get
-            Set
-                Me(Me.tableviewcheckout.datecheckoutColumn) = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsuserlaoNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.userlaoColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetuserlaoNull()
-            Me(Me.tableviewcheckout.userlaoColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IslocationnameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.locationnameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetlocationnameNull()
-            Me(Me.tableviewcheckout.locationnameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsromtypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.romtypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetromtypenameNull()
-            Me(Me.tableviewcheckout.romtypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function Isroom_idNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.room_idColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub Setroom_idNull()
-            Me(Me.tableviewcheckout.room_idColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscustomertypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.customertypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcustomertypenameNull()
-            Me(Me.tableviewcheckout.customertypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IstitlenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.titlenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SettitlenameNull()
-            Me(Me.tableviewcheckout.titlenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscusnameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.cusnameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcusnameNull()
-            Me(Me.tableviewcheckout.cusnameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IssurnameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.surnameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetsurnameNull()
-            Me(Me.tableviewcheckout.surnameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsnationalityNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.nationalityColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetnationalityNull()
-            Me(Me.tableviewcheckout.nationalityColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsvillagenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.villagenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetvillagenameNull()
-            Me(Me.tableviewcheckout.villagenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsdistrictnameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.districtnameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetdistrictnameNull()
-            Me(Me.tableviewcheckout.districtnameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsprovincenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.provincenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetprovincenameNull()
-            Me(Me.tableviewcheckout.provincenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscountrynameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.countrynameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcountrynameNull()
-            Me(Me.tableviewcheckout.countrynameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsbookingtypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.bookingtypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetbookingtypenameNull()
-            Me(Me.tableviewcheckout.bookingtypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsmarkettypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.markettypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetmarkettypenameNull()
-            Me(Me.tableviewcheckout.markettypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscheckindateNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.checkindateColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcheckindateNull()
-            Me(Me.tableviewcheckout.checkindateColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscheckoutdateNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.checkoutdateColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcheckoutdateNull()
-            Me(Me.tableviewcheckout.checkoutdateColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsnumberofpaxNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.numberofpaxColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetnumberofpaxNull()
-            Me(Me.tableviewcheckout.numberofpaxColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsmealtypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.mealtypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetmealtypenameNull()
-            Me(Me.tableviewcheckout.mealtypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsusetypenameNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.usetypenameColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetusetypenameNull()
-            Me(Me.tableviewcheckout.usetypenameColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsremarkNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.remarkColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetremarkNull()
-            Me(Me.tableviewcheckout.remarkColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsstatusidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.statusidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetstatusidNull()
-            Me(Me.tableviewcheckout.statusidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscheckinidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.checkinidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcheckinidNull()
-            Me(Me.tableviewcheckout.checkinidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsuseridNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.useridColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetuseridNull()
-            Me(Me.tableviewcheckout.useridColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsroomidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.roomidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetroomidNull()
-            Me(Me.tableviewcheckout.roomidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IscustomerNONull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.customerNOColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetcustomerNONull()
-            Me(Me.tableviewcheckout.customerNOColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsbookingtypeidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.bookingtypeidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetbookingtypeidNull()
-            Me(Me.tableviewcheckout.bookingtypeidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsmarkettypeidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.markettypeidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetmarkettypeidNull()
-            Me(Me.tableviewcheckout.markettypeidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsmealtypeidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.mealtypeidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetmealtypeidNull()
-            Me(Me.tableviewcheckout.mealtypeidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsusetypeidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.usetypeidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetusetypeidNull()
-            Me(Me.tableviewcheckout.usetypeidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsvillageidNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.villageidColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetvillageidNull()
-            Me(Me.tableviewcheckout.villageidColumn) = Global.System.Convert.DBNull
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsdatecheckoutNull() As Boolean
-            Return Me.IsNull(Me.tableviewcheckout.datecheckoutColumn)
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetdatecheckoutNull()
-            Me(Me.tableviewcheckout.datecheckoutColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -12766,6 +12228,1070 @@ Partial Public Class ReportDataset
     End Class
     
     '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class viewitemlistRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableviewitemlist As viewitemlistDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableviewitemlist = CType(Me.Table,viewitemlistDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property itemlistid() As Integer
+            Get
+                Return CType(Me(Me.tableviewitemlist.itemlistidColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableviewitemlist.itemlistidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property room_id() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.room_idColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'room_id' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.room_idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property proname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.pronameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'proname' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.pronameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property qty() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.qtyColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'qty' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.qtyColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property unitname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.unitnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'unitname' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.unitnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property price() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.priceColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'price' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.priceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property totalprice() As Double
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.totalpriceColumn),Double)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'totalprice' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.totalpriceColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property dateadd() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.dateaddColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'dateadd' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.dateaddColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property statusid() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.statusidColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'statusid' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.statusidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property userlao() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.userlaoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'userlao' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.userlaoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property roomid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.roomidColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'roomid' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.roomidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property proid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewitemlist.proidColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'proid' in table 'viewitemlist' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewitemlist.proidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property userid() As Integer
+            Get
+                Return CType(Me(Me.tableviewitemlist.useridColumn),Integer)
+            End Get
+            Set
+                Me(Me.tableviewitemlist.useridColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isroom_idNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.room_idColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setroom_idNull()
+            Me(Me.tableviewitemlist.room_idColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspronameNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.pronameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpronameNull()
+            Me(Me.tableviewitemlist.pronameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsqtyNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.qtyColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetqtyNull()
+            Me(Me.tableviewitemlist.qtyColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsunitnameNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.unitnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetunitnameNull()
+            Me(Me.tableviewitemlist.unitnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspriceNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.priceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpriceNull()
+            Me(Me.tableviewitemlist.priceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstotalpriceNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.totalpriceColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettotalpriceNull()
+            Me(Me.tableviewitemlist.totalpriceColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsdateaddNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.dateaddColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetdateaddNull()
+            Me(Me.tableviewitemlist.dateaddColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsstatusidNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.statusidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetstatusidNull()
+            Me(Me.tableviewitemlist.statusidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsuserlaoNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.userlaoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetuserlaoNull()
+            Me(Me.tableviewitemlist.userlaoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsroomidNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.roomidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetroomidNull()
+            Me(Me.tableviewitemlist.roomidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsproidNull() As Boolean
+            Return Me.IsNull(Me.tableviewitemlist.proidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetproidNull()
+            Me(Me.tableviewitemlist.proidColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class viewcheckoutRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableviewcheckout As viewcheckoutDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableviewcheckout = CType(Me.Table,viewcheckoutDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property checkoutNO() As String
+            Get
+                Return CType(Me(Me.tableviewcheckout.checkoutNOColumn),String)
+            End Get
+            Set
+                Me(Me.tableviewcheckout.checkoutNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property checkinid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.checkinidColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkinid' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.checkinidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property reserveNO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.reserveNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'reserveNO' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.reserveNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property room_id() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.room_idColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'room_id' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.room_idColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property titlename() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.titlenameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'titlename' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.titlenameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property cusname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.cusnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'cusname' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.cusnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property surname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.surnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'surname' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.surnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property nationality() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.nationalityColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'nationality' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.nationalityColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property villagename() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.villagenameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'villagename' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.villagenameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property districtname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.districtnameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'districtname' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.districtnameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property provincename() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.provincenameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'provincename' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.provincenameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property countryname() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.countrynameColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'countryname' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.countrynameColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property passport() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.passportColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'passport' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.passportColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property idcard() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.idcardColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'idcard' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.idcardColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property tel() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.telColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'tel' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.telColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property fax() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.faxColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'fax' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.faxColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property email() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.emailColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'email' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.emailColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property roomrateid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.roomrateidColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'roomrateid' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.roomrateidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property activate() As Boolean
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.activateColumn),Boolean)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'activate' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.activateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property checkindate() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.checkindateColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkindate' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.checkindateColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property datecheckout() As Date
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.datecheckoutColumn),Date)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'datecheckout' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.datecheckoutColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property numberofpax() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.numberofpaxColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'numberofpax' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.numberofpaxColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property userlao() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.userlaoColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'userlao' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.userlaoColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property checkoutid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.checkoutidColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'checkoutid' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.checkoutidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property CheckinNO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.CheckinNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CheckinNO' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.CheckinNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property customerNO() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.customerNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'customerNO' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.customerNOColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property userid() As Integer
+            Get
+                Try 
+                    Return CType(Me(Me.tableviewcheckout.useridColumn),Integer)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'userid' in table 'viewcheckout' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableviewcheckout.useridColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscheckinidNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.checkinidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcheckinidNull()
+            Me(Me.tableviewcheckout.checkinidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsreserveNONull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.reserveNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetreserveNONull()
+            Me(Me.tableviewcheckout.reserveNOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function Isroom_idNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.room_idColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub Setroom_idNull()
+            Me(Me.tableviewcheckout.room_idColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstitlenameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.titlenameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettitlenameNull()
+            Me(Me.tableviewcheckout.titlenameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscusnameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.cusnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcusnameNull()
+            Me(Me.tableviewcheckout.cusnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IssurnameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.surnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetsurnameNull()
+            Me(Me.tableviewcheckout.surnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsnationalityNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.nationalityColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetnationalityNull()
+            Me(Me.tableviewcheckout.nationalityColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsvillagenameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.villagenameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetvillagenameNull()
+            Me(Me.tableviewcheckout.villagenameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsdistrictnameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.districtnameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetdistrictnameNull()
+            Me(Me.tableviewcheckout.districtnameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsprovincenameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.provincenameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetprovincenameNull()
+            Me(Me.tableviewcheckout.provincenameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscountrynameNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.countrynameColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcountrynameNull()
+            Me(Me.tableviewcheckout.countrynameColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IspassportNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.passportColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetpassportNull()
+            Me(Me.tableviewcheckout.passportColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsidcardNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.idcardColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetidcardNull()
+            Me(Me.tableviewcheckout.idcardColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IstelNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.telColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SettelNull()
+            Me(Me.tableviewcheckout.telColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsfaxNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.faxColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetfaxNull()
+            Me(Me.tableviewcheckout.faxColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsemailNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.emailColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetemailNull()
+            Me(Me.tableviewcheckout.emailColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsroomrateidNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.roomrateidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetroomrateidNull()
+            Me(Me.tableviewcheckout.roomrateidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsactivateNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.activateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetactivateNull()
+            Me(Me.tableviewcheckout.activateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscheckindateNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.checkindateColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcheckindateNull()
+            Me(Me.tableviewcheckout.checkindateColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsdatecheckoutNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.datecheckoutColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetdatecheckoutNull()
+            Me(Me.tableviewcheckout.datecheckoutColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsnumberofpaxNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.numberofpaxColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetnumberofpaxNull()
+            Me(Me.tableviewcheckout.numberofpaxColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsuserlaoNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.userlaoColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetuserlaoNull()
+            Me(Me.tableviewcheckout.userlaoColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscheckoutidNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.checkoutidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcheckoutidNull()
+            Me(Me.tableviewcheckout.checkoutidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCheckinNONull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.CheckinNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCheckinNONull()
+            Me(Me.tableviewcheckout.CheckinNOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IscustomerNONull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.customerNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetcustomerNONull()
+            Me(Me.tableviewcheckout.customerNOColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsuseridNull() As Boolean
+            Return Me.IsNull(Me.tableviewcheckout.useridColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetuseridNull()
+            Me(Me.tableviewcheckout.useridColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
     '''Row event argument class
     '''</summary>
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -12859,42 +13385,6 @@ Partial Public Class ReportDataset
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As viewprovienceRow
-            Get
-                Return Me.eventRow
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
-            Get
-                Return Me.eventAction
-            End Get
-        End Property
-    End Class
-    
-    '''<summary>
-    '''Row event argument class
-    '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-    Public Class viewcheckoutRowChangeEvent
-        Inherits Global.System.EventArgs
-        
-        Private eventRow As viewcheckoutRow
-        
-        Private eventAction As Global.System.Data.DataRowAction
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New(ByVal row As viewcheckoutRow, ByVal action As Global.System.Data.DataRowAction)
-            MyBase.New
-            Me.eventRow = row
-            Me.eventAction = action
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Row() As viewcheckoutRow
             Get
                 Return Me.eventRow
             End Get
@@ -13183,6 +13673,78 @@ Partial Public Class ReportDataset
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As viewcustomerRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class viewitemlistRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As viewitemlistRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As viewitemlistRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As viewitemlistRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class viewcheckoutRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As viewcheckoutRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As viewcheckoutRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As viewcheckoutRow
             Get
                 Return Me.eventRow
             End Get
@@ -13738,212 +14300,6 @@ Namespace ReportDatasetTableAdapters
         Public Overloads Overridable Function GetData() As ReportDataset.viewprovienceDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As ReportDataset.viewprovienceDataTable = New ReportDataset.viewprovienceDataTable()
-            Me.Adapter.Fill(dataTable)
-            Return dataTable
-        End Function
-    End Class
-    
-    '''<summary>
-    '''Represents the connection and commands used to retrieve and save data.
-    '''</summary>
-    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
-     Global.System.ComponentModel.ToolboxItem(true),  _
-     Global.System.ComponentModel.DataObjectAttribute(true),  _
-     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
-     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
-    Partial Public Class viewcheckoutTableAdapter
-        Inherits Global.System.ComponentModel.Component
-        
-        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
-        
-        Private _connection As Global.System.Data.SqlClient.SqlConnection
-        
-        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
-        
-        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
-        
-        Private _clearBeforeFill As Boolean
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub New()
-            MyBase.New
-            Me.ClearBeforeFill = true
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
-            Get
-                If (Me._adapter Is Nothing) Then
-                    Me.InitAdapter
-                End If
-                Return Me._adapter
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
-            Get
-                If (Me._connection Is Nothing) Then
-                    Me.InitConnection
-                End If
-                Return Me._connection
-            End Get
-            Set
-                Me._connection = value
-                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
-                    Me.Adapter.InsertCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
-                    Me.Adapter.DeleteCommand.Connection = value
-                End If
-                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
-                    Me.Adapter.UpdateCommand.Connection = value
-                End If
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
-                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
-                    End If
-                    i = (i + 1)
-                Loop
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
-            Get
-                Return Me._transaction
-            End Get
-            Set
-                Me._transaction = value
-                Dim i As Integer = 0
-                Do While (i < Me.CommandCollection.Length)
-                    Me.CommandCollection(i).Transaction = Me._transaction
-                    i = (i + 1)
-                Loop
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
-                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
-                    Me.Adapter.InsertCommand.Transaction = Me._transaction
-                End If
-                If ((Not (Me.Adapter) Is Nothing)  _
-                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
-                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
-                End If
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
-            Get
-                If (Me._commandCollection Is Nothing) Then
-                    Me.InitCommandCollection
-                End If
-                Return Me._commandCollection
-            End Get
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property ClearBeforeFill() As Boolean
-            Get
-                Return Me._clearBeforeFill
-            End Get
-            Set
-                Me._clearBeforeFill = value
-            End Set
-        End Property
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Sub InitAdapter()
-            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
-            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
-            tableMapping.SourceTable = "Table"
-            tableMapping.DataSetTable = "viewcheckout"
-            tableMapping.ColumnMappings.Add("checkoutNO", "checkoutNO")
-            tableMapping.ColumnMappings.Add("checkinNO", "checkinNO")
-            tableMapping.ColumnMappings.Add("userlao", "userlao")
-            tableMapping.ColumnMappings.Add("locationname", "locationname")
-            tableMapping.ColumnMappings.Add("romtypename", "romtypename")
-            tableMapping.ColumnMappings.Add("room_id", "room_id")
-            tableMapping.ColumnMappings.Add("customertypename", "customertypename")
-            tableMapping.ColumnMappings.Add("titlename", "titlename")
-            tableMapping.ColumnMappings.Add("cusname", "cusname")
-            tableMapping.ColumnMappings.Add("surname", "surname")
-            tableMapping.ColumnMappings.Add("nationality", "nationality")
-            tableMapping.ColumnMappings.Add("villagename", "villagename")
-            tableMapping.ColumnMappings.Add("districtname", "districtname")
-            tableMapping.ColumnMappings.Add("provincename", "provincename")
-            tableMapping.ColumnMappings.Add("countryname", "countryname")
-            tableMapping.ColumnMappings.Add("bookingtypename", "bookingtypename")
-            tableMapping.ColumnMappings.Add("markettypename", "markettypename")
-            tableMapping.ColumnMappings.Add("checkindate", "checkindate")
-            tableMapping.ColumnMappings.Add("checkoutdate", "checkoutdate")
-            tableMapping.ColumnMappings.Add("numberofpax", "numberofpax")
-            tableMapping.ColumnMappings.Add("mealtypename", "mealtypename")
-            tableMapping.ColumnMappings.Add("usetypename", "usetypename")
-            tableMapping.ColumnMappings.Add("remark", "remark")
-            tableMapping.ColumnMappings.Add("statusid", "statusid")
-            tableMapping.ColumnMappings.Add("checkinid", "checkinid")
-            tableMapping.ColumnMappings.Add("userid", "userid")
-            tableMapping.ColumnMappings.Add("roomid", "roomid")
-            tableMapping.ColumnMappings.Add("customerNO", "customerNO")
-            tableMapping.ColumnMappings.Add("bookingtypeid", "bookingtypeid")
-            tableMapping.ColumnMappings.Add("markettypeid", "markettypeid")
-            tableMapping.ColumnMappings.Add("mealtypeid", "mealtypeid")
-            tableMapping.ColumnMappings.Add("usetypeid", "usetypeid")
-            tableMapping.ColumnMappings.Add("villageid", "villageid")
-            tableMapping.ColumnMappings.Add("datecheckout", "datecheckout")
-            Me._adapter.TableMappings.Add(tableMapping)
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Sub InitConnection()
-            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.HotelSystem.My.MySettings.Default.dbhotelsystemConnectionString
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
-            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT        viewcheckout.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            viewcheckout"
-            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
-        End Sub
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As ReportDataset.viewcheckoutDataTable) As Integer
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = true) Then
-                dataTable.Clear
-            End If
-            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
-            Return returnValue
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData() As ReportDataset.viewcheckoutDataTable
-            Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            Dim dataTable As ReportDataset.viewcheckoutDataTable = New ReportDataset.viewcheckoutDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
@@ -15792,6 +16148,390 @@ Namespace ReportDatasetTableAdapters
         Public Overloads Overridable Function GetData() As ReportDataset.viewcustomerDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As ReportDataset.viewcustomerDataTable = New ReportDataset.viewcustomerDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class viewitemlistTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "viewitemlist"
+            tableMapping.ColumnMappings.Add("itemlistid", "itemlistid")
+            tableMapping.ColumnMappings.Add("room_id", "room_id")
+            tableMapping.ColumnMappings.Add("proname", "proname")
+            tableMapping.ColumnMappings.Add("qty", "qty")
+            tableMapping.ColumnMappings.Add("unitname", "unitname")
+            tableMapping.ColumnMappings.Add("price", "price")
+            tableMapping.ColumnMappings.Add("totalprice", "totalprice")
+            tableMapping.ColumnMappings.Add("dateadd", "dateadd")
+            tableMapping.ColumnMappings.Add("statusid", "statusid")
+            tableMapping.ColumnMappings.Add("userlao", "userlao")
+            tableMapping.ColumnMappings.Add("roomid", "roomid")
+            tableMapping.ColumnMappings.Add("proid", "proid")
+            tableMapping.ColumnMappings.Add("userid", "userid")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.HotelSystem.My.MySettings.Default.dbhotelsystemConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        viewitemlist.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            viewitemlist"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As ReportDataset.viewitemlistDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As ReportDataset.viewitemlistDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ReportDataset.viewitemlistDataTable = New ReportDataset.viewitemlistDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the connection and commands used to retrieve and save data.
+    '''</summary>
+    <Global.System.ComponentModel.DesignerCategoryAttribute("code"),  _
+     Global.System.ComponentModel.ToolboxItem(true),  _
+     Global.System.ComponentModel.DataObjectAttribute(true),  _
+     Global.System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner"& _ 
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"),  _
+     Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+    Partial Public Class viewcheckoutTableAdapter
+        Inherits Global.System.ComponentModel.Component
+        
+        Private WithEvents _adapter As Global.System.Data.SqlClient.SqlDataAdapter
+        
+        Private _connection As Global.System.Data.SqlClient.SqlConnection
+        
+        Private _transaction As Global.System.Data.SqlClient.SqlTransaction
+        
+        Private _commandCollection() As Global.System.Data.SqlClient.SqlCommand
+        
+        Private _clearBeforeFill As Boolean
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.ClearBeforeFill = true
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Friend ReadOnly Property Adapter() As Global.System.Data.SqlClient.SqlDataAdapter
+            Get
+                If (Me._adapter Is Nothing) Then
+                    Me.InitAdapter
+                End If
+                Return Me._adapter
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Connection() As Global.System.Data.SqlClient.SqlConnection
+            Get
+                If (Me._connection Is Nothing) Then
+                    Me.InitConnection
+                End If
+                Return Me._connection
+            End Get
+            Set
+                Me._connection = value
+                If (Not (Me.Adapter.InsertCommand) Is Nothing) Then
+                    Me.Adapter.InsertCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.DeleteCommand) Is Nothing) Then
+                    Me.Adapter.DeleteCommand.Connection = value
+                End If
+                If (Not (Me.Adapter.UpdateCommand) Is Nothing) Then
+                    Me.Adapter.UpdateCommand.Connection = value
+                End If
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    If (Not (Me.CommandCollection(i)) Is Nothing) Then
+                        CType(Me.CommandCollection(i),Global.System.Data.SqlClient.SqlCommand).Connection = value
+                    End If
+                    i = (i + 1)
+                Loop
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Property Transaction() As Global.System.Data.SqlClient.SqlTransaction
+            Get
+                Return Me._transaction
+            End Get
+            Set
+                Me._transaction = value
+                Dim i As Integer = 0
+                Do While (i < Me.CommandCollection.Length)
+                    Me.CommandCollection(i).Transaction = Me._transaction
+                    i = (i + 1)
+                Loop
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.DeleteCommand) Is Nothing)) Then
+                    Me.Adapter.DeleteCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.InsertCommand) Is Nothing)) Then
+                    Me.Adapter.InsertCommand.Transaction = Me._transaction
+                End If
+                If ((Not (Me.Adapter) Is Nothing)  _
+                            AndAlso (Not (Me.Adapter.UpdateCommand) Is Nothing)) Then
+                    Me.Adapter.UpdateCommand.Transaction = Me._transaction
+                End If
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected ReadOnly Property CommandCollection() As Global.System.Data.SqlClient.SqlCommand()
+            Get
+                If (Me._commandCollection Is Nothing) Then
+                    Me.InitCommandCollection
+                End If
+                Return Me._commandCollection
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ClearBeforeFill() As Boolean
+            Get
+                Return Me._clearBeforeFill
+            End Get
+            Set
+                Me._clearBeforeFill = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitAdapter()
+            Me._adapter = New Global.System.Data.SqlClient.SqlDataAdapter()
+            Dim tableMapping As Global.System.Data.Common.DataTableMapping = New Global.System.Data.Common.DataTableMapping()
+            tableMapping.SourceTable = "Table"
+            tableMapping.DataSetTable = "viewcheckout"
+            tableMapping.ColumnMappings.Add("checkoutNO", "checkoutNO")
+            tableMapping.ColumnMappings.Add("checkinid", "checkinid")
+            tableMapping.ColumnMappings.Add("reserveNO", "reserveNO")
+            tableMapping.ColumnMappings.Add("room_id", "room_id")
+            tableMapping.ColumnMappings.Add("titlename", "titlename")
+            tableMapping.ColumnMappings.Add("cusname", "cusname")
+            tableMapping.ColumnMappings.Add("surname", "surname")
+            tableMapping.ColumnMappings.Add("nationality", "nationality")
+            tableMapping.ColumnMappings.Add("villagename", "villagename")
+            tableMapping.ColumnMappings.Add("districtname", "districtname")
+            tableMapping.ColumnMappings.Add("provincename", "provincename")
+            tableMapping.ColumnMappings.Add("countryname", "countryname")
+            tableMapping.ColumnMappings.Add("passport", "passport")
+            tableMapping.ColumnMappings.Add("idcard", "idcard")
+            tableMapping.ColumnMappings.Add("tel", "tel")
+            tableMapping.ColumnMappings.Add("fax", "fax")
+            tableMapping.ColumnMappings.Add("email", "email")
+            tableMapping.ColumnMappings.Add("roomrateid", "roomrateid")
+            tableMapping.ColumnMappings.Add("activate", "activate")
+            tableMapping.ColumnMappings.Add("checkindate", "checkindate")
+            tableMapping.ColumnMappings.Add("datecheckout", "datecheckout")
+            tableMapping.ColumnMappings.Add("numberofpax", "numberofpax")
+            tableMapping.ColumnMappings.Add("userlao", "userlao")
+            tableMapping.ColumnMappings.Add("checkoutid", "checkoutid")
+            tableMapping.ColumnMappings.Add("CheckinNO", "CheckinNO")
+            tableMapping.ColumnMappings.Add("customerNO", "customerNO")
+            tableMapping.ColumnMappings.Add("userid", "userid")
+            Me._adapter.TableMappings.Add(tableMapping)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitConnection()
+            Me._connection = New Global.System.Data.SqlClient.SqlConnection()
+            Me._connection.ConnectionString = Global.HotelSystem.My.MySettings.Default.dbhotelsystemConnectionString
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitCommandCollection()
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(0).Connection = Me.Connection
+            Me._commandCollection(0).CommandText = "SELECT        viewcheckout.*"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM            viewcheckout"
+            Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As ReportDataset.viewcheckoutDataTable) As Integer
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
+            End If
+            Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
+            Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As ReportDataset.viewcheckoutDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(0)
+            Dim dataTable As ReportDataset.viewcheckoutDataTable = New ReportDataset.viewcheckoutDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function

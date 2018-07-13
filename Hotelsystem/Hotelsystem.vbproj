@@ -428,6 +428,12 @@
     <Compile Include="Reception\frmshowroomlistitem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Report\billCheckin.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>billCheckin.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Report\ReportDataset.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -656,6 +662,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reception\frmshowroomlistitem.resx">
       <DependentUpon>frmshowroomlistitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\billCheckin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>billCheckin.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Companyprofile.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
