@@ -223,6 +223,7 @@
         closeform.closeform()
         closeform.f = frmcompanyprofile
         closeform.f.MdiParent = Me
+        closeform.f.WindowState = FormWindowState.Normal
         closeform.f.ControlBox = False
         closeform.f.FormBorderStyle = Windows.Forms.FormBorderStyle.FixedDialog
         closeform.f.Text = ""

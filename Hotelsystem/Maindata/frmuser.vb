@@ -75,6 +75,7 @@
         txteng.Select()
         enablesave()
         user.combolevel(cblevel)
+        rdenable.Checked = True
         cbadmin.Checked = True
         dept.combodepartment(cbdepartment)
         positions.comboposition(cbposition)
@@ -106,6 +107,11 @@
     End Sub
 
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
+        Dim checkuser As Boolean = user.check_userduplicatename(txteng.Text)
+        If checkuser = True Then
+            MessageBox.Show("ມີຊື່ນີ້ແລ້ວໃນລະບົບ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
         If frmsale11.Checked = True Then
             frmsale1 = "T"
         Else
@@ -317,7 +323,7 @@
             txtlao.Select()
             Return
         End If
-   
+
         If txtpassword.Text = "" Then
             MessageBox.Show("ກະລຸນາປ້ອນລະຫັດການໍາໃຊ້ລະບົບ", "ຄໍາເຕືອນ", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             txtpassword.Select()
@@ -328,7 +334,7 @@
             Return
         End If
         Dim activates As Boolean
-        If chkActivate.Checked = True Then
+        If rdenable.Checked = True Then
             activates = True
         Else
             activates = False
@@ -361,16 +367,18 @@
             cbdepartment.Text = .CurrentRow.Cells(5).Value
             cblevel.Text = .CurrentRow.Cells(6).Value
             txtuserid.Text = .CurrentRow.Cells(0).Value
+            If .CurrentRow.Cells(8).Value = True Then
+                rdenable.Checked = True
 
+            Else
+                rddisable.Checked = True
+
+            End If
 
             disabletext()
             enableedit()
         End With
-        If dgvuser.CurrentRow.Cells(7).Value = 1 Then
-            cbadmin.Checked = True
-        Else
-            cbuser.Checked = True
-        End If
+       
     End Sub
 
     Private Sub btnedit_Click(sender As Object, e As EventArgs) Handles btnedit.Click
@@ -606,7 +614,7 @@
             Return
         End If
         Dim activates As Boolean
-        If chkActivate.Checked = True Then
+        If rdenable.Checked = True Then
             activates = True
         Else
             activates = False

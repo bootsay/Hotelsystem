@@ -77,6 +77,8 @@ Partial Class frmcheckin
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtadvanhpay = New DevComponents.Editors.IntegerInput()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.btncancel = New DevComponents.DotNetBar.ButtonX()
         Me.btnprint = New DevComponents.DotNetBar.ButtonX()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
@@ -90,6 +92,7 @@ Partial Class frmcheckin
         Me.btnsave = New DevComponents.DotNetBar.ButtonX()
         Me.btnedit = New DevComponents.DotNetBar.ButtonX()
         Me.btnupdate = New DevComponents.DotNetBar.ButtonX()
+        Me.btnreservelist = New DevComponents.DotNetBar.ButtonX()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvlist, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -100,6 +103,7 @@ Partial Class frmcheckin
         CType(Me.dt1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.txtadvanhpay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.rdno.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -152,7 +156,7 @@ Partial Class frmcheckin
         Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
-        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 369)
         Me.dgvlist.MultiSelect = False
         Me.dgvlist.Name = "dgvlist"
@@ -913,6 +917,8 @@ Partial Class frmcheckin
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.txtadvanhpay)
+        Me.Panel2.Controls.Add(Me.Label20)
         Me.Panel2.Controls.Add(Me.btncancel)
         Me.Panel2.Controls.Add(Me.btnprint)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
@@ -920,6 +926,31 @@ Partial Class frmcheckin
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1061, 54)
         Me.Panel2.TabIndex = 2
+        '
+        'txtadvanhpay
+        '
+        Me.txtadvanhpay.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        '
+        '
+        '
+        Me.txtadvanhpay.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.txtadvanhpay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtadvanhpay.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.txtadvanhpay.Font = New System.Drawing.Font("Saysettha OT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtadvanhpay.Location = New System.Drawing.Point(678, 3)
+        Me.txtadvanhpay.Name = "txtadvanhpay"
+        Me.txtadvanhpay.Size = New System.Drawing.Size(386, 44)
+        Me.txtadvanhpay.TabIndex = 21
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(603, 12)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(72, 24)
+        Me.Label20.TabIndex = 20
+        Me.Label20.Text = "ຈ່າຍກ່ອນ:"
         '
         'btncancel
         '
@@ -964,6 +995,7 @@ Partial Class frmcheckin
         '
         'rdno
         '
+        Me.rdno.Controls.Add(Me.btnreservelist)
         Me.rdno.Controls.Add(Me.btnclose)
         Me.rdno.Controls.Add(Me.txtreserverNO_search)
         Me.rdno.Controls.Add(Me.btnsearchreserve)
@@ -999,7 +1031,7 @@ Partial Class frmcheckin
         Me.txtreserverNO_search.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.txtreserverNO_search.Location = New System.Drawing.Point(101, 22)
         Me.txtreserverNO_search.Name = "txtreserverNO_search"
-        Me.txtreserverNO_search.Size = New System.Drawing.Size(253, 35)
+        Me.txtreserverNO_search.Size = New System.Drawing.Size(224, 35)
         Me.txtreserverNO_search.TabIndex = 11
         '
         'btnsearchreserve
@@ -1008,7 +1040,7 @@ Partial Class frmcheckin
         Me.btnsearchreserve.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnsearchreserve.Image = CType(resources.GetObject("btnsearchreserve.Image"), System.Drawing.Image)
         Me.btnsearchreserve.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.btnsearchreserve.Location = New System.Drawing.Point(360, 22)
+        Me.btnsearchreserve.Location = New System.Drawing.Point(331, 22)
         Me.btnsearchreserve.Name = "btnsearchreserve"
         Me.btnsearchreserve.Size = New System.Drawing.Size(88, 35)
         Me.btnsearchreserve.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -1082,6 +1114,19 @@ Partial Class frmcheckin
         Me.btnupdate.TabIndex = 21
         Me.btnupdate.Text = "ປັບປຸງ"
         '
+        'btnreservelist
+        '
+        Me.btnreservelist.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText
+        Me.btnreservelist.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnreservelist.Image = Global.HotelSystem.My.Resources.Resources.folder_customer_icon2
+        Me.btnreservelist.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.btnreservelist.Location = New System.Drawing.Point(425, 22)
+        Me.btnreservelist.Name = "btnreservelist"
+        Me.btnreservelist.Size = New System.Drawing.Size(101, 35)
+        Me.btnreservelist.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnreservelist.TabIndex = 13
+        Me.btnreservelist.Text = "ລາຍການ"
+        '
         'frmcheckin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
@@ -1112,6 +1157,8 @@ Partial Class frmcheckin
         Me.GroupPanel1.ResumeLayout(False)
         Me.GroupPanel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.txtadvanhpay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.rdno.ResumeLayout(False)
         Me.rdno.PerformLayout()
@@ -1182,4 +1229,7 @@ Partial Class frmcheckin
     Friend WithEvents cbbooktype As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents cbstaytype As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents txtadvanhpay As DevComponents.Editors.IntegerInput
+    Friend WithEvents btnreservelist As DevComponents.DotNetBar.ButtonX
 End Class

@@ -31,16 +31,17 @@ Public Class frmlogin
         'Dim txtlevel As New TextBox
         Try
             cn.connect()
-            cm = New SqlCommand("select * from viewuser where username='" & txtuser.Text & "' and password=@password", cn.conn)
+            cm = New SqlCommand("select * from viewuser where username='" & txtuser.Text & "' and password=@password and activateid='True'", cn.conn)
             'cm = New SqlCommand("select * from tbuser where username='" & txtuser.Text & "' and password='" & txtpass.Text & "'", cn.conn)
             cm.Parameters.Add(New SqlParameter("password", txtpassword.Text))
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
                     frmmain.userid = re.GetValue(0).ToString
-                    frmmain.laoname = re.GetValue(2).ToString
+                    frmmain.laoname = re.GetValue(1).ToString
                     frmmain.level = re.GetValue(6).ToString
                     frmmain.Show()
+
 
                 End While
                 re.Close()
@@ -68,14 +69,14 @@ Public Class frmlogin
             'Dim txtlevel As New TextBox
             Try
                 cn.connect()
-                cm = New SqlCommand("select * from viewuser where username='" & txtuser.Text & "' and password=@password", cn.conn)
+                cm = New SqlCommand("select * from viewuser where username='" & txtuser.Text & "' and password=@password and activateid='True'", cn.conn)
                 'cm = New SqlCommand("select * from tbuser where username='" & txtuser.Text & "' and password='" & txtpass.Text & "'", cn.conn)
                 cm.Parameters.Add(New SqlParameter("password", txtpassword.Text))
                 re = cm.ExecuteReader
                 If re.HasRows Then
                     While re.Read
                         frmmain.userid = re.GetValue(0).ToString
-                        frmmain.laoname = re.GetValue(2).ToString
+                        frmmain.laoname = re.GetValue(1).ToString
                         frmmain.level = re.GetValue(6).ToString
                         frmmain.Show()
 

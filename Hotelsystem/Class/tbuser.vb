@@ -24,7 +24,7 @@ Public Class tbuser
     Public Function update(id As Integer, laoname As String, username As String, password As String, department As Integer, position As Integer, levleid As Integer, auth As String, activates As Boolean)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbuser set userlao=N'" & laoname & "',username=N'" & username & "', password='" & password & "',deptid=N'" & department & "', positionid=N'" & position & "',level_id='" & levleid & "', auth='" & auth & "', activateid='" & activates & "' where userid='" & id & "'", cn.conn)
+            cm = New SqlCommand("update tbuser set userlao=N'" & laoname & "',username=N'" & username & "', password='" & password & "',deptid=N'" & department & "', postionid=N'" & position & "',levelid='" & levleid & "', auth='" & auth & "', activateid='" & activates & "' where userid='" & id & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
                 cm.Dispose()
@@ -159,16 +159,16 @@ Public Class tbuser
     End Function
     Public Function check_userduplicatename(name As String)
         cn.connect()
-        Dim duplicatename As String = Nothing
+        Dim duplicatename As Boolean
         Try
             cm = New SqlCommand("select username frm tbuser where username='" & name & "'", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
-                    duplicatename = "True"
+                    duplicatename = True
                 End While
             Else
-                duplicatename = "False"
+                duplicatename = False
             End If
         Catch ex As Exception
 

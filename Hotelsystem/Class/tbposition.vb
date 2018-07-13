@@ -104,7 +104,7 @@ Public Class tbposition
 
             With cb
                 .DataSource = dt
-                .DisplayMember = dt.Columns("posname").ToString
+                .DisplayMember = dt.Columns("positionname").ToString
                 .ValueMember = dt.Columns("positionid").ToString
             End With
         Catch ex As Exception

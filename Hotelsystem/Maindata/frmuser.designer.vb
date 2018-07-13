@@ -23,7 +23,7 @@ Partial Class frmuser
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TabControl1 = New DevComponents.DotNetBar.TabControl()
         Me.TabControlPanel1 = New DevComponents.DotNetBar.TabControlPanel()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -39,6 +39,7 @@ Partial Class frmuser
         Me.btnnew = New System.Windows.Forms.ToolStripButton()
         Me.btnclose = New System.Windows.Forms.ToolStripButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.cbposition = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.cbdepartment = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -118,8 +119,8 @@ Partial Class frmuser
         Me.frmsumarysale = New System.Windows.Forms.CheckBox()
         Me.frmsalelistapprove = New System.Windows.Forms.CheckBox()
         Me.TabItem3 = New DevComponents.DotNetBar.TabItem(Me.components)
-        Me.chkActivate = New System.Windows.Forms.CheckBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.rdenable = New System.Windows.Forms.RadioButton()
+        Me.rddisable = New System.Windows.Forms.RadioButton()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabControlPanel1.SuspendLayout()
@@ -292,8 +293,9 @@ Partial Class frmuser
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.rddisable)
+        Me.Panel1.Controls.Add(Me.rdenable)
         Me.Panel1.Controls.Add(Me.Label16)
-        Me.Panel1.Controls.Add(Me.chkActivate)
         Me.Panel1.Controls.Add(Me.cbposition)
         Me.Panel1.Controls.Add(Me.cbdepartment)
         Me.Panel1.Controls.Add(Me.Label7)
@@ -315,6 +317,16 @@ Partial Class frmuser
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1304, 167)
         Me.Panel1.TabIndex = 2
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(628, 124)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(70, 24)
+        Me.Label16.TabIndex = 27
+        Me.Label16.Text = "ສະຖານະ:"
         '
         'cbposition
         '
@@ -500,16 +512,16 @@ Partial Class frmuser
         Me.dgvuser.AllowUserToResizeRows = False
         Me.dgvuser.BackgroundColor = System.Drawing.SystemColors.ControlLightLight
         Me.dgvuser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvuser.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvuser.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvuser.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvuser.Location = New System.Drawing.Point(1, 1)
         Me.dgvuser.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvuser.Name = "dgvuser"
@@ -1584,25 +1596,27 @@ Partial Class frmuser
         Me.TabItem3.Name = "TabItem3"
         Me.TabItem3.Text = "ກໍານົດສີດທິ"
         '
-        'chkActivate
+        'rdenable
         '
-        Me.chkActivate.AutoSize = True
-        Me.chkActivate.Location = New System.Drawing.Point(716, 124)
-        Me.chkActivate.Name = "chkActivate"
-        Me.chkActivate.Size = New System.Drawing.Size(73, 28)
-        Me.chkActivate.TabIndex = 26
-        Me.chkActivate.Text = "ໃຊ້ງານ"
-        Me.chkActivate.UseVisualStyleBackColor = True
+        Me.rdenable.AutoSize = True
+        Me.rdenable.Location = New System.Drawing.Point(716, 126)
+        Me.rdenable.Name = "rdenable"
+        Me.rdenable.Size = New System.Drawing.Size(72, 28)
+        Me.rdenable.TabIndex = 28
+        Me.rdenable.TabStop = True
+        Me.rdenable.Text = "ໃຊ້ງານ"
+        Me.rdenable.UseVisualStyleBackColor = True
         '
-        'Label16
+        'rddisable
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(628, 119)
-        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(70, 24)
-        Me.Label16.TabIndex = 27
-        Me.Label16.Text = "ສະຖານະ:"
+        Me.rddisable.AutoSize = True
+        Me.rddisable.Location = New System.Drawing.Point(846, 125)
+        Me.rddisable.Name = "rddisable"
+        Me.rddisable.Size = New System.Drawing.Size(82, 28)
+        Me.rddisable.TabIndex = 29
+        Me.rddisable.TabStop = True
+        Me.rddisable.Text = "ບໍ່ໃຊ້ງານ"
+        Me.rddisable.UseVisualStyleBackColor = True
         '
         'frmuser
         '
@@ -1743,5 +1757,6 @@ Partial Class frmuser
     Friend WithEvents cbposition As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents cbdepartment As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents Label16 As System.Windows.Forms.Label
-    Friend WithEvents chkActivate As System.Windows.Forms.CheckBox
+    Friend WithEvents rddisable As System.Windows.Forms.RadioButton
+    Friend WithEvents rdenable As System.Windows.Forms.RadioButton
 End Class

@@ -61,8 +61,8 @@ Public Class frmproduct
     End Sub
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-        product.delete(txtid.Text)
-        txtid.Text = cate.runid
+        product.delete(txtProductNO.Text)
+        txtProductNO.Text = product.runidNO
         product.loadtbproduct(dgvshow)
         cleartext()
         enabletext()
@@ -98,7 +98,8 @@ Public Class frmproduct
             activates = False
         End If
         Dim stockqty As Integer = 0
-        product.update(txtProductNO.Text, txtid.Text, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
+
+        product.update(txtProductNO.Text, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
         product.loadtbproduct(dgvshow)
         txtProductNO.Text = product.runidNO
         enablesave()

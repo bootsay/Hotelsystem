@@ -339,10 +339,6 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
-</member><member name="T:HotelSystem.ReportDataset.viewcheckinDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
 </member><member name="T:HotelSystem.ReportDataset.viewcheckoutDataTable">
 	<summary>
 Represents the strongly named DataTable class.
@@ -371,6 +367,14 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcheckinDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcustomerDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:HotelSystem.ReportDataset.viewproductRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -380,10 +384,6 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member><member name="T:HotelSystem.ReportDataset.viewprovienceRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:HotelSystem.ReportDataset.viewcheckinRow">
 	<summary>
 Represents strongly named DataRow class.
 </summary>
@@ -415,6 +415,14 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcheckinRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcustomerRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:HotelSystem.ReportDataset.viewproductRowChangeEvent">
 	<summary>
 Row event argument class
@@ -424,10 +432,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:HotelSystem.ReportDataset.viewprovienceRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:HotelSystem.ReportDataset.viewcheckinRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -459,6 +463,14 @@ Row event argument class
 	<summary>
 Row event argument class
 </summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcheckinRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:HotelSystem.ReportDataset.viewcustomerRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
 </member><member name="T:HotelSystem.ReportDataset">
 	<summary>
 Represents a strongly typed in-memory cache of data.
@@ -472,10 +484,6 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:HotelSystem.ReportDatasetTableAdapters.viewprovienceTableAdapter">
-	<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member><member name="T:HotelSystem.ReportDatasetTableAdapters.viewcheckinTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -504,6 +512,14 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:HotelSystem.ReportDatasetTableAdapters.tbcompanyprofileTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:HotelSystem.ReportDatasetTableAdapters.viewcheckinTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:HotelSystem.ReportDatasetTableAdapters.viewcustomerTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

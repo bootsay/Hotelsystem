@@ -18,7 +18,7 @@ Public Class tbfroom
         Return True
     End Function
 
-    Public Function save(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As Integer, des As String, activate As String, statusid As Integer)
+    Public Function save(roomid As Integer, roomtypeid As Integer, locationid As Integer, phone_ext As String, room_id As String, des As String, activate As String, statusid As Integer)
         cn.connect()
         Try
             cm = New SqlCommand("insert into tbfroom(roomid,roomtypeid,locationid,phone_ext,room_id,des,activate,statusid)values('" & roomid & "','" & roomtypeid & "','" & locationid & "','" & phone_ext & "','" & room_id & "',N'" & des & "','" & activate & "','" & statusid & "')", cn.conn)

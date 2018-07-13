@@ -50,10 +50,10 @@ Public Class tbproduct
     '    Return id
     'End Function
 
-    Public Function save(productNO As Integer, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
+    Public Function save(productNO As String, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbproduct(productNO,proid,cateid,proname,unitid,pricebuy,pricesale,stockqty,remark)values('" & productNO & "','" & proid & "','" & cateid & "','" & proname & "','" & unitid & "','" & pricebuy & "','" & pricesale & "','" & stockqty & "','" & activate & "')", cn.conn)
+            cm = New SqlCommand("insert into tbproduct values('" & productNO & "','" & proid & "','" & cateid & "','" & proname & "','" & unitid & "','" & pricebuy & "','" & pricesale & "','" & stockqty & "','" & activate & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -65,12 +65,14 @@ Public Class tbproduct
         Return True
     End Function
 
-    Public Function delete(productNO As Integer)
+    Public Function delete(productNO As String)
         cn.connect()
         Try
             cm = New SqlCommand("delete from tbproduct where productNO='" & productNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
+                cm.Dispose()
+                cn.conn.Close()
             Else
 
             End If
@@ -80,10 +82,10 @@ Public Class tbproduct
         Return True
     End Function
 
-    Public Function update(productNO As Integer, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
+    Public Function update(productNO As String, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbproduct set proid='" & proid & "', cateid='" & cateid & "', proname='" & proname & "', unitid='" & unitid & "', pricebuy='" & pricebuy & "', pricesale='" & pricesale & "', stockqty='" & stockqty & "', activate='" & activate & "' where productNO='" & productNO & "'", cn.conn)
+            cm = New SqlCommand("update tbproduct set  cateid='" & cateid & "', proname='" & proname & "', unitid='" & unitid & "', pricebuy='" & pricebuy & "', pricesale='" & pricesale & "', stockqty='" & stockqty & "', activate='" & activate & "' where productNO='" & productNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else

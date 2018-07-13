@@ -413,4 +413,25 @@
 
         End Try
     End Sub
+
+    Private Sub btnreservelist_Click(sender As Object, e As EventArgs) Handles btnreservelist.Click
+        frmshowroomreserve.ShowDialog()
+        frmshowroomreserve.Close()
+        Dim dtreserve As New DataTable
+        markettype.combomarkettype(cbmarket)
+        roomratetype.comboroomtyperate(cbpricetype)
+        checkins.selectReserveNO(txtreserverNO_search.Text, dtreserve)
+        If dtreserve.Rows.Count > 0 Then
+            txtroomno.Text = dtreserve.Rows(0).Item(17)
+            txtcustomername.Text = dtreserve.Rows(0).Item(3)
+            txtcustomertype.Text = dtreserve.Rows(0).Item(1)
+            cbpricetype.Text = dtreserve.Rows(0).Item(31)
+            txtprice.Text = dtreserve.Rows(0).Item(29)
+            txtnumberpeople.Text = dtreserve.Rows(0).Item(22)
+            dt1.Text = dtreserve.Rows(0).Item(20)
+            dt2.Text = dtreserve.Rows(0).Item(21)
+        Else
+        End If
+
+    End Sub
 End Class
