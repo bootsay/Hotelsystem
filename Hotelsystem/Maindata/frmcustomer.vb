@@ -154,6 +154,7 @@
         Dim id As Integer = customer.runid
         customer.save(idno, id, cbcustomertype.SelectedValue, cbtitlename.SelectedValue, txtCustomerName.Text, txtSurname.Text, txtNationality.Text, cbvillage.SelectedValue, txtPassport.Text, txtIdcard.Text, txtTel.Text, txtFax.Text, txtEmail.Text, cbRoomrate.SelectedValue, activates)
         customer.loadtbcustomer(dgvcustomer)
+        txtCustomerID.Text = customer.runidNO
         enableSave()
         cleartext()
         txtCustomerName.Select()
@@ -161,7 +162,8 @@
     End Sub
 
     Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
-        enableSave()
+        txtCustomerID.Text = customer.runidNO
+        enablesave()
         Enabletext()
         cleartext()
         txtCustomerName.Select()
@@ -175,6 +177,7 @@
             End If
             customer.update(txtCustomerID.Text, txtid.Text, cbcustomertype.SelectedValue, cbtitlename.SelectedValue, txtCustomerName.Text, txtSurname.Text, txtNationality.Text, cbvillage.SelectedValue, txtPassport.Text, txtIdcard.Text, txtTel.Text, txtFax.Text, txtEmail.Text, cbRoomrate.SelectedValue, activates)
             customer.loadtbcustomer(dgvcustomer)
+            txtCustomerID.Text = customer.runidNO
             enableSave()
             cleartext()
             txtCustomerName.Select()
