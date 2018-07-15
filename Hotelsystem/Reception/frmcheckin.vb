@@ -86,6 +86,7 @@
     End Sub
 
     Private Sub frmcreatereserve_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtuser.Text = frmmain.laoname
         bookingtype.combobookingtype(cbbooktype)
         dtsearch1.Text = Today.Date
         dtsearch2.Text = Today.Date
@@ -147,26 +148,12 @@
         txtcustomername.Clear()
         txtroomno.Clear()
     End Sub
-    Public Sub txtread()
-        'txtid.Clear()
-        txtuser.Enabled = False
-        txtprice.Enabled = False
-        txtNote.Enabled = False
-        txtnumberpeople.Enabled = False
-        txtcustomername.Enabled = False
-        txtroomno.Enabled = False
-        'txtdatereserve.Enabled = False
-
-        btnbrown1.Enabled = False
-        btnbrown2.Enabled = False
-        btncus.Enabled = False
-
-    End Sub
+  
     Public Sub formdisable()
         btnbrown2.Enabled = False
         btnbrown1.Enabled = False
         cbbooktype.Enabled = False
-        txtprice.Enabled = False
+        'txtprice.Enabled = False
         cbmarket.Enabled = False
         cbpricetype.Enabled = False
         cbfood.Enabled = False
@@ -180,7 +167,7 @@
         btnbrown2.Enabled = True
         btnbrown1.Enabled = True
         cbbooktype.Enabled = True
-        txtprice.Enabled = True
+        'txtprice.Enabled = True
         cbmarket.Enabled = True
         cbpricetype.Enabled = True
         cbfood.Enabled = True
@@ -190,21 +177,7 @@
         btncus.Enabled = True
         cbstaytype.Enabled = True
     End Function
-    Public Sub txtwrite()
-        'txtid.Clear()
-        'txtuser.Enabled = True
-        txtprice.Enabled = False
-        txtNote.Enabled = True
-        txtnumberpeople.Enabled = True
-        txtcustomername.Enabled = True
-        txtroomno.Enabled = True
-        'txtdatereserve.Enabled = True
-
-        btnbrown1.Enabled = True
-        btnbrown2.Enabled = True
-        btncus.Enabled = True
-
-    End Sub
+  
     Private Sub txtnumberpeople_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             e.Handled = True
@@ -214,7 +187,7 @@
         txtid.ReadOnly = False
         txtid.Select()
         enableupdate()
-        txtwrite()
+        formenable()
     End Sub
 
     Private Sub btnupdate_Click(sender As Object, e As EventArgs)
@@ -264,7 +237,7 @@
             If txtsearch.Text = "" Then
                 reserve.loadtbfreserve(dgvlist)
             Else
-                reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                reserve.loadtbfreserveSearchbyidorname(dgvlist, txtsearch.Text)
             End If
         Catch ex As Exception
 
@@ -355,7 +328,7 @@
     End Sub
 
     Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
-        checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy"), dgvlist)
+
         dt1.Text = Today.Date
         dt2.Text = Today.Date
         rddate.Checked = True
@@ -368,12 +341,13 @@
             dtsearch1.Visible = False
             dtsearch2.Visible = False
         End If
+        checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy"), dgvlist)
         formenable()
         markettype.combomarkettype(cbmarket)
         roomratetype.comboroomtyperate(cbpricetype)
         txtid.Text = checkins.runidNO
 
-        txtwrite()
+        formenable()
         txtclear()
         enablesave()
     End Sub
@@ -403,7 +377,8 @@
             txtreserverNO_search.Text = "0"
         End If
 
-        checkins.save(checkno, checkid, frm.userid, txtreserverNO_search.Text, txtroomno.Text, Customerid, cbbooktype.SelectedValue, cbmarket.SelectedValue, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"), txtnumberpeople.Text, cbfood.SelectedValue, cbstaytype.SelectedValue, txtNote.Text)
+        checkins.save(checkno, checkid, frm.userid, txtreserverNO_search.Text, room_id, Customerid, cbbooktype.SelectedValue, cbmarket.SelectedValue, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"), txtnumberpeople.Text, cbfood.SelectedValue, cbstaytype.SelectedValue, txtNote.Text, 6, txtprice.Text)
+        checkins.search_checkinby_datein(Format(CDate(dtsearch1.Text), "MM/dd/yyyy"), Format(CDate(dtsearch2.Text), "MM/dd/yyyy"), dgvlist)
         room.updateroom(room_id, 6)
         reserve.loadtbfreserve(dgvlist)
         txtclear()
@@ -460,8 +435,8 @@
     End Sub
 
     Private Sub btnreservelist_Click(sender As Object, e As EventArgs) Handles btnreservelist.Click
-        frmshowroomreserve.ShowDialog()
-        frmshowroomreserve.Close()
+        frmshowreserve.ShowDialog()
+        frmshowreserve.Close()
         Dim dtreserve As New DataTable
         markettype.combomarkettype(cbmarket)
         roomratetype.comboroomtyperate(cbpricetype)
@@ -478,5 +453,14 @@
         Else
         End If
 
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        If dgvlist.SelectedCells.Count < 0 Then
+
+        Else
+            frmBillcheckin.ShowDialog()
+            frmBillcheckin.Close()
+        End If
     End Sub
 End Class

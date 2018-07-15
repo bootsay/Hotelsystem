@@ -4,10 +4,10 @@
     'Dim level As New tbfroomlocation
     Private Sub frmshowunit_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            room.loadtbfroomshow(dgvroom)
-            'roomrtype.comboroomtype(cbroom)
+            reserve.loadtbfreserve(dgvroom)
+            room.comboroom(cbroom)
             'level.comboroomlocation(cblevel)
-            rdname.Checked = True
+            rdreserve.Checked = True
             txtsearch.Select()
 
             If rdreserve.Checked = True Then
@@ -71,6 +71,10 @@
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub txtsearch_StyleChanged(sender As Object, e As EventArgs) Handles txtsearch.StyleChanged
+
     End Sub
 
     Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged

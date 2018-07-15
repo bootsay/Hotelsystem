@@ -25,7 +25,7 @@
         roomratetype.comboroomtyperate(frmcheckin.cbpricetype)
         frmcheckin.txtid.Text = checkins.runidNO
 
-        frmcheckin.txtwrite()
+        frmcheckin.formenable()
         frmcheckin.txtclear()
         frmcheckin.enablesave()
 

@@ -180,6 +180,18 @@
     <Compile Include="frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmreport\frmBillreserve.Designer.vb">
+      <DependentUpon>frmBillreserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmBillreserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport\frmBillcheckin.Designer.vb">
+      <DependentUpon>frmBillcheckin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport\frmBillcheckin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmreport\frmReportSumCustomer.designer.vb">
       <DependentUpon>frmReportSumCustomer.vb</DependentUpon>
     </Compile>
@@ -429,16 +441,16 @@
     <Compile Include="Reception\frmshowroomlistitem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ReportDataset.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataset.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Report\billCheckin.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>billCheckin.rpt</DependentUpon>
       <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Report\ReportDataset.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ReportDataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="Report\Companyprofile.vb">
       <DependentUpon>Companyprofile.rpt</DependentUpon>
@@ -518,6 +530,12 @@
     <Compile Include="Reservation\frmreserve.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reservation\frmshowreserve.designer.vb">
+      <DependentUpon>frmshowreserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reservation\frmshowreserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reservation\frmshowroomreserve.designer.vb">
       <DependentUpon>frmshowroomreserve.vb</DependentUpon>
     </Compile>
@@ -540,6 +558,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmBillreserve.resx">
+      <DependentUpon>frmBillreserve.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport\frmBillcheckin.resx">
+      <DependentUpon>frmBillcheckin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmreport\frmReportSumCustomer.resx">
       <DependentUpon>frmReportSumCustomer.vb</DependentUpon>
@@ -719,6 +743,9 @@
     <EmbeddedResource Include="Reservation\frmreserve.resx">
       <DependentUpon>frmreserve.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reservation\frmshowreserve.resx">
+      <DependentUpon>frmshowreserve.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservation\frmshowroomreserve.resx">
       <DependentUpon>frmshowroomreserve.vb</DependentUpon>
     </EmbeddedResource>
@@ -740,15 +767,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Report\ReportDataset.xsc">
+    <None Include="ReportDataset.xsc">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </None>
-    <None Include="Report\ReportDataset.xsd">
+    <None Include="ReportDataset.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>ReportDataset.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Report\ReportDataset.xss">
+    <None Include="ReportDataset.xss">
       <DependentUpon>ReportDataset.xsd</DependentUpon>
     </None>
     <None Include="Resources\hotel.png" />

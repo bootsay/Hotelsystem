@@ -39,7 +39,6 @@ Partial Class frmreserve
         Me.btnedit = New DevComponents.DotNetBar.ButtonX()
         Me.btnupdate = New DevComponents.DotNetBar.ButtonX()
         Me.txtdatereserve = New System.Windows.Forms.DateTimePicker()
-        Me.btnroom = New DevComponents.DotNetBar.ButtonX()
         Me.txtroomno = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.btnbrown2 = New DevComponents.DotNetBar.ButtonX()
         Me.txtdatecheckout = New System.Windows.Forms.DateTimePicker()
@@ -62,7 +61,6 @@ Partial Class frmreserve
         Me.txtdatecheckin = New System.Windows.Forms.DateTimePicker()
         Me.txtcustomername = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.btnbrown1 = New DevComponents.DotNetBar.ButtonX()
-        Me.txtNote = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -76,6 +74,10 @@ Partial Class frmreserve
         Me.txtroomid = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.txtcustomerid = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.txtuserid = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.ButtonX2 = New DevComponents.DotNetBar.ButtonX()
+        Me.txtNote = New System.Windows.Forms.TextBox()
+        Me.ButtonX3 = New DevComponents.DotNetBar.ButtonX()
         Me.Panel2.SuspendLayout()
         Me.GroupPanel3.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -104,7 +106,7 @@ Partial Class frmreserve
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.Panel2.Location = New System.Drawing.Point(3, 605)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1200, 54)
+        Me.Panel2.Size = New System.Drawing.Size(1244, 54)
         Me.Panel2.TabIndex = 2
         '
         'btncancel
@@ -125,7 +127,7 @@ Partial Class frmreserve
         Me.ButtonX1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.ButtonX1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.ButtonX1.Location = New System.Drawing.Point(1098, 157)
+        Me.ButtonX1.Location = New System.Drawing.Point(1142, 157)
         Me.ButtonX1.Name = "ButtonX1"
         Me.ButtonX1.Size = New System.Drawing.Size(95, 35)
         Me.ButtonX1.TabIndex = 42
@@ -137,7 +139,7 @@ Partial Class frmreserve
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(5, 158)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(57, 29)
+        Me.Label5.Size = New System.Drawing.Size(54, 24)
         Me.Label5.TabIndex = 41
         Me.Label5.Text = "ຄົ້ນຫາ:"
         '
@@ -159,7 +161,7 @@ Partial Class frmreserve
         Me.GroupPanel3.Controls.Add(Me.FlowLayoutPanel1)
         Me.GroupPanel3.Location = New System.Drawing.Point(928, 5)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(265, 109)
+        Me.GroupPanel3.Size = New System.Drawing.Size(309, 109)
         '
         '
         '
@@ -196,10 +198,12 @@ Partial Class frmreserve
         Me.FlowLayoutPanel1.Controls.Add(Me.btnsave)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnedit)
         Me.FlowLayoutPanel1.Controls.Add(Me.btnupdate)
+        Me.FlowLayoutPanel1.Controls.Add(Me.ButtonX2)
+        Me.FlowLayoutPanel1.Controls.Add(Me.ButtonX3)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(259, 103)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(303, 103)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'btnnew
@@ -255,19 +259,6 @@ Partial Class frmreserve
         Me.txtdatereserve.Size = New System.Drawing.Size(163, 35)
         Me.txtdatereserve.TabIndex = 2
         '
-        'btnroom
-        '
-        Me.btnroom.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnroom.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnroom.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.btnroom.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.btnroom.Location = New System.Drawing.Point(868, 3)
-        Me.btnroom.Name = "btnroom"
-        Me.btnroom.Size = New System.Drawing.Size(54, 35)
-        Me.btnroom.TabIndex = 10
-        Me.btnroom.Text = "ໄໝ່"
-        Me.btnroom.TextColor = System.Drawing.Color.Maroon
-        '
         'txtroomno
         '
         Me.txtroomno.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -276,12 +267,12 @@ Partial Class frmreserve
         '
         Me.txtroomno.Border.Class = "TextBoxBorder"
         Me.txtroomno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomno.Location = New System.Drawing.Point(616, 3)
+        Me.txtroomno.Location = New System.Drawing.Point(687, 3)
         Me.txtroomno.Name = "txtroomno"
         Me.txtroomno.ReadOnly = True
-        Me.txtroomno.Size = New System.Drawing.Size(190, 35)
+        Me.txtroomno.Size = New System.Drawing.Size(175, 35)
         Me.txtroomno.TabIndex = 8
-        Me.txtroomno.WatermarkText = "ກະລຸນາເລືອກຫ້ອງໃຫ້ລູກຄ້າ"
+        Me.txtroomno.WatermarkText = "ເລືອກຫ້ອງ"
         '
         'btnbrown2
         '
@@ -289,7 +280,7 @@ Partial Class frmreserve
         Me.btnbrown2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
         Me.btnbrown2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.btnbrown2.ImageFixedSize = New System.Drawing.Size(24, 24)
-        Me.btnbrown2.Location = New System.Drawing.Point(810, 3)
+        Me.btnbrown2.Location = New System.Drawing.Point(868, 4)
         Me.btnbrown2.Name = "btnbrown2"
         Me.btnbrown2.Size = New System.Drawing.Size(54, 35)
         Me.btnbrown2.TabIndex = 9
@@ -330,7 +321,7 @@ Partial Class frmreserve
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 204.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1206, 662)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(1250, 662)
         Me.TableLayoutPanel1.TabIndex = 1
         '
         'dgvlist
@@ -354,13 +345,14 @@ Partial Class frmreserve
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
-        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
+        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 207)
+        Me.dgvlist.MultiSelect = False
         Me.dgvlist.Name = "dgvlist"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -373,12 +365,13 @@ Partial Class frmreserve
         Me.dgvlist.RowHeadersVisible = False
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle4
-        Me.dgvlist.RowTemplate.Height = 28
-        Me.dgvlist.Size = New System.Drawing.Size(1200, 392)
+        Me.dgvlist.RowTemplate.Height = 30
+        Me.dgvlist.Size = New System.Drawing.Size(1244, 392)
         Me.dgvlist.TabIndex = 0
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Label6)
         Me.Panel1.Controls.Add(Me.txtsearch)
         Me.Panel1.Controls.Add(Me.dt11)
         Me.Panel1.Controls.Add(Me.dt2)
@@ -391,7 +384,6 @@ Partial Class frmreserve
         Me.Panel1.Controls.Add(Me.txtprice)
         Me.Panel1.Controls.Add(Me.GroupPanel3)
         Me.Panel1.Controls.Add(Me.txtdatereserve)
-        Me.Panel1.Controls.Add(Me.btnroom)
         Me.Panel1.Controls.Add(Me.txtroomno)
         Me.Panel1.Controls.Add(Me.btnbrown2)
         Me.Panel1.Controls.Add(Me.txtdatecheckout)
@@ -418,7 +410,7 @@ Partial Class frmreserve
         Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1200, 198)
+        Me.Panel1.Size = New System.Drawing.Size(1244, 198)
         Me.Panel1.TabIndex = 1
         '
         'txtsearch
@@ -427,7 +419,7 @@ Partial Class frmreserve
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtsearch.Location = New System.Drawing.Point(429, 157)
         Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(663, 35)
+        Me.txtsearch.Size = New System.Drawing.Size(707, 35)
         Me.txtsearch.TabIndex = 53
         '
         'dt11
@@ -435,7 +427,7 @@ Partial Class frmreserve
         Me.dt11.AutoSize = True
         Me.dt11.Location = New System.Drawing.Point(662, 161)
         Me.dt11.Name = "dt11"
-        Me.dt11.Size = New System.Drawing.Size(64, 29)
+        Me.dt11.Size = New System.Drawing.Size(61, 24)
         Me.dt11.TabIndex = 57
         Me.dt11.Text = "ຫາວັນທີ"
         '
@@ -446,7 +438,7 @@ Partial Class frmreserve
         Me.dt2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dt2.Location = New System.Drawing.Point(728, 157)
         Me.dt2.Name = "dt2"
-        Me.dt2.Size = New System.Drawing.Size(364, 35)
+        Me.dt2.Size = New System.Drawing.Size(408, 35)
         Me.dt2.TabIndex = 56
         '
         'dt1
@@ -468,7 +460,7 @@ Partial Class frmreserve
         Me.cbroom.ItemHeight = 29
         Me.cbroom.Location = New System.Drawing.Point(446, 157)
         Me.cbroom.Name = "cbroom"
-        Me.cbroom.Size = New System.Drawing.Size(646, 35)
+        Me.cbroom.Size = New System.Drawing.Size(690, 35)
         Me.cbroom.TabIndex = 54
         '
         'txtnumberpeople
@@ -534,7 +526,7 @@ Partial Class frmreserve
         Me.rddate.BackColor = System.Drawing.Color.Transparent
         Me.rddate.Location = New System.Drawing.Point(178, 1)
         Me.rddate.Name = "rddate"
-        Me.rddate.Size = New System.Drawing.Size(62, 33)
+        Me.rddate.Size = New System.Drawing.Size(59, 28)
         Me.rddate.TabIndex = 7
         Me.rddate.TabStop = True
         Me.rddate.Text = "ວັນທີ"
@@ -546,7 +538,7 @@ Partial Class frmreserve
         Me.rdroom.BackColor = System.Drawing.Color.Transparent
         Me.rdroom.Location = New System.Drawing.Point(248, 1)
         Me.rdroom.Name = "rdroom"
-        Me.rdroom.Size = New System.Drawing.Size(91, 33)
+        Me.rdroom.Size = New System.Drawing.Size(88, 28)
         Me.rdroom.TabIndex = 6
         Me.rdroom.TabStop = True
         Me.rdroom.Text = "ຫ້ອງນອນ"
@@ -558,7 +550,7 @@ Partial Class frmreserve
         Me.rdname.BackColor = System.Drawing.Color.Transparent
         Me.rdname.Location = New System.Drawing.Point(129, 1)
         Me.rdname.Name = "rdname"
-        Me.rdname.Size = New System.Drawing.Size(41, 33)
+        Me.rdname.Size = New System.Drawing.Size(38, 28)
         Me.rdname.TabIndex = 5
         Me.rdname.TabStop = True
         Me.rdname.Text = "ຊື່"
@@ -570,7 +562,7 @@ Partial Class frmreserve
         Me.rdreserve.BackColor = System.Drawing.Color.Transparent
         Me.rdreserve.Location = New System.Drawing.Point(2, 1)
         Me.rdreserve.Name = "rdreserve"
-        Me.rdreserve.Size = New System.Drawing.Size(124, 33)
+        Me.rdreserve.Size = New System.Drawing.Size(121, 28)
         Me.rdreserve.TabIndex = 4
         Me.rdreserve.TabStop = True
         Me.rdreserve.Text = "ເລກທີການຈອງ"
@@ -605,7 +597,7 @@ Partial Class frmreserve
         Me.txtcustomername.ReadOnly = True
         Me.txtcustomername.Size = New System.Drawing.Size(153, 35)
         Me.txtcustomername.TabIndex = 3
-        Me.txtcustomername.WatermarkText = "ກະລຸນາເລືອກລູກຄ້າ"
+        Me.txtcustomername.WatermarkText = "ເລືອກລູກຄ້າ"
         '
         'btnbrown1
         '
@@ -619,21 +611,12 @@ Partial Class frmreserve
         Me.btnbrown1.TabIndex = 4
         Me.btnbrown1.Text = "ເລືອກ"
         '
-        'txtNote
-        '
-        Me.txtNote.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtNote.Location = New System.Drawing.Point(82, 117)
-        Me.txtNote.Name = "txtNote"
-        Me.txtNote.Size = New System.Drawing.Size(1111, 35)
-        Me.txtNote.TabIndex = 13
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(2, 46)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 29)
+        Me.Label2.Size = New System.Drawing.Size(74, 24)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "ຜູ້ອອກບີນ:"
         '
@@ -650,7 +633,7 @@ Partial Class frmreserve
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(2, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(58, 29)
+        Me.Label1.Size = New System.Drawing.Size(55, 24)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -659,7 +642,7 @@ Partial Class frmreserve
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(613, 43)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 29)
+        Me.Label11.Size = New System.Drawing.Size(69, 24)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "ວັນທີເຂົ້າ:"
         '
@@ -669,7 +652,7 @@ Partial Class frmreserve
         Me.Label3.ForeColor = System.Drawing.Color.DarkRed
         Me.Label3.Location = New System.Drawing.Point(607, 82)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 29)
+        Me.Label3.Size = New System.Drawing.Size(75, 24)
         Me.Label3.TabIndex = 25
         Me.Label3.Text = "ວັນທີອອກ:"
         '
@@ -678,7 +661,7 @@ Partial Class frmreserve
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(3, 83)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 29)
+        Me.Label8.Size = New System.Drawing.Size(73, 24)
         Me.Label8.TabIndex = 30
         Me.Label8.Text = "ວັນທີຈອງ:"
         '
@@ -687,7 +670,7 @@ Partial Class frmreserve
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(246, 85)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(85, 29)
+        Me.Label12.Size = New System.Drawing.Size(82, 24)
         Me.Label12.TabIndex = 33
         Me.Label12.Text = "ຈໍານວນຄົນ:"
         '
@@ -696,7 +679,7 @@ Partial Class frmreserve
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(1, 120)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 29)
+        Me.Label4.Size = New System.Drawing.Size(75, 24)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "ໜາຍເຫດ:"
         '
@@ -705,7 +688,7 @@ Partial Class frmreserve
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(281, 46)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(53, 29)
+        Me.Label13.Size = New System.Drawing.Size(50, 24)
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "ລາຄາ:"
         '
@@ -714,7 +697,7 @@ Partial Class frmreserve
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(280, 6)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(55, 29)
+        Me.Label14.Size = New System.Drawing.Size(52, 24)
         Me.Label14.TabIndex = 37
         Me.Label14.Text = "ລູກຄ້າ:"
         '
@@ -767,11 +750,51 @@ Partial Class frmreserve
         Me.txtuserid.TabIndex = 43
         Me.txtuserid.WatermarkText = "ເລືອກລູກຄ້າ"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(607, 8)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(80, 24)
+        Me.Label6.TabIndex = 58
+        Me.Label6.Text = "ເລືອກຫ້ອງ:"
+        '
+        'ButtonX2
+        '
+        Me.ButtonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ButtonX2.Location = New System.Drawing.Point(3, 105)
+        Me.ButtonX2.Name = "ButtonX2"
+        Me.ButtonX2.Size = New System.Drawing.Size(95, 45)
+        Me.ButtonX2.TabIndex = 18
+        Me.ButtonX2.Text = "ປັບປຸງ"
+        '
+        'txtNote
+        '
+        Me.txtNote.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtNote.Location = New System.Drawing.Point(82, 117)
+        Me.txtNote.Name = "txtNote"
+        Me.txtNote.Size = New System.Drawing.Size(1155, 35)
+        Me.txtNote.TabIndex = 13
+        '
+        'ButtonX3
+        '
+        Me.ButtonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.ButtonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.ButtonX3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.ButtonX3.Location = New System.Drawing.Point(104, 105)
+        Me.ButtonX3.Name = "ButtonX3"
+        Me.ButtonX3.Size = New System.Drawing.Size(95, 45)
+        Me.ButtonX3.TabIndex = 19
+        Me.ButtonX3.Text = "ປັບປຸງ"
+        '
         'frmreserve
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 29.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1206, 662)
+        Me.ClientSize = New System.Drawing.Size(1250, 662)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
@@ -807,7 +830,6 @@ Partial Class frmreserve
     Friend WithEvents btnedit As DevComponents.DotNetBar.ButtonX
     Friend WithEvents btnupdate As DevComponents.DotNetBar.ButtonX
     Friend WithEvents txtdatereserve As System.Windows.Forms.DateTimePicker
-    Friend WithEvents btnroom As DevComponents.DotNetBar.ButtonX
     Friend WithEvents txtroomno As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents btnbrown2 As DevComponents.DotNetBar.ButtonX
     Friend WithEvents txtdatecheckout As System.Windows.Forms.DateTimePicker
@@ -819,7 +841,6 @@ Partial Class frmreserve
     Friend WithEvents txtdatecheckin As System.Windows.Forms.DateTimePicker
     Friend WithEvents txtcustomername As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents btnbrown1 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents txtNote As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtid As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -844,4 +865,8 @@ Partial Class frmreserve
     Friend WithEvents dt2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents dt1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents cbroom As DevComponents.DotNetBar.Controls.ComboBoxEx
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents ButtonX2 As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents ButtonX3 As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents txtNote As System.Windows.Forms.TextBox
 End Class

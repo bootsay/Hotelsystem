@@ -22,10 +22,10 @@ Partial Class frmcheckin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcheckin))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvlist = New DevComponents.DotNetBar.Controls.DataGridViewX()
@@ -53,7 +53,6 @@ Partial Class frmcheckin
         Me.rdroomnumber = New System.Windows.Forms.RadioButton()
         Me.rdIDcard = New System.Windows.Forms.RadioButton()
         Me.rdname = New System.Windows.Forms.RadioButton()
-        Me.btnsearch = New DevComponents.DotNetBar.ButtonX()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cbpricetype = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -77,18 +76,19 @@ Partial Class frmcheckin
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtadvanhpay = New DevComponents.Editors.IntegerInput()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.btncancel = New DevComponents.DotNetBar.ButtonX()
-        Me.btnprint = New DevComponents.DotNetBar.ButtonX()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.rdno = New System.Windows.Forms.GroupBox()
-        Me.btnreservelist = New DevComponents.DotNetBar.ButtonX()
-        Me.btnclose = New DevComponents.DotNetBar.ButtonX()
         Me.txtreserverNO_search = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.btnsearchreserve = New DevComponents.DotNetBar.ButtonX()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
+        Me.txtadvanchpay = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.btnsearch = New DevComponents.DotNetBar.ButtonX()
+        Me.btncancel = New DevComponents.DotNetBar.ButtonX()
+        Me.btnprint = New DevComponents.DotNetBar.ButtonX()
+        Me.btnreservelist = New DevComponents.DotNetBar.ButtonX()
+        Me.btnclose = New DevComponents.DotNetBar.ButtonX()
+        Me.btnsearchreserve = New DevComponents.DotNetBar.ButtonX()
         Me.btnnew = New DevComponents.DotNetBar.ButtonX()
         Me.btnsave = New DevComponents.DotNetBar.ButtonX()
         Me.btnedit = New DevComponents.DotNetBar.ButtonX()
@@ -103,7 +103,6 @@ Partial Class frmcheckin
         CType(Me.dt1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupPanel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.txtadvanhpay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.rdno.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -137,40 +136,40 @@ Partial Class frmcheckin
         Me.dgvlist.AllowUserToResizeColumns = False
         Me.dgvlist.AllowUserToResizeRows = False
         Me.dgvlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(56, Byte), Integer), CType(CType(91, Byte), Integer))
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
         Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 369)
         Me.dgvlist.MultiSelect = False
         Me.dgvlist.Name = "dgvlist"
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvlist.RowHeadersVisible = False
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvlist.RowTemplate.Height = 30
         Me.dgvlist.Size = New System.Drawing.Size(1061, 297)
         Me.dgvlist.TabIndex = 0
@@ -666,20 +665,6 @@ Partial Class frmcheckin
         Me.rdname.Text = "ຄົ້ນຫາຕາມຊື່:"
         Me.rdname.UseVisualStyleBackColor = False
         '
-        'btnsearch
-        '
-        Me.btnsearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnsearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnsearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnsearch.Image = CType(resources.GetObject("btnsearch.Image"), System.Drawing.Image)
-        Me.btnsearch.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.btnsearch.Location = New System.Drawing.Point(963, 234)
-        Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(88, 35)
-        Me.btnsearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.btnsearch.TabIndex = 19
-        Me.btnsearch.Text = "ຄົ້ນຫາ"
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -917,7 +902,7 @@ Partial Class frmcheckin
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.txtadvanhpay)
+        Me.Panel2.Controls.Add(Me.txtadvanchpay)
         Me.Panel2.Controls.Add(Me.Label20)
         Me.Panel2.Controls.Add(Me.btncancel)
         Me.Panel2.Controls.Add(Me.btnprint)
@@ -927,22 +912,6 @@ Partial Class frmcheckin
         Me.Panel2.Size = New System.Drawing.Size(1061, 54)
         Me.Panel2.TabIndex = 2
         '
-        'txtadvanhpay
-        '
-        Me.txtadvanhpay.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        '
-        '
-        '
-        Me.txtadvanhpay.BackgroundStyle.Class = "DateTimeInputBackground"
-        Me.txtadvanhpay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtadvanhpay.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.txtadvanhpay.Font = New System.Drawing.Font("Saysettha OT", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtadvanhpay.Location = New System.Drawing.Point(678, 3)
-        Me.txtadvanhpay.Name = "txtadvanhpay"
-        Me.txtadvanhpay.Size = New System.Drawing.Size(386, 44)
-        Me.txtadvanhpay.TabIndex = 21
-        '
         'Label20
         '
         Me.Label20.AutoSize = True
@@ -951,32 +920,6 @@ Partial Class frmcheckin
         Me.Label20.Size = New System.Drawing.Size(72, 24)
         Me.Label20.TabIndex = 20
         Me.Label20.Text = "ຈ່າຍກ່ອນ:"
-        '
-        'btncancel
-        '
-        Me.btncancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btncancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btncancel.Image = Global.HotelSystem.My.Resources.Resources.edit_delete_icon
-        Me.btncancel.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.btncancel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
-        Me.btncancel.Location = New System.Drawing.Point(180, 3)
-        Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(121, 47)
-        Me.btncancel.TabIndex = 19
-        Me.btncancel.Text = "ຍົກເລີກ"
-        '
-        'btnprint
-        '
-        Me.btnprint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btnprint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnprint.Image = Global.HotelSystem.My.Resources.Resources.cashier
-        Me.btnprint.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.btnprint.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
-        Me.btnprint.Location = New System.Drawing.Point(3, 4)
-        Me.btnprint.Name = "btnprint"
-        Me.btnprint.Size = New System.Drawing.Size(171, 46)
-        Me.btnprint.TabIndex = 18
-        Me.btnprint.Text = "ພິມບີນ"
         '
         'TableLayoutPanel2
         '
@@ -1008,6 +951,96 @@ Partial Class frmcheckin
         Me.rdno.TabStop = False
         Me.rdno.Text = "ຄົ້ນຫາ"
         '
+        'txtreserverNO_search
+        '
+        '
+        '
+        '
+        Me.txtreserverNO_search.Border.Class = "TextBoxBorder"
+        Me.txtreserverNO_search.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtreserverNO_search.Location = New System.Drawing.Point(101, 22)
+        Me.txtreserverNO_search.Name = "txtreserverNO_search"
+        Me.txtreserverNO_search.Size = New System.Drawing.Size(224, 35)
+        Me.txtreserverNO_search.TabIndex = 0
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(2, 26)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(96, 24)
+        Me.Label9.TabIndex = 9
+        Me.Label9.Text = "ເລກການຈອງ:"
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnnew)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnsave)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnedit)
+        Me.FlowLayoutPanel1.Controls.Add(Me.btnupdate)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(445, 64)
+        Me.FlowLayoutPanel1.TabIndex = 5
+        '
+        'txtadvanchpay
+        '
+        Me.txtadvanchpay.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtadvanchpay.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        '
+        '
+        '
+        Me.txtadvanchpay.Border.Class = "TextBoxBorder"
+        Me.txtadvanchpay.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtadvanchpay.Font = New System.Drawing.Font("Saysettha OT", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtadvanchpay.Location = New System.Drawing.Point(681, 3)
+        Me.txtadvanchpay.Name = "txtadvanchpay"
+        Me.txtadvanchpay.Size = New System.Drawing.Size(377, 49)
+        Me.txtadvanchpay.TabIndex = 21
+        '
+        'btnsearch
+        '
+        Me.btnsearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnsearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnsearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnsearch.Image = CType(resources.GetObject("btnsearch.Image"), System.Drawing.Image)
+        Me.btnsearch.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.btnsearch.Location = New System.Drawing.Point(963, 234)
+        Me.btnsearch.Name = "btnsearch"
+        Me.btnsearch.Size = New System.Drawing.Size(88, 35)
+        Me.btnsearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnsearch.TabIndex = 19
+        Me.btnsearch.Text = "ຄົ້ນຫາ"
+        '
+        'btncancel
+        '
+        Me.btncancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btncancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btncancel.Image = Global.HotelSystem.My.Resources.Resources.edit_delete_icon
+        Me.btncancel.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.btncancel.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
+        Me.btncancel.Location = New System.Drawing.Point(180, 3)
+        Me.btncancel.Name = "btncancel"
+        Me.btncancel.Size = New System.Drawing.Size(121, 47)
+        Me.btncancel.TabIndex = 19
+        Me.btncancel.Text = "ຍົກເລີກ"
+        '
+        'btnprint
+        '
+        Me.btnprint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btnprint.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnprint.Image = Global.HotelSystem.My.Resources.Resources.cashier
+        Me.btnprint.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.btnprint.ImagePosition = DevComponents.DotNetBar.eImagePosition.Right
+        Me.btnprint.Location = New System.Drawing.Point(3, 4)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(171, 46)
+        Me.btnprint.TabIndex = 18
+        Me.btnprint.Text = "ພິມບີນ"
+        '
         'btnreservelist
         '
         Me.btnreservelist.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText
@@ -1035,18 +1068,6 @@ Partial Class frmcheckin
         Me.btnclose.TabIndex = 3
         Me.btnclose.Text = "ປິດ"
         '
-        'txtreserverNO_search
-        '
-        '
-        '
-        '
-        Me.txtreserverNO_search.Border.Class = "TextBoxBorder"
-        Me.txtreserverNO_search.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtreserverNO_search.Location = New System.Drawing.Point(101, 22)
-        Me.txtreserverNO_search.Name = "txtreserverNO_search"
-        Me.txtreserverNO_search.Size = New System.Drawing.Size(224, 35)
-        Me.txtreserverNO_search.TabIndex = 0
-        '
         'btnsearchreserve
         '
         Me.btnsearchreserve.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText
@@ -1059,28 +1080,6 @@ Partial Class frmcheckin
         Me.btnsearchreserve.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnsearchreserve.TabIndex = 1
         Me.btnsearchreserve.Text = "ຄົ້ນຫາ"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(2, 26)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 24)
-        Me.Label9.TabIndex = 9
-        Me.Label9.Text = "ເລກການຈອງ:"
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnnew)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnsave)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnedit)
-        Me.FlowLayoutPanel1.Controls.Add(Me.btnupdate)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(3, 3)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(445, 64)
-        Me.FlowLayoutPanel1.TabIndex = 5
         '
         'btnnew
         '
@@ -1158,7 +1157,6 @@ Partial Class frmcheckin
         Me.GroupPanel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.txtadvanhpay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.rdno.ResumeLayout(False)
         Me.rdno.PerformLayout()
@@ -1230,6 +1228,6 @@ Partial Class frmcheckin
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents cbstaytype As DevComponents.DotNetBar.Controls.ComboBoxEx
     Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents txtadvanhpay As DevComponents.Editors.IntegerInput
     Friend WithEvents btnreservelist As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents txtadvanchpay As DevComponents.DotNetBar.Controls.TextBoxX
 End Class

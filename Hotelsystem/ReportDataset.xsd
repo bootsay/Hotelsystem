@@ -510,7 +510,7 @@ FROM            viewcheckout</CommandText>
   <xs:element name="ReportDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReportDataset" msprop:Generator_UserDSName="ReportDataset">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="viewproduct" msprop:Generator_TableClassName="viewproductDataTable" msprop:Generator_TableVarName="tableviewproduct" msprop:Generator_RowChangedName="viewproductRowChanged" msprop:Generator_TablePropName="viewproduct" msprop:Generator_RowDeletingName="viewproductRowDeleting" msprop:Generator_RowChangingName="viewproductRowChanging" msprop:Generator_RowEvHandlerName="viewproductRowChangeEventHandler" msprop:Generator_RowDeletedName="viewproductRowDeleted" msprop:Generator_RowClassName="viewproductRow" msprop:Generator_UserTableName="viewproduct" msprop:Generator_RowEvArgName="viewproductRowChangeEvent">
+        <xs:element name="viewproduct" msprop:Generator_TableClassName="viewproductDataTable" msprop:Generator_TableVarName="tableviewproduct" msprop:Generator_TablePropName="viewproduct" msprop:Generator_RowDeletingName="viewproductRowDeleting" msprop:Generator_RowChangingName="viewproductRowChanging" msprop:Generator_RowEvHandlerName="viewproductRowChangeEventHandler" msprop:Generator_RowDeletedName="viewproductRowDeleted" msprop:Generator_UserTableName="viewproduct" msprop:Generator_RowChangedName="viewproductRowChanged" msprop:Generator_RowEvArgName="viewproductRowChangeEvent" msprop:Generator_RowClassName="viewproductRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="productNO" msprop:Generator_ColumnVarNameInTable="columnproductNO" msprop:Generator_ColumnPropNameInRow="productNO" msprop:Generator_ColumnPropNameInTable="productNOColumn" msprop:Generator_UserColumnName="productNO" type="xs:int" />
@@ -545,7 +545,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewroom" msprop:Generator_TableClassName="viewroomDataTable" msprop:Generator_TableVarName="tableviewroom" msprop:Generator_RowChangedName="viewroomRowChanged" msprop:Generator_TablePropName="viewroom" msprop:Generator_RowDeletingName="viewroomRowDeleting" msprop:Generator_RowChangingName="viewroomRowChanging" msprop:Generator_RowEvHandlerName="viewroomRowChangeEventHandler" msprop:Generator_RowDeletedName="viewroomRowDeleted" msprop:Generator_RowClassName="viewroomRow" msprop:Generator_UserTableName="viewroom" msprop:Generator_RowEvArgName="viewroomRowChangeEvent">
+        <xs:element name="viewroom" msprop:Generator_TableClassName="viewroomDataTable" msprop:Generator_TableVarName="tableviewroom" msprop:Generator_TablePropName="viewroom" msprop:Generator_RowDeletingName="viewroomRowDeleting" msprop:Generator_RowChangingName="viewroomRowChanging" msprop:Generator_RowEvHandlerName="viewroomRowChangeEventHandler" msprop:Generator_RowDeletedName="viewroomRowDeleted" msprop:Generator_UserTableName="viewroom" msprop:Generator_RowChangedName="viewroomRowChanged" msprop:Generator_RowEvArgName="viewroomRowChangeEvent" msprop:Generator_RowClassName="viewroomRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="roomid" msprop:Generator_ColumnVarNameInTable="columnroomid" msprop:Generator_ColumnPropNameInRow="roomid" msprop:Generator_ColumnPropNameInTable="roomidColumn" msprop:Generator_UserColumnName="roomid" type="xs:int" />
@@ -586,7 +586,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewprovience" msprop:Generator_TableClassName="viewprovienceDataTable" msprop:Generator_TableVarName="tableviewprovience" msprop:Generator_RowChangedName="viewprovienceRowChanged" msprop:Generator_TablePropName="viewprovience" msprop:Generator_RowDeletingName="viewprovienceRowDeleting" msprop:Generator_RowChangingName="viewprovienceRowChanging" msprop:Generator_RowEvHandlerName="viewprovienceRowChangeEventHandler" msprop:Generator_RowDeletedName="viewprovienceRowDeleted" msprop:Generator_RowClassName="viewprovienceRow" msprop:Generator_UserTableName="viewprovience" msprop:Generator_RowEvArgName="viewprovienceRowChangeEvent">
+        <xs:element name="viewprovience" msprop:Generator_TableClassName="viewprovienceDataTable" msprop:Generator_TableVarName="tableviewprovience" msprop:Generator_TablePropName="viewprovience" msprop:Generator_RowDeletingName="viewprovienceRowDeleting" msprop:Generator_RowChangingName="viewprovienceRowChanging" msprop:Generator_RowEvHandlerName="viewprovienceRowChangeEventHandler" msprop:Generator_RowDeletedName="viewprovienceRowDeleted" msprop:Generator_UserTableName="viewprovience" msprop:Generator_RowChangedName="viewprovienceRowChanged" msprop:Generator_RowEvArgName="viewprovienceRowChangeEvent" msprop:Generator_RowClassName="viewprovienceRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="provinceid" msprop:Generator_ColumnVarNameInTable="columnprovinceid" msprop:Generator_ColumnPropNameInRow="provinceid" msprop:Generator_ColumnPropNameInTable="provinceidColumn" msprop:Generator_UserColumnName="provinceid" type="xs:int" />
@@ -608,7 +608,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewroom1" msprop:Generator_TableClassName="viewroom1DataTable" msprop:Generator_TableVarName="tableviewroom1" msprop:Generator_RowChangedName="viewroom1RowChanged" msprop:Generator_TablePropName="viewroom1" msprop:Generator_RowDeletingName="viewroom1RowDeleting" msprop:Generator_RowChangingName="viewroom1RowChanging" msprop:Generator_RowEvHandlerName="viewroom1RowChangeEventHandler" msprop:Generator_RowDeletedName="viewroom1RowDeleted" msprop:Generator_RowClassName="viewroom1Row" msprop:Generator_UserTableName="viewroom1" msprop:Generator_RowEvArgName="viewroom1RowChangeEvent">
+        <xs:element name="viewroom1" msprop:Generator_TableClassName="viewroom1DataTable" msprop:Generator_TableVarName="tableviewroom1" msprop:Generator_TablePropName="viewroom1" msprop:Generator_RowDeletingName="viewroom1RowDeleting" msprop:Generator_RowChangingName="viewroom1RowChanging" msprop:Generator_RowEvHandlerName="viewroom1RowChangeEventHandler" msprop:Generator_RowDeletedName="viewroom1RowDeleted" msprop:Generator_UserTableName="viewroom1" msprop:Generator_RowChangedName="viewroom1RowChanged" msprop:Generator_RowEvArgName="viewroom1RowChangeEvent" msprop:Generator_RowClassName="viewroom1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="roomid" msprop:Generator_ColumnVarNameInTable="columnroomid" msprop:Generator_ColumnPropNameInRow="roomid" msprop:Generator_ColumnPropNameInTable="roomidColumn" msprop:Generator_UserColumnName="roomid" type="xs:int" />
@@ -649,7 +649,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewroomrate" msprop:Generator_TableClassName="viewroomrateDataTable" msprop:Generator_TableVarName="tableviewroomrate" msprop:Generator_TablePropName="viewroomrate" msprop:Generator_RowDeletingName="viewroomrateRowDeleting" msprop:Generator_RowChangingName="viewroomrateRowChanging" msprop:Generator_RowEvHandlerName="viewroomrateRowChangeEventHandler" msprop:Generator_RowDeletedName="viewroomrateRowDeleted" msprop:Generator_UserTableName="viewroomrate" msprop:Generator_RowChangedName="viewroomrateRowChanged" msprop:Generator_RowEvArgName="viewroomrateRowChangeEvent" msprop:Generator_RowClassName="viewroomrateRow">
+        <xs:element name="viewroomrate" msprop:Generator_TableClassName="viewroomrateDataTable" msprop:Generator_TableVarName="tableviewroomrate" msprop:Generator_RowChangedName="viewroomrateRowChanged" msprop:Generator_TablePropName="viewroomrate" msprop:Generator_RowDeletingName="viewroomrateRowDeleting" msprop:Generator_RowChangingName="viewroomrateRowChanging" msprop:Generator_RowEvHandlerName="viewroomrateRowChangeEventHandler" msprop:Generator_RowDeletedName="viewroomrateRowDeleted" msprop:Generator_RowClassName="viewroomrateRow" msprop:Generator_UserTableName="viewroomrate" msprop:Generator_RowEvArgName="viewroomrateRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="roomrateid" msprop:Generator_ColumnVarNameInTable="columnroomrateid" msprop:Generator_ColumnPropNameInRow="roomrateid" msprop:Generator_ColumnPropNameInTable="roomrateidColumn" msprop:Generator_UserColumnName="roomrateid" type="xs:int" />
@@ -680,7 +680,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="sumarystatusBlock" msprop:Generator_TableClassName="sumarystatusBlockDataTable" msprop:Generator_TableVarName="tablesumarystatusBlock" msprop:Generator_TablePropName="sumarystatusBlock" msprop:Generator_RowDeletingName="sumarystatusBlockRowDeleting" msprop:Generator_RowChangingName="sumarystatusBlockRowChanging" msprop:Generator_RowEvHandlerName="sumarystatusBlockRowChangeEventHandler" msprop:Generator_RowDeletedName="sumarystatusBlockRowDeleted" msprop:Generator_UserTableName="sumarystatusBlock" msprop:Generator_RowChangedName="sumarystatusBlockRowChanged" msprop:Generator_RowEvArgName="sumarystatusBlockRowChangeEvent" msprop:Generator_RowClassName="sumarystatusBlockRow">
+        <xs:element name="sumarystatusBlock" msprop:Generator_TableClassName="sumarystatusBlockDataTable" msprop:Generator_TableVarName="tablesumarystatusBlock" msprop:Generator_RowChangedName="sumarystatusBlockRowChanged" msprop:Generator_TablePropName="sumarystatusBlock" msprop:Generator_RowDeletingName="sumarystatusBlockRowDeleting" msprop:Generator_RowChangingName="sumarystatusBlockRowChanging" msprop:Generator_RowEvHandlerName="sumarystatusBlockRowChangeEventHandler" msprop:Generator_RowDeletedName="sumarystatusBlockRowDeleted" msprop:Generator_RowClassName="sumarystatusBlockRow" msprop:Generator_UserTableName="sumarystatusBlock" msprop:Generator_RowEvArgName="sumarystatusBlockRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="roomid" msprop:Generator_ColumnVarNameInTable="columnroomid" msprop:Generator_ColumnPropNameInRow="roomid" msprop:Generator_ColumnPropNameInTable="roomidColumn" msprop:Generator_UserColumnName="roomid" type="xs:int" />
@@ -730,7 +730,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewbill_folio" msprop:Generator_TableClassName="viewbill_folioDataTable" msprop:Generator_TableVarName="tableviewbill_folio" msprop:Generator_TablePropName="viewbill_folio" msprop:Generator_RowDeletingName="viewbill_folioRowDeleting" msprop:Generator_RowChangingName="viewbill_folioRowChanging" msprop:Generator_RowEvHandlerName="viewbill_folioRowChangeEventHandler" msprop:Generator_RowDeletedName="viewbill_folioRowDeleted" msprop:Generator_UserTableName="viewbill_folio" msprop:Generator_RowChangedName="viewbill_folioRowChanged" msprop:Generator_RowEvArgName="viewbill_folioRowChangeEvent" msprop:Generator_RowClassName="viewbill_folioRow">
+        <xs:element name="viewbill_folio" msprop:Generator_TableClassName="viewbill_folioDataTable" msprop:Generator_TableVarName="tableviewbill_folio" msprop:Generator_RowChangedName="viewbill_folioRowChanged" msprop:Generator_TablePropName="viewbill_folio" msprop:Generator_RowDeletingName="viewbill_folioRowDeleting" msprop:Generator_RowChangingName="viewbill_folioRowChanging" msprop:Generator_RowEvHandlerName="viewbill_folioRowChangeEventHandler" msprop:Generator_RowDeletedName="viewbill_folioRowDeleted" msprop:Generator_RowClassName="viewbill_folioRow" msprop:Generator_UserTableName="viewbill_folio" msprop:Generator_RowEvArgName="viewbill_folioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="billNO" msprop:Generator_ColumnVarNameInTable="columnbillNO" msprop:Generator_ColumnPropNameInRow="billNO" msprop:Generator_ColumnPropNameInTable="billNOColumn" msprop:Generator_UserColumnName="billNO">
@@ -905,7 +905,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewreserve" msprop:Generator_TableClassName="viewreserveDataTable" msprop:Generator_TableVarName="tableviewreserve" msprop:Generator_TablePropName="viewreserve" msprop:Generator_RowDeletingName="viewreserveRowDeleting" msprop:Generator_RowChangingName="viewreserveRowChanging" msprop:Generator_RowEvHandlerName="viewreserveRowChangeEventHandler" msprop:Generator_RowDeletedName="viewreserveRowDeleted" msprop:Generator_UserTableName="viewreserve" msprop:Generator_RowChangedName="viewreserveRowChanged" msprop:Generator_RowEvArgName="viewreserveRowChangeEvent" msprop:Generator_RowClassName="viewreserveRow">
+        <xs:element name="viewreserve" msprop:Generator_TableClassName="viewreserveDataTable" msprop:Generator_TableVarName="tableviewreserve" msprop:Generator_RowChangedName="viewreserveRowChanged" msprop:Generator_TablePropName="viewreserve" msprop:Generator_RowDeletingName="viewreserveRowDeleting" msprop:Generator_RowChangingName="viewreserveRowChanging" msprop:Generator_RowEvHandlerName="viewreserveRowChangeEventHandler" msprop:Generator_RowDeletedName="viewreserveRowDeleted" msprop:Generator_RowClassName="viewreserveRow" msprop:Generator_UserTableName="viewreserve" msprop:Generator_RowEvArgName="viewreserveRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="reserveNO" msprop:Generator_ColumnVarNameInTable="columnreserveNO" msprop:Generator_ColumnPropNameInRow="reserveNO" msprop:Generator_ColumnPropNameInTable="reserveNOColumn" msprop:Generator_UserColumnName="reserveNO">
@@ -1073,7 +1073,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbcompanyprofile" msprop:Generator_TableClassName="tbcompanyprofileDataTable" msprop:Generator_TableVarName="tabletbcompanyprofile" msprop:Generator_RowChangedName="tbcompanyprofileRowChanged" msprop:Generator_TablePropName="tbcompanyprofile" msprop:Generator_RowDeletingName="tbcompanyprofileRowDeleting" msprop:Generator_RowChangingName="tbcompanyprofileRowChanging" msprop:Generator_RowEvHandlerName="tbcompanyprofileRowChangeEventHandler" msprop:Generator_RowDeletedName="tbcompanyprofileRowDeleted" msprop:Generator_RowClassName="tbcompanyprofileRow" msprop:Generator_UserTableName="tbcompanyprofile" msprop:Generator_RowEvArgName="tbcompanyprofileRowChangeEvent">
+        <xs:element name="tbcompanyprofile" msprop:Generator_TableClassName="tbcompanyprofileDataTable" msprop:Generator_TableVarName="tabletbcompanyprofile" msprop:Generator_TablePropName="tbcompanyprofile" msprop:Generator_RowDeletingName="tbcompanyprofileRowDeleting" msprop:Generator_RowChangingName="tbcompanyprofileRowChanging" msprop:Generator_RowEvHandlerName="tbcompanyprofileRowChangeEventHandler" msprop:Generator_RowDeletedName="tbcompanyprofileRowDeleted" msprop:Generator_UserTableName="tbcompanyprofile" msprop:Generator_RowChangedName="tbcompanyprofileRowChanged" msprop:Generator_RowEvArgName="tbcompanyprofileRowChangeEvent" msprop:Generator_RowClassName="tbcompanyprofileRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="profileid" msprop:Generator_ColumnVarNameInTable="columnprofileid" msprop:Generator_ColumnPropNameInRow="profileid" msprop:Generator_ColumnPropNameInTable="profileidColumn" msprop:Generator_UserColumnName="profileid" type="xs:int" />
@@ -1117,7 +1117,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewcheckin" msprop:Generator_TableClassName="viewcheckinDataTable" msprop:Generator_TableVarName="tableviewcheckin" msprop:Generator_TablePropName="viewcheckin" msprop:Generator_RowDeletingName="viewcheckinRowDeleting" msprop:Generator_RowChangingName="viewcheckinRowChanging" msprop:Generator_RowEvHandlerName="viewcheckinRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckinRowDeleted" msprop:Generator_UserTableName="viewcheckin" msprop:Generator_RowChangedName="viewcheckinRowChanged" msprop:Generator_RowEvArgName="viewcheckinRowChangeEvent" msprop:Generator_RowClassName="viewcheckinRow">
+        <xs:element name="viewcheckin" msprop:Generator_TableClassName="viewcheckinDataTable" msprop:Generator_TableVarName="tableviewcheckin" msprop:Generator_RowChangedName="viewcheckinRowChanged" msprop:Generator_TablePropName="viewcheckin" msprop:Generator_RowDeletingName="viewcheckinRowDeleting" msprop:Generator_RowChangingName="viewcheckinRowChanging" msprop:Generator_RowEvHandlerName="viewcheckinRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckinRowDeleted" msprop:Generator_RowClassName="viewcheckinRow" msprop:Generator_UserTableName="viewcheckin" msprop:Generator_RowEvArgName="viewcheckinRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="checkinNO" msprop:Generator_ColumnVarNameInTable="columncheckinNO" msprop:Generator_ColumnPropNameInRow="checkinNO" msprop:Generator_ColumnPropNameInTable="checkinNOColumn" msprop:Generator_UserColumnName="checkinNO">
@@ -1318,7 +1318,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewcustomer" msprop:Generator_TableClassName="viewcustomerDataTable" msprop:Generator_TableVarName="tableviewcustomer" msprop:Generator_TablePropName="viewcustomer" msprop:Generator_RowDeletingName="viewcustomerRowDeleting" msprop:Generator_RowChangingName="viewcustomerRowChanging" msprop:Generator_RowEvHandlerName="viewcustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcustomerRowDeleted" msprop:Generator_UserTableName="viewcustomer" msprop:Generator_RowChangedName="viewcustomerRowChanged" msprop:Generator_RowEvArgName="viewcustomerRowChangeEvent" msprop:Generator_RowClassName="viewcustomerRow">
+        <xs:element name="viewcustomer" msprop:Generator_TableClassName="viewcustomerDataTable" msprop:Generator_TableVarName="tableviewcustomer" msprop:Generator_RowChangedName="viewcustomerRowChanged" msprop:Generator_TablePropName="viewcustomer" msprop:Generator_RowDeletingName="viewcustomerRowDeleting" msprop:Generator_RowChangingName="viewcustomerRowChanging" msprop:Generator_RowEvHandlerName="viewcustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcustomerRowDeleted" msprop:Generator_RowClassName="viewcustomerRow" msprop:Generator_UserTableName="viewcustomer" msprop:Generator_RowEvArgName="viewcustomerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="customerid" msprop:Generator_ColumnVarNameInTable="columncustomerid" msprop:Generator_ColumnPropNameInRow="customerid" msprop:Generator_ColumnPropNameInTable="customeridColumn" msprop:Generator_UserColumnName="customerid" type="xs:int" minOccurs="0" />
@@ -1436,7 +1436,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewitemlist" msprop:Generator_TableClassName="viewitemlistDataTable" msprop:Generator_TableVarName="tableviewitemlist" msprop:Generator_RowChangedName="viewitemlistRowChanged" msprop:Generator_TablePropName="viewitemlist" msprop:Generator_RowDeletingName="viewitemlistRowDeleting" msprop:Generator_RowChangingName="viewitemlistRowChanging" msprop:Generator_RowEvHandlerName="viewitemlistRowChangeEventHandler" msprop:Generator_RowDeletedName="viewitemlistRowDeleted" msprop:Generator_RowClassName="viewitemlistRow" msprop:Generator_UserTableName="viewitemlist" msprop:Generator_RowEvArgName="viewitemlistRowChangeEvent">
+        <xs:element name="viewitemlist" msprop:Generator_TableClassName="viewitemlistDataTable" msprop:Generator_TableVarName="tableviewitemlist" msprop:Generator_TablePropName="viewitemlist" msprop:Generator_RowDeletingName="viewitemlistRowDeleting" msprop:Generator_RowChangingName="viewitemlistRowChanging" msprop:Generator_RowEvHandlerName="viewitemlistRowChangeEventHandler" msprop:Generator_RowDeletedName="viewitemlistRowDeleted" msprop:Generator_UserTableName="viewitemlist" msprop:Generator_RowChangedName="viewitemlistRowChanged" msprop:Generator_RowEvArgName="viewitemlistRowChangeEvent" msprop:Generator_RowClassName="viewitemlistRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="itemlistid" msprop:Generator_ColumnVarNameInTable="columnitemlistid" msprop:Generator_ColumnPropNameInRow="itemlistid" msprop:Generator_ColumnPropNameInTable="itemlistidColumn" msprop:Generator_UserColumnName="itemlistid" type="xs:int" />
@@ -1479,7 +1479,7 @@ FROM            viewcheckout</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="viewcheckout" msprop:Generator_TableClassName="viewcheckoutDataTable" msprop:Generator_TableVarName="tableviewcheckout" msprop:Generator_TablePropName="viewcheckout" msprop:Generator_RowDeletingName="viewcheckoutRowDeleting" msprop:Generator_RowChangingName="viewcheckoutRowChanging" msprop:Generator_RowEvHandlerName="viewcheckoutRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckoutRowDeleted" msprop:Generator_UserTableName="viewcheckout" msprop:Generator_RowChangedName="viewcheckoutRowChanged" msprop:Generator_RowEvArgName="viewcheckoutRowChangeEvent" msprop:Generator_RowClassName="viewcheckoutRow">
+        <xs:element name="viewcheckout" msprop:Generator_TableClassName="viewcheckoutDataTable" msprop:Generator_TableVarName="tableviewcheckout" msprop:Generator_RowChangedName="viewcheckoutRowChanged" msprop:Generator_TablePropName="viewcheckout" msprop:Generator_RowDeletingName="viewcheckoutRowDeleting" msprop:Generator_RowChangingName="viewcheckoutRowChanging" msprop:Generator_RowEvHandlerName="viewcheckoutRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckoutRowDeleted" msprop:Generator_RowClassName="viewcheckoutRow" msprop:Generator_UserTableName="viewcheckout" msprop:Generator_RowEvArgName="viewcheckoutRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="checkoutNO" msprop:Generator_ColumnVarNameInTable="columncheckoutNO" msprop:Generator_ColumnPropNameInRow="checkoutNO" msprop:Generator_ColumnPropNameInTable="checkoutNOColumn" msprop:Generator_UserColumnName="checkoutNO">

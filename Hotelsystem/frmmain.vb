@@ -1,5 +1,5 @@
 ﻿Public Class frmmain
-    Public userid As Integer = 1
+    Public userid As Integer = 1001
     Public laoname As String
     Public level As String
     Public closeform As New formclose
@@ -160,7 +160,7 @@
         closeform.f.Show()
     End Sub
 
-    Private Sub checkout_Click(sender As Object, e As EventArgs) Handles checkout.Click
+    Private Sub checkout_Click(sender As Object, e As EventArgs)
         closeform.closeform()
         closeform.f = frmcheckout
         closeform.f.MdiParent = Me

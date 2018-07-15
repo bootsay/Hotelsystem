@@ -18,10 +18,10 @@ Public Class tbfcheckin
         End Try
         Return True
     End Function
-    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function save(checkinNO As String, checkinid As Integer, userid As Integer, reserveNO As String, roomid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, statusid As Integer, price As Double)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbfcheckin values('" & checkinNO & "','" & checkinid & "','" & userid & "', '" & reserveNO & "','" & inoutid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "')", cn.conn)
+            cm = New SqlCommand("insert into tbfcheckin values('" & checkinNO & "','" & checkinid & "','" & userid & "', '" & reserveNO & "','" & roomid & "','" & customerNO & "','" & bookingtypeid & "','" & markettypeid & "','" & checkindate & "','" & checkoutdate & "','" & numberofpax & "','" & mealtypeid & "','" & usetypeid & "','" & remark & "','" & statusid & "','" & price & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
                 cm.Dispose()
@@ -50,10 +50,10 @@ Public Class tbfcheckin
         Return True
     End Function
 
-    Public Function update(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String)
+    Public Function update(checkinNO As String, checkinid As Integer, reserveNO As String, inoutid As Integer, customerNO As String, bookingtypeid As Integer, markettypeid As Integer, checkindate As String, checkoutdate As String, numberofpax As Integer, mealtypeid As Integer, usetypeid As Integer, remark As String, price As Double)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', reserveNO='" & reserveNO & "', inoutid='" & inoutid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark='" & remark & "' where checkinNO='" & checkinNO & "'", cn.conn)
+            cm = New SqlCommand("update tbfcheckin set checkinid='" & checkinid & "', reserveNO='" & reserveNO & "', inoutid='" & inoutid & "', customerNO='" & customerNO & "', bookingtypeid='" & bookingtypeid & "', markettypeid='" & markettypeid & "', checkindate='" & checkindate & "', checkoutdate='" & checkoutdate & "', numberofpax='" & numberofpax & "', mealtypeid='" & mealtypeid & "', usetypeid='" & usetypeid & "', remark=N'" & remark & "', checkinprice='" & price & "' where checkinNO='" & checkinNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
@@ -69,6 +69,8 @@ Public Class tbfcheckin
     Public Function runidNO()
         cn.connect()
         Dim id As String = Nothing
+        Dim years As String = Today.Year
+        Dim months As String = Today.Month
         Dim idorder As Integer
         Dim length As Integer = 4
         Try
@@ -82,7 +84,7 @@ Public Class tbfcheckin
                 idorder = 1
             End If
             id = idorder
-            id = String.Format("{0}{1}", "CHKIN", idorder.ToString().PadLeft(length, "0"))
+            id = String.Format("{0}{1}", "CN-", idorder.ToString().PadLeft(length, "0"))
             re.Close()
             cm.Dispose()
             cn.conn.Close()

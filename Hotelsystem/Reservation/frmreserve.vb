@@ -50,7 +50,7 @@
         frmcreatereserve = False
     End Sub
 
-    Private Sub ButtonX2_Click(sender As Object, e As EventArgs) Handles btnroom.Click
+    Private Sub ButtonX2_Click(sender As Object, e As EventArgs)
         frmcreatereserve = True
         frmroom.ShowDialog()
         frmroom.Close()
@@ -129,7 +129,7 @@
         btnbrown1.Enabled = False
         btnbrown2.Enabled = False
         btncus.Enabled = False
-        btnroom.Enabled = False
+
     End Sub
     Private Sub txtwrite()
         'txtid.Clear()
@@ -145,7 +145,7 @@
         btnbrown1.Enabled = True
         btnbrown2.Enabled = True
         btncus.Enabled = True
-        btnroom.Enabled = True
+
     End Sub
 
     Private Sub btnnew_Click(sender As Object, e As EventArgs) Handles btnnew.Click
@@ -411,5 +411,14 @@
 
     Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
 
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        If dgvlist.SelectedCells.Count > 0 Then
+            frmBillreserve.ShowDialog()
+            frmBillreserve.Close()
+        Else
+
+        End If
     End Sub
 End Class
