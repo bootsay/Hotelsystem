@@ -61,12 +61,15 @@ Public Class tbproduct
     Public Function save(productNO As String, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
         cn.connect()
         Try
+
             cm = New SqlCommand("insert into tbproduct(productNO,proid,cateid,proname,unitid,pricebuy,pricesale,stockqty,activate)values('" & productNO & "','" & proid & "','" & cateid & "',N'" & proname & "','" & unitid & "','" & pricebuy & "','" & pricesale & "','" & stockqty & "','" & activate & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
-
             End If
+
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -147,11 +150,11 @@ Public Class tbproduct
                 .Columns(10).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception

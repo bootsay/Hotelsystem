@@ -22,10 +22,10 @@ Partial Class frmcheckin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmcheckin))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvlist = New DevComponents.DotNetBar.Controls.DataGridViewX()
@@ -83,6 +83,7 @@ Partial Class frmcheckin
         Me.btnprint = New DevComponents.DotNetBar.ButtonX()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.rdno = New System.Windows.Forms.GroupBox()
+        Me.btnreservelist = New DevComponents.DotNetBar.ButtonX()
         Me.btnclose = New DevComponents.DotNetBar.ButtonX()
         Me.txtreserverNO_search = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.btnsearchreserve = New DevComponents.DotNetBar.ButtonX()
@@ -92,7 +93,6 @@ Partial Class frmcheckin
         Me.btnsave = New DevComponents.DotNetBar.ButtonX()
         Me.btnedit = New DevComponents.DotNetBar.ButtonX()
         Me.btnupdate = New DevComponents.DotNetBar.ButtonX()
-        Me.btnreservelist = New DevComponents.DotNetBar.ButtonX()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.dgvlist, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -137,40 +137,40 @@ Partial Class frmcheckin
         Me.dgvlist.AllowUserToResizeColumns = False
         Me.dgvlist.AllowUserToResizeRows = False
         Me.dgvlist.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvlist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle6
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
-        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 369)
         Me.dgvlist.MultiSelect = False
         Me.dgvlist.Name = "dgvlist"
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle7.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvlist.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         Me.dgvlist.RowHeadersVisible = False
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dgvlist.RowsDefaultCellStyle = DataGridViewCellStyle8
         Me.dgvlist.RowTemplate.Height = 30
         Me.dgvlist.Size = New System.Drawing.Size(1061, 297)
         Me.dgvlist.TabIndex = 0
@@ -234,9 +234,9 @@ Partial Class frmcheckin
         Me.cbstaytype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbstaytype.FormattingEnabled = True
         Me.cbstaytype.ItemHeight = 29
-        Me.cbstaytype.Location = New System.Drawing.Point(832, 156)
+        Me.cbstaytype.Location = New System.Drawing.Point(833, 154)
         Me.cbstaytype.Name = "cbstaytype"
-        Me.cbstaytype.Size = New System.Drawing.Size(219, 35)
+        Me.cbstaytype.Size = New System.Drawing.Size(218, 35)
         Me.cbstaytype.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.cbstaytype.TabIndex = 73
         '
@@ -245,7 +245,7 @@ Partial Class frmcheckin
         Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(411, 164)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(87, 24)
+        Me.Label19.Size = New System.Drawing.Size(90, 29)
         Me.Label19.TabIndex = 72
         Me.Label19.Text = "ປະເພດຈອງ:"
         '
@@ -254,7 +254,7 @@ Partial Class frmcheckin
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(7, 83)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(68, 24)
+        Me.Label18.Size = New System.Drawing.Size(71, 29)
         Me.Label18.TabIndex = 71
         Me.Label18.Text = "ເລກຈອງ:"
         '
@@ -274,7 +274,7 @@ Partial Class frmcheckin
         Me.cbbooktype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbbooktype.FormattingEnabled = True
         Me.cbbooktype.ItemHeight = 29
-        Me.cbbooktype.Location = New System.Drawing.Point(500, 156)
+        Me.cbbooktype.Location = New System.Drawing.Point(500, 153)
         Me.cbbooktype.Name = "cbbooktype"
         Me.cbbooktype.Size = New System.Drawing.Size(226, 35)
         Me.cbbooktype.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -286,7 +286,7 @@ Partial Class frmcheckin
         Me.Label17.ForeColor = System.Drawing.Color.DarkRed
         Me.Label17.Location = New System.Drawing.Point(746, 164)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(79, 24)
+        Me.Label17.Size = New System.Drawing.Size(82, 29)
         Me.Label17.TabIndex = 68
         Me.Label17.Text = "ປະເພດພັກ:"
         '
@@ -295,7 +295,7 @@ Partial Class frmcheckin
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(746, 86)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(62, 24)
+        Me.Label16.Size = New System.Drawing.Size(65, 29)
         Me.Label16.TabIndex = 66
         Me.Label16.Text = "ອາຫານ:"
         '
@@ -308,7 +308,7 @@ Partial Class frmcheckin
         Me.cbfood.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbfood.FormattingEnabled = True
         Me.cbfood.ItemHeight = 29
-        Me.cbfood.Location = New System.Drawing.Point(833, 81)
+        Me.cbfood.Location = New System.Drawing.Point(833, 80)
         Me.cbfood.Name = "cbfood"
         Me.cbfood.Size = New System.Drawing.Size(219, 35)
         Me.cbfood.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -319,7 +319,7 @@ Partial Class frmcheckin
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(746, 50)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(73, 24)
+        Me.Label15.Size = New System.Drawing.Size(76, 29)
         Me.Label15.TabIndex = 64
         Me.Label15.Text = "ຕະຫລາດ:"
         '
@@ -332,7 +332,7 @@ Partial Class frmcheckin
         Me.cbmarket.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbmarket.FormattingEnabled = True
         Me.cbmarket.ItemHeight = 29
-        Me.cbmarket.Location = New System.Drawing.Point(833, 44)
+        Me.cbmarket.Location = New System.Drawing.Point(833, 43)
         Me.cbmarket.Name = "cbmarket"
         Me.cbmarket.Size = New System.Drawing.Size(219, 35)
         Me.cbmarket.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
@@ -348,7 +348,7 @@ Partial Class frmcheckin
         Me.txtnumberpeople.BackgroundStyle.Class = "DateTimeInputBackground"
         Me.txtnumberpeople.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.txtnumberpeople.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
-        Me.txtnumberpeople.Location = New System.Drawing.Point(833, 118)
+        Me.txtnumberpeople.Location = New System.Drawing.Point(833, 117)
         Me.txtnumberpeople.Name = "txtnumberpeople"
         Me.txtnumberpeople.ShowUpDown = True
         Me.txtnumberpeople.Size = New System.Drawing.Size(218, 35)
@@ -420,7 +420,7 @@ Partial Class frmcheckin
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(732, 241)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(34, 24)
+        Me.Label10.Size = New System.Drawing.Size(37, 29)
         Me.Label10.TabIndex = 60
         Me.Label10.Text = "ຫາ:"
         '
@@ -573,7 +573,7 @@ Partial Class frmcheckin
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(7, 241)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 24)
+        Me.Label5.Size = New System.Drawing.Size(57, 29)
         Me.Label5.TabIndex = 56
         Me.Label5.Text = "ຄົ້ນຫາ:"
         '
@@ -624,7 +624,7 @@ Partial Class frmcheckin
         Me.rddate.BackColor = System.Drawing.Color.Transparent
         Me.rddate.Location = New System.Drawing.Point(3, 3)
         Me.rddate.Name = "rddate"
-        Me.rddate.Size = New System.Drawing.Size(63, 28)
+        Me.rddate.Size = New System.Drawing.Size(66, 33)
         Me.rddate.TabIndex = 62
         Me.rddate.TabStop = True
         Me.rddate.Text = "ວັນທີ:"
@@ -636,7 +636,7 @@ Partial Class frmcheckin
         Me.rdroomnumber.BackColor = System.Drawing.Color.Transparent
         Me.rdroomnumber.Location = New System.Drawing.Point(324, 3)
         Me.rdroomnumber.Name = "rdroomnumber"
-        Me.rdroomnumber.Size = New System.Drawing.Size(78, 28)
+        Me.rdroomnumber.Size = New System.Drawing.Size(81, 33)
         Me.rdroomnumber.TabIndex = 61
         Me.rdroomnumber.TabStop = True
         Me.rdroomnumber.Text = "ເບີຫ້ອງ:"
@@ -648,7 +648,7 @@ Partial Class frmcheckin
         Me.rdIDcard.BackColor = System.Drawing.Color.Transparent
         Me.rdIDcard.Location = New System.Drawing.Point(204, 3)
         Me.rdIDcard.Name = "rdIDcard"
-        Me.rdIDcard.Size = New System.Drawing.Size(114, 28)
+        Me.rdIDcard.Size = New System.Drawing.Size(117, 33)
         Me.rdIDcard.TabIndex = 60
         Me.rdIDcard.TabStop = True
         Me.rdIDcard.Text = "ເລກປະຈໍາໂຕ:"
@@ -660,7 +660,7 @@ Partial Class frmcheckin
         Me.rdname.BackColor = System.Drawing.Color.Transparent
         Me.rdname.Location = New System.Drawing.Point(72, 3)
         Me.rdname.Name = "rdname"
-        Me.rdname.Size = New System.Drawing.Size(110, 28)
+        Me.rdname.Size = New System.Drawing.Size(113, 33)
         Me.rdname.TabIndex = 59
         Me.rdname.TabStop = True
         Me.rdname.Text = "ຄົ້ນຫາຕາມຊື່:"
@@ -685,7 +685,7 @@ Partial Class frmcheckin
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(401, 47)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 24)
+        Me.Label7.Size = New System.Drawing.Size(100, 29)
         Me.Label7.TabIndex = 53
         Me.Label7.Text = "ປະເພດລູກຄ້າ:"
         '
@@ -707,7 +707,7 @@ Partial Class frmcheckin
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(403, 85)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 24)
+        Me.Label8.Size = New System.Drawing.Size(98, 29)
         Me.Label8.TabIndex = 51
         Me.Label8.Text = "ປະເພດລາຄາ:"
         '
@@ -731,7 +731,7 @@ Partial Class frmcheckin
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(438, 13)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(60, 24)
+        Me.Label6.Size = New System.Drawing.Size(63, 29)
         Me.Label6.TabIndex = 43
         Me.Label6.Text = "ເບີຫ້ອງ:"
         '
@@ -739,9 +739,9 @@ Partial Class frmcheckin
         '
         Me.txtprice.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.txtprice.ForeColor = System.Drawing.Color.Blue
-        Me.txtprice.Location = New System.Drawing.Point(501, 118)
+        Me.txtprice.Location = New System.Drawing.Point(500, 116)
         Me.txtprice.Name = "txtprice"
-        Me.txtprice.Size = New System.Drawing.Size(225, 35)
+        Me.txtprice.Size = New System.Drawing.Size(226, 35)
         Me.txtprice.TabIndex = 6
         '
         'txtroomno
@@ -838,7 +838,7 @@ Partial Class frmcheckin
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(7, 44)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(74, 24)
+        Me.Label2.Size = New System.Drawing.Size(77, 29)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "ຜູ້ອອກບີນ:"
         '
@@ -856,7 +856,7 @@ Partial Class frmcheckin
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(7, 7)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 24)
+        Me.Label1.Size = New System.Drawing.Size(58, 29)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "ລະຫັດ:"
         '
@@ -865,7 +865,7 @@ Partial Class frmcheckin
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(7, 121)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(69, 24)
+        Me.Label11.Size = New System.Drawing.Size(72, 29)
         Me.Label11.TabIndex = 20
         Me.Label11.Text = "ວັນທີເຂົ້າ:"
         '
@@ -875,7 +875,7 @@ Partial Class frmcheckin
         Me.Label3.ForeColor = System.Drawing.Color.DarkRed
         Me.Label3.Location = New System.Drawing.Point(7, 158)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 24)
+        Me.Label3.Size = New System.Drawing.Size(78, 29)
         Me.Label3.TabIndex = 25
         Me.Label3.Text = "ວັນທີອອກ:"
         '
@@ -884,7 +884,7 @@ Partial Class frmcheckin
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(746, 125)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(82, 24)
+        Me.Label12.Size = New System.Drawing.Size(85, 29)
         Me.Label12.TabIndex = 33
         Me.Label12.Text = "ຈໍານວນຄົນ:"
         '
@@ -893,7 +893,7 @@ Partial Class frmcheckin
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(7, 195)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(75, 24)
+        Me.Label4.Size = New System.Drawing.Size(78, 29)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "ໜາຍເຫດ:"
         '
@@ -902,7 +902,7 @@ Partial Class frmcheckin
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(448, 127)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(50, 24)
+        Me.Label13.Size = New System.Drawing.Size(53, 29)
         Me.Label13.TabIndex = 36
         Me.Label13.Text = "ລາຄາ:"
         '
@@ -911,7 +911,7 @@ Partial Class frmcheckin
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(746, 11)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(52, 24)
+        Me.Label14.Size = New System.Drawing.Size(55, 29)
         Me.Label14.TabIndex = 37
         Me.Label14.Text = "ລູກຄ້າ:"
         '
@@ -948,7 +948,7 @@ Partial Class frmcheckin
         Me.Label20.AutoSize = True
         Me.Label20.Location = New System.Drawing.Point(603, 12)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(72, 24)
+        Me.Label20.Size = New System.Drawing.Size(75, 29)
         Me.Label20.TabIndex = 20
         Me.Label20.Text = "ຈ່າຍກ່ອນ:"
         '
@@ -1008,6 +1008,19 @@ Partial Class frmcheckin
         Me.rdno.TabStop = False
         Me.rdno.Text = "ຄົ້ນຫາ"
         '
+        'btnreservelist
+        '
+        Me.btnreservelist.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText
+        Me.btnreservelist.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btnreservelist.Image = Global.HotelSystem.My.Resources.Resources.folder_customer_icon2
+        Me.btnreservelist.ImageFixedSize = New System.Drawing.Size(32, 32)
+        Me.btnreservelist.Location = New System.Drawing.Point(425, 22)
+        Me.btnreservelist.Name = "btnreservelist"
+        Me.btnreservelist.Size = New System.Drawing.Size(101, 35)
+        Me.btnreservelist.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btnreservelist.TabIndex = 13
+        Me.btnreservelist.Text = "ລາຍການ"
+        '
         'btnclose
         '
         Me.btnclose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
@@ -1052,7 +1065,7 @@ Partial Class frmcheckin
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(2, 26)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(96, 24)
+        Me.Label9.Size = New System.Drawing.Size(99, 29)
         Me.Label9.TabIndex = 9
         Me.Label9.Text = "ເລກການຈອງ:"
         '
@@ -1114,22 +1127,9 @@ Partial Class frmcheckin
         Me.btnupdate.TabIndex = 21
         Me.btnupdate.Text = "ປັບປຸງ"
         '
-        'btnreservelist
-        '
-        Me.btnreservelist.AccessibleRole = System.Windows.Forms.AccessibleRole.StaticText
-        Me.btnreservelist.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnreservelist.Image = Global.HotelSystem.My.Resources.Resources.folder_customer_icon2
-        Me.btnreservelist.ImageFixedSize = New System.Drawing.Size(32, 32)
-        Me.btnreservelist.Location = New System.Drawing.Point(425, 22)
-        Me.btnreservelist.Name = "btnreservelist"
-        Me.btnreservelist.Size = New System.Drawing.Size(101, 35)
-        Me.btnreservelist.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.btnreservelist.TabIndex = 13
-        Me.btnreservelist.Text = "ລາຍການ"
-        '
         'frmcheckin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(194, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1067, 729)
