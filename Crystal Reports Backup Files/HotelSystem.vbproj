@@ -68,8 +68,8 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -511,12 +511,6 @@
       <DependentUpon>billCheckout.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reservation\frmshowreserve.designer.vb">
-      <DependentUpon>frmshowreserve.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Reservation\frmshowreserve.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Reservation\frmreserve.designer.vb">
       <DependentUpon>frmreserve.vb</DependentUpon>
     </Compile>
@@ -720,9 +714,6 @@
     <EmbeddedResource Include="Report\billCheckout.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>billCheckout.vb</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reservation\frmshowreserve.resx">
-      <DependentUpon>frmshowreserve.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reservation\frmreserve.resx">
       <DependentUpon>frmreserve.vb</DependentUpon>

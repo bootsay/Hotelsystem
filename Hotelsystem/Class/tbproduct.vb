@@ -95,7 +95,6 @@ Public Class tbproduct
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
-
             End If
 
         Catch ex As Exception

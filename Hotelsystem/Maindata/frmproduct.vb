@@ -42,6 +42,7 @@ Public Class frmproduct
         txtname.Clear()
         txtsale.Clear()
         txtbuy.Clear()
+        chkactivate.Checked = False
     End Sub
     Private Sub disabletext()
         txtname.Enabled = False
@@ -101,7 +102,7 @@ Public Class frmproduct
         Dim id As Integer = product.runid
         Dim stockqty As Integer = 0
 
-        product.update(idno, id, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
+        product.update(txtProductNO.Text, id, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
         product.loadtbproduct(dgvshow)
         txtProductNO.Text = product.runidNO
         enablesave()

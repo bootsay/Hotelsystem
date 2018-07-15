@@ -30,7 +30,6 @@ Partial Class frmreserve
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btncancel = New DevComponents.DotNetBar.ButtonX()
         Me.ButtonX1 = New DevComponents.DotNetBar.ButtonX()
-        Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtprice = New System.Windows.Forms.TextBox()
         Me.GroupPanel3 = New DevComponents.DotNetBar.Controls.GroupPanel()
@@ -48,12 +47,17 @@ Partial Class frmreserve
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.dgvlist = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtsearch = New System.Windows.Forms.TextBox()
+        Me.dt11 = New System.Windows.Forms.Label()
+        Me.dt2 = New System.Windows.Forms.DateTimePicker()
+        Me.dt1 = New System.Windows.Forms.DateTimePicker()
+        Me.cbroom = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.txtnumberpeople = New DevComponents.Editors.IntegerInput()
-        Me.txtserchroom = New System.Windows.Forms.TextBox()
         Me.GroupPanel2 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.rroom = New System.Windows.Forms.RadioButton()
-        Me.rid = New System.Windows.Forms.RadioButton()
-        Me.rdate = New System.Windows.Forms.RadioButton()
+        Me.rddate = New System.Windows.Forms.RadioButton()
+        Me.rdroom = New System.Windows.Forms.RadioButton()
+        Me.rdname = New System.Windows.Forms.RadioButton()
+        Me.rdreserve = New System.Windows.Forms.RadioButton()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.txtdatecheckin = New System.Windows.Forms.DateTimePicker()
         Me.txtcustomername = New DevComponents.DotNetBar.Controls.TextBoxX()
@@ -72,9 +76,6 @@ Partial Class frmreserve
         Me.txtroomid = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.txtcustomerid = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.txtuserid = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtdate3 = New System.Windows.Forms.DateTimePicker()
-        Me.txtdate2 = New System.Windows.Forms.Label()
-        Me.txtdate1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel2.SuspendLayout()
         Me.GroupPanel3.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -130,16 +131,6 @@ Partial Class frmreserve
         Me.ButtonX1.TabIndex = 42
         Me.ButtonX1.Text = "ຄົ້ນຫາ"
         Me.ButtonX1.TextColor = System.Drawing.Color.Brown
-        '
-        'txtsearch
-        '
-        Me.txtsearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtsearch.Location = New System.Drawing.Point(367, 157)
-        Me.txtsearch.Name = "txtsearch"
-        Me.txtsearch.Size = New System.Drawing.Size(725, 35)
-        Me.txtsearch.TabIndex = 40
         '
         'Label5
         '
@@ -368,7 +359,7 @@ Partial Class frmreserve
         Me.dgvlist.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvlist.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvlist.EnableHeadersVisualStyles = False
-        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvlist.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvlist.Location = New System.Drawing.Point(3, 207)
         Me.dgvlist.Name = "dgvlist"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -388,11 +379,14 @@ Partial Class frmreserve
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.txtsearch)
+        Me.Panel1.Controls.Add(Me.dt11)
+        Me.Panel1.Controls.Add(Me.dt2)
+        Me.Panel1.Controls.Add(Me.dt1)
+        Me.Panel1.Controls.Add(Me.cbroom)
         Me.Panel1.Controls.Add(Me.txtnumberpeople)
-        Me.Panel1.Controls.Add(Me.txtserchroom)
         Me.Panel1.Controls.Add(Me.GroupPanel2)
         Me.Panel1.Controls.Add(Me.ButtonX1)
-        Me.Panel1.Controls.Add(Me.txtsearch)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.txtprice)
         Me.Panel1.Controls.Add(Me.GroupPanel3)
@@ -420,15 +414,62 @@ Partial Class frmreserve
         Me.Panel1.Controls.Add(Me.txtroomid)
         Me.Panel1.Controls.Add(Me.txtcustomerid)
         Me.Panel1.Controls.Add(Me.txtuserid)
-        Me.Panel1.Controls.Add(Me.txtdate3)
-        Me.Panel1.Controls.Add(Me.txtdate2)
-        Me.Panel1.Controls.Add(Me.txtdate1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1200, 198)
         Me.Panel1.TabIndex = 1
+        '
+        'txtsearch
+        '
+        Me.txtsearch.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtsearch.Location = New System.Drawing.Point(429, 157)
+        Me.txtsearch.Name = "txtsearch"
+        Me.txtsearch.Size = New System.Drawing.Size(663, 35)
+        Me.txtsearch.TabIndex = 53
+        '
+        'dt11
+        '
+        Me.dt11.AutoSize = True
+        Me.dt11.Location = New System.Drawing.Point(662, 161)
+        Me.dt11.Name = "dt11"
+        Me.dt11.Size = New System.Drawing.Size(64, 29)
+        Me.dt11.TabIndex = 57
+        Me.dt11.Text = "ຫາວັນທີ"
+        '
+        'dt2
+        '
+        Me.dt2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dt2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dt2.Location = New System.Drawing.Point(728, 157)
+        Me.dt2.Name = "dt2"
+        Me.dt2.Size = New System.Drawing.Size(364, 35)
+        Me.dt2.TabIndex = 56
+        '
+        'dt1
+        '
+        Me.dt1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dt1.Location = New System.Drawing.Point(429, 157)
+        Me.dt1.Name = "dt1"
+        Me.dt1.Size = New System.Drawing.Size(232, 35)
+        Me.dt1.TabIndex = 55
+        '
+        'cbroom
+        '
+        Me.cbroom.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbroom.DisplayMember = "Text"
+        Me.cbroom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.cbroom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbroom.FormattingEnabled = True
+        Me.cbroom.ItemHeight = 29
+        Me.cbroom.Location = New System.Drawing.Point(446, 157)
+        Me.cbroom.Name = "cbroom"
+        Me.cbroom.Size = New System.Drawing.Size(646, 35)
+        Me.cbroom.TabIndex = 54
         '
         'txtnumberpeople
         '
@@ -445,27 +486,18 @@ Partial Class frmreserve
         Me.txtnumberpeople.Size = New System.Drawing.Size(272, 35)
         Me.txtnumberpeople.TabIndex = 52
         '
-        'txtserchroom
-        '
-        Me.txtserchroom.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtserchroom.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.txtserchroom.Location = New System.Drawing.Point(367, 157)
-        Me.txtserchroom.Name = "txtserchroom"
-        Me.txtserchroom.Size = New System.Drawing.Size(725, 35)
-        Me.txtserchroom.TabIndex = 51
-        '
         'GroupPanel2
         '
         Me.GroupPanel2.CanvasColor = System.Drawing.SystemColors.Control
         Me.GroupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GroupPanel2.Controls.Add(Me.rroom)
-        Me.GroupPanel2.Controls.Add(Me.rid)
-        Me.GroupPanel2.Controls.Add(Me.rdate)
+        Me.GroupPanel2.Controls.Add(Me.rddate)
+        Me.GroupPanel2.Controls.Add(Me.rdroom)
+        Me.GroupPanel2.Controls.Add(Me.rdname)
+        Me.GroupPanel2.Controls.Add(Me.rdreserve)
         Me.GroupPanel2.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
         Me.GroupPanel2.Location = New System.Drawing.Point(81, 154)
         Me.GroupPanel2.Name = "GroupPanel2"
-        Me.GroupPanel2.Size = New System.Drawing.Size(279, 40)
+        Me.GroupPanel2.Size = New System.Drawing.Size(343, 40)
         '
         '
         '
@@ -496,44 +528,53 @@ Partial Class frmreserve
         Me.GroupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel2.TabIndex = 50
         '
-        'rroom
+        'rddate
         '
-        Me.rroom.AutoSize = True
-        Me.rroom.BackColor = System.Drawing.Color.Transparent
-        Me.rroom.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.rroom.Location = New System.Drawing.Point(123, 0)
-        Me.rroom.Name = "rroom"
-        Me.rroom.Size = New System.Drawing.Size(82, 33)
-        Me.rroom.TabIndex = 45
-        Me.rroom.TabStop = True
-        Me.rroom.Text = "ເບີຫ້ອງ"
-        Me.rroom.UseVisualStyleBackColor = False
+        Me.rddate.AutoSize = True
+        Me.rddate.BackColor = System.Drawing.Color.Transparent
+        Me.rddate.Location = New System.Drawing.Point(178, 1)
+        Me.rddate.Name = "rddate"
+        Me.rddate.Size = New System.Drawing.Size(62, 33)
+        Me.rddate.TabIndex = 7
+        Me.rddate.TabStop = True
+        Me.rddate.Text = "ວັນທີ"
+        Me.rddate.UseVisualStyleBackColor = False
         '
-        'rid
+        'rdroom
         '
-        Me.rid.AutoSize = True
-        Me.rid.BackColor = System.Drawing.Color.Transparent
-        Me.rid.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.rid.Location = New System.Drawing.Point(0, 0)
-        Me.rid.Name = "rid"
-        Me.rid.Size = New System.Drawing.Size(123, 33)
-        Me.rid.TabIndex = 44
-        Me.rid.TabStop = True
-        Me.rid.Text = "ເລກທີສັງຈອງ"
-        Me.rid.UseVisualStyleBackColor = False
+        Me.rdroom.AutoSize = True
+        Me.rdroom.BackColor = System.Drawing.Color.Transparent
+        Me.rdroom.Location = New System.Drawing.Point(248, 1)
+        Me.rdroom.Name = "rdroom"
+        Me.rdroom.Size = New System.Drawing.Size(91, 33)
+        Me.rdroom.TabIndex = 6
+        Me.rdroom.TabStop = True
+        Me.rdroom.Text = "ຫ້ອງນອນ"
+        Me.rdroom.UseVisualStyleBackColor = False
         '
-        'rdate
+        'rdname
         '
-        Me.rdate.AutoSize = True
-        Me.rdate.BackColor = System.Drawing.Color.Transparent
-        Me.rdate.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.rdate.Location = New System.Drawing.Point(205, 0)
-        Me.rdate.Name = "rdate"
-        Me.rdate.Size = New System.Drawing.Size(65, 33)
-        Me.rdate.TabIndex = 46
-        Me.rdate.TabStop = True
-        Me.rdate.Text = "ວັນທີ"
-        Me.rdate.UseVisualStyleBackColor = False
+        Me.rdname.AutoSize = True
+        Me.rdname.BackColor = System.Drawing.Color.Transparent
+        Me.rdname.Location = New System.Drawing.Point(129, 1)
+        Me.rdname.Name = "rdname"
+        Me.rdname.Size = New System.Drawing.Size(41, 33)
+        Me.rdname.TabIndex = 5
+        Me.rdname.TabStop = True
+        Me.rdname.Text = "ຊື່"
+        Me.rdname.UseVisualStyleBackColor = False
+        '
+        'rdreserve
+        '
+        Me.rdreserve.AutoSize = True
+        Me.rdreserve.BackColor = System.Drawing.Color.Transparent
+        Me.rdreserve.Location = New System.Drawing.Point(2, 1)
+        Me.rdreserve.Name = "rdreserve"
+        Me.rdreserve.Size = New System.Drawing.Size(124, 33)
+        Me.rdreserve.TabIndex = 4
+        Me.rdreserve.TabStop = True
+        Me.rdreserve.Text = "ເລກທີການຈອງ"
+        Me.rdreserve.UseVisualStyleBackColor = False
         '
         'txtuser
         '
@@ -726,35 +767,6 @@ Partial Class frmreserve
         Me.txtuserid.TabIndex = 43
         Me.txtuserid.WatermarkText = "ເລືອກລູກຄ້າ"
         '
-        'txtdate3
-        '
-        Me.txtdate3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtdate3.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtdate3.Location = New System.Drawing.Point(658, 157)
-        Me.txtdate3.Name = "txtdate3"
-        Me.txtdate3.Size = New System.Drawing.Size(434, 35)
-        Me.txtdate3.TabIndex = 49
-        '
-        'txtdate2
-        '
-        Me.txtdate2.AutoSize = True
-        Me.txtdate2.BackColor = System.Drawing.Color.Transparent
-        Me.txtdate2.ForeColor = System.Drawing.Color.DarkRed
-        Me.txtdate2.Location = New System.Drawing.Point(622, 160)
-        Me.txtdate2.Name = "txtdate2"
-        Me.txtdate2.Size = New System.Drawing.Size(33, 29)
-        Me.txtdate2.TabIndex = 48
-        Me.txtdate2.Text = "ຫາ"
-        '
-        'txtdate1
-        '
-        Me.txtdate1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.txtdate1.Location = New System.Drawing.Point(367, 157)
-        Me.txtdate1.Name = "txtdate1"
-        Me.txtdate1.Size = New System.Drawing.Size(254, 35)
-        Me.txtdate1.TabIndex = 47
-        '
         'frmreserve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 29.0!)
@@ -786,7 +798,6 @@ Partial Class frmreserve
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents btncancel As DevComponents.DotNetBar.ButtonX
     Friend WithEvents ButtonX1 As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents txtsearch As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtprice As System.Windows.Forms.TextBox
     Friend WithEvents GroupPanel3 As DevComponents.DotNetBar.Controls.GroupPanel
@@ -822,13 +833,15 @@ Partial Class frmreserve
     Friend WithEvents txtroomid As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtcustomerid As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtuserid As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents rdate As System.Windows.Forms.RadioButton
-    Friend WithEvents rroom As System.Windows.Forms.RadioButton
-    Friend WithEvents rid As System.Windows.Forms.RadioButton
-    Friend WithEvents txtdate3 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtdate2 As System.Windows.Forms.Label
-    Friend WithEvents txtdate1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents GroupPanel2 As DevComponents.DotNetBar.Controls.GroupPanel
-    Friend WithEvents txtserchroom As System.Windows.Forms.TextBox
     Friend WithEvents txtnumberpeople As DevComponents.Editors.IntegerInput
+    Friend WithEvents rddate As System.Windows.Forms.RadioButton
+    Friend WithEvents rdroom As System.Windows.Forms.RadioButton
+    Friend WithEvents rdname As System.Windows.Forms.RadioButton
+    Friend WithEvents rdreserve As System.Windows.Forms.RadioButton
+    Friend WithEvents txtsearch As System.Windows.Forms.TextBox
+    Friend WithEvents dt11 As System.Windows.Forms.Label
+    Friend WithEvents dt2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dt1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents cbroom As DevComponents.DotNetBar.Controls.ComboBoxEx
 End Class

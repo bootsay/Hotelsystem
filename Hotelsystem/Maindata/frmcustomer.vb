@@ -64,7 +64,7 @@
         txtNationality.Clear()
         txtPassport.Clear()
         txtSurname.Clear()
-
+        chkActivate.Checked = False
     End Sub
     Private Sub disabletext()
         txtCustomerName.Enabled = False

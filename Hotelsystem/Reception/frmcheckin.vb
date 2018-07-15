@@ -220,7 +220,7 @@
             If txtsearch.Text = "" Then
                 reserve.loadtbfreserve(dgvlist)
             Else
-                reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                reserve.loadtbfreserveSearchbyidorname(dgvlist, txtsearch.Text)
             End If
         Catch ex As Exception
 

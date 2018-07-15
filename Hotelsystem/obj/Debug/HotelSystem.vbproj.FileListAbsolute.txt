@@ -62,8 +62,6 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.ex
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.exe
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.pdb
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\HotelSystem.xml
-C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.vbprojResolveAssemblyReference.cache
@@ -118,3 +116,4 @@ C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.vb
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.exe
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.xml
 C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.pdb
+C:\Users\dell\Documents\GitHub\Hotelsystem1\HotelSystem\obj\Debug\HotelSystem.frmshowreserve.resources

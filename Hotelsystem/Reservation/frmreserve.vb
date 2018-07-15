@@ -242,13 +242,13 @@
 
     End Sub
 
-    Private Sub txtsearch_KeyDown(sender As Object, e As KeyEventArgs) Handles txtsearch.KeyDown
+    Private Sub txtsearch_KeyDown(sender As Object, e As KeyEventArgs)
         Try
             If e.KeyCode = Keys.Enter Then
                 If txtsearch.Text = "" Then
                     reserve.loadtbfreserve(dgvlist)
                 Else
-                    reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                    reserve.loadtbfreserveSearchbyidorname(dgvlist, txtsearch.Text)
                 End If
             End If
 
@@ -261,20 +261,18 @@
 
     Private Sub ButtonX1_Click(sender As Object, e As EventArgs) Handles ButtonX1.Click
         Try
-            If rid.Checked = True Then
+            If rdreserve.Checked = True Or rdname.Checked = True Then
                 If txtsearch.Text = "" Then
                     reserve.loadtbfreserve(dgvlist)
                 Else
-                    reserve.loadtbfreserveSearch(dgvlist, txtsearch.Text)
+                    reserve.loadtbfreserveSearchbyidorname(dgvlist, txtsearch.Text)
                 End If
-            ElseIf rroom.Checked = True Then
-                If txtsearch.Text = "" Then
-                    reserve.loadtbfreserve(dgvlist)
-                Else
-                    reserve.loadtbfreserveSearch(dgvlist, txtserchroom.Text)
-                End If
+            ElseIf rddate.Checked = True Then
+             cbroom.Text = "%"
+                reserve.loadtbfreserveSearchbydate(dgvlist, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"))
             Else
-                reserve.loadtbfreserveSearchorderdate(dgvlist, Format(CDate(txtdate1.Text), "MM/dd/yyyy"), Format(CDate(txtdate3.Text), "MM/dd/yyyy"))
+                txtsearch.Text = "%"
+                reserve.loadtbfreserveSearchbyroom(dgvlist, cbroom.SelectedValue)
             End If
        
         Catch ex As Exception
@@ -286,92 +284,132 @@
 
     End Sub
 
-    Private Sub rtype_CheckedChanged(sender As Object, e As EventArgs) Handles rid.CheckedChanged
-        Try
-            If rid.Checked = True Then
-                txtsearch.Visible = True
-                txtserchroom.Visible = False
-                txtdate1.Visible = False
-                txtdate2.Visible = False
-                txtdate3.Visible = False
-                txtsearch.Focus()
-            Else
-                txtsearch.Visible = True
-                txtserchroom.Visible = False
-                txtdate1.Visible = False
-                txtdate2.Visible = False
-                txtdate3.Visible = False
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub rname_CheckedChanged(sender As Object, e As EventArgs) Handles rroom.CheckedChanged
-        Try
-            If rroom.Checked = True Then
-                txtsearch.Visible = False
-                txtserchroom.Visible = True
-                txtdate1.Visible = False
-                txtdate2.Visible = False
-                txtdate3.Visible = False
-                txtserchroom.Focus()
-            Else
-                txtserchroom.Visible = False
-                txtsearch.Visible = True
-                txtdate1.Visible = False
-                txtdate2.Visible = False
-                txtdate3.Visible = False
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub rdate_CheckedChanged(sender As Object, e As EventArgs) Handles rdate.CheckedChanged
-        Try
-            If rdate.Checked = True Then
-                txtsearch.Visible = False
-                txtdate1.Visible = True
-                txtdate2.Visible = True
-                txtdate3.Visible = True
-                txtdate1.Select()
-            Else
-                txtsearch.Visible = True
-                txtdate1.Visible = False
-                txtdate2.Visible = False
-                txtdate3.Visible = False
-            End If
-        Catch ex As Exception
-
-        End Try
-    End Sub
-
-    Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
-
-    End Sub
-
-    Private Sub txtserchroom_KeyDown(sender As Object, e As KeyEventArgs) Handles txtserchroom.KeyDown
-        Try
-            If e.KeyCode = Keys.Enter Then
-                If txtsearch.Text = "" Then
-                    reserve.loadtbfreserve(dgvlist)
-                Else
-                    reserve.loadtbfreserveSearch(dgvlist, txtserchroom.Text)
-                End If
-            End If
-
-        Catch ex As Exception
-
-        End Try
-
-
-    End Sub
-
-    Private Sub txtserchroom_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtserchroom.KeyPress
+   
+    Private Sub txtserchroom_KeyPress(sender As Object, e As KeyPressEventArgs)
         If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
             e.Handled = True
         End If
     End Sub
 
+    Private Sub txtserchroom_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub txtsearch_KeyDown1(sender As Object, e As KeyEventArgs) Handles txtsearch.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Then
+                If rdname.Checked = True Or rdreserve.Checked = True Then
+                    cbroom.Text = "%"
+                    reserve.loadtbfreserveSearchbyidorname(dgvlist, txtsearch.Text)
+                End If
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub dt2_ValueChanged(sender As Object, e As EventArgs) Handles dt2.ValueChanged
+        Try
+            If rddate.Checked = True Then
+                cbroom.Text = "%"
+                reserve.loadtbfreserveSearchbydate(dgvlist, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"))
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub dt1_ValueChanged(sender As Object, e As EventArgs) Handles dt1.ValueChanged
+        Try
+            If rddate.Checked = True Then
+                cbroom.Text = "%"
+                reserve.loadtbfreserveSearchbydate(dgvlist, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"))
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub cbroom_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbroom.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub cbroom_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbroom.SelectionChangeCommitted
+        Try
+            If rdroom.Checked = True Then
+                cbroom.Text = "%"
+                reserve.loadtbfreserveSearchbydate(dgvlist, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"))
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub rdreserve_CheckedChanged(sender As Object, e As EventArgs) Handles rdreserve.CheckedChanged
+        If rdreserve.Checked = True Then
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        Else
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        End If
+    End Sub
+
+    Private Sub rdname_CheckedChanged(sender As Object, e As EventArgs) Handles rdname.CheckedChanged
+        If rdname.Checked = True Then
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        Else
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        End If
+    End Sub
+
+    Private Sub rddate_CheckedChanged(sender As Object, e As EventArgs) Handles rddate.CheckedChanged
+        If rddate.Checked = True Then
+            txtsearch.Visible = False
+            cbroom.Visible = False
+            dt1.Visible = True
+            dt11.Visible = True
+            dt2.Visible = True
+        Else
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        End If
+    End Sub
+
+    Private Sub rdroom_CheckedChanged(sender As Object, e As EventArgs) Handles rdroom.CheckedChanged
+        If rdroom.Checked = True Then
+            txtsearch.Visible = False
+            cbroom.Visible = True
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        Else
+            txtsearch.Visible = True
+            cbroom.Visible = False
+            dt1.Visible = False
+            dt11.Visible = False
+            dt2.Visible = False
+        End If
+    End Sub
+
+    Private Sub txtsearch_TextChanged(sender As Object, e As EventArgs) Handles txtsearch.TextChanged
+
+    End Sub
 End Class
