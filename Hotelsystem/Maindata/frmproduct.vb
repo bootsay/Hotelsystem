@@ -12,7 +12,7 @@ Public Class frmproduct
             unit.combounit(cbunit)
             product.loadtbproduct(dgvshow)
             enablesave()
-
+            rduse.Checked = True
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -42,6 +42,7 @@ Public Class frmproduct
         txtname.Clear()
         txtsale.Clear()
         txtbuy.Clear()
+        rduse.Checked = True
     End Sub
     Private Sub disabletext()
         txtname.Enabled = False
@@ -49,7 +50,8 @@ Public Class frmproduct
         txtbuy.Enabled = False
         cbcategory.Enabled = False
         cbunit.Enabled = False
-        chkactivate.Enabled = False
+        rdnouse.Enabled = False
+        rduse.Enabled = False
     End Sub
     Private Sub enabletext()
         txtname.Enabled = True
@@ -57,7 +59,8 @@ Public Class frmproduct
         txtbuy.Enabled = True
         cbcategory.Enabled = True
         cbunit.Enabled = True
-        chkactivate.Enabled = True
+        rdnouse.Enabled = True
+        rduse.Enabled = True
     End Sub
 
     Private Sub btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
@@ -92,14 +95,16 @@ Public Class frmproduct
             Return
         End If
         Dim activates As Boolean
-        If chkactivate.Checked = True Then
+        If rduse.Checked = True Then
             activates = True
         Else
             activates = False
         End If
+        Dim idno As String = product.runidNO
+        Dim id As Integer = product.runid
         Dim stockqty As Integer = 0
 
-        product.update(txtProductNO.Text, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
+        product.update(txtProductNO.Text, id, cbcategory.SelectedValue, txtname.Text, cbunit.SelectedValue, txtbuy.Text, txtsale.Text, stockqty, activates)
         product.loadtbproduct(dgvshow)
         txtProductNO.Text = product.runidNO
         enablesave()
@@ -137,7 +142,7 @@ Public Class frmproduct
             Return
         End If
         Dim activates As Boolean
-        If chkactivate.Checked = True Then
+        If rduse.Checked = True Then
             activates = True
         Else
             activates = False
@@ -165,7 +170,17 @@ Public Class frmproduct
                 txtbuy.Text = .CurrentRow.Cells(4).Value
                 txtsale.Text = .CurrentRow.Cells(5).Value
                 '  txtNationality.Text = .CurrentRow.Cells(6).Value
-                chkactivate.Checked = .CurrentRow.Cells(7).Value
+                'rduse.Checked = .CurrentRow.Cells(7).Value
+
+                If .CurrentRow.Cells(7).Value = True Then
+                    rduse.Checked = True
+                    'rdnouse.Checked = False
+                Else
+
+                    'rduse.Checked = False
+                    rdnouse.Checked = True
+                End If
+
                 txtid.Text = .CurrentRow.Cells(8).Value
                 disabletext()
                 enableedit()
@@ -228,5 +243,13 @@ Public Class frmproduct
         Catch ex As Exception
 
         End Try
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles rduse.CheckedChanged
+
+    End Sub
+
+    Private Sub dgvshow_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvshow.CellContentClick
+
     End Sub
 End Class

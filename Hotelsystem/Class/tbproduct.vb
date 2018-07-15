@@ -5,6 +5,32 @@ Public Class tbproduct
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
+    'Public Function runidNO()
+    '    cn.connect()
+    '    Dim id As String = Nothing
+    '    Dim idorder As Integer
+    '    Dim length As Integer = 4
+    '    Try
+    '        cm = New SqlCommand("select top 1 proid from tbproduct order by proid desc", cn.conn)
+    '        re = cm.ExecuteReader
+    '        If re.HasRows Then
+    '            While re.Read
+    '                idorder = re.GetValue(0) + 1
+    '            End While
+    '        Else
+    '            idorder = 1
+    '        End If
+    '        id = idorder
+    '        id = String.Format("{0}{1}", "P", idorder.ToString().PadLeft(length, "0"))
+    '        re.Close()
+    '        cm.Dispose()
+    '        cn.conn.Close()
+
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '    End Try
+    '    Return id
+    'End Function
     Public Function runidNO()
         cn.connect()
         Dim id As String = Nothing
@@ -21,7 +47,7 @@ Public Class tbproduct
                 idorder = 1
             End If
             id = idorder
-            id = String.Format("{0}{1}", "P", idorder.ToString().PadLeft(length, "0"))
+            id = String.Format("{0}{1}", "PRO", idorder.ToString().PadLeft(length, "0"))
             re.Close()
             cm.Dispose()
             cn.conn.Close()
@@ -31,34 +57,19 @@ Public Class tbproduct
         End Try
         Return id
     End Function
-    'Public Function runid()
-    '    cn.connect()
-    '    Dim id As Integer
-    '    Try
-    '        cm = New SqlCommand("select top 1 proid from tbproduct order by proid desc", cn.conn)
-    '        re = cm.ExecuteReader
-    '        If re.HasRows Then
-    '            While re.Read
-    '                id = re.GetValue(0).ToString + 1
-    '            End While
-    '        Else
-    '            id = "1"
-    '        End If
-    '    Catch ex As Exception
-
-    '    End Try
-    '    Return id
-    'End Function
 
     Public Function save(productNO As String, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("insert into tbproduct values('" & productNO & "','" & proid & "','" & cateid & "','" & proname & "','" & unitid & "','" & pricebuy & "','" & pricesale & "','" & stockqty & "','" & activate & "')", cn.conn)
+
+            cm = New SqlCommand("insert into tbproduct(productNO,proid,cateid,proname,unitid,pricebuy,pricesale,stockqty,activate)values('" & productNO & "','" & proid & "','" & cateid & "',N'" & proname & "','" & unitid & "','" & pricebuy & "','" & pricesale & "','" & stockqty & "','" & activate & "')", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການບັນທືກແທ້ບໍ່", "ບັນທືກ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
-
             End If
+
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -71,8 +82,6 @@ Public Class tbproduct
             cm = New SqlCommand("delete from tbproduct where productNO='" & productNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການລືບແທ້ບໍ່", "ລືບ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
-                cm.Dispose()
-                cn.conn.Close()
             Else
 
             End If
@@ -82,14 +91,13 @@ Public Class tbproduct
         Return True
     End Function
 
-    Public Function update(productNO As String, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
+    Public Function update(productNO As String, proid As Integer, cateid As Integer, proname As String, unitid As Integer, pricebuy As Double, pricesale As Double, stockqty As Integer, activate As String)
         cn.connect()
         Try
-            cm = New SqlCommand("update tbproduct set  cateid='" & cateid & "', proname='" & proname & "', unitid='" & unitid & "', pricebuy='" & pricebuy & "', pricesale='" & pricesale & "', stockqty='" & stockqty & "', activate='" & activate & "' where productNO='" & productNO & "'", cn.conn)
+            cm = New SqlCommand("update tbproduct set proid='" & proid & "', cateid='" & cateid & "', proname=N'" & proname & "', unitid='" & unitid & "', pricebuy='" & pricebuy & "', pricesale='" & pricesale & "', stockqty='" & stockqty & "', activate='" & activate & "' where productNO='" & productNO & "'", cn.conn)
             If MessageBox.Show("ທ່ານຕ້ອງການແກ້ໄຂແທ້ບໍ່", "ແກ້ໄຂ", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) = DialogResult.OK Then
                 cm.ExecuteNonQuery()
             Else
-
             End If
 
         Catch ex As Exception
@@ -120,7 +128,7 @@ Public Class tbproduct
     Public Function loadtbproduct(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewproduct", cn.conn)
+            da = New SqlDataAdapter("select * from viewproduct order by proid desc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -142,11 +150,11 @@ Public Class tbproduct
                 .Columns(10).Visible = False
                 .Columns(0).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(1).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
+                .Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                 .Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(4).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 .Columns(5).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
-                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                .Columns(6).AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells
                 '.Columns(7).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
             End With
         Catch ex As Exception
@@ -157,7 +165,7 @@ Public Class tbproduct
     Public Function loadtbproductitemlist(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewproduct", cn.conn)
+            da = New SqlDataAdapter("select * from viewproduct order by proid desc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")
@@ -194,7 +202,7 @@ Public Class tbproduct
     Public Function loadtbproductitemlistearch(dgv As DataGridView, name As String)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewproduct where proname like N'%" & name & "%'", cn.conn)
+            da = New SqlDataAdapter("select * from viewproduct where proname like N'%" & name & "%'order by proid desc", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")

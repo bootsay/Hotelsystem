@@ -80,56 +80,6 @@ FROM            viewprovience</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewcheckoutTableAdapter" GeneratorDataComponentClassName="viewcheckoutTableAdapter" Name="viewcheckout" UserDataComponentName="viewcheckoutTableAdapter">
-            <MainSource>
-              <DbSource ConnectionRef="dbhotelsystemConnectionString (MySettings)" DbObjectName="dbhotelsystem.dbo.viewcheckout" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
-                <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        viewcheckout.*
-FROM            viewcheckout</CommandText>
-                    <Parameters />
-                  </DbCommand>
-                </SelectCommand>
-              </DbSource>
-            </MainSource>
-            <Mappings>
-              <Mapping SourceColumn="checkoutNO" DataSetColumn="checkoutNO" />
-              <Mapping SourceColumn="checkinNO" DataSetColumn="checkinNO" />
-              <Mapping SourceColumn="userlao" DataSetColumn="userlao" />
-              <Mapping SourceColumn="locationname" DataSetColumn="locationname" />
-              <Mapping SourceColumn="romtypename" DataSetColumn="romtypename" />
-              <Mapping SourceColumn="room_id" DataSetColumn="room_id" />
-              <Mapping SourceColumn="customertypename" DataSetColumn="customertypename" />
-              <Mapping SourceColumn="titlename" DataSetColumn="titlename" />
-              <Mapping SourceColumn="cusname" DataSetColumn="cusname" />
-              <Mapping SourceColumn="surname" DataSetColumn="surname" />
-              <Mapping SourceColumn="nationality" DataSetColumn="nationality" />
-              <Mapping SourceColumn="villagename" DataSetColumn="villagename" />
-              <Mapping SourceColumn="districtname" DataSetColumn="districtname" />
-              <Mapping SourceColumn="provincename" DataSetColumn="provincename" />
-              <Mapping SourceColumn="countryname" DataSetColumn="countryname" />
-              <Mapping SourceColumn="bookingtypename" DataSetColumn="bookingtypename" />
-              <Mapping SourceColumn="markettypename" DataSetColumn="markettypename" />
-              <Mapping SourceColumn="checkindate" DataSetColumn="checkindate" />
-              <Mapping SourceColumn="checkoutdate" DataSetColumn="checkoutdate" />
-              <Mapping SourceColumn="numberofpax" DataSetColumn="numberofpax" />
-              <Mapping SourceColumn="mealtypename" DataSetColumn="mealtypename" />
-              <Mapping SourceColumn="usetypename" DataSetColumn="usetypename" />
-              <Mapping SourceColumn="remark" DataSetColumn="remark" />
-              <Mapping SourceColumn="statusid" DataSetColumn="statusid" />
-              <Mapping SourceColumn="checkinid" DataSetColumn="checkinid" />
-              <Mapping SourceColumn="userid" DataSetColumn="userid" />
-              <Mapping SourceColumn="roomid" DataSetColumn="roomid" />
-              <Mapping SourceColumn="customerNO" DataSetColumn="customerNO" />
-              <Mapping SourceColumn="bookingtypeid" DataSetColumn="bookingtypeid" />
-              <Mapping SourceColumn="markettypeid" DataSetColumn="markettypeid" />
-              <Mapping SourceColumn="mealtypeid" DataSetColumn="mealtypeid" />
-              <Mapping SourceColumn="usetypeid" DataSetColumn="usetypeid" />
-              <Mapping SourceColumn="villageid" DataSetColumn="villageid" />
-              <Mapping SourceColumn="datecheckout" DataSetColumn="datecheckout" />
-            </Mappings>
-            <Sources />
-          </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewroom1TableAdapter" GeneratorDataComponentClassName="viewroom1TableAdapter" Name="viewroom1" UserDataComponentName="viewroom1TableAdapter">
             <MainSource>
               <DbSource ConnectionRef="dbhotelsystemConnectionString (MySettings)" DbObjectName="dbhotelsystem.dbo.viewroom" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
@@ -480,6 +430,78 @@ FROM            viewcustomer</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewitemlistTableAdapter" GeneratorDataComponentClassName="viewitemlistTableAdapter" Name="viewitemlist" UserDataComponentName="viewitemlistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbhotelsystemConnectionString (MySettings)" DbObjectName="dbhotelsystem.dbo.viewitemlist" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        viewitemlist.*
+FROM            viewitemlist</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="itemlistid" DataSetColumn="itemlistid" />
+              <Mapping SourceColumn="room_id" DataSetColumn="room_id" />
+              <Mapping SourceColumn="proname" DataSetColumn="proname" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="unitname" DataSetColumn="unitname" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="totalprice" DataSetColumn="totalprice" />
+              <Mapping SourceColumn="dateadd" DataSetColumn="dateadd" />
+              <Mapping SourceColumn="statusid" DataSetColumn="statusid" />
+              <Mapping SourceColumn="userlao" DataSetColumn="userlao" />
+              <Mapping SourceColumn="roomid" DataSetColumn="roomid" />
+              <Mapping SourceColumn="proid" DataSetColumn="proid" />
+              <Mapping SourceColumn="userid" DataSetColumn="userid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="viewcheckoutTableAdapter" GeneratorDataComponentClassName="viewcheckoutTableAdapter" Name="viewcheckout" UserDataComponentName="viewcheckoutTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="dbhotelsystemConnectionString (MySettings)" DbObjectName="dbhotelsystem.dbo.viewcheckout" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        viewcheckout.*
+FROM            viewcheckout</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="checkoutNO" DataSetColumn="checkoutNO" />
+              <Mapping SourceColumn="checkinid" DataSetColumn="checkinid" />
+              <Mapping SourceColumn="reserveNO" DataSetColumn="reserveNO" />
+              <Mapping SourceColumn="room_id" DataSetColumn="room_id" />
+              <Mapping SourceColumn="titlename" DataSetColumn="titlename" />
+              <Mapping SourceColumn="cusname" DataSetColumn="cusname" />
+              <Mapping SourceColumn="surname" DataSetColumn="surname" />
+              <Mapping SourceColumn="nationality" DataSetColumn="nationality" />
+              <Mapping SourceColumn="villagename" DataSetColumn="villagename" />
+              <Mapping SourceColumn="districtname" DataSetColumn="districtname" />
+              <Mapping SourceColumn="provincename" DataSetColumn="provincename" />
+              <Mapping SourceColumn="countryname" DataSetColumn="countryname" />
+              <Mapping SourceColumn="passport" DataSetColumn="passport" />
+              <Mapping SourceColumn="idcard" DataSetColumn="idcard" />
+              <Mapping SourceColumn="tel" DataSetColumn="tel" />
+              <Mapping SourceColumn="fax" DataSetColumn="fax" />
+              <Mapping SourceColumn="email" DataSetColumn="email" />
+              <Mapping SourceColumn="roomrateid" DataSetColumn="roomrateid" />
+              <Mapping SourceColumn="activate" DataSetColumn="activate" />
+              <Mapping SourceColumn="checkindate" DataSetColumn="checkindate" />
+              <Mapping SourceColumn="datecheckout" DataSetColumn="datecheckout" />
+              <Mapping SourceColumn="numberofpax" DataSetColumn="numberofpax" />
+              <Mapping SourceColumn="userlao" DataSetColumn="userlao" />
+              <Mapping SourceColumn="checkoutid" DataSetColumn="checkoutid" />
+              <Mapping SourceColumn="CheckinNO" DataSetColumn="CheckinNO" />
+              <Mapping SourceColumn="customerNO" DataSetColumn="customerNO" />
+              <Mapping SourceColumn="userid" DataSetColumn="userid" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -583,166 +605,6 @@ FROM            viewcustomer</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="countryid" msprop:Generator_ColumnVarNameInTable="columncountryid" msprop:Generator_ColumnPropNameInRow="countryid" msprop:Generator_ColumnPropNameInTable="countryidColumn" msprop:Generator_UserColumnName="countryid" type="xs:int" minOccurs="0" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-        <xs:element name="viewcheckout" msprop:Generator_TableClassName="viewcheckoutDataTable" msprop:Generator_TableVarName="tableviewcheckout" msprop:Generator_TablePropName="viewcheckout" msprop:Generator_RowDeletingName="viewcheckoutRowDeleting" msprop:Generator_RowChangingName="viewcheckoutRowChanging" msprop:Generator_RowEvHandlerName="viewcheckoutRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckoutRowDeleted" msprop:Generator_UserTableName="viewcheckout" msprop:Generator_RowChangedName="viewcheckoutRowChanged" msprop:Generator_RowEvArgName="viewcheckoutRowChangeEvent" msprop:Generator_RowClassName="viewcheckoutRow">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="checkoutNO" msprop:Generator_ColumnVarNameInTable="columncheckoutNO" msprop:Generator_ColumnPropNameInRow="checkoutNO" msprop:Generator_ColumnPropNameInTable="checkoutNOColumn" msprop:Generator_UserColumnName="checkoutNO">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="checkinNO" msprop:Generator_ColumnVarNameInTable="columncheckinNO" msprop:Generator_ColumnPropNameInRow="checkinNO" msprop:Generator_ColumnPropNameInTable="checkinNOColumn" msprop:Generator_UserColumnName="checkinNO">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="userlao" msprop:Generator_ColumnVarNameInTable="columnuserlao" msprop:Generator_ColumnPropNameInRow="userlao" msprop:Generator_ColumnPropNameInTable="userlaoColumn" msprop:Generator_UserColumnName="userlao" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="locationname" msprop:Generator_ColumnVarNameInTable="columnlocationname" msprop:Generator_ColumnPropNameInRow="locationname" msprop:Generator_ColumnPropNameInTable="locationnameColumn" msprop:Generator_UserColumnName="locationname" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="romtypename" msprop:Generator_ColumnVarNameInTable="columnromtypename" msprop:Generator_ColumnPropNameInRow="romtypename" msprop:Generator_ColumnPropNameInTable="romtypenameColumn" msprop:Generator_UserColumnName="romtypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="room_id" msprop:Generator_ColumnVarNameInTable="columnroom_id" msprop:Generator_ColumnPropNameInRow="room_id" msprop:Generator_ColumnPropNameInTable="room_idColumn" msprop:Generator_UserColumnName="room_id" type="xs:int" minOccurs="0" />
-              <xs:element name="customertypename" msprop:Generator_ColumnVarNameInTable="columncustomertypename" msprop:Generator_ColumnPropNameInRow="customertypename" msprop:Generator_ColumnPropNameInTable="customertypenameColumn" msprop:Generator_UserColumnName="customertypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="titlename" msprop:Generator_ColumnVarNameInTable="columntitlename" msprop:Generator_ColumnPropNameInRow="titlename" msprop:Generator_ColumnPropNameInTable="titlenameColumn" msprop:Generator_UserColumnName="titlename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="cusname" msprop:Generator_ColumnVarNameInTable="columncusname" msprop:Generator_ColumnPropNameInRow="cusname" msprop:Generator_ColumnPropNameInTable="cusnameColumn" msprop:Generator_UserColumnName="cusname" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="nationality" msprop:Generator_ColumnVarNameInTable="columnnationality" msprop:Generator_ColumnPropNameInRow="nationality" msprop:Generator_ColumnPropNameInTable="nationalityColumn" msprop:Generator_UserColumnName="nationality" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="villagename" msprop:Generator_ColumnVarNameInTable="columnvillagename" msprop:Generator_ColumnPropNameInRow="villagename" msprop:Generator_ColumnPropNameInTable="villagenameColumn" msprop:Generator_UserColumnName="villagename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="districtname" msprop:Generator_ColumnVarNameInTable="columndistrictname" msprop:Generator_ColumnPropNameInRow="districtname" msprop:Generator_ColumnPropNameInTable="districtnameColumn" msprop:Generator_UserColumnName="districtname" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="provincename" msprop:Generator_ColumnVarNameInTable="columnprovincename" msprop:Generator_ColumnPropNameInRow="provincename" msprop:Generator_ColumnPropNameInTable="provincenameColumn" msprop:Generator_UserColumnName="provincename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="countryname" msprop:Generator_ColumnVarNameInTable="columncountryname" msprop:Generator_ColumnPropNameInRow="countryname" msprop:Generator_ColumnPropNameInTable="countrynameColumn" msprop:Generator_UserColumnName="countryname" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="bookingtypename" msprop:Generator_ColumnVarNameInTable="columnbookingtypename" msprop:Generator_ColumnPropNameInRow="bookingtypename" msprop:Generator_ColumnPropNameInTable="bookingtypenameColumn" msprop:Generator_UserColumnName="bookingtypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="markettypename" msprop:Generator_ColumnVarNameInTable="columnmarkettypename" msprop:Generator_ColumnPropNameInRow="markettypename" msprop:Generator_ColumnPropNameInTable="markettypenameColumn" msprop:Generator_UserColumnName="markettypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="checkindate" msprop:Generator_ColumnVarNameInTable="columncheckindate" msprop:Generator_ColumnPropNameInRow="checkindate" msprop:Generator_ColumnPropNameInTable="checkindateColumn" msprop:Generator_UserColumnName="checkindate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="checkoutdate" msprop:Generator_ColumnVarNameInTable="columncheckoutdate" msprop:Generator_ColumnPropNameInRow="checkoutdate" msprop:Generator_ColumnPropNameInTable="checkoutdateColumn" msprop:Generator_UserColumnName="checkoutdate" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="numberofpax" msprop:Generator_ColumnVarNameInTable="columnnumberofpax" msprop:Generator_ColumnPropNameInRow="numberofpax" msprop:Generator_ColumnPropNameInTable="numberofpaxColumn" msprop:Generator_UserColumnName="numberofpax" type="xs:int" minOccurs="0" />
-              <xs:element name="mealtypename" msprop:Generator_ColumnVarNameInTable="columnmealtypename" msprop:Generator_ColumnPropNameInRow="mealtypename" msprop:Generator_ColumnPropNameInTable="mealtypenameColumn" msprop:Generator_UserColumnName="mealtypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="usetypename" msprop:Generator_ColumnVarNameInTable="columnusetypename" msprop:Generator_ColumnPropNameInRow="usetypename" msprop:Generator_ColumnPropNameInTable="usetypenameColumn" msprop:Generator_UserColumnName="usetypename" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="statusid" msprop:Generator_ColumnVarNameInTable="columnstatusid" msprop:Generator_ColumnPropNameInRow="statusid" msprop:Generator_ColumnPropNameInTable="statusidColumn" msprop:Generator_UserColumnName="statusid" type="xs:int" minOccurs="0" />
-              <xs:element name="checkinid" msprop:Generator_ColumnVarNameInTable="columncheckinid" msprop:Generator_ColumnPropNameInRow="checkinid" msprop:Generator_ColumnPropNameInTable="checkinidColumn" msprop:Generator_UserColumnName="checkinid" type="xs:int" minOccurs="0" />
-              <xs:element name="userid" msprop:Generator_ColumnVarNameInTable="columnuserid" msprop:Generator_ColumnPropNameInRow="userid" msprop:Generator_ColumnPropNameInTable="useridColumn" msprop:Generator_UserColumnName="userid" type="xs:int" minOccurs="0" />
-              <xs:element name="roomid" msprop:Generator_ColumnVarNameInTable="columnroomid" msprop:Generator_ColumnPropNameInRow="roomid" msprop:Generator_ColumnPropNameInTable="roomidColumn" msprop:Generator_UserColumnName="roomid" type="xs:int" minOccurs="0" />
-              <xs:element name="customerNO" msprop:Generator_ColumnVarNameInTable="columncustomerNO" msprop:Generator_ColumnPropNameInRow="customerNO" msprop:Generator_ColumnPropNameInTable="customerNOColumn" msprop:Generator_UserColumnName="customerNO" minOccurs="0">
-                <xs:simpleType>
-                  <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
-                  </xs:restriction>
-                </xs:simpleType>
-              </xs:element>
-              <xs:element name="bookingtypeid" msprop:Generator_ColumnVarNameInTable="columnbookingtypeid" msprop:Generator_ColumnPropNameInRow="bookingtypeid" msprop:Generator_ColumnPropNameInTable="bookingtypeidColumn" msprop:Generator_UserColumnName="bookingtypeid" type="xs:int" minOccurs="0" />
-              <xs:element name="markettypeid" msprop:Generator_ColumnVarNameInTable="columnmarkettypeid" msprop:Generator_ColumnPropNameInRow="markettypeid" msprop:Generator_ColumnPropNameInTable="markettypeidColumn" msprop:Generator_UserColumnName="markettypeid" type="xs:int" minOccurs="0" />
-              <xs:element name="mealtypeid" msprop:Generator_ColumnVarNameInTable="columnmealtypeid" msprop:Generator_ColumnPropNameInRow="mealtypeid" msprop:Generator_ColumnPropNameInTable="mealtypeidColumn" msprop:Generator_UserColumnName="mealtypeid" type="xs:int" minOccurs="0" />
-              <xs:element name="usetypeid" msprop:Generator_ColumnVarNameInTable="columnusetypeid" msprop:Generator_ColumnPropNameInRow="usetypeid" msprop:Generator_ColumnPropNameInTable="usetypeidColumn" msprop:Generator_UserColumnName="usetypeid" type="xs:int" minOccurs="0" />
-              <xs:element name="villageid" msprop:Generator_ColumnVarNameInTable="columnvillageid" msprop:Generator_ColumnPropNameInRow="villageid" msprop:Generator_ColumnPropNameInTable="villageidColumn" msprop:Generator_UserColumnName="villageid" type="xs:int" minOccurs="0" />
-              <xs:element name="datecheckout" msprop:Generator_ColumnVarNameInTable="columndatecheckout" msprop:Generator_ColumnPropNameInRow="datecheckout" msprop:Generator_ColumnPropNameInTable="datecheckoutColumn" msprop:Generator_UserColumnName="datecheckout" type="xs:dateTime" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1574,6 +1436,190 @@ FROM            viewcustomer</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="viewitemlist" msprop:Generator_TableClassName="viewitemlistDataTable" msprop:Generator_TableVarName="tableviewitemlist" msprop:Generator_RowChangedName="viewitemlistRowChanged" msprop:Generator_TablePropName="viewitemlist" msprop:Generator_RowDeletingName="viewitemlistRowDeleting" msprop:Generator_RowChangingName="viewitemlistRowChanging" msprop:Generator_RowEvHandlerName="viewitemlistRowChangeEventHandler" msprop:Generator_RowDeletedName="viewitemlistRowDeleted" msprop:Generator_RowClassName="viewitemlistRow" msprop:Generator_UserTableName="viewitemlist" msprop:Generator_RowEvArgName="viewitemlistRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itemlistid" msprop:Generator_ColumnVarNameInTable="columnitemlistid" msprop:Generator_ColumnPropNameInRow="itemlistid" msprop:Generator_ColumnPropNameInTable="itemlistidColumn" msprop:Generator_UserColumnName="itemlistid" type="xs:int" />
+              <xs:element name="room_id" msprop:Generator_ColumnVarNameInTable="columnroom_id" msprop:Generator_ColumnPropNameInRow="room_id" msprop:Generator_ColumnPropNameInTable="room_idColumn" msprop:Generator_UserColumnName="room_id" type="xs:int" minOccurs="0" />
+              <xs:element name="proname" msprop:Generator_ColumnVarNameInTable="columnproname" msprop:Generator_ColumnPropNameInRow="proname" msprop:Generator_ColumnPropNameInTable="pronameColumn" msprop:Generator_UserColumnName="proname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:int" minOccurs="0" />
+              <xs:element name="unitname" msprop:Generator_ColumnVarNameInTable="columnunitname" msprop:Generator_ColumnPropNameInRow="unitname" msprop:Generator_ColumnPropNameInTable="unitnameColumn" msprop:Generator_UserColumnName="unitname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" minOccurs="0" />
+              <xs:element name="totalprice" msprop:Generator_ColumnVarNameInTable="columntotalprice" msprop:Generator_ColumnPropNameInRow="totalprice" msprop:Generator_ColumnPropNameInTable="totalpriceColumn" msprop:Generator_UserColumnName="totalprice" type="xs:double" minOccurs="0" />
+              <xs:element name="dateadd" msprop:Generator_ColumnVarNameInTable="columndateadd" msprop:Generator_ColumnPropNameInRow="dateadd" msprop:Generator_ColumnPropNameInTable="dateaddColumn" msprop:Generator_UserColumnName="dateadd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="statusid" msprop:Generator_ColumnVarNameInTable="columnstatusid" msprop:Generator_ColumnPropNameInRow="statusid" msprop:Generator_ColumnPropNameInTable="statusidColumn" msprop:Generator_UserColumnName="statusid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userlao" msprop:Generator_ColumnVarNameInTable="columnuserlao" msprop:Generator_ColumnPropNameInRow="userlao" msprop:Generator_ColumnPropNameInTable="userlaoColumn" msprop:Generator_UserColumnName="userlao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="roomid" msprop:Generator_ColumnVarNameInTable="columnroomid" msprop:Generator_ColumnPropNameInRow="roomid" msprop:Generator_ColumnPropNameInTable="roomidColumn" msprop:Generator_UserColumnName="roomid" type="xs:int" minOccurs="0" />
+              <xs:element name="proid" msprop:Generator_ColumnVarNameInTable="columnproid" msprop:Generator_ColumnPropNameInRow="proid" msprop:Generator_ColumnPropNameInTable="proidColumn" msprop:Generator_UserColumnName="proid" type="xs:int" minOccurs="0" />
+              <xs:element name="userid" msprop:Generator_ColumnVarNameInTable="columnuserid" msprop:Generator_ColumnPropNameInRow="userid" msprop:Generator_ColumnPropNameInTable="useridColumn" msprop:Generator_UserColumnName="userid" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="viewcheckout" msprop:Generator_TableClassName="viewcheckoutDataTable" msprop:Generator_TableVarName="tableviewcheckout" msprop:Generator_TablePropName="viewcheckout" msprop:Generator_RowDeletingName="viewcheckoutRowDeleting" msprop:Generator_RowChangingName="viewcheckoutRowChanging" msprop:Generator_RowEvHandlerName="viewcheckoutRowChangeEventHandler" msprop:Generator_RowDeletedName="viewcheckoutRowDeleted" msprop:Generator_UserTableName="viewcheckout" msprop:Generator_RowChangedName="viewcheckoutRowChanged" msprop:Generator_RowEvArgName="viewcheckoutRowChangeEvent" msprop:Generator_RowClassName="viewcheckoutRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="checkoutNO" msprop:Generator_ColumnVarNameInTable="columncheckoutNO" msprop:Generator_ColumnPropNameInRow="checkoutNO" msprop:Generator_ColumnPropNameInTable="checkoutNOColumn" msprop:Generator_UserColumnName="checkoutNO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="checkinid" msprop:Generator_ColumnVarNameInTable="columncheckinid" msprop:Generator_ColumnPropNameInRow="checkinid" msprop:Generator_ColumnPropNameInTable="checkinidColumn" msprop:Generator_UserColumnName="checkinid" type="xs:int" minOccurs="0" />
+              <xs:element name="reserveNO" msprop:Generator_ColumnVarNameInTable="columnreserveNO" msprop:Generator_ColumnPropNameInRow="reserveNO" msprop:Generator_ColumnPropNameInTable="reserveNOColumn" msprop:Generator_UserColumnName="reserveNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="room_id" msprop:Generator_ColumnVarNameInTable="columnroom_id" msprop:Generator_ColumnPropNameInRow="room_id" msprop:Generator_ColumnPropNameInTable="room_idColumn" msprop:Generator_UserColumnName="room_id" type="xs:int" minOccurs="0" />
+              <xs:element name="titlename" msprop:Generator_ColumnVarNameInTable="columntitlename" msprop:Generator_ColumnPropNameInRow="titlename" msprop:Generator_ColumnPropNameInTable="titlenameColumn" msprop:Generator_UserColumnName="titlename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cusname" msprop:Generator_ColumnVarNameInTable="columncusname" msprop:Generator_ColumnPropNameInRow="cusname" msprop:Generator_ColumnPropNameInTable="cusnameColumn" msprop:Generator_UserColumnName="cusname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="surname" msprop:Generator_ColumnVarNameInTable="columnsurname" msprop:Generator_ColumnPropNameInRow="surname" msprop:Generator_ColumnPropNameInTable="surnameColumn" msprop:Generator_UserColumnName="surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nationality" msprop:Generator_ColumnVarNameInTable="columnnationality" msprop:Generator_ColumnPropNameInRow="nationality" msprop:Generator_ColumnPropNameInTable="nationalityColumn" msprop:Generator_UserColumnName="nationality" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="villagename" msprop:Generator_ColumnVarNameInTable="columnvillagename" msprop:Generator_ColumnPropNameInRow="villagename" msprop:Generator_ColumnPropNameInTable="villagenameColumn" msprop:Generator_UserColumnName="villagename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="districtname" msprop:Generator_ColumnVarNameInTable="columndistrictname" msprop:Generator_ColumnPropNameInRow="districtname" msprop:Generator_ColumnPropNameInTable="districtnameColumn" msprop:Generator_UserColumnName="districtname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="provincename" msprop:Generator_ColumnVarNameInTable="columnprovincename" msprop:Generator_ColumnPropNameInRow="provincename" msprop:Generator_ColumnPropNameInTable="provincenameColumn" msprop:Generator_UserColumnName="provincename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="countryname" msprop:Generator_ColumnVarNameInTable="columncountryname" msprop:Generator_ColumnPropNameInRow="countryname" msprop:Generator_ColumnPropNameInTable="countrynameColumn" msprop:Generator_UserColumnName="countryname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="passport" msprop:Generator_ColumnVarNameInTable="columnpassport" msprop:Generator_ColumnPropNameInRow="passport" msprop:Generator_ColumnPropNameInTable="passportColumn" msprop:Generator_UserColumnName="passport" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idcard" msprop:Generator_ColumnVarNameInTable="columnidcard" msprop:Generator_ColumnPropNameInRow="idcard" msprop:Generator_ColumnPropNameInTable="idcardColumn" msprop:Generator_UserColumnName="idcard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tel" msprop:Generator_ColumnVarNameInTable="columntel" msprop:Generator_ColumnPropNameInRow="tel" msprop:Generator_ColumnPropNameInTable="telColumn" msprop:Generator_UserColumnName="tel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fax" msprop:Generator_ColumnVarNameInTable="columnfax" msprop:Generator_ColumnPropNameInRow="fax" msprop:Generator_ColumnPropNameInTable="faxColumn" msprop:Generator_UserColumnName="fax" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="email" msprop:Generator_ColumnVarNameInTable="columnemail" msprop:Generator_ColumnPropNameInRow="email" msprop:Generator_ColumnPropNameInTable="emailColumn" msprop:Generator_UserColumnName="email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="roomrateid" msprop:Generator_ColumnVarNameInTable="columnroomrateid" msprop:Generator_ColumnPropNameInRow="roomrateid" msprop:Generator_ColumnPropNameInTable="roomrateidColumn" msprop:Generator_UserColumnName="roomrateid" type="xs:int" minOccurs="0" />
+              <xs:element name="activate" msprop:Generator_ColumnVarNameInTable="columnactivate" msprop:Generator_ColumnPropNameInRow="activate" msprop:Generator_ColumnPropNameInTable="activateColumn" msprop:Generator_UserColumnName="activate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="checkindate" msprop:Generator_ColumnVarNameInTable="columncheckindate" msprop:Generator_ColumnPropNameInRow="checkindate" msprop:Generator_ColumnPropNameInTable="checkindateColumn" msprop:Generator_UserColumnName="checkindate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="datecheckout" msprop:Generator_ColumnVarNameInTable="columndatecheckout" msprop:Generator_ColumnPropNameInRow="datecheckout" msprop:Generator_ColumnPropNameInTable="datecheckoutColumn" msprop:Generator_UserColumnName="datecheckout" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="numberofpax" msprop:Generator_ColumnVarNameInTable="columnnumberofpax" msprop:Generator_ColumnPropNameInRow="numberofpax" msprop:Generator_ColumnPropNameInTable="numberofpaxColumn" msprop:Generator_UserColumnName="numberofpax" type="xs:int" minOccurs="0" />
+              <xs:element name="userlao" msprop:Generator_ColumnVarNameInTable="columnuserlao" msprop:Generator_ColumnPropNameInRow="userlao" msprop:Generator_ColumnPropNameInTable="userlaoColumn" msprop:Generator_UserColumnName="userlao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="checkoutid" msprop:Generator_ColumnVarNameInTable="columncheckoutid" msprop:Generator_ColumnPropNameInRow="checkoutid" msprop:Generator_ColumnPropNameInTable="checkoutidColumn" msprop:Generator_UserColumnName="checkoutid" type="xs:int" minOccurs="0" />
+              <xs:element name="CheckinNO" msprop:Generator_ColumnVarNameInTable="columnCheckinNO" msprop:Generator_ColumnPropNameInRow="CheckinNO" msprop:Generator_ColumnPropNameInTable="CheckinNOColumn" msprop:Generator_UserColumnName="CheckinNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="customerNO" msprop:Generator_ColumnVarNameInTable="columncustomerNO" msprop:Generator_ColumnPropNameInRow="customerNO" msprop:Generator_ColumnPropNameInTable="customerNOColumn" msprop:Generator_UserColumnName="customerNO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="userid" msprop:Generator_ColumnVarNameInTable="columnuserid" msprop:Generator_ColumnPropNameInRow="userid" msprop:Generator_ColumnPropNameInTable="useridColumn" msprop:Generator_UserColumnName="userid" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1611,6 +1657,14 @@ FROM            viewcustomer</CommandText>
     <xs:unique name="viewcustomer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:viewcustomer" />
       <xs:field xpath="mstns:customerNO" />
+    </xs:unique>
+    <xs:unique name="viewitemlist_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:viewitemlist" />
+      <xs:field xpath="mstns:itemlistid" />
+    </xs:unique>
+    <xs:unique name="viewcheckout_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:viewcheckout" />
+      <xs:field xpath="mstns:checkoutNO" />
     </xs:unique>
   </xs:element>
 </xs:schema>

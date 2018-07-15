@@ -50,7 +50,6 @@ Partial Class frmproduct
         Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
         Me.dgvshow = New DevComponents.DotNetBar.Controls.DataGridViewX()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.chkactivate = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbunit = New DevComponents.DotNetBar.Controls.ComboBoxEx()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -71,6 +70,8 @@ Partial Class frmproduct
         Me.TabItem2 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.TabItem1 = New DevComponents.DotNetBar.TabItem(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.rduse = New System.Windows.Forms.RadioButton()
+        Me.rdnouse = New System.Windows.Forms.RadioButton()
         Me.GroupPanel1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         CType(Me.TabControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -352,8 +353,9 @@ Partial Class frmproduct
         Me.dgvshow.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvshow.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvshow.EnableHeadersVisualStyles = False
-        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(113, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(170, Byte), Integer))
+        Me.dgvshow.GridColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(229, Byte), Integer))
         Me.dgvshow.Location = New System.Drawing.Point(3, 183)
+        Me.dgvshow.MultiSelect = False
         Me.dgvshow.Name = "dgvshow"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
@@ -374,7 +376,8 @@ Partial Class frmproduct
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        Me.Panel2.Controls.Add(Me.chkactivate)
+        Me.Panel2.Controls.Add(Me.rdnouse)
+        Me.Panel2.Controls.Add(Me.rduse)
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Controls.Add(Me.cbunit)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -394,20 +397,8 @@ Partial Class frmproduct
         Me.Panel2.Size = New System.Drawing.Size(1086, 122)
         Me.Panel2.TabIndex = 7
         '
-        'chkactivate
-        '
-        Me.chkactivate.AutoSize = True
-        Me.chkactivate.ForeColor = System.Drawing.Color.Black
-        Me.chkactivate.Location = New System.Drawing.Point(1008, 88)
-        Me.chkactivate.Name = "chkactivate"
-        Me.chkactivate.Size = New System.Drawing.Size(76, 33)
-        Me.chkactivate.TabIndex = 58
-        Me.chkactivate.Text = "ໃຊ້ງານ"
-        Me.chkactivate.UseVisualStyleBackColor = True
-        '
         'Label4
         '
-        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
@@ -419,7 +410,6 @@ Partial Class frmproduct
         '
         'cbunit
         '
-        Me.cbunit.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbunit.DisplayMember = "Text"
         Me.cbunit.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbunit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -429,7 +419,7 @@ Partial Class frmproduct
         Me.cbunit.ItemHeight = 29
         Me.cbunit.Location = New System.Drawing.Point(599, 7)
         Me.cbunit.Name = "cbunit"
-        Me.cbunit.Size = New System.Drawing.Size(404, 35)
+        Me.cbunit.Size = New System.Drawing.Size(388, 35)
         Me.cbunit.TabIndex = 7
         '
         'Label1
@@ -445,8 +435,6 @@ Partial Class frmproduct
         '
         'cbcategory
         '
-        Me.cbcategory.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbcategory.DisplayMember = "Text"
         Me.cbcategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
         Me.cbcategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -472,30 +460,24 @@ Partial Class frmproduct
         '
         'txtsale
         '
-        Me.txtsale.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtsale.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtsale.ForeColor = System.Drawing.Color.Black
         Me.txtsale.Location = New System.Drawing.Point(599, 83)
         Me.txtsale.Name = "txtsale"
-        Me.txtsale.Size = New System.Drawing.Size(404, 35)
+        Me.txtsale.Size = New System.Drawing.Size(388, 35)
         Me.txtsale.TabIndex = 4
         '
         'txtbuy
         '
-        Me.txtbuy.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtbuy.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbuy.ForeColor = System.Drawing.Color.Black
         Me.txtbuy.Location = New System.Drawing.Point(599, 45)
         Me.txtbuy.Name = "txtbuy"
-        Me.txtbuy.Size = New System.Drawing.Size(404, 35)
+        Me.txtbuy.Size = New System.Drawing.Size(388, 35)
         Me.txtbuy.TabIndex = 4
         '
         'txtname
         '
-        Me.txtname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtname.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtname.ForeColor = System.Drawing.Color.Black
         Me.txtname.Location = New System.Drawing.Point(110, 85)
@@ -538,8 +520,6 @@ Partial Class frmproduct
         '
         'txtProductNO
         '
-        Me.txtProductNO.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtProductNO.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProductNO.ForeColor = System.Drawing.Color.Black
         Me.txtProductNO.Location = New System.Drawing.Point(110, 7)
@@ -550,8 +530,6 @@ Partial Class frmproduct
         '
         'txtid
         '
-        Me.txtid.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtid.Font = New System.Drawing.Font("Saysettha OT", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtid.ForeColor = System.Drawing.Color.Black
         Me.txtid.Location = New System.Drawing.Point(259, 11)
@@ -595,6 +573,28 @@ Partial Class frmproduct
         '
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'rduse
+        '
+        Me.rduse.AutoSize = True
+        Me.rduse.Location = New System.Drawing.Point(995, 31)
+        Me.rduse.Name = "rduse"
+        Me.rduse.Size = New System.Drawing.Size(75, 33)
+        Me.rduse.TabIndex = 59
+        Me.rduse.TabStop = True
+        Me.rduse.Text = "ໃຊ້ງານ"
+        Me.rduse.UseVisualStyleBackColor = True
+        '
+        'rdnouse
+        '
+        Me.rdnouse.AutoSize = True
+        Me.rdnouse.Location = New System.Drawing.Point(995, 70)
+        Me.rdnouse.Name = "rdnouse"
+        Me.rdnouse.Size = New System.Drawing.Size(85, 33)
+        Me.rdnouse.TabIndex = 60
+        Me.rdnouse.TabStop = True
+        Me.rdnouse.Text = "ບໍ່ໃຊ້ງານ"
+        Me.rdnouse.UseVisualStyleBackColor = True
         '
         'frmproduct
         '
@@ -662,7 +662,6 @@ Partial Class frmproduct
     Friend WithEvents btnclose As System.Windows.Forms.ToolStripButton
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtbuy As System.Windows.Forms.TextBox
-    Friend WithEvents chkactivate As System.Windows.Forms.CheckBox
     Friend WithEvents txtsale As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents txtid As System.Windows.Forms.TextBox
@@ -670,4 +669,6 @@ Partial Class frmproduct
     Friend WithEvents ToolStripLabel2 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents rduse As System.Windows.Forms.RadioButton
+    Friend WithEvents rdnouse As System.Windows.Forms.RadioButton
 End Class
