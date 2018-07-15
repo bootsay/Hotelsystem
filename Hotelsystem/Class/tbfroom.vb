@@ -5,15 +5,66 @@ Public Class tbfroom
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
+    Public Function Count_roombystatus(statusname As Integer)
+        cn.connect()
+        Dim id As Integer
+        Try
+            cm = New SqlCommand("select count(room_id) as count from tbfroom where statusid='" & statusname & "' and  activate='True'", cn.conn)
+            re = cm.ExecuteReader
+            If re.HasRows Then
+                While re.Read
+                    If re.GetValue(0) Is DBNull.Value Then
+                        id = 0
+                    Else
+                        id = re.GetValue(0)
+                    End If
+                End While
+            Else
+                id = 0
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        re.Close()
+        cm.Dispose()
+        cn.conn.Close()
+        Return id
+    End Function
+    Public Function Count_allroom()
+        cn.connect()
+        Dim id As Integer
+        Try
+            cm = New SqlCommand("select count(room_id) as count from tbfroom where activate='True'", cn.conn)
+            re = cm.ExecuteReader
+            If re.HasRows Then
+                While re.Read
+                    If re.GetValue(0) Is DBNull.Value Then
+                        id = 0
+                    Else
+                        id = re.GetValue(0)
+                    End If
+                End While
+            Else
+                id = 0
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        re.Close()
+        cm.Dispose()
+        cn.conn.Close()
+        Return id
+    End Function
     Public Function getroom(floorid As Integer, typename As String, dt As DataTable)
         cn.connect()
         Try
             dt.Clear()
             da = New SqlDataAdapter("select * from viewroominfo where locationid='" & floorid & "' and romtypename like N'%" & typename & "%' and activate='True'", cn.conn)
             da.Fill(dt)
-
+            da.Dispose()
+            cn.conn.Close()
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
         Return True
     End Function
@@ -188,7 +239,7 @@ Public Class tbfroom
     Public Function loadtbfroomshowlist(dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewroom where statusid=3 order by roomid", cn.conn)
+            da = New SqlDataAdapter("select * from viewroom where statusid=1  order by roomid", cn.conn)
             da.Fill(ds, "pt")
             ds.Tables.Clear()
             da.Fill(ds, "pt")

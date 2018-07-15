@@ -56,7 +56,7 @@ Public Class tbfBill
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 billNO from tbfBill order by billNO desc", cn.conn)
+            cm = New SqlCommand("select top 1 billid from tbfBill order by billid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -79,8 +79,7 @@ Public Class tbfBill
             ds.Tables.Clear()
             da.Fill(ds, "pt")
             dgv.DataSource = ds.Tables(0)
-            dgv.Refresh()
-
+   
             With dgv
                 .ReadOnly = True
                 .SelectionMode = DataGridViewSelectionMode.FullRowSelect

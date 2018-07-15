@@ -23,50 +23,58 @@ Partial Class frmoption
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btncheckin = New DevComponents.DotNetBar.ButtonX()
-        Me.btncheckout = New DevComponents.DotNetBar.ButtonX()
         Me.btnchangstatus = New DevComponents.DotNetBar.ButtonX()
+        Me.btncheckout = New DevComponents.DotNetBar.ButtonX()
         Me.SuspendLayout()
         '
         'btncheckin
         '
         Me.btncheckin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btncheckin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btncheckin.Location = New System.Drawing.Point(96, 23)
+        Me.btncheckin.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncheckin.Image = Global.HotelSystem.My.Resources.Resources.checkin
+        Me.btncheckin.ImageFixedSize = New System.Drawing.Size(60, 60)
+        Me.btncheckin.Location = New System.Drawing.Point(49, 23)
         Me.btncheckin.Name = "btncheckin"
         Me.btncheckin.Size = New System.Drawing.Size(330, 101)
         Me.btncheckin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btncheckin.TabIndex = 0
-        Me.btncheckin.Text = "ເຂົ້າຫ້ອງ"
-        '
-        'btncheckout
-        '
-        Me.btncheckout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
-        Me.btncheckout.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btncheckout.Location = New System.Drawing.Point(96, 127)
-        Me.btncheckout.Name = "btncheckout"
-        Me.btncheckout.Size = New System.Drawing.Size(330, 101)
-        Me.btncheckout.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.btncheckout.TabIndex = 1
-        Me.btncheckout.Text = "ອອກຫ້ອງ"
+        Me.btncheckin.Text = "ເຂົ້າຫ້ອງ(Check In)"
         '
         'btnchangstatus
         '
         Me.btnchangstatus.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
         Me.btnchangstatus.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
-        Me.btnchangstatus.Location = New System.Drawing.Point(96, 234)
+        Me.btnchangstatus.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnchangstatus.Image = Global.HotelSystem.My.Resources.Resources.cashier
+        Me.btnchangstatus.ImageFixedSize = New System.Drawing.Size(60, 60)
+        Me.btnchangstatus.Location = New System.Drawing.Point(49, 237)
         Me.btnchangstatus.Name = "btnchangstatus"
         Me.btnchangstatus.Size = New System.Drawing.Size(330, 101)
         Me.btnchangstatus.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
         Me.btnchangstatus.TabIndex = 2
         Me.btnchangstatus.Text = "ປ່ຽນສະຖານະ"
         '
+        'btncheckout
+        '
+        Me.btncheckout.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton
+        Me.btncheckout.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground
+        Me.btncheckout.Font = New System.Drawing.Font("Saysettha OT", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btncheckout.Image = Global.HotelSystem.My.Resources.Resources.hotelcheckout
+        Me.btncheckout.Location = New System.Drawing.Point(49, 130)
+        Me.btncheckout.Name = "btncheckout"
+        Me.btncheckout.Size = New System.Drawing.Size(330, 101)
+        Me.btncheckout.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.btncheckout.TabIndex = 3
+        Me.btncheckout.Text = "ອອກຫ້ອງ(Check Out)"
+        '
         'frmoption
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 392)
-        Me.Controls.Add(Me.btnchangstatus)
+        Me.ClientSize = New System.Drawing.Size(434, 374)
         Me.Controls.Add(Me.btncheckout)
+        Me.Controls.Add(Me.btnchangstatus)
         Me.Controls.Add(Me.btncheckin)
         Me.DoubleBuffered = True
         Me.EnableGlass = False
@@ -81,6 +89,6 @@ Partial Class frmoption
 
     End Sub
     Friend WithEvents btncheckin As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents btncheckout As DevComponents.DotNetBar.ButtonX
     Friend WithEvents btnchangstatus As DevComponents.DotNetBar.ButtonX
+    Friend WithEvents btncheckout As DevComponents.DotNetBar.ButtonX
 End Class

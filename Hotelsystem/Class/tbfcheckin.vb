@@ -113,7 +113,7 @@ Public Class tbfcheckin
     Public Function search_checkinby_datein(dt1 As String, dt2 As String, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewcheckin where checkindate>='" & dt1 & "' and checkindate<='" & dt2 & "'", cn.conn)
+            da = New SqlDataAdapter("select * from viewcheckin where checkindate>='" & dt1 & "' and checkindate<='" & dt2 & "' order by checkinid desc", cn.conn)
             da.Fill(ds, "pt1")
             ds.Tables.Clear()
             da.Fill(ds, "pt1")
@@ -129,7 +129,7 @@ Public Class tbfcheckin
     Public Function search_checkinby_Name(name As String, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewcheckin where cusname like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da = New SqlDataAdapter("select * from viewcheckin where cusname like N'%" & name & "%' order by checkinid desc", cn.conn)
             da.Fill(ds, "pt1")
             ds.Tables.Clear()
             da.Fill(ds, "pt1")
@@ -145,7 +145,7 @@ Public Class tbfcheckin
     Public Function search_checkinby_roomNO(name As String, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewcheckin where room_id like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da = New SqlDataAdapter("select * from viewcheckin where room_id like N'%" & name & "%' order by checkinid desc", cn.conn)
             da.Fill(ds, "pt1")
             ds.Tables.Clear()
             da.Fill(ds, "pt1")
@@ -161,7 +161,7 @@ Public Class tbfcheckin
     Public Function search_checkinby_IDCard(name As String, dgv As DataGridView)
         cn.connect()
         Try
-            da = New SqlDataAdapter("select * from viewcheckin where idcard like N'%" & name & "%' order by checkinid asc", cn.conn)
+            da = New SqlDataAdapter("select * from viewcheckin where idcard like N'%" & name & "%' order by checkinid desc", cn.conn)
             da.Fill(ds, "pt1")
             ds.Tables.Clear()
             da.Fill(ds, "pt1")

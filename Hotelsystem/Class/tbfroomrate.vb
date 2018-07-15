@@ -5,7 +5,32 @@ Public Class tbfroomrate
     Dim ds As New DataSet
     Dim cm As New SqlCommand
     Dim re As SqlDataReader
+    Public Function selectprice_by_pricetype(id As Integer)
+        cn.connect()
+        Dim price As Double
+        Try
+            cm = New SqlCommand("select price from viewroomrate where roomtypeid='" & id & "'", cn.conn)
+            re = cm.ExecuteReader
+            If re.HasRows Then
+                While re.Read
+                    If re.GetValue(0) Is DBNull.Value Then
+                        price = 0
+                    Else
+                        price = re.GetValue(0)
+                    End If
 
+                End While
+            Else
+                price = 0
+            End If
+            re.Close()
+            cm.Dispose()
+            cn.conn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        Return price
+    End Function
     Public Function save(roomrateid As Integer, roomtypeid As Integer, roomtyperateid As Integer, price As Double, des As String)
         cn.connect()
         Try

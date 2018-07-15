@@ -102,7 +102,7 @@ Public Class tbproduct
         cn.connect()
         Dim id As Integer
         Try
-            cm = New SqlCommand("select top 1 productNO from tbproduct order by productNO desc", cn.conn)
+            cm = New SqlCommand("select top 1 proid from tbproduct order by proid desc", cn.conn)
             re = cm.ExecuteReader
             If re.HasRows Then
                 While re.Read
@@ -135,7 +135,7 @@ Public Class tbproduct
                 .Columns(3).HeaderText = "ຫົວໜ່ວຍ"
                 .Columns(4).HeaderText = "ລາຄາຊື້"
                 .Columns(5).HeaderText = "ລາຄາຂາຍ"
-                .Columns(6).HeaderText = "ຈຳນວນສະຕ໋ອກ"
+                .Columns(6).HeaderText = "ຈໍານວນສະຕ໋ອກ"
                 .Columns(7).Visible = False
                 .Columns(8).Visible = False
                 .Columns(9).Visible = False

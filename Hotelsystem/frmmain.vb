@@ -2,8 +2,10 @@
     Public userid As Integer = 1
     Public laoname As String
     Public level As String
-    Dim closeform As New formclose
+    Public closeform As New formclose
     Private Sub frmmain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lname.Text = laoname
+        llevel.Text = level
 
     End Sub
 

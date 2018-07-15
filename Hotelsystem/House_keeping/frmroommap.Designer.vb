@@ -30,10 +30,14 @@ Partial Class frmroommap
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.froom = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtroomdirty = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.txtroomoutoforder = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.txtroomblock = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.txtroomempty = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.txtroomall = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -41,18 +45,10 @@ Partial Class frmroommap
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnclose = New DevComponents.DotNetBar.ButtonX()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtroomall = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtroomempty = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtroomblock = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtroomnotempty = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtroomdirty = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.txtroomoutoforder = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.PanelEx1.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,15 +150,12 @@ Partial Class frmroommap
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.txtroomdirty)
         Me.Panel1.Controls.Add(Me.txtroomoutoforder)
-        Me.Panel1.Controls.Add(Me.txtroomnotempty)
         Me.Panel1.Controls.Add(Me.txtroomblock)
         Me.Panel1.Controls.Add(Me.txtroomempty)
         Me.Panel1.Controls.Add(Me.txtroomall)
         Me.Panel1.Controls.Add(Me.Label8)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Controls.Add(Me.PictureBox5)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -175,10 +168,79 @@ Partial Class frmroommap
         Me.Panel1.Size = New System.Drawing.Size(818, 216)
         Me.Panel1.TabIndex = 1
         '
+        'txtroomdirty
+        '
+        '
+        '
+        '
+        Me.txtroomdirty.Border.Class = "TextBoxBorder"
+        Me.txtroomdirty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtroomdirty.Location = New System.Drawing.Point(563, 103)
+        Me.txtroomdirty.Name = "txtroomdirty"
+        Me.txtroomdirty.Size = New System.Drawing.Size(235, 35)
+        Me.txtroomdirty.TabIndex = 16
+        '
+        'txtroomoutoforder
+        '
+        '
+        '
+        '
+        Me.txtroomoutoforder.Border.Class = "TextBoxBorder"
+        Me.txtroomoutoforder.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtroomoutoforder.Location = New System.Drawing.Point(564, 53)
+        Me.txtroomoutoforder.Name = "txtroomoutoforder"
+        Me.txtroomoutoforder.Size = New System.Drawing.Size(235, 35)
+        Me.txtroomoutoforder.TabIndex = 15
+        '
+        'txtroomblock
+        '
+        '
+        '
+        '
+        Me.txtroomblock.Border.Class = "TextBoxBorder"
+        Me.txtroomblock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtroomblock.Location = New System.Drawing.Point(160, 103)
+        Me.txtroomblock.Name = "txtroomblock"
+        Me.txtroomblock.Size = New System.Drawing.Size(235, 35)
+        Me.txtroomblock.TabIndex = 13
+        '
+        'txtroomempty
+        '
+        '
+        '
+        '
+        Me.txtroomempty.Border.Class = "TextBoxBorder"
+        Me.txtroomempty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtroomempty.Location = New System.Drawing.Point(160, 54)
+        Me.txtroomempty.Name = "txtroomempty"
+        Me.txtroomempty.Size = New System.Drawing.Size(234, 35)
+        Me.txtroomempty.TabIndex = 12
+        '
+        'txtroomall
+        '
+        '
+        '
+        '
+        Me.txtroomall.Border.Class = "TextBoxBorder"
+        Me.txtroomall.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.txtroomall.Location = New System.Drawing.Point(160, 12)
+        Me.txtroomall.Name = "txtroomall"
+        Me.txtroomall.Size = New System.Drawing.Size(234, 35)
+        Me.txtroomall.TabIndex = 11
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(18, 14)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(88, 24)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "ຫ້ອງທັງໜົດ:"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(468, 106)
+        Me.Label7.Location = New System.Drawing.Point(457, 56)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(98, 24)
         Me.Label7.TabIndex = 9
@@ -187,36 +249,17 @@ Partial Class frmroommap
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.HotelSystem.My.Resources.Resources.hotel_outofforder
-        Me.PictureBox5.Location = New System.Drawing.Point(414, 98)
+        Me.PictureBox5.Location = New System.Drawing.Point(403, 48)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(48, 40)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 8
         Me.PictureBox5.TabStop = False
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(77, 155)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(76, 24)
-        Me.Label6.TabIndex = 7
-        Me.Label6.Text = "ຫ້ອງບໍ່ວ່າງ"
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.HotelSystem.My.Resources.Resources.hotel_notempty
-        Me.PictureBox4.Location = New System.Drawing.Point(23, 149)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(48, 40)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 6
-        Me.PictureBox4.TabStop = False
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(468, 162)
+        Me.Label5.Location = New System.Drawing.Point(457, 112)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(76, 24)
         Me.Label5.TabIndex = 5
@@ -225,7 +268,7 @@ Partial Class frmroommap
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.HotelSystem.My.Resources.Resources.hotel_dirty
-        Me.PictureBox3.Location = New System.Drawing.Point(414, 152)
+        Me.PictureBox3.Location = New System.Drawing.Point(403, 102)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(48, 40)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -283,87 +326,6 @@ Partial Class frmroommap
         Me.btnclose.TabIndex = 2
         Me.btnclose.Text = "ປິດ"
         '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(18, 14)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(88, 24)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "ຫ້ອງທັງໜົດ:"
-        '
-        'txtroomall
-        '
-        '
-        '
-        '
-        Me.txtroomall.Border.Class = "TextBoxBorder"
-        Me.txtroomall.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomall.Location = New System.Drawing.Point(160, 12)
-        Me.txtroomall.Name = "txtroomall"
-        Me.txtroomall.Size = New System.Drawing.Size(234, 35)
-        Me.txtroomall.TabIndex = 11
-        '
-        'txtroomempty
-        '
-        '
-        '
-        '
-        Me.txtroomempty.Border.Class = "TextBoxBorder"
-        Me.txtroomempty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomempty.Location = New System.Drawing.Point(160, 54)
-        Me.txtroomempty.Name = "txtroomempty"
-        Me.txtroomempty.Size = New System.Drawing.Size(234, 35)
-        Me.txtroomempty.TabIndex = 12
-        '
-        'txtroomblock
-        '
-        '
-        '
-        '
-        Me.txtroomblock.Border.Class = "TextBoxBorder"
-        Me.txtroomblock.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomblock.Location = New System.Drawing.Point(160, 103)
-        Me.txtroomblock.Name = "txtroomblock"
-        Me.txtroomblock.Size = New System.Drawing.Size(235, 35)
-        Me.txtroomblock.TabIndex = 13
-        '
-        'txtroomnotempty
-        '
-        '
-        '
-        '
-        Me.txtroomnotempty.Border.Class = "TextBoxBorder"
-        Me.txtroomnotempty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomnotempty.Location = New System.Drawing.Point(159, 153)
-        Me.txtroomnotempty.Name = "txtroomnotempty"
-        Me.txtroomnotempty.Size = New System.Drawing.Size(235, 35)
-        Me.txtroomnotempty.TabIndex = 14
-        '
-        'txtroomdirty
-        '
-        '
-        '
-        '
-        Me.txtroomdirty.Border.Class = "TextBoxBorder"
-        Me.txtroomdirty.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomdirty.Location = New System.Drawing.Point(574, 153)
-        Me.txtroomdirty.Name = "txtroomdirty"
-        Me.txtroomdirty.Size = New System.Drawing.Size(235, 35)
-        Me.txtroomdirty.TabIndex = 16
-        '
-        'txtroomoutoforder
-        '
-        '
-        '
-        '
-        Me.txtroomoutoforder.Border.Class = "TextBoxBorder"
-        Me.txtroomoutoforder.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.txtroomoutoforder.Location = New System.Drawing.Point(575, 103)
-        Me.txtroomoutoforder.Name = "txtroomoutoforder"
-        Me.txtroomoutoforder.Size = New System.Drawing.Size(235, 35)
-        Me.txtroomoutoforder.TabIndex = 15
-        '
         'frmroommap
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 24.0!)
@@ -386,7 +348,6 @@ Partial Class frmroommap
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -407,14 +368,11 @@ Partial Class frmroommap
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtroomdirty As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtroomoutoforder As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents txtroomnotempty As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtroomblock As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtroomempty As DevComponents.DotNetBar.Controls.TextBoxX
     Friend WithEvents txtroomall As DevComponents.DotNetBar.Controls.TextBoxX

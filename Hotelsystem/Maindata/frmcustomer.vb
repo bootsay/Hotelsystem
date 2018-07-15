@@ -15,13 +15,15 @@
     Public frmprovience1 As Boolean = False
     Public frmcountry1 As Boolean = False
     Dim countrys As New tbcountry
+    Dim roomratetype As New tbfroomtype
     Private Sub frmcustomer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             txtCustomerID.Text = customer.runidNO
             customertype.combocustomertype(cbcustomertype)
-            roomrate.comboroomrate(cbRoomrate)
+            roomratetype.comboroomtype(cbRoomrate)
+            cbRoomrate.SelectedValue = 0
             titlename.combotitlename(cbtitlename)
-
+            rduse.Checked = True
             countrys.combocountry(cbcountry)
 
             province.comboprovince(cbprovince)
@@ -82,7 +84,7 @@
         cbvillage.Enabled = False
         cbdistrict.Enabled = False
         cbprovince.Enabled = False
-        chkActivate.Enabled = False
+        rduse.Enabled = False
     End Sub
     Private Sub Enabletext()
         txtCustomerName.Enabled = True
@@ -100,12 +102,18 @@
         cbvillage.Enabled = True
         cbdistrict.Enabled = True
         cbprovince.Enabled = True
-        chkActivate.Enabled = True
+        rdoff.Enabled = True
+        rduse.Enabled = True
     End Sub
     Private Sub btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click     
         If txtCustomerName.Text = "" Then
             MessageBox.Show("ຂໍ້ມູນທີທ່ານປ້ອນເຂົ້າຍັງບໍ່ສໍາເລັດ")
             txtCustomerName.Focus()
+            Return
+        End If
+        If cbRoomrate.SelectedValue = 0 Then
+            MessageBox.Show("ກະລຸນາເລືອກປະເພດດລາຄາ")
+
             Return
         End If
         If txtSurname.Text = "" Then
@@ -145,7 +153,7 @@
             Return
         End If
         Dim activates As Boolean
-        If chkActivate.Checked = True Then
+        If rduse.Checked = True Then
             activates = True
         Else
             activates = False
@@ -170,7 +178,7 @@
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         Try
             Dim activates As Boolean
-            If chkActivate.Checked = True Then
+            If rduse.Checked = True Then
                 activates = True
             End If
             customer.update(txtCustomerID.Text, txtid.Text, cbcustomertype.SelectedValue, cbtitlename.SelectedValue, txtCustomerName.Text, txtSurname.Text, txtNationality.Text, cbvillage.SelectedValue, txtPassport.Text, txtIdcard.Text, txtTel.Text, txtFax.Text, txtEmail.Text, cbRoomrate.SelectedValue, activates)
@@ -217,9 +225,14 @@
                 txtFax.Text = .CurrentRow.Cells(14).Value
                 txtEmail.Text = .CurrentRow.Cells(15).Value
                 cbRoomrate.Text = .CurrentRow.Cells(16).Value
-                chkActivate.Checked = .CurrentRow.Cells(17).Value
+                If .CurrentRow.Cells(17).Value = True Then
+                    rduse.Checked = True
+                Else
+                    rdoff.Checked = True
+                End If
+
                 disabletext()
-                enableEdit()
+                enableedit()
             End With
         Catch ex As Exception
 
@@ -344,4 +357,13 @@
     Private Sub dgvcustomer_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvcustomer.CellContentClick
 
     End Sub
+
+    Private Sub cbRoomrate_SelectionChangeCommitted(sender As Object, e As EventArgs) Handles cbRoomrate.SelectionChangeCommitted
+        Try
+            txtprice.Text = roomrate.selectprice_by_pricetype(cbRoomrate.SelectedValue)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 End Class

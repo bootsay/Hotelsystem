@@ -4,9 +4,10 @@
     Dim rooms As New tbfroom
     Dim dtroom As New DataTable
     Dim roomstatus As Integer
-    Dim roomtypename As String
-    Dim roomNumber As String
-    Dim selectchange As Boolean = False
+    Public roomid As Integer
+    Public roomtypename As String
+    Public roomNumber As String
+    Public selectchange As Boolean = False
     Private Sub frmroommap_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         floors.comboroomlocation(cbfloor)
         cbfloor.SelectedIndex = 0
@@ -24,6 +25,7 @@
                 roomstatus = dtroom.Rows(i).Item(10)
                 roomtypename = dtroom.Rows(i).Item(1)
                 roomNumber = dtroom.Rows(i).Item(4)
+                roomid = dtroom.Rows(i).Item(0)
                 btn.Text = roomNumber + "(" & roomtypename & ")"
                 If roomstatus = 1 Then
                     btn.Image = My.Resources.hotel_empty
@@ -32,10 +34,10 @@
                     btn.Image = My.Resources.room1
                     btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                 ElseIf roomstatus = 3 Then
-                    btn.Image = My.Resources.hotel_notempty
+                    btn.Image = My.Resources.hotel_dirty
                     btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                 ElseIf roomstatus = 4 Then
-                    btn.Image = My.Resources.hotel_dirty
+                    btn.Image = My.Resources.hotel_notempty
                     btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                 ElseIf roomstatus = 5 Then
                     btn.Image = My.Resources.hotel_outofforder
@@ -43,16 +45,31 @@
                 ElseIf roomstatus = 6 Then
                     btn.Image = My.Resources.hotel_dirty
                     btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
+                ElseIf roomstatus = 7 Then
+                    btn.Image = My.Resources.room1
+                    btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                 End If
                 btn.Name = dtroom.Rows(i).Item(0)
                 btn.Visible = True
                 froom.Controls.Add(btn)
             Next
         End If
+
+
+        txtroomall.Text = rooms.Count_allroom()
+        txtroomblock.Text = rooms.Count_roombystatus(7)
+        txtroomdirty.Text = rooms.Count_roombystatus(6)
+        txtroomempty.Text = rooms.Count_roombystatus(1)
+        txtroomoutoforder.Text = rooms.Count_roombystatus(5)
+
     End Sub
     Private Sub clickme(ByVal sendr As Object, ByVal e As EventArgs)
 
         frmoption.ShowDialog()
+
+
+
+
         frmoption.Close()
     End Sub
  
@@ -84,10 +101,10 @@
                         btn.Image = My.Resources.room1
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 3 Then
-                        btn.Image = My.Resources.hotel_notempty
+                        btn.Image = My.Resources.hotel_dirty
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 4 Then
-                        btn.Image = My.Resources.hotel_dirty
+                        btn.Image = My.Resources.hotel_notempty
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 5 Then
                         btn.Image = My.Resources.hotel_outofforder
@@ -141,10 +158,10 @@
                         btn.Image = My.Resources.room1
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 3 Then
-                        btn.Image = My.Resources.hotel_notempty
+                        btn.Image = My.Resources.hotel_dirty
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 4 Then
-                        btn.Image = My.Resources.hotel_dirty
+                        btn.Image = My.Resources.hotel_notempty
                         btn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Bottom
                     ElseIf roomstatus = 5 Then
                         btn.Image = My.Resources.hotel_outofforder

@@ -28,6 +28,18 @@
         frmshowcustomer.getform = "CHIN"
         frmshowcustomer.ShowDialog()
         frmshowcustomer.Close()
+        Dim customerdt As New DataTable
+        customerdt.Clear()
+        cus.Selectcustomer(customerdt)
+        If customerdt.Rows.Count > 0 Then
+            cus_id = customerdt.Rows(0).Item(0)
+            txtcustomername.Text = customerdt.Rows(0).Item(4)
+            txtprice.Text = customerdt.Rows(0).Item(15)
+            txtcustomertype.Text = customerdt.Rows(0).Item(2)
+        Else
+
+        End If
+
         frmshowcustomer.getform = ""
     End Sub
 
@@ -49,6 +61,7 @@
             cus_id = customerdt.Rows(0).Item(0)
             txtcustomername.Text = customerdt.Rows(0).Item(4)
             txtprice.Text = customerdt.Rows(0).Item(15)
+            txtcustomertype.Text = customerdt.Rows(0).Item(2)
         Else
 
         End If
@@ -79,11 +92,14 @@
         usetype.combousetype(cbstaytype)
         mealtype.combomealtype(cbfood)
 
-
+        formdisable()
         btnnew.Enabled = True
         btnsave.Enabled = False
         btnedit.Enabled = False
         btnupdate.Enabled = False
+
+
+
 
 
     End Sub
@@ -104,25 +120,25 @@
         End Try
     End Sub
 
-    Private Sub enablesave()
+    Public Sub enablesave()
         btnsave.Enabled = True
         btnedit.Enabled = False
         btnupdate.Enabled = False
         btnnew.Enabled = True
     End Sub
-    Private Sub enableedit()
+    Public Sub enableedit()
         btnsave.Enabled = False
         btnedit.Enabled = True
         btnupdate.Enabled = False
         btnnew.Enabled = True
     End Sub
-    Private Sub enableupdate()
+    Public Sub enableupdate()
         btnsave.Enabled = False
         btnedit.Enabled = False
         btnupdate.Enabled = True
         btnnew.Enabled = True
     End Sub
-    Private Sub txtclear()
+    Public Sub txtclear()
         'txtid.Clear()
         txtuser.Text = 1
         txtprice.Clear()
@@ -131,7 +147,7 @@
         txtcustomername.Clear()
         txtroomno.Clear()
     End Sub
-    Private Sub txtread()
+    Public Sub txtread()
         'txtid.Clear()
         txtuser.Enabled = False
         txtprice.Enabled = False
@@ -140,13 +156,41 @@
         txtcustomername.Enabled = False
         txtroomno.Enabled = False
         'txtdatereserve.Enabled = False
-    
+
         btnbrown1.Enabled = False
         btnbrown2.Enabled = False
         btncus.Enabled = False
 
     End Sub
-    Private Sub txtwrite()
+    Public Sub formdisable()
+        btnbrown2.Enabled = False
+        btnbrown1.Enabled = False
+        cbbooktype.Enabled = False
+        txtprice.Enabled = False
+        cbmarket.Enabled = False
+        cbpricetype.Enabled = False
+        cbfood.Enabled = False
+        txtNote.Enabled = False
+        dt1.Enabled = False
+        dt2.Enabled = False
+        btncus.Enabled = False
+        cbstaytype.Enabled = False
+    End Sub
+    Public Function formenable()
+        btnbrown2.Enabled = True
+        btnbrown1.Enabled = True
+        cbbooktype.Enabled = True
+        txtprice.Enabled = True
+        cbmarket.Enabled = True
+        cbpricetype.Enabled = True
+        cbfood.Enabled = True
+        txtNote.Enabled = True
+        dt1.Enabled = True
+        dt2.Enabled = True
+        btncus.Enabled = True
+        cbstaytype.Enabled = True
+    End Function
+    Public Sub txtwrite()
         'txtid.Clear()
         'txtuser.Enabled = True
         txtprice.Enabled = False
@@ -155,7 +199,7 @@
         txtcustomername.Enabled = True
         txtroomno.Enabled = True
         'txtdatereserve.Enabled = True
-    
+
         btnbrown1.Enabled = True
         btnbrown2.Enabled = True
         btncus.Enabled = True
@@ -324,6 +368,7 @@
             dtsearch1.Visible = False
             dtsearch2.Visible = False
         End If
+        formenable()
         markettype.combomarkettype(cbmarket)
         roomratetype.comboroomtyperate(cbpricetype)
         txtid.Text = checkins.runidNO
@@ -359,7 +404,7 @@
         End If
 
         checkins.save(checkno, checkid, frm.userid, txtreserverNO_search.Text, txtroomno.Text, Customerid, cbbooktype.SelectedValue, cbmarket.SelectedValue, Format(CDate(dt1.Text), "MM/dd/yyyy"), Format(CDate(dt2.Text), "MM/dd/yyyy"), txtnumberpeople.Text, cbfood.SelectedValue, cbstaytype.SelectedValue, txtNote.Text)
-        'room.updateroom(txtroomid.Text, 2)
+        room.updateroom(room_id, 6)
         reserve.loadtbfreserve(dgvlist)
         txtclear()
         txtid.Text = reserve.runidNO

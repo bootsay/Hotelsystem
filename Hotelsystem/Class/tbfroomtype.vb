@@ -104,8 +104,10 @@ Public Class tbfroomtype
         cn.connect()
         Dim dt As New DataTable
         Try
+            dt.Clear()
             da = New SqlDataAdapter("select * from tbfroomtype order by roomtypeid desc", cn.conn)
             da.Fill(dt)
+            dt.Rows.Add("0", "ເລືອກ")
             With cb
                 .DataSource = dt
                 .DisplayMember = dt.Columns("romtypename").ToString
